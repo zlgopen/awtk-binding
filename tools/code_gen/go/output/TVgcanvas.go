@@ -60,8 +60,8 @@ func (this TVgcanvas) ClosePath() TRet {
   return TRet(C.vgcanvas_close_path((*C.vgcanvas_t)(this.handle)));
 }
 
-func (this TVgcanvas) PathWinding(dir bool) TRet {
-  return TRet(C.vgcanvas_path_winding((*C.vgcanvas_t)(this.handle), (C.bool_t)(dir)));
+func (this TVgcanvas) SetFillMode(fill_mode TVgcanvasFillMode) TRet {
+  return TRet(C.vgcanvas_set_fill_mode((*C.vgcanvas_t)(this.handle), (C.vgcanvas_fill_mode_t)(fill_mode)));
 }
 
 func (this TVgcanvas) Rotate(rad float64) TRet {

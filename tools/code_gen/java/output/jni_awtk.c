@@ -5971,6 +5971,30 @@ int awtk_TBitmapFlag_BITMAP_FLAG_GPU_FBO_TEXTURE(Runtime *runtime, JClass *clazz
   return 0;
 }
 
+int awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_ALL_FILL(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VGCANVAS_FILL_MODE_ALL_FILL));
+
+  return 0;
+}
+
+int awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_NON_ZERO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VGCANVAS_FILL_MODE_NON_ZERO));
+
+  return 0;
+}
+
+int awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_EVEN_ODD(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(VGCANVAS_FILL_MODE_EVEN_ODD));
+
+  return 0;
+}
+
 int awtk_TVgcanvas_vgcanvas_cast(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -6165,13 +6189,13 @@ int awtk_TVgcanvas_vgcanvas_close_path(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
-int awtk_TVgcanvas_vgcanvas_path_winding(Runtime *runtime, JClass *clazz) {
+int awtk_TVgcanvas_vgcanvas_set_fill_mode(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   ret_t ret = 0;
   vgcanvas_t* vg = (vgcanvas_t*)jni_ctx_get_object(&actx);
-  bool_t dir = (bool_t)jni_ctx_get_int(&actx);
-  ret = (ret_t)vgcanvas_path_winding(vg, dir);
+  vgcanvas_fill_mode_t fill_mode = (vgcanvas_fill_mode_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)vgcanvas_set_fill_mode(vg, fill_mode);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -12893,6 +12917,30 @@ int awtk_TObjectProp_OBJECT_PROP_SELECTED_INDEX(Runtime *runtime, JClass *clazz)
   return 0;
 }
 
+int awtk_TObjectLife_OBJECT_LIFE_NONE(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(OBJECT_LIFE_NONE));
+
+  return 0;
+}
+
+int awtk_TObjectLife_OBJECT_LIFE_OWN(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(OBJECT_LIFE_OWN));
+
+  return 0;
+}
+
+int awtk_TObjectLife_OBJECT_LIFE_HOLD(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(OBJECT_LIFE_HOLD));
+
+  return 0;
+}
+
 int awtk_TRlog_rlog_create(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -18073,6 +18121,17 @@ int awtk_TScrollView_scroll_view_set_virtual_h(Runtime *runtime, JClass *clazz) 
   widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
   wh_t h = (wh_t)jni_ctx_get_int(&actx);
   ret = (ret_t)scroll_view_set_virtual_h(widget, h);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TScrollView_scroll_view_fix_offset(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  ret = (ret_t)scroll_view_fix_offset(widget);
   jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
@@ -24953,6 +25012,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_PREMULTI_ALPHA",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_PREMULTI_ALPHA},
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_LCD_ORIENTATION",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_LCD_ORIENTATION},
 {"awtk/TBitmapFlag",  "BITMAP_FLAG_GPU_FBO_TEXTURE",  "()I",  awtk_TBitmapFlag_BITMAP_FLAG_GPU_FBO_TEXTURE},
+{"awtk/TVgcanvasFillMode",  "VGCANVAS_FILL_MODE_ALL_FILL",  "()I",  awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_ALL_FILL},
+{"awtk/TVgcanvasFillMode",  "VGCANVAS_FILL_MODE_NON_ZERO",  "()I",  awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_NON_ZERO},
+{"awtk/TVgcanvasFillMode",  "VGCANVAS_FILL_MODE_EVEN_ODD",  "()I",  awtk_TVgcanvasFillMode_VGCANVAS_FILL_MODE_EVEN_ODD},
 {"awtk/TVgcanvas",  "vgcanvas_cast",  "(J)J",  awtk_TVgcanvas_vgcanvas_cast},
 {"awtk/TVgcanvas",  "vgcanvas_flush",  "(J)I",  awtk_TVgcanvas_vgcanvas_flush},
 {"awtk/TVgcanvas",  "vgcanvas_begin_path",  "(J)I",  awtk_TVgcanvas_vgcanvas_begin_path},
@@ -24967,7 +25029,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TVgcanvas",  "vgcanvas_rounded_rect",  "(JFFFFF)I",  awtk_TVgcanvas_vgcanvas_rounded_rect},
 {"awtk/TVgcanvas",  "vgcanvas_ellipse",  "(JFFFF)I",  awtk_TVgcanvas_vgcanvas_ellipse},
 {"awtk/TVgcanvas",  "vgcanvas_close_path",  "(J)I",  awtk_TVgcanvas_vgcanvas_close_path},
-{"awtk/TVgcanvas",  "vgcanvas_path_winding",  "(JZ)I",  awtk_TVgcanvas_vgcanvas_path_winding},
+{"awtk/TVgcanvas",  "vgcanvas_set_fill_mode",  "(JI)I",  awtk_TVgcanvas_vgcanvas_set_fill_mode},
 {"awtk/TVgcanvas",  "vgcanvas_rotate",  "(JF)I",  awtk_TVgcanvas_vgcanvas_rotate},
 {"awtk/TVgcanvas",  "vgcanvas_scale",  "(JFF)I",  awtk_TVgcanvas_vgcanvas_scale},
 {"awtk/TVgcanvas",  "vgcanvas_translate",  "(JFF)I",  awtk_TVgcanvas_vgcanvas_translate},
@@ -25687,6 +25749,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TObjectProp",  "OBJECT_PROP_SIZE",  "()Ljava/lang/String;",  awtk_TObjectProp_OBJECT_PROP_SIZE},
 {"awtk/TObjectProp",  "OBJECT_PROP_CHECKED",  "()Ljava/lang/String;",  awtk_TObjectProp_OBJECT_PROP_CHECKED},
 {"awtk/TObjectProp",  "OBJECT_PROP_SELECTED_INDEX",  "()Ljava/lang/String;",  awtk_TObjectProp_OBJECT_PROP_SELECTED_INDEX},
+{"awtk/TObjectLife",  "OBJECT_LIFE_NONE",  "()I",  awtk_TObjectLife_OBJECT_LIFE_NONE},
+{"awtk/TObjectLife",  "OBJECT_LIFE_OWN",  "()I",  awtk_TObjectLife_OBJECT_LIFE_OWN},
+{"awtk/TObjectLife",  "OBJECT_LIFE_HOLD",  "()I",  awtk_TObjectLife_OBJECT_LIFE_HOLD},
 {"awtk/TRlog",  "rlog_create",  "(Ljava/lang/String;II)J",  awtk_TRlog_rlog_create},
 {"awtk/TRlog",  "rlog_write",  "(JLjava/lang/String;)I",  awtk_TRlog_rlog_write},
 {"awtk/TTimeNow",  "time_now_s",  "()J",  awtk_TTimeNow_time_now_s},
@@ -26180,6 +26245,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TScrollView",  "scroll_view_cast",  "(J)J",  awtk_TScrollView_scroll_view_cast},
 {"awtk/TScrollView",  "scroll_view_set_virtual_w",  "(JI)I",  awtk_TScrollView_scroll_view_set_virtual_w},
 {"awtk/TScrollView",  "scroll_view_set_virtual_h",  "(JI)I",  awtk_TScrollView_scroll_view_set_virtual_h},
+{"awtk/TScrollView",  "scroll_view_fix_offset",  "(J)I",  awtk_TScrollView_scroll_view_fix_offset},
 {"awtk/TScrollView",  "scroll_view_set_xslidable",  "(JZ)I",  awtk_TScrollView_scroll_view_set_xslidable},
 {"awtk/TScrollView",  "scroll_view_set_yslidable",  "(JZ)I",  awtk_TScrollView_scroll_view_set_yslidable},
 {"awtk/TScrollView",  "scroll_view_set_snap_to_page",  "(JZ)I",  awtk_TScrollView_scroll_view_set_snap_to_page},

@@ -7240,6 +7240,31 @@
     "level": 1
   },
   {
+    "type": "enum",
+    "desc": "填充规则。",
+    "consts": [
+      {
+        "desc": "全部填充。（部分vg渲染引擎可能不支持，会退化为非零规则填充）",
+        "name": "VGCANVAS_FILL_MODE_ALL_FILL"
+      },
+      {
+        "desc": "非零规则填充。",
+        "name": "VGCANVAS_FILL_MODE_NON_ZERO"
+      },
+      {
+        "desc": "奇偶规则填充。",
+        "name": "VGCANVAS_FILL_MODE_EVEN_ODD"
+      }
+    ],
+    "header": "base/vgcanvas.h",
+    "name": "vgcanvas_fill_mode_t",
+    "prefix": "VGCANVAS_FILL_MODE_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
     "type": "class",
     "methods": [
       {
@@ -7703,16 +7728,16 @@
             "desc": "vgcanvas对象。"
           },
           {
-            "type": "bool_t",
-            "name": "dir",
-            "desc": "填充方法。"
+            "type": "vgcanvas_fill_mode_t",
+            "name": "fill_mode",
+            "desc": "填充规则。"
           }
         ],
         "annotation": {
           "scriptable": true
         },
-        "desc": "设置路径填充实心与否。\n\n>设置为FALSE为实心，TRUE为镂空。",
-        "name": "vgcanvas_path_winding",
+        "desc": "设置填充规则。",
+        "name": "vgcanvas_set_fill_mode",
         "return": {
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
@@ -15593,6 +15618,31 @@
     "annotation": {
       "scriptable": true,
       "string": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "对象生命周期的定义。如果需要保存对象的实例，如何决定对象的生命周期。",
+    "consts": [
+      {
+        "desc": "不关心对象的生命周期(假设对象的生命周期长于当前的上下文)。",
+        "name": "TK_OBJECT_LIFE_NONE"
+      },
+      {
+        "desc": "拥有对象的生命周期。当前上下文开始时，*不会* 增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。",
+        "name": "TK_OBJECT_LIFE_OWN"
+      },
+      {
+        "desc": "持有对象的生命周期。当前上下文开始时，增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。",
+        "name": "TK_OBJECT_LIFE_HOLD"
+      }
+    ],
+    "header": "tkc/object.h",
+    "name": "tk_object_life_t",
+    "prefix": "TK_OBJECT_LIFE_",
+    "annotation": {
+      "scriptable": true
     },
     "level": 1
   },
@@ -24872,6 +24922,24 @@
             "type": "widget_t*",
             "name": "widget",
             "desc": "控件对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "修复偏移量。",
+        "name": "scroll_view_fix_offset",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
           },
           {
             "type": "bool_t",
@@ -32202,7 +32270,7 @@
     "properties": [
       {
         "name": "length",
-        "desc": "显示字符的个数(小于0时全部显示)。\n主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。",
+        "desc": "显示字符的个数(小于0时全部显示)。\n主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。\n> 和换行是冲突的，换行后，该属性不生效",
         "type": "int32_t",
         "annotation": {
           "set_prop": true,
@@ -33251,7 +33319,7 @@
       },
       {
         "name": "drag_threshold",
-        "desc": "拖动临界值。",
+        "desc": "进入拖动状态的拖动临界值。",
         "type": "uint32_t",
         "annotation": {
           "set_prop": true,

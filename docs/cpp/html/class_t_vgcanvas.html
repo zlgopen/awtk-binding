@@ -130,8 +130,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a481191e63898c7baef8552bc662e49dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093edb0bc723b63f6cec458bcbd7aa5c" id="r_a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a093edb0bc723b63f6cec458bcbd7aa5c">ClosePath</a> ()</td></tr>
 <tr class="separator:a093edb0bc723b63f6cec458bcbd7aa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61cd3dd4d904843c1d0c9e979c1b47c" id="r_af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af61cd3dd4d904843c1d0c9e979c1b47c">PathWinding</a> (bool dir)</td></tr>
-<tr class="separator:af61cd3dd4d904843c1d0c9e979c1b47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6be9e922d2ff2a5464e2067213714f9" id="r_ac6be9e922d2ff2a5464e2067213714f9"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6be9e922d2ff2a5464e2067213714f9">SetFillMode</a> (vgcanvas_fill_mode_t fill_mode)</td></tr>
+<tr class="separator:ac6be9e922d2ff2a5464e2067213714f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4692739271712eaec24aeabf3d43c566" id="r_a4692739271712eaec24aeabf3d43c566"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4692739271712eaec24aeabf3d43c566">Rotate</a> (float_t rad)</td></tr>
 <tr class="separator:a4692739271712eaec24aeabf3d43c566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8803bf0876568ea4abe87fd7cc68944f" id="r_a8803bf0876568ea4abe87fd7cc68944f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8803bf0876568ea4abe87fd7cc68944f">Scale</a> (float_t x, float_t y)</td></tr>
@@ -1354,32 +1354,6 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 
 </div>
 </div>
-<a id="af61cd3dd4d904843c1d0c9e979c1b47c" name="af61cd3dd4d904843c1d0c9e979c1b47c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af61cd3dd4d904843c1d0c9e979c1b47c">&#9670;&#160;</a></span>PathWinding()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ret_t TVgcanvas::PathWinding </td>
-          <td>(</td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>dir</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>设置路径填充实心与否。</p>
-<p>&gt;设置为FALSE为实心，TRUE为镂空。</p>
-<dl class="params"><dt>参数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dir</td><td>填充方法。</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
-
-</div>
-</div>
 <a id="a4088321865d88a1f24902f4ae337d693" name="a4088321865d88a1f24902f4ae337d693"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4088321865d88a1f24902f4ae337d693">&#9670;&#160;</a></span>QuadTo()</h2>
 
@@ -1654,6 +1628,31 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">color</td><td>颜色。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ac6be9e922d2ff2a5464e2067213714f9" name="ac6be9e922d2ff2a5464e2067213714f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6be9e922d2ff2a5464e2067213714f9">&#9670;&#160;</a></span>SetFillMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TVgcanvas::SetFillMode </td>
+          <td>(</td>
+          <td class="paramtype">vgcanvas_fill_mode_t</td>          <td class="paramname"><span class="paramname"><em>fill_mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置填充规则。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fill_mode</td><td>填充规则。</td></tr>
   </table>
   </dd>
 </dl>

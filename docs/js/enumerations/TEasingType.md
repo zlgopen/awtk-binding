@@ -18,7 +18,7 @@ EASING_BACK_IN
 
 #### Defined in
 
-[awtk.ts:13885](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13885)
+[awtk.ts:13916](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13916)
 
 ***
 
@@ -30,7 +30,7 @@ EASING_BACK_INOUT
 
 #### Defined in
 
-[awtk.ts:13897](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13897)
+[awtk.ts:13928](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13928)
 
 ***
 
@@ -42,7 +42,7 @@ EASING_BACK_OUT
 
 #### Defined in
 
-[awtk.ts:13891](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13891)
+[awtk.ts:13922](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13922)
 
 ***
 
@@ -54,7 +54,7 @@ EASING_BOUNCE_IN
 
 #### Defined in
 
-[awtk.ts:13903](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13903)
+[awtk.ts:13934](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13934)
 
 ***
 
@@ -66,7 +66,7 @@ EASING_BOUNCE_INOUT
 
 #### Defined in
 
-[awtk.ts:13915](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13915)
+[awtk.ts:13946](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13946)
 
 ***
 
@@ -78,7 +78,7 @@ EASING_BOUNCE_OUT
 
 #### Defined in
 
-[awtk.ts:13909](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13909)
+[awtk.ts:13940](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13940)
 
 ***
 
@@ -90,7 +90,7 @@ EASING_CIRCULAR_IN
 
 #### Defined in
 
-[awtk.ts:13849](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13849)
+[awtk.ts:13880](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13880)
 
 ***
 
@@ -102,7 +102,7 @@ EASING_CIRCULAR_INOUT
 
 #### Defined in
 
-[awtk.ts:13861](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13861)
+[awtk.ts:13892](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13892)
 
 ***
 
@@ -114,7 +114,7 @@ EASING_CIRCULAR_OUT
 
 #### Defined in
 
-[awtk.ts:13855](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13855)
+[awtk.ts:13886](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13886)
 
 ***
 
@@ -126,7 +126,7 @@ EASING_CUBIC_IN
 
 #### Defined in
 
-[awtk.ts:13801](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13801)
+[awtk.ts:13832](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13832)
 
 ***
 
@@ -138,7 +138,7 @@ EASING_CUBIC_OUT
 
 #### Defined in
 
-[awtk.ts:13807](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13807)
+[awtk.ts:13838](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13838)
 
 ***
 
@@ -150,7 +150,7 @@ EASING_ELASTIC_IN
 
 #### Defined in
 
-[awtk.ts:13867](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13867)
+[awtk.ts:13898](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13898)
 
 ***
 
@@ -162,7 +162,7 @@ EASING_ELASTIC_INOUT
 
 #### Defined in
 
-[awtk.ts:13879](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13879)
+[awtk.ts:13910](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13910)
 
 ***
 
@@ -174,7 +174,7 @@ EASING_ELASTIC_OUT
 
 #### Defined in
 
-[awtk.ts:13873](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13873)
+[awtk.ts:13904](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13904)
 
 ***
 
@@ -186,7 +186,7 @@ EASING_LINEAR。
 
 #### Defined in
 
-[awtk.ts:13777](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13777)
+[awtk.ts:13808](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13808)
 
 ***
 
@@ -198,7 +198,7 @@ EASING_POW_IN
 
 #### Defined in
 
-[awtk.ts:13831](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13831)
+[awtk.ts:13862](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13862)
 
 ***
 
@@ -210,7 +210,7 @@ EASING_POW_INOUT
 
 #### Defined in
 
-[awtk.ts:13843](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13843)
+[awtk.ts:13874](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13874)
 
 ***
 
@@ -222,7 +222,7 @@ EASING_POW_OUT
 
 #### Defined in
 
-[awtk.ts:13837](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13837)
+[awtk.ts:13868](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13868)
 
 ***
 
@@ -234,7 +234,7 @@ EASING_QUADRATIC_IN
 
 #### Defined in
 
-[awtk.ts:13783](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13783)
+[awtk.ts:13814](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13814)
 
 ***
 
@@ -246,7 +246,7 @@ EASING_QUADRATIC_INOUT
 
 #### Defined in
 
-[awtk.ts:13795](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13795)
+[awtk.ts:13826](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13826)
 
 ***
 
@@ -258,7 +258,7 @@ EASING_QUADRATIC_OUT
 
 #### Defined in
 
-[awtk.ts:13789](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13789)
+[awtk.ts:13820](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13820)
 
 ***
 
@@ -270,7 +270,7 @@ EASING_SIN_IN
 
 #### Defined in
 
-[awtk.ts:13813](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13813)
+[awtk.ts:13844](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13844)
 
 ***
 
@@ -282,7 +282,7 @@ EASING_SIN_OUT
 
 #### Defined in
 
-[awtk.ts:13825](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13825)
+[awtk.ts:13856](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13856)
 
 ***
 
@@ -294,4 +294,4 @@ EASING_SIN_OUT
 
 #### Defined in
 
-[awtk.ts:13819](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13819)
+[awtk.ts:13850](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13850)

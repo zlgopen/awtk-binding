@@ -54,7 +54,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7808](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7808)
+[awtk.ts:7815](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7815)
 
 ***
 
@@ -82,7 +82,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7869](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7869)
+[awtk.ts:7876](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7876)
 
 ***
 
@@ -106,7 +106,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7820](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7820)
+[awtk.ts:7827](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7827)
 
 ***
 
@@ -130,7 +130,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7832](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7832)
+[awtk.ts:7839](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7839)
 
 ***
 
@@ -154,7 +154,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7856](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7856)
+[awtk.ts:7863](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7863)
 
 ***
 
@@ -178,4 +178,4 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7844](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L7844)
+[awtk.ts:7851](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7851)

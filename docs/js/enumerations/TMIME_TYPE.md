@@ -18,7 +18,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13940](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13940)
+[awtk.ts:13971](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13971)
 
 ***
 
@@ -30,7 +30,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13946](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13946)
+[awtk.ts:13977](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13977)
 
 ***
 
@@ -42,7 +42,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13952](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13952)
+[awtk.ts:13983](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13983)
 
 ***
 
@@ -54,7 +54,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13958](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13958)
+[awtk.ts:13989](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13989)
 
 ***
 
@@ -66,7 +66,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13964](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13964)
+[awtk.ts:13995](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13995)
 
 ***
 
@@ -78,7 +78,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13976](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13976)
+[awtk.ts:14007](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14007)
 
 ***
 
@@ -90,7 +90,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13982](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13982)
+[awtk.ts:14013](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14013)
 
 ***
 
@@ -102,7 +102,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13988](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13988)
+[awtk.ts:14019](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14019)
 
 ***
 
@@ -114,7 +114,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13994](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13994)
+[awtk.ts:14025](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14025)
 
 ***
 
@@ -126,7 +126,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14000](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14000)
+[awtk.ts:14031](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14031)
 
 ***
 
@@ -138,7 +138,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14006](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14006)
+[awtk.ts:14037](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14037)
 
 ***
 
@@ -150,7 +150,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14012](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14012)
+[awtk.ts:14043](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14043)
 
 ***
 
@@ -162,7 +162,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14018](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14018)
+[awtk.ts:14049](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14049)
 
 ***
 
@@ -174,7 +174,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14024](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14024)
+[awtk.ts:14055](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14055)
 
 ***
 
@@ -186,7 +186,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14030](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14030)
+[awtk.ts:14061](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14061)
 
 ***
 
@@ -198,7 +198,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14036](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14036)
+[awtk.ts:14067](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14067)
 
 ***
 
@@ -210,7 +210,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:13970](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L13970)
+[awtk.ts:14001](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14001)
 
 ***
 
@@ -222,7 +222,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14042](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14042)
+[awtk.ts:14073](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14073)
 
 ***
 
@@ -234,7 +234,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14048](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14048)
+[awtk.ts:14079](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14079)
 
 ***
 
@@ -246,7 +246,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14054](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14054)
+[awtk.ts:14085](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14085)
 
 ***
 
@@ -258,7 +258,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14060](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14060)
+[awtk.ts:14091](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14091)
 
 ***
 
@@ -270,7 +270,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14066](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14066)
+[awtk.ts:14097](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14097)
 
 ***
 
@@ -282,7 +282,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14072](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14072)
+[awtk.ts:14103](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14103)
 
 ***
 
@@ -294,7 +294,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14078](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14078)
+[awtk.ts:14109](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14109)
 
 ***
 
@@ -306,7 +306,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14084](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14084)
+[awtk.ts:14115](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14115)
 
 ***
 
@@ -318,7 +318,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14090](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14090)
+[awtk.ts:14121](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14121)
 
 ***
 
@@ -330,7 +330,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14096](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14096)
+[awtk.ts:14127](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14127)
 
 ***
 
@@ -342,7 +342,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14102](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14102)
+[awtk.ts:14133](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14133)
 
 ***
 
@@ -354,7 +354,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14108](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14108)
+[awtk.ts:14139](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14139)
 
 ***
 
@@ -366,7 +366,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14114](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14114)
+[awtk.ts:14145](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14145)
 
 ***
 
@@ -378,7 +378,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14120](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14120)
+[awtk.ts:14151](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14151)
 
 ***
 
@@ -390,7 +390,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14126](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14126)
+[awtk.ts:14157](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14157)
 
 ***
 
@@ -402,7 +402,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14132](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14132)
+[awtk.ts:14163](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14163)
 
 ***
 
@@ -414,7 +414,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14138](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14138)
+[awtk.ts:14169](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14169)
 
 ***
 
@@ -426,7 +426,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14144](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14144)
+[awtk.ts:14175](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14175)
 
 ***
 
@@ -438,7 +438,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14150](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14150)
+[awtk.ts:14181](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14181)
 
 ***
 
@@ -450,7 +450,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14156](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14156)
+[awtk.ts:14187](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14187)
 
 ***
 
@@ -462,7 +462,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14162](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14162)
+[awtk.ts:14193](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14193)
 
 ***
 
@@ -474,7 +474,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14168](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14168)
+[awtk.ts:14199](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14199)
 
 ***
 
@@ -486,7 +486,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14174](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14174)
+[awtk.ts:14205](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14205)
 
 ***
 
@@ -498,7 +498,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14180](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14180)
+[awtk.ts:14211](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14211)
 
 ***
 
@@ -510,7 +510,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14186](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14186)
+[awtk.ts:14217](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14217)
 
 ***
 
@@ -522,7 +522,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14192](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14192)
+[awtk.ts:14223](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14223)
 
 ***
 
@@ -534,7 +534,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14198](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14198)
+[awtk.ts:14229](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14229)
 
 ***
 
@@ -546,7 +546,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14204](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14204)
+[awtk.ts:14235](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14235)
 
 ***
 
@@ -558,7 +558,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14210](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14210)
+[awtk.ts:14241](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14241)
 
 ***
 
@@ -570,7 +570,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14216](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14216)
+[awtk.ts:14247](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14247)
 
 ***
 
@@ -582,7 +582,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14222](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14222)
+[awtk.ts:14253](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14253)
 
 ***
 
@@ -594,7 +594,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14228](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14228)
+[awtk.ts:14259](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14259)
 
 ***
 
@@ -606,7 +606,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14234](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14234)
+[awtk.ts:14265](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14265)
 
 ***
 
@@ -618,7 +618,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14240](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14240)
+[awtk.ts:14271](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14271)
 
 ***
 
@@ -630,7 +630,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14246](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14246)
+[awtk.ts:14277](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14277)
 
 ***
 
@@ -642,7 +642,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14252](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14252)
+[awtk.ts:14283](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14283)
 
 ***
 
@@ -654,7 +654,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14258](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14258)
+[awtk.ts:14289](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14289)
 
 ***
 
@@ -666,7 +666,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14264](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14264)
+[awtk.ts:14295](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14295)
 
 ***
 
@@ -678,7 +678,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14270](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14270)
+[awtk.ts:14301](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14301)
 
 ***
 
@@ -690,7 +690,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14276](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14276)
+[awtk.ts:14307](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14307)
 
 ***
 
@@ -702,7 +702,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14282](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14282)
+[awtk.ts:14313](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14313)
 
 ***
 
@@ -714,7 +714,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14288](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14288)
+[awtk.ts:14319](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14319)
 
 ***
 
@@ -726,7 +726,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14294](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14294)
+[awtk.ts:14325](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14325)
 
 ***
 
@@ -738,7 +738,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14300](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14300)
+[awtk.ts:14331](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14331)
 
 ***
 
@@ -750,7 +750,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14306](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14306)
+[awtk.ts:14337](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14337)
 
 ***
 
@@ -762,7 +762,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14312](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14312)
+[awtk.ts:14343](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14343)
 
 ***
 
@@ -774,7 +774,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14318](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14318)
+[awtk.ts:14349](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14349)
 
 ***
 
@@ -786,7 +786,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14324](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14324)
+[awtk.ts:14355](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14355)
 
 ***
 
@@ -798,7 +798,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14330](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14330)
+[awtk.ts:14361](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14361)
 
 ***
 
@@ -810,7 +810,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14336](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14336)
+[awtk.ts:14367](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14367)
 
 ***
 
@@ -822,7 +822,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14342](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14342)
+[awtk.ts:14373](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14373)
 
 ***
 
@@ -834,7 +834,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14348](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14348)
+[awtk.ts:14379](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14379)
 
 ***
 
@@ -846,7 +846,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14354](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14354)
+[awtk.ts:14385](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14385)
 
 ***
 
@@ -858,7 +858,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14360](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14360)
+[awtk.ts:14391](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14391)
 
 ***
 
@@ -870,7 +870,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14366](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14366)
+[awtk.ts:14397](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14397)
 
 ***
 
@@ -882,7 +882,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14372](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14372)
+[awtk.ts:14403](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14403)
 
 ***
 
@@ -894,7 +894,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14378](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14378)
+[awtk.ts:14409](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14409)
 
 ***
 
@@ -906,7 +906,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14384)
+[awtk.ts:14415](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14415)
 
 ***
 
@@ -918,7 +918,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14390](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14390)
+[awtk.ts:14421](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14421)
 
 ***
 
@@ -930,7 +930,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14396](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14396)
+[awtk.ts:14427](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14427)
 
 ***
 
@@ -942,7 +942,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14402](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14402)
+[awtk.ts:14433](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14433)
 
 ***
 
@@ -954,7 +954,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14408](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14408)
+[awtk.ts:14439](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14439)
 
 ***
 
@@ -966,7 +966,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14414](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14414)
+[awtk.ts:14445](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14445)
 
 ***
 
@@ -978,7 +978,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14420](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14420)
+[awtk.ts:14451](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14451)
 
 ***
 
@@ -990,7 +990,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14426](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14426)
+[awtk.ts:14457](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14457)
 
 ***
 
@@ -1002,7 +1002,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14432](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14432)
+[awtk.ts:14463](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14463)
 
 ***
 
@@ -1014,7 +1014,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14438](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14438)
+[awtk.ts:14469](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14469)
 
 ***
 
@@ -1026,7 +1026,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14444](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14444)
+[awtk.ts:14475](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14475)
 
 ***
 
@@ -1038,7 +1038,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14450](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14450)
+[awtk.ts:14481](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14481)
 
 ***
 
@@ -1050,7 +1050,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14456](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14456)
+[awtk.ts:14487](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14487)
 
 ***
 
@@ -1062,7 +1062,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14462](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14462)
+[awtk.ts:14493](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14493)
 
 ***
 
@@ -1074,7 +1074,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14468](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14468)
+[awtk.ts:14499](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14499)
 
 ***
 
@@ -1086,7 +1086,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14474](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14474)
+[awtk.ts:14505](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14505)
 
 ***
 
@@ -1098,7 +1098,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14480](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14480)
+[awtk.ts:14511](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14511)
 
 ***
 
@@ -1110,7 +1110,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14486](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14486)
+[awtk.ts:14517](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14517)
 
 ***
 
@@ -1122,7 +1122,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14492](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14492)
+[awtk.ts:14523](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14523)
 
 ***
 
@@ -1134,7 +1134,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14498](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14498)
+[awtk.ts:14529](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14529)
 
 ***
 
@@ -1146,7 +1146,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14504](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14504)
+[awtk.ts:14535](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14535)
 
 ***
 
@@ -1158,7 +1158,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14510](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14510)
+[awtk.ts:14541](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14541)
 
 ***
 
@@ -1170,7 +1170,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14516](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14516)
+[awtk.ts:14547](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14547)
 
 ***
 
@@ -1182,7 +1182,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14522](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14522)
+[awtk.ts:14553](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14553)
 
 ***
 
@@ -1194,7 +1194,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14528](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14528)
+[awtk.ts:14559](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14559)
 
 ***
 
@@ -1206,7 +1206,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14534](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14534)
+[awtk.ts:14565](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14565)
 
 ***
 
@@ -1218,7 +1218,7 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14540](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14540)
+[awtk.ts:14571](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14571)
 
 ***
 
@@ -1230,4 +1230,4 @@ MIME_TYPE。
 
 #### Defined in
 
-[awtk.ts:14546](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L14546)
+[awtk.ts:14577](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L14577)

@@ -2907,15 +2907,13 @@ public:
   ret_t ClosePath() ;
 
   /**
-   * 设置路径填充实心与否。
-   *
-   *>设置为FALSE为实心，TRUE为镂空。
+   * 设置填充规则。
    * 
-   * @param dir 填充方法。
+   * @param fill_mode 填充规则。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
-  ret_t PathWinding(bool dir) ;
+  ret_t SetFillMode(vgcanvas_fill_mode_t fill_mode) ;
 
   /**
    * 旋转。
@@ -11035,6 +11033,14 @@ public:
   ret_t SetVirtualH(wh_t h) ;
 
   /**
+   * 修复偏移量。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t FixOffset() ;
+
+  /**
    * 设置是否允许x方向滑动。
    * 
    * @param xslidable 是否允许滑动。
@@ -15358,6 +15364,7 @@ public:
   /**
    * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
+   *> 和换行是冲突的，换行后，该属性不生效
    *
    */
   int32_t GetLength() const;
@@ -15967,7 +15974,7 @@ public:
   bool GetSlideWithBar() const;
 
   /**
-   * 拖动临界值。
+   * 进入拖动状态的拖动临界值。
    *
    */
   uint32_t GetDragThreshold() const;

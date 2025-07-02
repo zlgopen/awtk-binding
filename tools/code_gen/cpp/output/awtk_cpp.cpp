@@ -967,8 +967,8 @@
    return vgcanvas_close_path(((vgcanvas_t*)(this->nativeObj)));
  }
 
- ret_t TVgcanvas::PathWinding(bool dir)  {
-   return vgcanvas_path_winding(((vgcanvas_t*)(this->nativeObj)), dir);
+ ret_t TVgcanvas::SetFillMode(vgcanvas_fill_mode_t fill_mode)  {
+   return vgcanvas_set_fill_mode(((vgcanvas_t*)(this->nativeObj)), fill_mode);
  }
 
  ret_t TVgcanvas::Rotate(float_t rad)  {
@@ -3597,6 +3597,10 @@
 
  ret_t TScrollView::SetVirtualH(wh_t h)  {
    return scroll_view_set_virtual_h(((widget_t*)(this->nativeObj)), h);
+ }
+
+ ret_t TScrollView::FixOffset()  {
+   return scroll_view_fix_offset(((widget_t*)(this->nativeObj)));
  }
 
  ret_t TScrollView::SetXslidable(bool xslidable)  {

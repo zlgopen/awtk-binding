@@ -113,6 +113,17 @@ public class TScrollView extends TWidget {
 
 
   /**
+   * 修复偏移量。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet fixOffset()  {
+   return TRet.from(scroll_view_fix_offset(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
    * 设置是否允许x方向滑动。
    * 
    * @param xslidable 是否允许滑动。
@@ -362,6 +373,7 @@ static private native long scroll_view_create(long parent, int x, int y, int w, 
 static private native long scroll_view_cast(long widget);
 static private native int scroll_view_set_virtual_w(long widget, int w);
 static private native int scroll_view_set_virtual_h(long widget, int h);
+static private native int scroll_view_fix_offset(long widget);
 static private native int scroll_view_set_xslidable(long widget, boolean xslidable);
 static private native int scroll_view_set_yslidable(long widget, boolean yslidable);
 static private native int scroll_view_set_snap_to_page(long widget, boolean snap_to_page);

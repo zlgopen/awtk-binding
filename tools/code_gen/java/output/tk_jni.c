@@ -4095,6 +4095,21 @@ JNIEXPORT jint JNICALL Java_awtk_TBitmapFlag_BITMAP_1FLAG_1GPU_1FBO_1TEXTURE(JNI
   return (jint)(BITMAP_FLAG_GPU_FBO_TEXTURE);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TVgcanvasFillMode_VGCANVAS_1FILL_1MODE_1ALL_1FILL(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VGCANVAS_FILL_MODE_ALL_FILL);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVgcanvasFillMode_VGCANVAS_1FILL_1MODE_1NON_1ZERO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VGCANVAS_FILL_MODE_NON_ZERO);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TVgcanvasFillMode_VGCANVAS_1FILL_1MODE_1EVEN_1ODD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(VGCANVAS_FILL_MODE_EVEN_ODD);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TVgcanvas_vgcanvas_1cast(JNIEnv* env,  jclass ajc, jlong jvg) { /*func*/
   vgcanvas_t* ret;
   vgcanvas_t* vg = (vgcanvas_t*)jvg;
@@ -4207,10 +4222,10 @@ JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1close_1path(JNIEnv* env,  j
   return (jint)(ret);
 }
 
-JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1path_1winding(JNIEnv* env,  jclass ajc, jlong jvg, jboolean dir) { /*func*/
+JNIEXPORT jint JNICALL Java_awtk_TVgcanvas_vgcanvas_1set_1fill_1mode(JNIEnv* env,  jclass ajc, jlong jvg, jint fill_mode) { /*func*/
   ret_t ret;
   vgcanvas_t* vg = (vgcanvas_t*)jvg;
-  ret = (ret_t)vgcanvas_path_winding(vg, dir);
+  ret = (ret_t)vgcanvas_set_fill_mode(vg, fill_mode);
 
   return (jint)(ret);
 }
@@ -8637,6 +8652,21 @@ JNIEXPORT jstring JNICALL Java_awtk_TObjectProp_OBJECT_1PROP_1SELECTED_1INDEX(JN
   return (*env)->NewStringUTF(env, OBJECT_PROP_SELECTED_INDEX);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TObjectLife_OBJECT_1LIFE_1NONE(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(OBJECT_LIFE_NONE);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TObjectLife_OBJECT_1LIFE_1OWN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(OBJECT_LIFE_OWN);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TObjectLife_OBJECT_1LIFE_1HOLD(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(OBJECT_LIFE_HOLD);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TRlog_rlog_1create(JNIEnv* env,  jclass ajc, jstring jfilename_pattern, jint max_size, jint buff_size) { /*func*/
   rlog_t* ret;
   const char* filename_pattern = (char*)(*env)->GetStringUTFChars(env, jfilename_pattern, 0);
@@ -12121,6 +12151,14 @@ JNIEXPORT jint JNICALL Java_awtk_TScrollView_scroll_1view_1set_1virtual_1h(JNIEn
   ret_t ret;
   widget_t* widget = (widget_t*)jwidget;
   ret = (ret_t)scroll_view_set_virtual_h(widget, h);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TScrollView_scroll_1view_1fix_1offset(JNIEnv* env,  jclass ajc, jlong jwidget) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)scroll_view_fix_offset(widget);
 
   return (jint)(ret);
 }

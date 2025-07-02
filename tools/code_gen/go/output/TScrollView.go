@@ -22,6 +22,10 @@ func (this TScrollView) SetVirtualH(h int) TRet {
   return TRet(C.scroll_view_set_virtual_h((*C.widget_t)(this.handle), (C.wh_t)(h)));
 }
 
+func (this TScrollView) FixOffset() TRet {
+  return TRet(C.scroll_view_fix_offset((*C.widget_t)(this.handle)));
+}
+
 func (this TScrollView) SetXslidable(xslidable bool) TRet {
   return TRet(C.scroll_view_set_xslidable((*C.widget_t)(this.handle), (C.bool_t)(xslidable)));
 }

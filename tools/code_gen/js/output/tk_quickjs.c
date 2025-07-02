@@ -9356,6 +9356,47 @@ ret_t bitmap_flag_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t get_VGCANVAS_FILL_MODE_ALL_FILL(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, VGCANVAS_FILL_MODE_ALL_FILL);
+}
+
+jsvalue_t get_VGCANVAS_FILL_MODE_NON_ZERO(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, VGCANVAS_FILL_MODE_NON_ZERO);
+}
+
+jsvalue_t get_VGCANVAS_FILL_MODE_EVEN_ODD(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, VGCANVAS_FILL_MODE_EVEN_ODD);
+}
+
+ret_t vgcanvas_fill_mode_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "VGCANVAS_FILL_MODE_ALL_FILL",
+                      JS_NewCFunction(ctx, get_VGCANVAS_FILL_MODE_ALL_FILL, "VGCANVAS_FILL_MODE_ALL_FILL", 1));
+  JS_SetPropertyStr(ctx, global_obj, "VGCANVAS_FILL_MODE_NON_ZERO",
+                      JS_NewCFunction(ctx, get_VGCANVAS_FILL_MODE_NON_ZERO, "VGCANVAS_FILL_MODE_NON_ZERO", 1));
+  JS_SetPropertyStr(ctx, global_obj, "VGCANVAS_FILL_MODE_EVEN_ODD",
+                      JS_NewCFunction(ctx, get_VGCANVAS_FILL_MODE_EVEN_ODD, "VGCANVAS_FILL_MODE_EVEN_ODD", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_vgcanvas_cast(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -9634,7 +9675,7 @@ jsvalue_t wrap_vgcanvas_close_path(
   return jret;
 }
 
-jsvalue_t wrap_vgcanvas_path_winding(
+jsvalue_t wrap_vgcanvas_set_fill_mode(
     JSContext *ctx, 
     jsvalue_const_t this_val,
     int argc, 
@@ -9644,8 +9685,8 @@ jsvalue_t wrap_vgcanvas_path_winding(
   if(argc >= 2) {
   ret_t ret = (ret_t)0;
   vgcanvas_t* vg = (vgcanvas_t*)jsvalue_get_pointer(ctx, argv[0], "vgcanvas_t*");
-  bool_t dir = (bool_t)jsvalue_get_boolean_value(ctx, argv[1]);
-  ret = (ret_t)vgcanvas_path_winding(vg, dir);
+  vgcanvas_fill_mode_t fill_mode = (vgcanvas_fill_mode_t)jsvalue_get_int_value(ctx, argv[1]);
+  ret = (ret_t)vgcanvas_set_fill_mode(vg, fill_mode);
 
   jret = jsvalue_create_int(ctx, ret);
   }
@@ -10477,8 +10518,8 @@ ret_t vgcanvas_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_vgcanvas_ellipse, "vgcanvas_ellipse", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_close_path",
                       JS_NewCFunction(ctx, wrap_vgcanvas_close_path, "vgcanvas_close_path", 1));
-  JS_SetPropertyStr(ctx, global_obj, "vgcanvas_path_winding",
-                      JS_NewCFunction(ctx, wrap_vgcanvas_path_winding, "vgcanvas_path_winding", 1));
+  JS_SetPropertyStr(ctx, global_obj, "vgcanvas_set_fill_mode",
+                      JS_NewCFunction(ctx, wrap_vgcanvas_set_fill_mode, "vgcanvas_set_fill_mode", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_rotate",
                       JS_NewCFunction(ctx, wrap_vgcanvas_rotate, "vgcanvas_rotate", 1));
   JS_SetPropertyStr(ctx, global_obj, "vgcanvas_scale",
@@ -19938,6 +19979,47 @@ ret_t object_prop_t_init(JSContext *ctx) {
  return RET_OK;
 }
 
+jsvalue_t get_OBJECT_LIFE_NONE(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, OBJECT_LIFE_NONE);
+}
+
+jsvalue_t get_OBJECT_LIFE_OWN(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, OBJECT_LIFE_OWN);
+}
+
+jsvalue_t get_OBJECT_LIFE_HOLD(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, OBJECT_LIFE_HOLD);
+}
+
+ret_t object_life_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "OBJECT_LIFE_NONE",
+                      JS_NewCFunction(ctx, get_OBJECT_LIFE_NONE, "OBJECT_LIFE_NONE", 1));
+  JS_SetPropertyStr(ctx, global_obj, "OBJECT_LIFE_OWN",
+                      JS_NewCFunction(ctx, get_OBJECT_LIFE_OWN, "OBJECT_LIFE_OWN", 1));
+  JS_SetPropertyStr(ctx, global_obj, "OBJECT_LIFE_HOLD",
+                      JS_NewCFunction(ctx, get_OBJECT_LIFE_HOLD, "OBJECT_LIFE_HOLD", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
 jsvalue_t wrap_rlog_create(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -28807,6 +28889,23 @@ jsvalue_t wrap_scroll_view_set_virtual_h(
   return jret;
 }
 
+jsvalue_t wrap_scroll_view_fix_offset(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  ret = (ret_t)scroll_view_fix_offset(widget);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_scroll_view_set_xslidable(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -29177,6 +29276,8 @@ ret_t scroll_view_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_scroll_view_set_virtual_w, "scroll_view_set_virtual_w", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_virtual_h",
                       JS_NewCFunction(ctx, wrap_scroll_view_set_virtual_h, "scroll_view_set_virtual_h", 1));
+  JS_SetPropertyStr(ctx, global_obj, "scroll_view_fix_offset",
+                      JS_NewCFunction(ctx, wrap_scroll_view_fix_offset, "scroll_view_fix_offset", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_xslidable",
                       JS_NewCFunction(ctx, wrap_scroll_view_set_xslidable, "scroll_view_set_xslidable", 1));
   JS_SetPropertyStr(ctx, global_obj, "scroll_view_set_yslidable",
@@ -39661,6 +39762,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   app_type_t_init(ctx);
   bitmap_format_t_init(ctx);
   bitmap_flag_t_init(ctx);
+  vgcanvas_fill_mode_t_init(ctx);
   vgcanvas_t_init(ctx);
   vgcanvas_line_cap_t_init(ctx);
   vgcanvas_line_join_t_init(ctx);
@@ -39684,6 +39786,7 @@ ret_t awtk_js_init(JSContext *ctx) {
   MIME_TYPE_init(ctx);
   object_cmd_t_init(ctx);
   object_prop_t_init(ctx);
+  object_life_t_init(ctx);
   rlog_t_init(ctx);
   time_now_t_init(ctx);
   timer_manager_t_init(ctx);

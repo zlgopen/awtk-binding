@@ -18,7 +18,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10469](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10469)
+[awtk.ts:10500](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10500)
 
 ***
 
@@ -30,7 +30,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10241](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10241)
+[awtk.ts:10272](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10272)
 
 ***
 
@@ -42,7 +42,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10373](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10373)
+[awtk.ts:10404](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10404)
 
 ***
 
@@ -54,7 +54,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10499](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10499)
+[awtk.ts:10530](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10530)
 
 ***
 
@@ -66,7 +66,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10379](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10379)
+[awtk.ts:10410](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10410)
 
 ***
 
@@ -78,7 +78,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10277](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10277)
+[awtk.ts:10308](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10308)
 
 ***
 
@@ -90,7 +90,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10457](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10457)
+[awtk.ts:10488](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10488)
 
 ***
 
@@ -102,7 +102,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10445](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10445)
+[awtk.ts:10476](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10476)
 
 ***
 
@@ -114,7 +114,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10439](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10439)
+[awtk.ts:10470](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10470)
 
 ***
 
@@ -126,7 +126,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10451](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10451)
+[awtk.ts:10482](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10482)
 
 ***
 
@@ -138,7 +138,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10493](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10493)
+[awtk.ts:10524](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10524)
 
 ***
 
@@ -150,7 +150,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10319](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10319)
+[awtk.ts:10350](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10350)
 
 ***
 
@@ -162,7 +162,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10325](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10325)
+[awtk.ts:10356](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10356)
 
 ***
 
@@ -174,7 +174,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10193](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10193)
+[awtk.ts:10224](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10224)
 
 ***
 
@@ -186,7 +186,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10295](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10295)
+[awtk.ts:10326](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10326)
 
 ***
 
@@ -198,7 +198,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10289](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10289)
+[awtk.ts:10320](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10320)
 
 ***
 
@@ -210,7 +210,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10229](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10229)
+[awtk.ts:10260](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10260)
 
 ***
 
@@ -222,7 +222,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10391](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10391)
+[awtk.ts:10422](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10422)
 
 ***
 
@@ -234,7 +234,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10259](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10259)
+[awtk.ts:10290](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10290)
 
 ***
 
@@ -246,7 +246,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10475](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10475)
+[awtk.ts:10506](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10506)
 
 ***
 
@@ -258,7 +258,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10481](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10481)
+[awtk.ts:10512](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10512)
 
 ***
 
@@ -270,7 +270,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10271](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10271)
+[awtk.ts:10302](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10302)
 
 ***
 
@@ -282,7 +282,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10253](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10253)
+[awtk.ts:10284](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10284)
 
 ***
 
@@ -294,7 +294,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10247](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10247)
+[awtk.ts:10278](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10278)
 
 ***
 
@@ -306,7 +306,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10223](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10223)
+[awtk.ts:10254](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10254)
 
 ***
 
@@ -318,7 +318,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10235](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10235)
+[awtk.ts:10266](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10266)
 
 ***
 
@@ -330,7 +330,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10433](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10433)
+[awtk.ts:10464](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10464)
 
 ***
 
@@ -342,7 +342,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10421](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10421)
+[awtk.ts:10452](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10452)
 
 ***
 
@@ -354,7 +354,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10427](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10427)
+[awtk.ts:10458](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10458)
 
 ***
 
@@ -366,7 +366,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10163](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10163)
+[awtk.ts:10194](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10194)
 
 ***
 
@@ -378,7 +378,7 @@ AppBar控件。
 
 #### Defined in
 
-[awtk.ts:10175](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10175)
+[awtk.ts:10206](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10206)
 
 ***
 
@@ -390,7 +390,7 @@ overlay窗口。
 
 #### Defined in
 
-[awtk.ts:10181](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10181)
+[awtk.ts:10212](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10212)
 
 ***
 
@@ -402,7 +402,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10313](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10313)
+[awtk.ts:10344](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10344)
 
 ***
 
@@ -414,7 +414,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10349](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10349)
+[awtk.ts:10380](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10380)
 
 ***
 
@@ -426,7 +426,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10199](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10199)
+[awtk.ts:10230](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10230)
 
 ***
 
@@ -438,7 +438,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10265](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10265)
+[awtk.ts:10296](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10296)
 
 ***
 
@@ -450,7 +450,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10283](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10283)
+[awtk.ts:10314](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10314)
 
 ***
 
@@ -462,7 +462,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10463](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10463)
+[awtk.ts:10494](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10494)
 
 ***
 
@@ -474,7 +474,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10487](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10487)
+[awtk.ts:10518](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10518)
 
 ***
 
@@ -486,7 +486,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10397](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10397)
+[awtk.ts:10428](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10428)
 
 ***
 
@@ -498,7 +498,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10403](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10403)
+[awtk.ts:10434](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10434)
 
 ***
 
@@ -510,7 +510,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10409](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10409)
+[awtk.ts:10440](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10440)
 
 ***
 
@@ -522,7 +522,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10415](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10415)
+[awtk.ts:10446](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10446)
 
 ***
 
@@ -534,7 +534,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10301](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10301)
+[awtk.ts:10332](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10332)
 
 ***
 
@@ -546,7 +546,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10337](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10337)
+[awtk.ts:10368](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10368)
 
 ***
 
@@ -558,7 +558,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10343](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10343)
+[awtk.ts:10374](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10374)
 
 ***
 
@@ -570,7 +570,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10331](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10331)
+[awtk.ts:10362](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10362)
 
 ***
 
@@ -582,7 +582,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10385](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10385)
+[awtk.ts:10416](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10416)
 
 ***
 
@@ -594,7 +594,7 @@ page控件。
 
 #### Defined in
 
-[awtk.ts:10217](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10217)
+[awtk.ts:10248](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10248)
 
 ***
 
@@ -606,7 +606,7 @@ system bar window
 
 #### Defined in
 
-[awtk.ts:10205](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10205)
+[awtk.ts:10236](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10236)
 
 ***
 
@@ -618,7 +618,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10211](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10211)
+[awtk.ts:10242](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10242)
 
 ***
 
@@ -630,7 +630,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10355](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10355)
+[awtk.ts:10386](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10386)
 
 ***
 
@@ -642,7 +642,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10367](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10367)
+[awtk.ts:10398](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10398)
 
 ***
 
@@ -654,7 +654,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10361](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10361)
+[awtk.ts:10392](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10392)
 
 ***
 
@@ -666,7 +666,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10187](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10187)
+[awtk.ts:10218](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10218)
 
 ***
 
@@ -678,7 +678,7 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10307](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10307)
+[awtk.ts:10338](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10338)
 
 ***
 
@@ -690,4 +690,4 @@ system bar window ato bottom
 
 #### Defined in
 
-[awtk.ts:10169](https://github.com/zlgopen/awtk-binding/blob/1e0945ae06a2e3b3a4ad0ffa625288088a8ac5d4/tools/code_gen/js/output/awtk.ts#L10169)
+[awtk.ts:10200](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L10200)

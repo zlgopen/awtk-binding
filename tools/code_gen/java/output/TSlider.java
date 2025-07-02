@@ -271,7 +271,7 @@ public class TSlider extends TWidget {
 
 
   /**
-   * 拖动临界值。
+   * 进入拖动状态的拖动临界值。
    *
    */
  public int getDragThreshold() {

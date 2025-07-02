@@ -173,6 +173,7 @@ public class TLabel extends TWidget {
   /**
    * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
+   *> 和换行是冲突的，换行后，该属性不生效
    *
    */
  public int getLength() {

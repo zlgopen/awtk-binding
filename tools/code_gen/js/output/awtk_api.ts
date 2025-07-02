@@ -1302,6 +1302,12 @@ const BITMAP_FLAG_LCD_ORIENTATION = Module.cwrap("get_BITMAP_FLAG_LCD_ORIENTATIO
     "number", []);
 const BITMAP_FLAG_GPU_FBO_TEXTURE = Module.cwrap("get_BITMAP_FLAG_GPU_FBO_TEXTURE", 
     "number", []);
+const VGCANVAS_FILL_MODE_ALL_FILL = Module.cwrap("get_VGCANVAS_FILL_MODE_ALL_FILL", 
+    "number", []);
+const VGCANVAS_FILL_MODE_NON_ZERO = Module.cwrap("get_VGCANVAS_FILL_MODE_NON_ZERO", 
+    "number", []);
+const VGCANVAS_FILL_MODE_EVEN_ODD = Module.cwrap("get_VGCANVAS_FILL_MODE_EVEN_ODD", 
+    "number", []);
 const vgcanvas_cast = Module.cwrap("vgcanvas_cast", 
     "number", ["number"]);
 const vgcanvas_flush = Module.cwrap("vgcanvas_flush", 
@@ -1330,7 +1336,7 @@ const vgcanvas_ellipse = Module.cwrap("vgcanvas_ellipse",
     "number", ["number","number","number","number","number"]);
 const vgcanvas_close_path = Module.cwrap("vgcanvas_close_path", 
     "number", ["number"]);
-const vgcanvas_path_winding = Module.cwrap("vgcanvas_path_winding", 
+const vgcanvas_set_fill_mode = Module.cwrap("vgcanvas_set_fill_mode", 
     "number", ["number","number"]);
 const vgcanvas_rotate = Module.cwrap("vgcanvas_rotate", 
     "number", ["number","number"]);
@@ -2774,6 +2780,12 @@ const TK_OBJECT_PROP_CHECKED = Module.cwrap("get_TK_OBJECT_PROP_CHECKED",
     "string", []);
 const TK_OBJECT_PROP_SELECTED_INDEX = Module.cwrap("get_TK_OBJECT_PROP_SELECTED_INDEX", 
     "string", []);
+const TK_OBJECT_LIFE_NONE = Module.cwrap("get_TK_OBJECT_LIFE_NONE", 
+    "number", []);
+const TK_OBJECT_LIFE_OWN = Module.cwrap("get_TK_OBJECT_LIFE_OWN", 
+    "number", []);
+const TK_OBJECT_LIFE_HOLD = Module.cwrap("get_TK_OBJECT_LIFE_HOLD", 
+    "number", []);
 const rlog_create = Module.cwrap("rlog_create", 
     "number", ["string","number","number"]);
 const rlog_write = Module.cwrap("rlog_write", 
@@ -3760,6 +3772,8 @@ const scroll_view_set_virtual_w = Module.cwrap("scroll_view_set_virtual_w",
     "number", ["number","number"]);
 const scroll_view_set_virtual_h = Module.cwrap("scroll_view_set_virtual_h", 
     "number", ["number","number"]);
+const scroll_view_fix_offset = Module.cwrap("scroll_view_fix_offset", 
+    "number", ["number"]);
 const scroll_view_set_xslidable = Module.cwrap("scroll_view_set_xslidable", 
     "number", ["number","number"]);
 const scroll_view_set_yslidable = Module.cwrap("scroll_view_set_yslidable", 
@@ -10542,6 +10556,32 @@ export enum TBitmapFlag {
 
 
 /**
+ * 填充规则。
+ *
+ */
+export enum TVgcanvasFillMode {
+
+  /**
+   * 全部填充。（部分vg渲染引擎可能不支持，会退化为非零规则填充）
+   *
+   */
+ ALL_FILL = VGCANVAS_FILL_MODE_ALL_FILL(),
+
+  /**
+   * 非零规则填充。
+   *
+   */
+ NON_ZERO = VGCANVAS_FILL_MODE_NON_ZERO(),
+
+  /**
+   * 奇偶规则填充。
+   *
+   */
+ EVEN_ODD = VGCANVAS_FILL_MODE_EVEN_ODD(),
+};
+
+
+/**
  * 矢量图画布抽象基类。
  *
  *具体实现时可以使用agg，nanovg, cairo和skia等方式。
@@ -10770,16 +10810,14 @@ export class TVgcanvas {
 
 
   /**
-   * 设置路径填充实心与否。
-   *
-   *>设置为FALSE为实心，TRUE为镂空。
+   * 设置填充规则。
    * 
-   * @param dir 填充方法。
+   * @param fill_mode 填充规则。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- pathWinding(dir : boolean) : TRet  {
-    return vgcanvas_path_winding(this != null ? (this.nativeObj || this) : null, dir);
+ setFillMode(fill_mode : TVgcanvasFillMode) : TRet  {
+    return vgcanvas_set_fill_mode(this != null ? (this.nativeObj || this) : null, fill_mode);
  }
 
 
@@ -17091,6 +17129,32 @@ export enum TObjectProp {
    *
    */
  TK_SELECTED_INDEX = TK_OBJECT_PROP_SELECTED_INDEX(),
+};
+
+
+/**
+ * 对象生命周期的定义。如果需要保存对象的实例，如何决定对象的生命周期。
+ *
+ */
+export enum TTkObjectLife {
+
+  /**
+   * 不关心对象的生命周期(假设对象的生命周期长于当前的上下文)。
+   *
+   */
+ NONE = TK_OBJECT_LIFE_NONE(),
+
+  /**
+   * 拥有对象的生命周期。当前上下文开始时，*不会* 增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。
+   *
+   */
+ OWN = TK_OBJECT_LIFE_OWN(),
+
+  /**
+   * 持有对象的生命周期。当前上下文开始时，增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。
+   *
+   */
+ HOLD = TK_OBJECT_LIFE_HOLD(),
 };
 
 
@@ -23881,6 +23945,17 @@ export class TScrollView extends TWidget {
 
 
   /**
+   * 修复偏移量。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fixOffset() : TRet  {
+    return scroll_view_fix_offset(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置是否允许x方向滑动。
    * 
    * @param xslidable 是否允许滑动。
@@ -28995,6 +29070,7 @@ export class TLabel extends TWidget {
   /**
    * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
+   *> 和换行是冲突的，换行后，该属性不生效
    *
    */
  get length() : number {
@@ -29771,7 +29847,7 @@ export class TSlider extends TWidget {
 
 
   /**
-   * 拖动临界值。
+   * 进入拖动状态的拖动临界值。
    *
    */
  get dragThreshold() : number {

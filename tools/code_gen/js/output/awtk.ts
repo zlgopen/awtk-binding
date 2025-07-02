@@ -643,6 +643,9 @@ declare function BITMAP_FLAG_CHANGED():any;
 declare function BITMAP_FLAG_PREMULTI_ALPHA():any;
 declare function BITMAP_FLAG_LCD_ORIENTATION():any;
 declare function BITMAP_FLAG_GPU_FBO_TEXTURE():any;
+declare function VGCANVAS_FILL_MODE_ALL_FILL():any;
+declare function VGCANVAS_FILL_MODE_NON_ZERO():any;
+declare function VGCANVAS_FILL_MODE_EVEN_ODD():any;
 declare function vgcanvas_cast(vg : any) : any;
 declare function vgcanvas_flush(vg : any) : TRet;
 declare function vgcanvas_begin_path(vg : any) : TRet;
@@ -657,7 +660,7 @@ declare function vgcanvas_rect(vg : any, x : number, y : number, w : number, h :
 declare function vgcanvas_rounded_rect(vg : any, x : number, y : number, w : number, h : number, r : number) : TRet;
 declare function vgcanvas_ellipse(vg : any, x : number, y : number, rx : number, ry : number) : TRet;
 declare function vgcanvas_close_path(vg : any) : TRet;
-declare function vgcanvas_path_winding(vg : any, dir : boolean) : TRet;
+declare function vgcanvas_set_fill_mode(vg : any, fill_mode : TVgcanvasFillMode) : TRet;
 declare function vgcanvas_rotate(vg : any, rad : number) : TRet;
 declare function vgcanvas_scale(vg : any, x : number, y : number) : TRet;
 declare function vgcanvas_translate(vg : any, x : number, y : number) : TRet;
@@ -1379,6 +1382,9 @@ declare function OBJECT_CMD_EDIT():any;
 declare function OBJECT_PROP_SIZE():any;
 declare function OBJECT_PROP_CHECKED():any;
 declare function OBJECT_PROP_SELECTED_INDEX():any;
+declare function OBJECT_LIFE_NONE():any;
+declare function OBJECT_LIFE_OWN():any;
+declare function OBJECT_LIFE_HOLD():any;
 declare function rlog_create(filename_pattern : string, max_size : number, buff_size : number) : any;
 declare function rlog_write(log : any, str : string) : TRet;
 declare function time_now_s() : number;
@@ -1872,6 +1878,7 @@ declare function scroll_view_create(parent : any, x : number, y : number, w : nu
 declare function scroll_view_cast(widget : any) : any;
 declare function scroll_view_set_virtual_w(widget : any, w : number) : TRet;
 declare function scroll_view_set_virtual_h(widget : any, h : number) : TRet;
+declare function scroll_view_fix_offset(widget : any) : TRet;
 declare function scroll_view_set_xslidable(widget : any, xslidable : boolean) : TRet;
 declare function scroll_view_set_yslidable(widget : any, yslidable : boolean) : TRet;
 declare function scroll_view_set_snap_to_page(widget : any, snap_to_page : boolean) : TRet;
@@ -8098,6 +8105,32 @@ export enum TBitmapFlag {
 
 
 /**
+ * 填充规则。
+ *
+ */
+export enum TVgcanvasFillMode {
+
+  /**
+   * 全部填充。（部分vg渲染引擎可能不支持，会退化为非零规则填充）
+   *
+   */
+ ALL_FILL = VGCANVAS_FILL_MODE_ALL_FILL(),
+
+  /**
+   * 非零规则填充。
+   *
+   */
+ NON_ZERO = VGCANVAS_FILL_MODE_NON_ZERO(),
+
+  /**
+   * 奇偶规则填充。
+   *
+   */
+ EVEN_ODD = VGCANVAS_FILL_MODE_EVEN_ODD(),
+};
+
+
+/**
  * 矢量图画布抽象基类。
  *
  *具体实现时可以使用agg，nanovg, cairo和skia等方式。
@@ -8326,16 +8359,14 @@ export class TVgcanvas {
 
 
   /**
-   * 设置路径填充实心与否。
-   *
-   *>设置为FALSE为实心，TRUE为镂空。
+   * 设置填充规则。
    * 
-   * @param dir 填充方法。
+   * @param fill_mode 填充规则。
    *
    * @returns 返回RET_OK表示成功，否则表示失败。
    */
- pathWinding(dir : boolean) : TRet  {
-    return vgcanvas_path_winding(this != null ? (this.nativeObj || this) : null, dir);
+ setFillMode(fill_mode : TVgcanvasFillMode) : TRet  {
+    return vgcanvas_set_fill_mode(this != null ? (this.nativeObj || this) : null, fill_mode);
  }
 
 
@@ -14646,6 +14677,32 @@ export enum TObjectProp {
    *
    */
  SELECTED_INDEX = OBJECT_PROP_SELECTED_INDEX(),
+};
+
+
+/**
+ * 对象生命周期的定义。如果需要保存对象的实例，如何决定对象的生命周期。
+ *
+ */
+export enum TObjectLife {
+
+  /**
+   * 不关心对象的生命周期(假设对象的生命周期长于当前的上下文)。
+   *
+   */
+ NONE = OBJECT_LIFE_NONE(),
+
+  /**
+   * 拥有对象的生命周期。当前上下文开始时，*不会* 增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。
+   *
+   */
+ OWN = OBJECT_LIFE_OWN(),
+
+  /**
+   * 持有对象的生命周期。当前上下文开始时，增加对象的引用计数。当前上下文结束时，自动减少(unref)对象引用计数。
+   *
+   */
+ HOLD = OBJECT_LIFE_HOLD(),
 };
 
 
@@ -21436,6 +21493,17 @@ export class TScrollView extends TWidget {
 
 
   /**
+   * 修复偏移量。
+   * 
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fixOffset() : TRet  {
+    return scroll_view_fix_offset(this != null ? (this.nativeObj || this) : null);
+ }
+
+
+  /**
    * 设置是否允许x方向滑动。
    * 
    * @param xslidable 是否允许滑动。
@@ -26550,6 +26618,7 @@ export class TLabel extends TWidget {
   /**
    * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
+   *> 和换行是冲突的，换行后，该属性不生效
    *
    */
  get length() : number {
@@ -27326,7 +27395,7 @@ export class TSlider extends TWidget {
 
 
   /**
-   * 拖动临界值。
+   * 进入拖动状态的拖动临界值。
    *
    */
  get dragThreshold() : number {

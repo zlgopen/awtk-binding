@@ -1,0 +1,6 @@
+type TObjectLife int
+const (
+  OBJECT_LIFE_NONE TObjectLife = C.OBJECT_LIFE_NONE
+  OBJECT_LIFE_OWN TObjectLife = C.OBJECT_LIFE_OWN
+  OBJECT_LIFE_HOLD TObjectLife = C.OBJECT_LIFE_HOLD
+)

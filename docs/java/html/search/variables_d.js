@@ -20,5 +20,6 @@ var searchData=
   ['over_5fof_5factive_17',['OVER_OF_ACTIVE',['../enumawtk_1_1_t_widget_state.html#a04cc60e5d2a866b921d1c2ad5fd0f728',1,'awtk::TWidgetState']]],
   ['over_5fof_5fchecked_18',['OVER_OF_CHECKED',['../enumawtk_1_1_t_widget_state.html#ab432643f28592d89e34ae112a487be0f',1,'awtk::TWidgetState']]],
   ['over_5fof_5findeterminate_19',['OVER_OF_INDETERMINATE',['../enumawtk_1_1_t_widget_state.html#af841e8260699721da71eadbb0ed4b733',1,'awtk::TWidgetState']]],
-  ['overlay_20',['OVERLAY',['../enumawtk_1_1_t_widget_type.html#a3c79fe854b003616890436c5c28f07b0',1,'awtk::TWidgetType']]]
+  ['overlay_20',['OVERLAY',['../enumawtk_1_1_t_widget_type.html#a3c79fe854b003616890436c5c28f07b0',1,'awtk::TWidgetType']]],
+  ['own_21',['OWN',['../enumawtk_1_1_t_object_life.html#ad3585971b13f2ff52ded5f254fd5fc7b',1,'awtk::TObjectLife']]]
 ];

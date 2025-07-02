@@ -255,16 +255,14 @@ public class TVgcanvas {
 
 
   /**
-   * 设置路径填充实心与否。
-   *
-   *>设置为FALSE为实心，TRUE为镂空。
+   * 设置填充规则。
    * 
-   * @param dir 填充方法。
+   * @param fill_mode 填充规则。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
- public  TRet pathWinding(boolean dir)  {
-   return TRet.from(vgcanvas_path_winding(this != null ? (this.nativeObj) : 0, dir));
+ public  TRet setFillMode(TVgcanvasFillMode fill_mode)  {
+   return TRet.from(vgcanvas_set_fill_mode(this != null ? (this.nativeObj) : 0, fill_mode.value()));
  }
 
 
@@ -871,7 +869,7 @@ static private native int vgcanvas_rect(long vg, double x, double y, double w, d
 static private native int vgcanvas_rounded_rect(long vg, double x, double y, double w, double h, double r);
 static private native int vgcanvas_ellipse(long vg, double x, double y, double rx, double ry);
 static private native int vgcanvas_close_path(long vg);
-static private native int vgcanvas_path_winding(long vg, boolean dir);
+static private native int vgcanvas_set_fill_mode(long vg, int fill_mode);
 static private native int vgcanvas_rotate(long vg, double rad);
 static private native int vgcanvas_scale(long vg, double x, double y);
 static private native int vgcanvas_translate(long vg, double x, double y);
