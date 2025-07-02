@@ -339,6 +339,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a771127fd9cbcbd02e645bb23d7885b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4573cc0284fa48def8aea2965414249" id="r_ae4573cc0284fa48def8aea2965414249"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4573cc0284fa48def8aea2965414249">GetPropStr</a> (const char *name, const char *defval)</td></tr>
 <tr class="separator:ae4573cc0284fa48def8aea2965414249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa203e8b6c842c6c9aad2f799d9c3bba2" id="r_aa203e8b6c842c6c9aad2f799d9c3bba2"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa203e8b6c842c6c9aad2f799d9c3bba2">SetPropPointer</a> (const char *name, void *v)</td></tr>
+<tr class="separator:aa203e8b6c842c6c9aad2f799d9c3bba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8384fce88c9cd2dca37ea5ca035203b8" id="r_a8384fce88c9cd2dca37ea5ca035203b8"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8384fce88c9cd2dca37ea5ca035203b8">GetPropPointer</a> (const char *name)</td></tr>
 <tr class="separator:a8384fce88c9cd2dca37ea5ca035203b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbc63a7223d76460c19ff2c751a88be5" id="r_afbc63a7223d76460c19ff2c751a88be5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbc63a7223d76460c19ff2c751a88be5">SetPropFloat</a> (const char *name, float_t v)</td></tr>
@@ -3581,6 +3583,36 @@ widget_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
       </table>
 </div><div class="memdoc">
 <p>设置整数格式的属性。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>属性的名称。 </td></tr>
+    <tr><td class="paramname">v</td><td>属性的值。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="aa203e8b6c842c6c9aad2f799d9c3bba2" name="aa203e8b6c842c6c9aad2f799d9c3bba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa203e8b6c842c6c9aad2f799d9c3bba2">&#9670;&#160;</a></span>SetPropPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TWidget::SetPropPointer </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置指针格式的属性。</p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>属性的名称。 </td></tr>

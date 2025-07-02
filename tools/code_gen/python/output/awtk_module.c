@@ -8059,6 +8059,21 @@ pyobject_t wrap_widget_get_prop_str(pyobject_t self, pyobject_t pyargs) {
   return Py_BuildValue("s", ret);
 }
 
+pyobject_t wrap_widget_set_prop_pointer(pyobject_t self, pyobject_t pyargs) {
+  ret_t ret = 0;
+  widget_t* widget = NULL;
+  const char* name = NULL;
+  void* v = NULL;
+
+  if (!PyArg_ParseTuple(pyargs, "O&sO&" , &__parse_voidp, &widget, &name, &__parse_voidp, &v)) {
+    PyErr_SetString(PyExc_TypeError, "invalid arguments");
+    return NULL;
+  }
+
+  ret = (ret_t)widget_set_prop_pointer(widget, name, v);
+  return Py_BuildValue("i", ret);
+}
+
 pyobject_t wrap_widget_get_prop_pointer(pyobject_t self, pyobject_t pyargs) {
   void* ret = NULL;
   widget_t* widget = NULL;
@@ -24596,6 +24611,7 @@ static PyMethodDef awtk_methods[] = {
 {"widget_set_props", wrap_widget_set_props, METH_VARARGS, "widget_set_props"},
 {"widget_set_prop_str", wrap_widget_set_prop_str, METH_VARARGS, "widget_set_prop_str"},
 {"widget_get_prop_str", wrap_widget_get_prop_str, METH_VARARGS, "widget_get_prop_str"},
+{"widget_set_prop_pointer", wrap_widget_set_prop_pointer, METH_VARARGS, "widget_set_prop_pointer"},
 {"widget_get_prop_pointer", wrap_widget_get_prop_pointer, METH_VARARGS, "widget_get_prop_pointer"},
 {"widget_set_prop_float", wrap_widget_set_prop_float, METH_VARARGS, "widget_set_prop_float"},
 {"widget_get_prop_float", wrap_widget_get_prop_float, METH_VARARGS, "widget_get_prop_float"},

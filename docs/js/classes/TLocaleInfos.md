@@ -45,7 +45,7 @@
 
 #### Defined in
 
-[awtk.ts:7257](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7257)
+[awtk.ts:7258](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7258)
 
 ***
 
@@ -69,7 +69,7 @@ locale_infos_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7283](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7283)
+[awtk.ts:7284](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7284)
 
 ***
 
@@ -101,7 +101,7 @@ locale_infos_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7271](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7271)
+[awtk.ts:7272](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7272)
 
 ***
 
@@ -125,7 +125,7 @@ locale_infos_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7232](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7232)
+[awtk.ts:7233](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7233)
 
 ***
 
@@ -143,7 +143,7 @@ locale_infos_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7294](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7294)
+[awtk.ts:7295](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7295)
 
 ***
 
@@ -167,4 +167,4 @@ locale_info对象。
 
 #### Defined in
 
-[awtk.ts:7244](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7244)
+[awtk.ts:7245](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7245)

@@ -54,7 +54,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7815](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7815)
+[awtk.ts:7816](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7816)
 
 ***
 
@@ -82,7 +82,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7876](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7876)
+[awtk.ts:7877](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7877)
 
 ***
 
@@ -106,7 +106,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7827](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7827)
+[awtk.ts:7828](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7828)
 
 ***
 
@@ -130,7 +130,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7839](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7839)
+[awtk.ts:7840](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7840)
 
 ***
 
@@ -154,7 +154,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7863](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7863)
+[awtk.ts:7864](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7864)
 
 ***
 
@@ -178,4 +178,4 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7851](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7851)
+[awtk.ts:7852](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7852)

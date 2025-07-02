@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[awtk.ts:13253](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13253)
+[awtk.ts:13267](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13267)
 
 ## Properties
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[awtk.ts:13252](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13252)
+[awtk.ts:13266](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13266)
 
 ## Accessors
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[awtk.ts:13325](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13325)
+[awtk.ts:13339](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13339)
 
 ***
 
@@ -67,7 +67,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13344](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13344)
+[awtk.ts:13358](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13358)
 
 ***
 
@@ -83,7 +83,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13334](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13334)
+[awtk.ts:13348](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13348)
 
 ***
 
@@ -99,7 +99,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13316](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13316)
+[awtk.ts:13330](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13330)
 
 ***
 
@@ -115,7 +115,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13307](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13307)
+[awtk.ts:13321](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13321)
 
 ## Methods
 
@@ -133,7 +133,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13275](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13275)
+[awtk.ts:13289](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13289)
 
 ***
 
@@ -151,7 +151,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13264](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13264)
+[awtk.ts:13278](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13278)
 
 ***
 
@@ -169,7 +169,7 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13286](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13286)
+[awtk.ts:13300](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13300)
 
 ***
 
@@ -193,4 +193,4 @@ is\_in\_rom == FALSE时才有效。
 
 #### Defined in
 
-[awtk.ts:13298](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L13298)
+[awtk.ts:13312](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13312)

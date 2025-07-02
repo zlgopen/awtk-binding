@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[awtk.ts:29255](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29255)
+[awtk.ts:29269](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29269)
 
 ## Properties
 
@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[awtk.ts:29254](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29254)
+[awtk.ts:29268](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29268)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ idle回调函数上下文。
 
 #### Defined in
 
-[awtk.ts:29276](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29276)
+[awtk.ts:29290](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29290)
 
 ***
 
@@ -78,7 +78,7 @@ idle回调函数上下文。
 
 #### Defined in
 
-[awtk.ts:29285](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29285)
+[awtk.ts:29299](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29299)
 
 ***
 
@@ -96,7 +96,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:29296](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29296)
+[awtk.ts:29310](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29310)
 
 ***
 
@@ -122,7 +122,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3684](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3684)
+[awtk.ts:3685](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3685)
 
 ***
 
@@ -142,7 +142,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3675](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3675)
+[awtk.ts:3676](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3676)
 
 ## Methods
 
@@ -174,7 +174,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3230](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3230)
+[awtk.ts:3231](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3231)
 
 ***
 
@@ -206,7 +206,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3434](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3434)
+[awtk.ts:3435](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3435)
 
 ***
 
@@ -228,7 +228,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3666](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3666)
+[awtk.ts:3667](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3667)
 
 ***
 
@@ -256,7 +256,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2962](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2962)
+[awtk.ts:2963](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2963)
 
 ***
 
@@ -288,7 +288,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3179](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3179)
+[awtk.ts:3180](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3180)
 
 ***
 
@@ -320,7 +320,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3192](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3192)
+[awtk.ts:3193](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3193)
 
 ***
 
@@ -342,7 +342,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2544](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2544)
+[awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2545)
 
 ***
 
@@ -366,7 +366,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2533](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2533)
+[awtk.ts:2534](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2534)
 
 ***
 
@@ -395,7 +395,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2469](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2469)
+[awtk.ts:2470](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2470)
 
 ***
 
@@ -423,7 +423,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2483](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2483)
+[awtk.ts:2484](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2484)
 
 ***
 
@@ -445,7 +445,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2520)
+[awtk.ts:2521](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2521)
 
 ***
 
@@ -477,7 +477,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3217](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3217)
+[awtk.ts:3218](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3218)
 
 ***
 
@@ -509,7 +509,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3243](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3243)
+[awtk.ts:3244](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3244)
 
 ***
 
@@ -541,7 +541,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3447](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3447)
+[awtk.ts:3448](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3448)
 
 ***
 
@@ -563,7 +563,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2916](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2916)
+[awtk.ts:2917](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2917)
 
 ***
 
@@ -595,7 +595,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:2975](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2975)
+[awtk.ts:2976](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2976)
 
 ***
 
@@ -627,7 +627,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3037](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3037)
+[awtk.ts:3038](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3038)
 
 ***
 
@@ -659,7 +659,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3328](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3328)
+[awtk.ts:3329](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3329)
 
 ***
 
@@ -691,7 +691,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3063](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3063)
+[awtk.ts:3064](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3064)
 
 ***
 
@@ -723,7 +723,7 @@ idle的ID
 
 #### Defined in
 
-[awtk.ts:3050](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3050)
+[awtk.ts:3051](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3051)
 
 ***
 
@@ -757,7 +757,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3343](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3343)
+[awtk.ts:3344](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3344)
 
 ***
 
@@ -789,7 +789,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3024](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3024)
+[awtk.ts:3025](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3025)
 
 ***
 
@@ -821,7 +821,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3512](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3512)
+[awtk.ts:3513](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3513)
 
 ***
 
@@ -853,7 +853,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3564](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3564)
+[awtk.ts:3565](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3565)
 
 ***
 
@@ -885,7 +885,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3616](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3616)
+[awtk.ts:3617](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3617)
 
 ***
 
@@ -917,7 +917,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3460](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3460)
+[awtk.ts:3461](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3461)
 
 ***
 
@@ -949,7 +949,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3315](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3315)
+[awtk.ts:3316](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3316)
 
 ***
 
@@ -977,7 +977,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3011](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3011)
+[awtk.ts:3012](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3012)
 
 ***
 
@@ -1005,7 +1005,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3302](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3302)
+[awtk.ts:3303](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3303)
 
 ***
 
@@ -1033,7 +1033,7 @@ e
 
 #### Defined in
 
-[awtk.ts:2999](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2999)
+[awtk.ts:3000](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3000)
 
 ***
 
@@ -1061,7 +1061,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3290](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3290)
+[awtk.ts:3291](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3291)
 
 ***
 
@@ -1089,7 +1089,7 @@ e
 
 #### Defined in
 
-[awtk.ts:2987](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2987)
+[awtk.ts:2988](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2988)
 
 ***
 
@@ -1117,7 +1117,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3278](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3278)
+[awtk.ts:3279](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3279)
 
 ***
 
@@ -1149,7 +1149,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3538](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3538)
+[awtk.ts:3539](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3539)
 
 ***
 
@@ -1181,7 +1181,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3590](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3590)
+[awtk.ts:3591](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3591)
 
 ***
 
@@ -1213,7 +1213,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3642](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3642)
+[awtk.ts:3643](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3643)
 
 ***
 
@@ -1245,7 +1245,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3486](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3486)
+[awtk.ts:3487](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3487)
 
 ***
 
@@ -1267,7 +1267,7 @@ e
 
 #### Defined in
 
-[awtk.ts:2927](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2927)
+[awtk.ts:2928](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2928)
 
 ***
 
@@ -1289,7 +1289,7 @@ e
 
 #### Defined in
 
-[awtk.ts:2905](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2905)
+[awtk.ts:2906](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2906)
 
 ***
 
@@ -1317,7 +1317,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3204](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3204)
+[awtk.ts:3205](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3205)
 
 ***
 
@@ -1345,7 +1345,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3266](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3266)
+[awtk.ts:3267](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3267)
 
 ***
 
@@ -1367,7 +1367,7 @@ e
 
 #### Defined in
 
-[awtk.ts:2938](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2938)
+[awtk.ts:2939](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2939)
 
 ***
 
@@ -1389,7 +1389,7 @@ e
 
 #### Defined in
 
-[awtk.ts:3254](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3254)
+[awtk.ts:3255](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3255)
 
 ***
 
@@ -1417,7 +1417,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2509](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2509)
+[awtk.ts:2510](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2510)
 
 ***
 
@@ -1453,7 +1453,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2497](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2497)
+[awtk.ts:2498](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2498)
 
 ***
 
@@ -1481,7 +1481,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3075](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3075)
+[awtk.ts:3076](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3076)
 
 ***
 
@@ -1509,7 +1509,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2950](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2950)
+[awtk.ts:2951](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2951)
 
 ***
 
@@ -1541,7 +1541,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3088](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3088)
+[awtk.ts:3089](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3089)
 
 ***
 
@@ -1573,7 +1573,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3140](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3140)
+[awtk.ts:3141](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3141)
 
 ***
 
@@ -1605,7 +1605,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3408](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3408)
+[awtk.ts:3409](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3409)
 
 ***
 
@@ -1637,7 +1637,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3356](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3356)
+[awtk.ts:3357](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3357)
 
 ***
 
@@ -1669,7 +1669,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3166](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3166)
+[awtk.ts:3167](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3167)
 
 ***
 
@@ -1701,7 +1701,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3153](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3153)
+[awtk.ts:3154](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3154)
 
 ***
 
@@ -1733,7 +1733,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3421](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3421)
+[awtk.ts:3422](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3422)
 
 ***
 
@@ -1765,7 +1765,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3127](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3127)
+[awtk.ts:3128](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3128)
 
 ***
 
@@ -1797,7 +1797,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3525](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3525)
+[awtk.ts:3526](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3526)
 
 ***
 
@@ -1829,7 +1829,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3577](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3577)
+[awtk.ts:3578](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3578)
 
 ***
 
@@ -1861,7 +1861,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3629](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3629)
+[awtk.ts:3630](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3630)
 
 ***
 
@@ -1893,7 +1893,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3473](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3473)
+[awtk.ts:3474](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3474)
 
 ***
 
@@ -1925,7 +1925,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3395](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3395)
+[awtk.ts:3396](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3396)
 
 ***
 
@@ -1957,7 +1957,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3114](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3114)
+[awtk.ts:3115](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3115)
 
 ***
 
@@ -1989,7 +1989,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3382](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3382)
+[awtk.ts:3383](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3383)
 
 ***
 
@@ -2021,7 +2021,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3101](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3101)
+[awtk.ts:3102](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3102)
 
 ***
 
@@ -2053,7 +2053,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3369](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3369)
+[awtk.ts:3370](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3370)
 
 ***
 
@@ -2085,7 +2085,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3551](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3551)
+[awtk.ts:3552](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3552)
 
 ***
 
@@ -2117,7 +2117,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3603](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3603)
+[awtk.ts:3604](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3604)
 
 ***
 
@@ -2149,7 +2149,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3655](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3655)
+[awtk.ts:3656](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3656)
 
 ***
 
@@ -2181,7 +2181,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:3499](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L3499)
+[awtk.ts:3500](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L3500)
 
 ***
 
@@ -2203,7 +2203,7 @@ emitter_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:2882](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2882)
+[awtk.ts:2883](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2883)
 
 ***
 
@@ -2231,7 +2231,7 @@ idle_info对象。
 
 #### Defined in
 
-[awtk.ts:29267](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L29267)
+[awtk.ts:29281](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L29281)
 
 ***
 
@@ -2253,7 +2253,7 @@ idle_info对象。
 
 #### Defined in
 
-[awtk.ts:2456](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2456)
+[awtk.ts:2457](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2457)
 
 ***
 
@@ -2281,4 +2281,4 @@ object对象。
 
 #### Defined in
 
-[awtk.ts:2894](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L2894)
+[awtk.ts:2895](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L2895)

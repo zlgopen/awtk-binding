@@ -32,7 +32,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:15467](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L15467)
+[awtk.ts:15481](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L15481)
 
 ## Properties
 
@@ -46,7 +46,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:15466](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L15466)
+[awtk.ts:15480](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L15480)
 
 ## Accessors
 
@@ -66,7 +66,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5874](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5874)
+[awtk.ts:5875](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5875)
 
 ***
 
@@ -86,7 +86,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5892](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5892)
+[awtk.ts:5893](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5893)
 
 ***
 
@@ -106,7 +106,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5883](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5883)
+[awtk.ts:5884](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5884)
 
 ***
 
@@ -126,7 +126,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5865](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5865)
+[awtk.ts:5866](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5866)
 
 ## Methods
 
@@ -150,7 +150,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5856](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5856)
+[awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5857)
 
 ***
 
@@ -172,7 +172,7 @@ offset变化事件。
 
 #### Defined in
 
-[awtk.ts:5829](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5829)
+[awtk.ts:5830](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5830)
 
 ***
 
@@ -200,7 +200,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:15479](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L15479)
+[awtk.ts:15493](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L15493)
 
 ***
 
@@ -230,7 +230,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5843](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5843)
+[awtk.ts:5844](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5844)
 
 ***
 
@@ -258,7 +258,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5779](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5779)
+[awtk.ts:5780](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5780)
 
 ***
 
@@ -290,7 +290,7 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5792](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5792)
+[awtk.ts:5793](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5793)
 
 ***
 
@@ -318,4 +318,4 @@ event对象。
 
 #### Defined in
 
-[awtk.ts:5804](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5804)
+[awtk.ts:5805](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5805)

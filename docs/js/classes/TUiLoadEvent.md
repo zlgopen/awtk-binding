@@ -32,7 +32,7 @@ UI加载完成事件。
 
 #### Defined in
 
-[awtk.ts:16042](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16042)
+[awtk.ts:16056](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16056)
 
 ## Properties
 
@@ -46,7 +46,7 @@ UI加载完成事件。
 
 #### Defined in
 
-[awtk.ts:16041](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16041)
+[awtk.ts:16055](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16055)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ UI的名称。
 
 #### Defined in
 
-[awtk.ts:16072](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16072)
+[awtk.ts:16086](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16086)
 
 ***
 
@@ -78,7 +78,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:16063](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16063)
+[awtk.ts:16077](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16077)
 
 ***
 
@@ -98,7 +98,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5874](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5874)
+[awtk.ts:5875](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5875)
 
 ***
 
@@ -118,7 +118,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5892](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5892)
+[awtk.ts:5893](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5893)
 
 ***
 
@@ -138,7 +138,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5883](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5883)
+[awtk.ts:5884](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5884)
 
 ***
 
@@ -158,7 +158,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5865](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5865)
+[awtk.ts:5866](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5866)
 
 ## Methods
 
@@ -182,7 +182,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5856](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5856)
+[awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5857)
 
 ***
 
@@ -204,7 +204,7 @@ UI的根控件对象。
 
 #### Defined in
 
-[awtk.ts:5829](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5829)
+[awtk.ts:5830](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5830)
 
 ***
 
@@ -232,7 +232,7 @@ event 对象。
 
 #### Defined in
 
-[awtk.ts:16054](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16054)
+[awtk.ts:16068](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16068)
 
 ***
 
@@ -262,7 +262,7 @@ event 对象。
 
 #### Defined in
 
-[awtk.ts:5843](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5843)
+[awtk.ts:5844](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5844)
 
 ***
 
@@ -290,7 +290,7 @@ event 对象。
 
 #### Defined in
 
-[awtk.ts:5779](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5779)
+[awtk.ts:5780](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5780)
 
 ***
 
@@ -322,7 +322,7 @@ event 对象。
 
 #### Defined in
 
-[awtk.ts:5792](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5792)
+[awtk.ts:5793](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5793)
 
 ***
 
@@ -350,4 +350,4 @@ event 对象。
 
 #### Defined in
 
-[awtk.ts:5804](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L5804)
+[awtk.ts:5805](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L5805)

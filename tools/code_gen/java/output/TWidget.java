@@ -1122,6 +1122,19 @@ public class TWidget {
 
 
   /**
+   * 设置指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPropPointer(String name, long v)  {
+   return TRet.from(widget_set_prop_pointer(this != null ? (this.nativeObj) : 0, name, v));
+ }
+
+
+  /**
    * 获取指针格式的属性。
    * 
    * @param name 属性的名称。
@@ -2001,6 +2014,7 @@ static private native int widget_set_prop(long widget, String name, long v);
 static private native int widget_set_props(long widget, String params);
 static private native int widget_set_prop_str(long widget, String name, String v);
 static private native String widget_get_prop_str(long widget, String name, String defval);
+static private native int widget_set_prop_pointer(long widget, String name, long v);
 static private native long widget_get_prop_pointer(long widget, String name);
 static private native int widget_set_prop_float(long widget, String name, double v);
 static private native double widget_get_prop_float(long widget, String name, double defval);

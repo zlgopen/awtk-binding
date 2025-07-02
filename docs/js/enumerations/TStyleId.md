@@ -18,7 +18,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7483](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7483)
+[awtk.ts:7484](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7484)
 
 ***
 
@@ -30,7 +30,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7309](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7309)
+[awtk.ts:7310](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7310)
 
 ***
 
@@ -42,7 +42,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7411](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7411)
+[awtk.ts:7412](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7412)
 
 ***
 
@@ -54,7 +54,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7417](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7417)
+[awtk.ts:7418](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7418)
 
 ***
 
@@ -66,7 +66,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7405](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7405)
+[awtk.ts:7406](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7406)
 
 ***
 
@@ -78,7 +78,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7393](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7393)
+[awtk.ts:7394](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7394)
 
 ***
 
@@ -90,7 +90,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7399](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7399)
+[awtk.ts:7400](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7400)
 
 ***
 
@@ -102,7 +102,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7549](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7549)
+[awtk.ts:7550](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7550)
 
 ***
 
@@ -114,7 +114,7 @@ Active图标的名称。
 
 #### Defined in
 
-[awtk.ts:7573](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7573)
+[awtk.ts:7574](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7574)
 
 ***
 
@@ -126,7 +126,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7321](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7321)
+[awtk.ts:7322](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7322)
 
 ***
 
@@ -138,7 +138,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7585](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7585)
+[awtk.ts:7586](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7586)
 
 ***
 
@@ -150,7 +150,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7567](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7567)
+[awtk.ts:7568](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7568)
 
 ***
 
@@ -162,7 +162,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7315](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7315)
+[awtk.ts:7316](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7316)
 
 ***
 
@@ -174,7 +174,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7429](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7429)
+[awtk.ts:7430](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7430)
 
 ***
 
@@ -186,7 +186,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7435](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7435)
+[awtk.ts:7436](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7436)
 
 ***
 
@@ -198,7 +198,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7561](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7561)
+[awtk.ts:7562](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7562)
 
 ***
 
@@ -210,7 +210,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7333](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7333)
+[awtk.ts:7334](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7334)
 
 ***
 
@@ -222,7 +222,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7339](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7339)
+[awtk.ts:7340](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7340)
 
 ***
 
@@ -234,7 +234,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7345](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7345)
+[awtk.ts:7346](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7346)
 
 ***
 
@@ -246,7 +246,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7579](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7579)
+[awtk.ts:7580](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7580)
 
 ***
 
@@ -258,7 +258,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7357](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7357)
+[awtk.ts:7358](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7358)
 
 ***
 
@@ -270,7 +270,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7363](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7363)
+[awtk.ts:7364](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7364)
 
 ***
 
@@ -282,7 +282,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7369](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7369)
+[awtk.ts:7370](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7370)
 
 ***
 
@@ -294,7 +294,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7423](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7423)
+[awtk.ts:7424](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7424)
 
 ***
 
@@ -306,7 +306,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7477](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7477)
+[awtk.ts:7478](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7478)
 
 ***
 
@@ -318,7 +318,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7447](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7447)
+[awtk.ts:7448](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7448)
 
 ***
 
@@ -330,7 +330,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7471](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7471)
+[awtk.ts:7472](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7472)
 
 ***
 
@@ -342,7 +342,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7453](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7453)
+[awtk.ts:7454](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7454)
 
 ***
 
@@ -354,7 +354,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7459](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7459)
+[awtk.ts:7460](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7460)
 
 ***
 
@@ -366,7 +366,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7465](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7465)
+[awtk.ts:7466](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7466)
 
 ***
 
@@ -378,7 +378,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7327](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7327)
+[awtk.ts:7328](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7328)
 
 ***
 
@@ -390,7 +390,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7591](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7591)
+[awtk.ts:7592](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7592)
 
 ***
 
@@ -402,7 +402,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7519](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7519)
+[awtk.ts:7520](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7520)
 
 ***
 
@@ -414,7 +414,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7537](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7537)
+[awtk.ts:7538](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7538)
 
 ***
 
@@ -426,7 +426,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7543](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7543)
+[awtk.ts:7544](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7544)
 
 ***
 
@@ -438,7 +438,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7525](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7525)
+[awtk.ts:7526](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7526)
 
 ***
 
@@ -450,7 +450,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7531](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7531)
+[awtk.ts:7532](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7532)
 
 ***
 
@@ -462,7 +462,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7501](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7501)
+[awtk.ts:7502](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7502)
 
 ***
 
@@ -474,7 +474,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7507](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7507)
+[awtk.ts:7508](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7508)
 
 ***
 
@@ -486,7 +486,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7513](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7513)
+[awtk.ts:7514](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7514)
 
 ***
 
@@ -498,7 +498,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7555](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7555)
+[awtk.ts:7556](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7556)
 
 ***
 
@@ -510,7 +510,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7441](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7441)
+[awtk.ts:7442](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7442)
 
 ***
 
@@ -522,7 +522,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7381](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7381)
+[awtk.ts:7382](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7382)
 
 ***
 
@@ -534,7 +534,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7387](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7387)
+[awtk.ts:7388](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7388)
 
 ***
 
@@ -546,7 +546,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7351](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7351)
+[awtk.ts:7352](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7352)
 
 ***
 
@@ -558,7 +558,7 @@ dragger颜色。
 
 #### Defined in
 
-[awtk.ts:7375](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7375)
+[awtk.ts:7376](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7376)
 
 ***
 
@@ -570,7 +570,7 @@ X方向的偏移，方便实现按下的效果。
 
 #### Defined in
 
-[awtk.ts:7489](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7489)
+[awtk.ts:7490](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7490)
 
 ***
 
@@ -582,4 +582,4 @@ Y方向的偏移，方便实现按下的效果。
 
 #### Defined in
 
-[awtk.ts:7495](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7495)
+[awtk.ts:7496](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7496)

@@ -12598,6 +12598,23 @@ static void wrap_widget_get_prop_str(const Nan::FunctionCallbackInfo<v8::Value>&
   (void)argc;(void)ctx;
 }
 
+static void wrap_widget_set_prop_pointer(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
+  JSContext* ctx = NULL; 
+  int32_t argc = (int32_t)(argv.Length()); 
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  void* v = (void*)jsvalue_get_pointer(ctx, argv[2], "void*");
+  ret = (ret_t)widget_set_prop_pointer(widget, name, v);
+  jsvalue_free_str(ctx, name);
+
+  v8::Local<v8::Int32> jret= Nan::New((int32_t)(ret));
+  argv.GetReturnValue().Set(jret);
+  }
+  (void)argc;(void)ctx;
+}
+
 static void wrap_widget_get_prop_pointer(const Nan::FunctionCallbackInfo<v8::Value>& argv) {
   JSContext* ctx = NULL; 
   int32_t argc = (int32_t)(argv.Length()); 
@@ -13719,6 +13736,7 @@ ret_t widget_t_init(v8::Local<v8::Object> ctx) {
   Nan::Export(ctx, "widget_set_props", wrap_widget_set_props);
   Nan::Export(ctx, "widget_set_prop_str", wrap_widget_set_prop_str);
   Nan::Export(ctx, "widget_get_prop_str", wrap_widget_get_prop_str);
+  Nan::Export(ctx, "widget_set_prop_pointer", wrap_widget_set_prop_pointer);
   Nan::Export(ctx, "widget_get_prop_pointer", wrap_widget_get_prop_pointer);
   Nan::Export(ctx, "widget_set_prop_float", wrap_widget_set_prop_float);
   Nan::Export(ctx, "widget_get_prop_float", wrap_widget_get_prop_float);

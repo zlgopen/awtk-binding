@@ -34,7 +34,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:16397](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16397)
+[awtk.ts:16411](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16411)
 
 ## Properties
 
@@ -48,7 +48,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:16396](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16396)
+[awtk.ts:16410](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16410)
 
 ## Accessors
 
@@ -70,7 +70,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:16458](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16458)
+[awtk.ts:16472](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16472)
 
 ## Methods
 
@@ -106,7 +106,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7683](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7683)
+[awtk.ts:7684](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7684)
 
 ***
 
@@ -138,7 +138,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7643](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7643)
+[awtk.ts:7644](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7644)
 
 ***
 
@@ -170,7 +170,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7669](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7669)
+[awtk.ts:7670](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7670)
 
 ***
 
@@ -192,7 +192,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7724](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7724)
+[awtk.ts:7725](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7725)
 
 ***
 
@@ -214,7 +214,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7746](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7746)
+[awtk.ts:7747](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7747)
 
 ***
 
@@ -246,7 +246,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7656](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7656)
+[awtk.ts:7657](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7657)
 
 ***
 
@@ -268,7 +268,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7735](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7735)
+[awtk.ts:7736](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7736)
 
 ***
 
@@ -290,7 +290,7 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 #### Defined in
 
-[awtk.ts:7630](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7630)
+[awtk.ts:7631](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7631)
 
 ***
 
@@ -318,7 +318,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:7619](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7619)
+[awtk.ts:7620](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7620)
 
 ***
 
@@ -354,7 +354,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:7697](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7697)
+[awtk.ts:7698](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7698)
 
 ***
 
@@ -386,7 +386,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:16423](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16423)
+[awtk.ts:16437](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16437)
 
 ***
 
@@ -410,7 +410,7 @@ widget状态改变时，通知style更新数据。
 
 #### Defined in
 
-[awtk.ts:16409](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16409)
+[awtk.ts:16423](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16423)
 
 ***
 
@@ -451,7 +451,7 @@ style的名称。
 
 #### Defined in
 
-[awtk.ts:7713](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L7713)
+[awtk.ts:7714](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7714)
 
 ***
 
@@ -475,7 +475,7 @@ style对象。
 
 #### Defined in
 
-[awtk.ts:16435](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16435)
+[awtk.ts:16449](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16449)
 
 ***
 
@@ -501,4 +501,4 @@ style对象。
 
 #### Defined in
 
-[awtk.ts:16449](https://github.com/zlgopen/awtk-binding/blob/a193834fdb1c1ee98bdcf84db4b6e5fd059e1d7c/tools/code_gen/js/output/awtk.ts#L16449)
+[awtk.ts:16463](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L16463)

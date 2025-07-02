@@ -6822,6 +6822,16 @@ JNIEXPORT jstring JNICALL Java_awtk_TWidget_widget_1get_1prop_1str(JNIEnv* env, 
   return (*env)->NewStringUTF(env, ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1set_1prop_1pointer(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jlong v) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (ret_t)widget_set_prop_pointer(widget, name, v);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jlong JNICALL Java_awtk_TWidget_widget_1get_1prop_1pointer(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname) { /*func*/
   void* ret;
   widget_t* widget = (widget_t*)jwidget;

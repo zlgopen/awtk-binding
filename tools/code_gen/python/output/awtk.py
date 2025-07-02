@@ -9493,6 +9493,18 @@ class TWidget(object):
 
 
   #
+  # 设置指针格式的属性。
+  # 
+  # @param name 属性的名称。
+  # @param v 属性的值。
+  #
+  # @return 返回RET_OK表示成功，否则表示失败。
+  #
+  def set_prop_pointer(self, name, v): 
+      return widget_set_prop_pointer(awtk_get_native_obj(self), name, v)
+
+
+  #
   # 获取指针格式的属性。
   # 
   # @param name 属性的名称。

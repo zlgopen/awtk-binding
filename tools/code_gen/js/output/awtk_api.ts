@@ -2194,6 +2194,8 @@ const widget_set_prop_str = Module.cwrap("widget_set_prop_str",
     "number", ["number","string","string"]);
 const widget_get_prop_str = Module.cwrap("widget_get_prop_str", 
     "string", ["number","string","string"]);
+const widget_set_prop_pointer = Module.cwrap("widget_set_prop_pointer", 
+    "number", ["number","string","number"]);
 const widget_get_prop_pointer = Module.cwrap("widget_get_prop_pointer", 
     "number", ["number","string"]);
 const widget_set_prop_float = Module.cwrap("widget_set_prop_float", 
@@ -14409,6 +14411,19 @@ export class TWidget {
    */
  getPropStr(name : string, defval : string) : string  {
     return widget_get_prop_str(this != null ? (this.nativeObj || this) : null, name, defval);
+ }
+
+
+  /**
+   * 设置指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setPropPointer(name : string, v : any) : TRet  {
+    return widget_set_prop_pointer(this != null ? (this.nativeObj || this) : null, name, v);
  }
 
 

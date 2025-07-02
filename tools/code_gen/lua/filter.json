@@ -12079,6 +12079,34 @@
             "type": "const char*",
             "name": "name",
             "desc": "属性的名称。"
+          },
+          {
+            "type": "void*",
+            "name": "v",
+            "desc": "属性的值。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置指针格式的属性。",
+        "name": "widget_set_prop_pointer",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
+            "name": "name",
+            "desc": "属性的名称。"
           }
         ],
         "annotation": {

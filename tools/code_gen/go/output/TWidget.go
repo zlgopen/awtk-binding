@@ -419,6 +419,12 @@ func (this TWidget) GetPropStr(name string, defval string) string {
   return C.GoString(C.widget_get_prop_str((*C.widget_t)(this.handle), aname, adefval));
 }
 
+func (this TWidget) SetPropPointer(name string, v unsafe.Pointer) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.widget_set_prop_pointer((*C.widget_t)(this.handle), aname, (unsafe.Pointer)(v)));
+}
+
 func (this TWidget) GetPropPointer(name string) unsafe.Pointer {
   aname := C.CString(name)
   defer C.free(unsafe.Pointer(aname))

@@ -4250,6 +4250,16 @@ public:
   const char* GetPropStr(const char* name, const char* defval) ;
 
   /**
+   * 设置指针格式的属性。
+   * 
+   * @param name 属性的名称。
+   * @param v 属性的值。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t SetPropPointer(const char* name, void* v) ;
+
+  /**
    * 获取指针格式的属性。
    * 
    * @param name 属性的名称。

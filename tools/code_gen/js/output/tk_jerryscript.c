@@ -10088,6 +10088,22 @@ static HANDLER_PROTO(wrap_widget_get_prop_str)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_widget_set_prop_pointer)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 3) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  void* v = (void*)jsvalue_get_pointer(ctx, argv[2], "void*");
+  ret = (ret_t)widget_set_prop_pointer(widget, name, v);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_widget_get_prop_pointer)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -11118,6 +11134,7 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_props", wrap_widget_set_props);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_str", wrap_widget_set_prop_str);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_str", wrap_widget_get_prop_str);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_pointer", wrap_widget_set_prop_pointer);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_pointer", wrap_widget_get_prop_pointer);
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_prop_float", wrap_widget_set_prop_float);
   jerryx_handler_register_global((const jerry_char_t*)"widget_get_prop_float", wrap_widget_get_prop_float);

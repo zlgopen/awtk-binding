@@ -10174,6 +10174,20 @@ int awtk_TWidget_widget_get_prop_str(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_set_prop_pointer(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  void* v = (void*)jni_ctx_get_int64(&actx);
+  ret = (ret_t)widget_set_prop_pointer(widget, name, v);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_get_prop_pointer(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -25458,6 +25472,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_set_props",  "(JLjava/lang/String;)I",  awtk_TWidget_widget_set_props},
 {"awtk/TWidget",  "widget_set_prop_str",  "(JLjava/lang/String;Ljava/lang/String;)I",  awtk_TWidget_widget_set_prop_str},
 {"awtk/TWidget",  "widget_get_prop_str",  "(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;",  awtk_TWidget_widget_get_prop_str},
+{"awtk/TWidget",  "widget_set_prop_pointer",  "(JLjava/lang/String;J)I",  awtk_TWidget_widget_set_prop_pointer},
 {"awtk/TWidget",  "widget_get_prop_pointer",  "(JLjava/lang/String;)J",  awtk_TWidget_widget_get_prop_pointer},
 {"awtk/TWidget",  "widget_set_prop_float",  "(JLjava/lang/String;F)I",  awtk_TWidget_widget_set_prop_float},
 {"awtk/TWidget",  "widget_get_prop_float",  "(JLjava/lang/String;F)F",  awtk_TWidget_widget_get_prop_float},
