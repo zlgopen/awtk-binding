@@ -134,6 +134,10 @@ func (this TValue) Equal(other TValue) bool {
   return (bool)(C.value_equal((*C.value_t)(this.handle), (*C.value_t)(other.handle)));
 }
 
+func (this TValue) Compare(other TValue) int {
+  return (int)(C.value_compare((*C.value_t)(this.handle), (*C.value_t)(other.handle)));
+}
+
 func (this TValue) SetInt(value int32) TValue {
   retObj := TValue{}
   retObj.handle = unsafe.Pointer(C.value_set_int((*C.value_t)(this.handle), (C.int32_t)(value)))

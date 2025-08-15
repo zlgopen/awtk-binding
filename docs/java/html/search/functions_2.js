@@ -22,7 +22,7 @@ var searchData=
   ['closewindow_19',['closeWindow',['../classawtk_1_1_t_widget.html#a5b1f9c1a8cd05f0656717a5a563f93b2',1,'awtk::TWidget']]],
   ['closewindowforce_20',['closeWindowForce',['../classawtk_1_1_t_widget.html#a8bacb8d2905c1645cdd4705ec7736758',1,'awtk::TWidget']]],
   ['committext_21',['commitText',['../classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e',1,'awtk::TInputMethod']]],
-  ['compare_22',['compare',['../classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506',1,'awtk::TObject']]],
+  ['compare_22',['compare',['../classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506',1,'awtk.TObject.compare()'],['../classawtk_1_1_t_value.html#abbfad4bb9ec24c0a6acf484d0e7e35a3',1,'awtk.TValue.compare()']]],
   ['confirm_23',['confirm',['../classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab',1,'awtk::TDialog']]],
   ['copyprop_24',['copyProp',['../classawtk_1_1_t_object.html#a018aeba3eefe2f97c5b83287524b5eb4',1,'awtk::TObject']]],
   ['copyprops_25',['copyProps',['../classawtk_1_1_t_object.html#af6b23e38c494f0efcbffb75b6811ec93',1,'awtk::TObject']]],

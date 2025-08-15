@@ -266,6 +266,8 @@ const value_is_null = Module.cwrap("value_is_null",
     "number", ["number"]);
 const value_equal = Module.cwrap("value_equal", 
     "number", ["number","number"]);
+const value_compare = Module.cwrap("value_compare", 
+    "number", ["number","number"]);
 const value_set_int = Module.cwrap("value_set_int", 
     "number", ["number","number"]);
 const value_set_object = Module.cwrap("value_set_object", 
@@ -2074,6 +2076,12 @@ const widget_add_value_int = Module.cwrap("widget_add_value_int",
     "number", ["number","number"]);
 const widget_animate_value_to = Module.cwrap("widget_animate_value_to", 
     "number", ["number","number","number"]);
+const widget_animate_prop_float_to = Module.cwrap("widget_animate_prop_float_to", 
+    "number", ["number","string","number","number"]);
+const widget_animate_position_to = Module.cwrap("widget_animate_position_to", 
+    "number", ["number","number","number","number"]);
+const widget_animate_size_to = Module.cwrap("widget_animate_size_to", 
+    "number", ["number","number","number","number"]);
 const widget_is_style_exist = Module.cwrap("widget_is_style_exist", 
     "number", ["number","string","string"]);
 const widget_is_support_highlighter = Module.cwrap("widget_is_support_highlighter", 
@@ -2552,6 +2560,18 @@ const EASING_BOUNCE_OUT = Module.cwrap("get_EASING_BOUNCE_OUT",
     "number", []);
 const EASING_BOUNCE_INOUT = Module.cwrap("get_EASING_BOUNCE_INOUT", 
     "number", []);
+const LOG_LEVEL_DEBUG = Module.cwrap("get_LOG_LEVEL_DEBUG", 
+    "number", []);
+const LOG_LEVEL_INFO = Module.cwrap("get_LOG_LEVEL_INFO", 
+    "number", []);
+const LOG_LEVEL_WARN = Module.cwrap("get_LOG_LEVEL_WARN", 
+    "number", []);
+const LOG_LEVEL_ERROR = Module.cwrap("get_LOG_LEVEL_ERROR", 
+    "number", []);
+const log_get_log_level = Module.cwrap("log_get_log_level", 
+    "number", []);
+const log_set_log_level = Module.cwrap("log_set_log_level", 
+    "number", ["number"]);
 const MIME_TYPE_APPLICATION_ENVOY = Module.cwrap("get_MIME_TYPE_APPLICATION_ENVOY", 
     "string", []);
 const MIME_TYPE_APPLICATION_FRACTALS = Module.cwrap("get_MIME_TYPE_APPLICATION_FRACTALS", 
@@ -6458,6 +6478,18 @@ export class TValue {
    */
  equal(other : TValue) : boolean  {
     return value_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
+ }
+
+
+  /**
+   * 比较两个value。
+   * 
+   * @param other value对象。
+   *
+   * @returns 小于返回-1，等于返回0，大于返回1。
+   */
+ compare(other : TValue) : number  {
+    return value_compare(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
  }
 
 
@@ -13645,6 +13677,48 @@ export class TWidget {
 
 
   /**
+   * 设置控件的属性(以动画形式变化到指定的值)。
+   * 
+   * @param name 属性名称。
+   * @param value 值。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animatePropFloatTo(name : string, value : any, duration : number) : TRet  {
+    return widget_animate_prop_float_to(this != null ? (this.nativeObj || this) : null, name, value, duration);
+ }
+
+
+  /**
+   * 设置控件的位置(以动画形式变化到指定的位置)。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animatePositionTo(x : number, y : number, duration : number) : TRet  {
+    return widget_animate_position_to(this != null ? (this.nativeObj || this) : null, x, y, duration);
+ }
+
+
+  /**
+   * 设置控件的大小(以动画形式变化到指定的大小)。
+   * 
+   * @param w 宽度。
+   * @param h 高度。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animateSizeTo(w : number, h : number, duration : number) : TRet  {
+    return widget_animate_size_to(this != null ? (this.nativeObj || this) : null, w, h, duration);
+ }
+
+
+  /**
    * 查询指定的style是否存在。
    * 
    * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -16422,6 +16496,67 @@ export class TIdleManager {
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
+ }
+
+};
+/**
+ * LOG的级别。
+ *
+ */
+export enum TTkLogLevel {
+
+  /**
+   * DEBUG
+   *
+   */
+ DEBUG = LOG_LEVEL_DEBUG(),
+
+  /**
+   * INFO
+   *
+   */
+ INFO = LOG_LEVEL_INFO(),
+
+  /**
+   * WARN
+   *
+   */
+ WARN = LOG_LEVEL_WARN(),
+
+  /**
+   * ERROR
+   *
+   */
+ ERROR = LOG_LEVEL_ERROR(),
+};
+
+
+/**
+ * log。
+ *
+ */
+export class TLog { 
+
+  /**
+   * 获取log的级别。
+   * 
+   *
+   * @returns 返回log的级别。
+   */
+ static getLogLevel() : TTkLogLevel  {
+    return log_get_log_level();
+ }
+
+
+  /**
+   * 设置log的级别。
+   * 
+   * @param log_level log的级别。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static setLogLevel(log_level : TTkLogLevel) : TRet  {
+    return log_set_log_level(log_level);
  }
 
 };

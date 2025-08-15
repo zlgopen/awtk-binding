@@ -62,7 +62,7 @@ var searchData=
   ['combo_5fbox_5fitem_59',['COMBO_BOX_ITEM',['../enumawtk_1_1_t_widget_type.html#ad27d8bf8d538bc001877fdb1b3187669',1,'awtk::TWidgetType']]],
   ['committext_60',['commitText',['../classawtk_1_1_t_input_method.html#a86c97d3b8557e45a5166ba141894a32e',1,'awtk::TInputMethod']]],
   ['compact_61',['COMPACT',['../enumawtk_1_1_t_widget_prop.html#a49c97359c35a7fda3d97223157809550',1,'awtk::TWidgetProp']]],
-  ['compare_62',['compare',['../classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506',1,'awtk::TObject']]],
+  ['compare_62',['compare',['../classawtk_1_1_t_object.html#ad0b41aa66511fcf8b19006e484034506',1,'awtk.TObject.compare()'],['../classawtk_1_1_t_value.html#abbfad4bb9ec24c0a6acf484d0e7e35a3',1,'awtk.TValue.compare()']]],
   ['confirm_63',['CONFIRM',['../enumawtk_1_1_t_window_closable.html#a9a6d8e789c8af697178fc9316cc0fe6b',1,'awtk::TWindowClosable']]],
   ['confirm_64',['confirm',['../classawtk_1_1_t_dialog.html#a054118d06f48982829bf86b93cc0cfab',1,'awtk::TDialog']]],
   ['connect_65',['CONNECT',['../enumawtk_1_1_t_event_type.html#a33f8a1de08646eaa578157fb6a535ac5',1,'awtk::TEventType']]],

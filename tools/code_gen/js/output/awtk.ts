@@ -125,6 +125,7 @@ declare function value_str(v : any) : string;
 declare function value_str_ex(v : any, buff : string, size : number) : string;
 declare function value_is_null(value : any) : boolean;
 declare function value_equal(value : any, other : any) : boolean;
+declare function value_compare(v : any, other : any) : number;
 declare function value_set_int(v : any, value : any) : any;
 declare function value_set_object(v : any, value : any) : any;
 declare function value_object(v : any) : any;
@@ -1029,6 +1030,9 @@ declare function widget_get_value_int(widget : any) : number;
 declare function widget_set_value_int(widget : any, value : any) : TRet;
 declare function widget_add_value_int(widget : any, delta : number) : TRet;
 declare function widget_animate_value_to(widget : any, value : any, duration : number) : TRet;
+declare function widget_animate_prop_float_to(widget : any, name : string, value : any, duration : number) : TRet;
+declare function widget_animate_position_to(widget : any, x : number, y : number, duration : number) : TRet;
+declare function widget_animate_size_to(widget : any, w : number, h : number, duration : number) : TRet;
 declare function widget_is_style_exist(widget : any, style_name : string, state_name : string) : boolean;
 declare function widget_is_support_highlighter(widget : any) : boolean;
 declare function widget_has_highlighter(widget : any) : boolean;
@@ -1268,6 +1272,12 @@ declare function EASING_BACK_INOUT():any;
 declare function EASING_BOUNCE_IN():any;
 declare function EASING_BOUNCE_OUT():any;
 declare function EASING_BOUNCE_INOUT():any;
+declare function LOG_LEVEL_DEBUG():any;
+declare function LOG_LEVEL_INFO():any;
+declare function LOG_LEVEL_WARN():any;
+declare function LOG_LEVEL_ERROR():any;
+declare function log_get_log_level() : TTkLogLevel;
+declare function log_set_log_level(log_level : TTkLogLevel) : TRet;
 declare function MIME_TYPE_APPLICATION_ENVOY():any;
 declare function MIME_TYPE_APPLICATION_FRACTALS():any;
 declare function MIME_TYPE_APPLICATION_FUTURESPLASH():any;
@@ -4006,6 +4016,18 @@ export class TValue {
    */
  equal(other : TValue) : boolean  {
     return value_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
+ }
+
+
+  /**
+   * 比较两个value。
+   * 
+   * @param other value对象。
+   *
+   * @returns 小于返回-1，等于返回0，大于返回1。
+   */
+ compare(other : TValue) : number  {
+    return value_compare(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
  }
 
 
@@ -11193,6 +11215,48 @@ export class TWidget {
 
 
   /**
+   * 设置控件的属性(以动画形式变化到指定的值)。
+   * 
+   * @param name 属性名称。
+   * @param value 值。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animatePropFloatTo(name : string, value : any, duration : number) : TRet  {
+    return widget_animate_prop_float_to(this != null ? (this.nativeObj || this) : null, name, value, duration);
+ }
+
+
+  /**
+   * 设置控件的位置(以动画形式变化到指定的位置)。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animatePositionTo(x : number, y : number, duration : number) : TRet  {
+    return widget_animate_position_to(this != null ? (this.nativeObj || this) : null, x, y, duration);
+ }
+
+
+  /**
+   * 设置控件的大小(以动画形式变化到指定的大小)。
+   * 
+   * @param w 宽度。
+   * @param h 高度。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ animateSizeTo(w : number, h : number, duration : number) : TRet  {
+    return widget_animate_size_to(this != null ? (this.nativeObj || this) : null, w, h, duration);
+ }
+
+
+  /**
    * 查询指定的style是否存在。
    * 
    * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -13969,6 +14033,67 @@ export class TIdleManager {
  public nativeObj : any;
  constructor(nativeObj : any) {
    this.nativeObj = nativeObj;
+ }
+
+};
+/**
+ * LOG的级别。
+ *
+ */
+export enum TTkLogLevel {
+
+  /**
+   * DEBUG
+   *
+   */
+ DEBUG = LOG_LEVEL_DEBUG(),
+
+  /**
+   * INFO
+   *
+   */
+ INFO = LOG_LEVEL_INFO(),
+
+  /**
+   * WARN
+   *
+   */
+ WARN = LOG_LEVEL_WARN(),
+
+  /**
+   * ERROR
+   *
+   */
+ ERROR = LOG_LEVEL_ERROR(),
+};
+
+
+/**
+ * log。
+ *
+ */
+export class TLog { 
+
+  /**
+   * 获取log的级别。
+   * 
+   *
+   * @returns 返回log的级别。
+   */
+ static getLogLevel() : TTkLogLevel  {
+    return log_get_log_level();
+ }
+
+
+  /**
+   * 设置log的级别。
+   * 
+   * @param log_level log的级别。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ static setLogLevel(log_level : TTkLogLevel) : TRet  {
+    return log_set_log_level(log_level);
  }
 
 };

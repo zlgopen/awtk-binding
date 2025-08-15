@@ -54,7 +54,7 @@ timer回调函数的上下文。
 
 #### Defined in
 
-[awtk.ts:7816](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7816)
+[awtk.ts:7838](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7838)
 
 ***
 
@@ -82,7 +82,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7877](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7877)
+[awtk.ts:7899](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7899)
 
 ***
 
@@ -106,7 +106,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7828](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7828)
+[awtk.ts:7850](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7850)
 
 ***
 
@@ -130,7 +130,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7840](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7840)
+[awtk.ts:7862](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7862)
 
 ***
 
@@ -154,7 +154,7 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7864](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7864)
+[awtk.ts:7886](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7886)
 
 ***
 
@@ -178,4 +178,4 @@ timerID。
 
 #### Defined in
 
-[awtk.ts:7852](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7852)
+[awtk.ts:7874](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7874)

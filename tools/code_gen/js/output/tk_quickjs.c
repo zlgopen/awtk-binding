@@ -37,6 +37,7 @@
 #include "tkc/date_time.h"
 #include "tkc/easing.h"
 #include "tkc/idle_manager.h"
+#include "tkc/log.h"
 #include "tkc/mime_types.h"
 #include "tkc/rlog.h"
 #include "tkc/time_now.h"
@@ -2500,6 +2501,24 @@ jsvalue_t wrap_value_equal(
   return jret;
 }
 
+jsvalue_t wrap_value_compare(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  int ret = (int)0;
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
+  const value_t* other = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int)value_compare(v, other);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_value_set_int(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -2777,6 +2796,8 @@ ret_t value_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_value_is_null, "value_is_null", 1));
   JS_SetPropertyStr(ctx, global_obj, "value_equal",
                       JS_NewCFunction(ctx, wrap_value_equal, "value_equal", 1));
+  JS_SetPropertyStr(ctx, global_obj, "value_compare",
+                      JS_NewCFunction(ctx, wrap_value_compare, "value_compare", 1));
   JS_SetPropertyStr(ctx, global_obj, "value_set_int",
                       JS_NewCFunction(ctx, wrap_value_set_int, "value_set_int", 1));
   JS_SetPropertyStr(ctx, global_obj, "value_set_object",
@@ -14395,6 +14416,67 @@ jsvalue_t wrap_widget_animate_value_to(
   return jret;
 }
 
+jsvalue_t wrap_widget_animate_prop_float_to(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  float_t value = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_prop_float_to(widget, name, value, duration);
+  jsvalue_free_str(ctx, name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_animate_position_to(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  xy_t x = (xy_t)jsvalue_get_int_value(ctx, argv[1]);
+  xy_t y = (xy_t)jsvalue_get_int_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_position_to(widget, x, y, duration);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_widget_animate_size_to(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[1]);
+  wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_size_to(widget, w, h, duration);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 jsvalue_t wrap_widget_is_style_exist(
     JSContext *ctx, 
     jsvalue_const_t this_val,
@@ -16806,6 +16888,12 @@ ret_t widget_t_init(JSContext *ctx) {
                       JS_NewCFunction(ctx, wrap_widget_add_value_int, "widget_add_value_int", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_animate_value_to",
                       JS_NewCFunction(ctx, wrap_widget_animate_value_to, "widget_animate_value_to", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_animate_prop_float_to",
+                      JS_NewCFunction(ctx, wrap_widget_animate_prop_float_to, "widget_animate_prop_float_to", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_animate_position_to",
+                      JS_NewCFunction(ctx, wrap_widget_animate_position_to, "widget_animate_position_to", 1));
+  JS_SetPropertyStr(ctx, global_obj, "widget_animate_size_to",
+                      JS_NewCFunction(ctx, wrap_widget_animate_size_to, "widget_animate_size_to", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_style_exist",
                       JS_NewCFunction(ctx, wrap_widget_is_style_exist, "widget_is_style_exist", 1));
   JS_SetPropertyStr(ctx, global_obj, "widget_is_support_highlighter",
@@ -18706,6 +18794,103 @@ ret_t easing_type_t_init(JSContext *ctx) {
 
 ret_t idle_manager_t_init(JSContext *ctx) {
   jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t get_LOG_LEVEL_DEBUG(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, LOG_LEVEL_DEBUG);
+}
+
+jsvalue_t get_LOG_LEVEL_INFO(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, LOG_LEVEL_INFO);
+}
+
+jsvalue_t get_LOG_LEVEL_WARN(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, LOG_LEVEL_WARN);
+}
+
+jsvalue_t get_LOG_LEVEL_ERROR(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  return jsvalue_create_int(ctx, LOG_LEVEL_ERROR);
+}
+
+ret_t tk_log_level_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "LOG_LEVEL_DEBUG",
+                      JS_NewCFunction(ctx, get_LOG_LEVEL_DEBUG, "LOG_LEVEL_DEBUG", 1));
+  JS_SetPropertyStr(ctx, global_obj, "LOG_LEVEL_INFO",
+                      JS_NewCFunction(ctx, get_LOG_LEVEL_INFO, "LOG_LEVEL_INFO", 1));
+  JS_SetPropertyStr(ctx, global_obj, "LOG_LEVEL_WARN",
+                      JS_NewCFunction(ctx, get_LOG_LEVEL_WARN, "LOG_LEVEL_WARN", 1));
+  JS_SetPropertyStr(ctx, global_obj, "LOG_LEVEL_ERROR",
+                      JS_NewCFunction(ctx, get_LOG_LEVEL_ERROR, "LOG_LEVEL_ERROR", 1));
+
+ jsvalue_unref(ctx, global_obj);
+
+ return RET_OK;
+}
+
+jsvalue_t wrap_log_get_log_level(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  tk_log_level_t ret = (tk_log_level_t)0;
+  ret = (tk_log_level_t)log_get_log_level();
+
+  jret = jsvalue_create_number(ctx, ret);
+  }
+  return jret;
+}
+
+jsvalue_t wrap_log_set_log_level(
+    JSContext *ctx, 
+    jsvalue_const_t this_val,
+    int argc, 
+    jsvalue_const_t *argv
+  ) {
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  tk_log_level_t log_level = (tk_log_level_t)jsvalue_get_int_value(ctx, argv[0]);
+  ret = (ret_t)log_set_log_level(log_level);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+ret_t log_t_init(JSContext *ctx) {
+  jsvalue_t global_obj = JS_GetGlobalObject(ctx);
+  JS_SetPropertyStr(ctx, global_obj, "log_get_log_level",
+                      JS_NewCFunction(ctx, wrap_log_get_log_level, "log_get_log_level", 1));
+  JS_SetPropertyStr(ctx, global_obj, "log_set_log_level",
+                      JS_NewCFunction(ctx, wrap_log_set_log_level, "log_set_log_level", 1));
 
  jsvalue_unref(ctx, global_obj);
 
@@ -39805,6 +39990,8 @@ ret_t awtk_js_init(JSContext *ctx) {
   date_time_t_init(ctx);
   easing_type_t_init(ctx);
   idle_manager_t_init(ctx);
+  tk_log_level_t_init(ctx);
+  log_t_init(ctx);
   MIME_TYPE_init(ctx);
   object_cmd_t_init(ctx);
   object_prop_t_init(ctx);

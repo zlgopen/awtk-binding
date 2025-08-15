@@ -40,7 +40,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12953](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12953)
+[awtk.ts:13017](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13017)
 
 ***
 
@@ -64,7 +64,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12965](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12965)
+[awtk.ts:13029](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13029)
 
 ***
 
@@ -92,7 +92,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13069](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13069)
+[awtk.ts:13133](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13133)
 
 ***
 
@@ -120,7 +120,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13082](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13082)
+[awtk.ts:13146](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13146)
 
 ***
 
@@ -148,7 +148,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13043](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13043)
+[awtk.ts:13107](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13107)
 
 ***
 
@@ -176,7 +176,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13056](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13056)
+[awtk.ts:13120](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13120)
 
 ***
 
@@ -204,7 +204,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13095](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13095)
+[awtk.ts:13159](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13159)
 
 ***
 
@@ -222,7 +222,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12942](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12942)
+[awtk.ts:13006](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13006)
 
 ***
 
@@ -246,7 +246,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13107](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13107)
+[awtk.ts:13171](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13171)
 
 ***
 
@@ -264,7 +264,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12931](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12931)
+[awtk.ts:12995](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12995)
 
 ***
 
@@ -292,7 +292,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13004](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13004)
+[awtk.ts:13068](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13068)
 
 ***
 
@@ -320,7 +320,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13017](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13017)
+[awtk.ts:13081](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13081)
 
 ***
 
@@ -348,7 +348,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12978](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12978)
+[awtk.ts:13042](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13042)
 
 ***
 
@@ -376,7 +376,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:12991](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L12991)
+[awtk.ts:13055](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13055)
 
 ***
 
@@ -404,4 +404,4 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 #### Defined in
 
-[awtk.ts:13030](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L13030)
+[awtk.ts:13094](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13094)

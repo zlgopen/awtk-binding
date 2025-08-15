@@ -2847,6 +2847,29 @@
       {
         "params": [
           {
+            "type": "const value_t*",
+            "name": "v",
+            "desc": "value对象。"
+          },
+          {
+            "type": "const value_t*",
+            "name": "other",
+            "desc": "value对象。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "比较两个value。",
+        "name": "value_compare",
+        "return": {
+          "type": "int",
+          "desc": "小于返回-1，等于返回0，大于返回1。"
+        }
+      },
+      {
+        "params": [
+          {
             "type": "value_t*",
             "name": "v",
             "desc": "value对象。"
@@ -10674,6 +10697,105 @@
           },
           {
             "type": "const char*",
+            "name": "name",
+            "desc": "属性名称。"
+          },
+          {
+            "type": "float_t",
+            "name": "value",
+            "desc": "值。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "duration",
+            "desc": "动画持续时间(毫秒)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的属性(以动画形式变化到指定的值)。",
+        "name": "widget_animate_prop_float_to",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "duration",
+            "desc": "动画持续时间(毫秒)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的位置(以动画形式变化到指定的位置)。",
+        "name": "widget_animate_position_to",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "wh_t",
+            "name": "w",
+            "desc": "宽度。"
+          },
+          {
+            "type": "wh_t",
+            "name": "h",
+            "desc": "高度。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "duration",
+            "desc": "动画持续时间(毫秒)。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置控件的大小(以动画形式变化到指定的大小)。",
+        "name": "widget_animate_size_to",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "控件对象。"
+          },
+          {
+            "type": "const char*",
             "name": "style_name",
             "desc": "style的名称（如果为 NULL，则默认为 default）。"
           },
@@ -13347,16 +13469,6 @@
         "type": "event_t"
       },
       {
-        "name": "EVT_WIDGET_WILL_RESTACK_CHILD",
-        "desc": "控件即将调整子控件位置序数。\n在该的回调函数中返回RET_STOP停止调整动作。",
-        "type": "event_t"
-      },
-      {
-        "name": "EVT_WIDGET_RESTACK_CHILD",
-        "desc": "控件调整子控件位置序数。",
-        "type": "event_t"
-      },
-      {
         "name": "EVT_PROP_WILL_CHANGE",
         "desc": "控件属性改变前触发(通过set_prop设置属性，才会触发)。",
         "type": "prop_change_event_t"
@@ -15144,6 +15256,82 @@
     "name": "idle_manager_t",
     "annotation": {
       "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "LOG的级别。",
+    "consts": [
+      {
+        "desc": "DEBUG",
+        "name": "LOG_LEVEL_DEBUG"
+      },
+      {
+        "desc": "INFO",
+        "name": "LOG_LEVEL_INFO"
+      },
+      {
+        "desc": "WARN",
+        "name": "LOG_LEVEL_WARN"
+      },
+      {
+        "desc": "ERROR",
+        "name": "LOG_LEVEL_ERROR"
+      }
+    ],
+    "header": "tkc/log.h",
+    "name": "tk_log_level_t",
+    "prefix": "LOG_LEVEL_",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "class",
+    "methods": [
+      {
+        "params": [],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "获取log的级别。",
+        "name": "log_get_log_level",
+        "return": {
+          "type": "tk_log_level_t",
+          "desc": "返回log的级别。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "tk_log_level_t",
+            "name": "log_level",
+            "desc": "log的级别。"
+          }
+        ],
+        "annotation": {
+          "static": true,
+          "scriptable": true
+        },
+        "desc": "设置log的级别。",
+        "name": "log_set_log_level",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      }
+    ],
+    "events": [],
+    "properties": [],
+    "header": "tkc/log.h",
+    "desc": "log。",
+    "name": "log_t",
+    "annotation": {
+      "scriptable": true,
+      "fake": true
     },
     "level": 1
   },

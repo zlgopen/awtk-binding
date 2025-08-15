@@ -29,7 +29,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:14734](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14734)
+[awtk.ts:14859](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14859)
 
 ## Properties
 
@@ -39,7 +39,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:14733](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14733)
+[awtk.ts:14858](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14858)
 
 ## Methods
 
@@ -63,7 +63,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 #### Defined in
 
-[awtk.ts:14762](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14762)
+[awtk.ts:14887](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14887)
 
 ***
 
@@ -95,4 +95,4 @@ log文件占用最大磁盘空间(字节)。
 
 #### Defined in
 
-[awtk.ts:14750](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14750)
+[awtk.ts:14875](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14875)

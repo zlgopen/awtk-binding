@@ -353,6 +353,48 @@ public class TWidget {
 
 
   /**
+   * 设置控件的属性(以动画形式变化到指定的值)。
+   * 
+   * @param name 属性名称。
+   * @param value 值。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet animatePropFloatTo(String name, double value, int duration)  {
+   return TRet.from(widget_animate_prop_float_to(this != null ? (this.nativeObj) : 0, name, value, duration));
+ }
+
+
+  /**
+   * 设置控件的位置(以动画形式变化到指定的位置)。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet animatePositionTo(int x, int y, int duration)  {
+   return TRet.from(widget_animate_position_to(this != null ? (this.nativeObj) : 0, x, y, duration));
+ }
+
+
+  /**
+   * 设置控件的大小(以动画形式变化到指定的大小)。
+   * 
+   * @param w 宽度。
+   * @param h 高度。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet animateSizeTo(int w, int h, int duration)  {
+   return TRet.from(widget_animate_size_to(this != null ? (this.nativeObj) : 0, w, h, duration));
+ }
+
+
+  /**
    * 查询指定的style是否存在。
    * 
    * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -1954,6 +1996,9 @@ static private native int widget_get_value_int(long widget);
 static private native int widget_set_value_int(long widget, int value);
 static private native int widget_add_value_int(long widget, int delta);
 static private native int widget_animate_value_to(long widget, double value, int duration);
+static private native int widget_animate_prop_float_to(long widget, String name, double value, int duration);
+static private native int widget_animate_position_to(long widget, int x, int y, int duration);
+static private native int widget_animate_size_to(long widget, int w, int h, int duration);
 static private native boolean widget_is_style_exist(long widget, String style_name, String state_name);
 static private native boolean widget_is_support_highlighter(long widget);
 static private native boolean widget_has_highlighter(long widget);

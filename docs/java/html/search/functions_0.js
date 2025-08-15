@@ -8,8 +8,11 @@ var searchData=
   ['addhighlightline_5',['addHighlightLine',['../classawtk_1_1_t_line_number.html#a8081bbf3dc32ae9ac7472368b884be0a',1,'awtk::TLineNumber']]],
   ['addvalue_6',['addValue',['../classawtk_1_1_t_widget.html#a5f920f9c2195a7f9f81e9cbdee500f59',1,'awtk::TWidget']]],
   ['addvalueint_7',['addValueInt',['../classawtk_1_1_t_widget.html#ac075edf40a980ffa560a4e927a8c4a08',1,'awtk::TWidget']]],
-  ['animatevalueto_8',['animateValueTo',['../classawtk_1_1_t_widget.html#ac72faf65ae1c9c8e61f5e3c753d0b17d',1,'awtk::TWidget']]],
-  ['appendoption_9',['appendOption',['../classawtk_1_1_t_combo_box.html#a43bd95933163b4fe8019426952024b62',1,'awtk.TComboBox.appendOption()'],['../classawtk_1_1_t_text_selector.html#aacb03375ddbb337f1e622a60fe83fc83',1,'awtk.TTextSelector.appendOption()']]],
-  ['arc_10',['arc',['../classawtk_1_1_t_vgcanvas.html#adae5f4c6378c3cbe0317120cdfde2d92',1,'awtk::TVgcanvas']]],
-  ['arcto_11',['arcTo',['../classawtk_1_1_t_vgcanvas.html#af2571f923a22f2828c905852ed7e9823',1,'awtk::TVgcanvas']]]
+  ['animatepositionto_8',['animatePositionTo',['../classawtk_1_1_t_widget.html#ab873566dc0bcfad841c5fc655f98ef0c',1,'awtk::TWidget']]],
+  ['animatepropfloatto_9',['animatePropFloatTo',['../classawtk_1_1_t_widget.html#acbe75a14fa494c6857feef379aa91477',1,'awtk::TWidget']]],
+  ['animatesizeto_10',['animateSizeTo',['../classawtk_1_1_t_widget.html#a0082d9765e84c9cbd1cef74d18bc492f',1,'awtk::TWidget']]],
+  ['animatevalueto_11',['animateValueTo',['../classawtk_1_1_t_widget.html#ac72faf65ae1c9c8e61f5e3c753d0b17d',1,'awtk::TWidget']]],
+  ['appendoption_12',['appendOption',['../classawtk_1_1_t_combo_box.html#a43bd95933163b4fe8019426952024b62',1,'awtk.TComboBox.appendOption()'],['../classawtk_1_1_t_text_selector.html#aacb03375ddbb337f1e622a60fe83fc83',1,'awtk.TTextSelector.appendOption()']]],
+  ['arc_13',['arc',['../classawtk_1_1_t_vgcanvas.html#adae5f4c6378c3cbe0317120cdfde2d92',1,'awtk::TVgcanvas']]],
+  ['arcto_14',['arcTo',['../classawtk_1_1_t_vgcanvas.html#af2571f923a22f2828c905852ed7e9823',1,'awtk::TVgcanvas']]]
 ];

@@ -37,6 +37,7 @@
 #include "tkc/date_time.h"
 #include "tkc/easing.h"
 #include "tkc/idle_manager.h"
+#include "tkc/log.h"
 #include "tkc/mime_types.h"
 #include "tkc/rlog.h"
 #include "tkc/time_now.h"
@@ -1950,6 +1951,20 @@ static HANDLER_PROTO(wrap_value_equal)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_value_compare)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 2) {
+  int ret = (int)0;
+  const value_t* v = (const value_t*)jsvalue_get_pointer(ctx, argv[0], "const value_t*");
+  const value_t* other = (const value_t*)jsvalue_get_pointer(ctx, argv[1], "const value_t*");
+  ret = (int)value_compare(v, other);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_value_set_int)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -2148,6 +2163,7 @@ ret_t value_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"value_str_ex", wrap_value_str_ex);
   jerryx_handler_register_global((const jerry_char_t*)"value_is_null", wrap_value_is_null);
   jerryx_handler_register_global((const jerry_char_t*)"value_equal", wrap_value_equal);
+  jerryx_handler_register_global((const jerry_char_t*)"value_compare", wrap_value_compare);
   jerryx_handler_register_global((const jerry_char_t*)"value_set_int", wrap_value_set_int);
   jerryx_handler_register_global((const jerry_char_t*)"value_set_object", wrap_value_set_object);
   jerryx_handler_register_global((const jerry_char_t*)"value_object", wrap_value_object);
@@ -9227,6 +9243,55 @@ static HANDLER_PROTO(wrap_widget_animate_value_to)  {
   return jret;
 }
 
+static HANDLER_PROTO(wrap_widget_animate_prop_float_to)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  const char* name = (const char*)jsvalue_get_utf8_string(ctx, argv[1]);
+  float_t value = (float_t)jsvalue_get_number_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_prop_float_to(widget, name, value, duration);
+  TKMEM_FREE(name);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_animate_position_to)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  xy_t x = (xy_t)jsvalue_get_int_value(ctx, argv[1]);
+  xy_t y = (xy_t)jsvalue_get_int_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_position_to(widget, x, y, duration);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_widget_animate_size_to)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 4) {
+  ret_t ret = (ret_t)0;
+  widget_t* widget = (widget_t*)jsvalue_get_pointer(ctx, argv[0], "widget_t*");
+  wh_t w = (wh_t)jsvalue_get_int_value(ctx, argv[1]);
+  wh_t h = (wh_t)jsvalue_get_int_value(ctx, argv[2]);
+  uint32_t duration = (uint32_t)jsvalue_get_int_value(ctx, argv[3]);
+  ret = (ret_t)widget_animate_size_to(widget, w, h, duration);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
 static HANDLER_PROTO(wrap_widget_is_style_exist)  {
   void* ctx = NULL;
   jsvalue_t jret = JS_NULL;
@@ -11074,6 +11139,9 @@ ret_t widget_t_init(JSContext *ctx) {
   jerryx_handler_register_global((const jerry_char_t*)"widget_set_value_int", wrap_widget_set_value_int);
   jerryx_handler_register_global((const jerry_char_t*)"widget_add_value_int", wrap_widget_add_value_int);
   jerryx_handler_register_global((const jerry_char_t*)"widget_animate_value_to", wrap_widget_animate_value_to);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_prop_float_to", wrap_widget_animate_prop_float_to);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_position_to", wrap_widget_animate_position_to);
+  jerryx_handler_register_global((const jerry_char_t*)"widget_animate_size_to", wrap_widget_animate_size_to);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_style_exist", wrap_widget_is_style_exist);
   jerryx_handler_register_global((const jerry_char_t*)"widget_is_support_highlighter", wrap_widget_is_support_highlighter);
   jerryx_handler_register_global((const jerry_char_t*)"widget_has_highlighter", wrap_widget_has_highlighter);
@@ -12307,6 +12375,67 @@ ret_t easing_type_t_init(JSContext *ctx) {
 }
 
 ret_t idle_manager_t_init(JSContext *ctx) {
+
+ return RET_OK;
+}
+
+static HANDLER_PROTO(get_LOG_LEVEL_DEBUG)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, LOG_LEVEL_DEBUG);
+}
+
+static HANDLER_PROTO(get_LOG_LEVEL_INFO)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, LOG_LEVEL_INFO);
+}
+
+static HANDLER_PROTO(get_LOG_LEVEL_WARN)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, LOG_LEVEL_WARN);
+}
+
+static HANDLER_PROTO(get_LOG_LEVEL_ERROR)  {
+  void* ctx = NULL;
+  return jsvalue_create_int(ctx, LOG_LEVEL_ERROR);
+}
+
+ret_t tk_log_level_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"LOG_LEVEL_DEBUG", get_LOG_LEVEL_DEBUG);
+  jerryx_handler_register_global((const jerry_char_t*)"LOG_LEVEL_INFO", get_LOG_LEVEL_INFO);
+  jerryx_handler_register_global((const jerry_char_t*)"LOG_LEVEL_WARN", get_LOG_LEVEL_WARN);
+  jerryx_handler_register_global((const jerry_char_t*)"LOG_LEVEL_ERROR", get_LOG_LEVEL_ERROR);
+
+ return RET_OK;
+}
+
+static HANDLER_PROTO(wrap_log_get_log_level)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 0) {
+  tk_log_level_t ret = (tk_log_level_t)0;
+  ret = (tk_log_level_t)log_get_log_level();
+
+  jret = jsvalue_create_number(ctx, ret);
+  }
+  return jret;
+}
+
+static HANDLER_PROTO(wrap_log_set_log_level)  {
+  void* ctx = NULL;
+  jsvalue_t jret = JS_NULL;
+  if(argc >= 1) {
+  ret_t ret = (ret_t)0;
+  tk_log_level_t log_level = (tk_log_level_t)jsvalue_get_int_value(ctx, argv[0]);
+  ret = (ret_t)log_set_log_level(log_level);
+
+  jret = jsvalue_create_int(ctx, ret);
+  }
+  return jret;
+}
+
+ret_t log_t_init(JSContext *ctx) {
+  jerryx_handler_register_global((const jerry_char_t*)"log_get_log_level", wrap_log_get_log_level);
+  jerryx_handler_register_global((const jerry_char_t*)"log_set_log_level", wrap_log_set_log_level);
 
  return RET_OK;
 }
@@ -27227,6 +27356,8 @@ ret_t awtk_js_init(JSContext *ctx) {
   date_time_t_init(ctx);
   easing_type_t_init(ctx);
   idle_manager_t_init(ctx);
+  tk_log_level_t_init(ctx);
+  log_t_init(ctx);
   MIME_TYPE_init(ctx);
   object_cmd_t_init(ctx);
   object_prop_t_init(ctx);

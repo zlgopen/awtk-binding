@@ -1053,6 +1053,14 @@ export declare class TValue {
      */
     equal(other: TValue): boolean;
     /**
+     * 比较两个value。
+     *
+     * @param other value对象。
+     *
+     * @returns 小于返回-1，等于返回0，大于返回1。
+     */
+    compare(other: TValue): number;
+    /**
      * 设置类型为int的值。
      *
      * @param value 待设置的值。
@@ -6639,6 +6647,36 @@ export declare class TWidget {
      */
     animateValueTo(value: any, duration: number): TRet;
     /**
+     * 设置控件的属性(以动画形式变化到指定的值)。
+     *
+     * @param name 属性名称。
+     * @param value 值。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    animatePropFloatTo(name: string, value: any, duration: number): TRet;
+    /**
+     * 设置控件的位置(以动画形式变化到指定的位置)。
+     *
+     * @param x x坐标。
+     * @param y y坐标。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    animatePositionTo(x: number, y: number, duration: number): TRet;
+    /**
+     * 设置控件的大小(以动画形式变化到指定的大小)。
+     *
+     * @param w 宽度。
+     * @param h 高度。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    animateSizeTo(w: number, h: number, duration: number): TRet;
+    /**
      * 查询指定的style是否存在。
      *
      * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -8506,6 +8544,53 @@ export declare enum TEasingType {
 export declare class TIdleManager {
     nativeObj: any;
     constructor(nativeObj: any);
+}
+/**
+ * LOG的级别。
+ *
+ */
+export declare enum TTkLogLevel {
+    /**
+     * DEBUG
+     *
+     */
+    DEBUG,
+    /**
+     * INFO
+     *
+     */
+    INFO,
+    /**
+     * WARN
+     *
+     */
+    WARN,
+    /**
+     * ERROR
+     *
+     */
+    ERROR
+}
+/**
+ * log。
+ *
+ */
+export declare class TLog {
+    /**
+     * 获取log的级别。
+     *
+     *
+     * @returns 返回log的级别。
+     */
+    static getLogLevel(): TTkLogLevel;
+    /**
+     * 设置log的级别。
+     *
+     * @param log_level log的级别。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    static setLogLevel(log_level: TTkLogLevel): TRet;
 }
 /**
  * MIME_TYPE。

@@ -34,7 +34,7 @@ TK全局对象。
 
 #### Defined in
 
-[awtk.ts:4247](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4247)
+[awtk.ts:4269](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4269)
 
 ***
 
@@ -52,7 +52,7 @@ TK全局对象。
 
 #### Defined in
 
-[awtk.ts:4258](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4258)
+[awtk.ts:4280](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4280)
 
 ***
 
@@ -92,7 +92,7 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4202](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4202)
+[awtk.ts:4224](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4224)
 
 ***
 
@@ -110,7 +110,7 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4269](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4269)
+[awtk.ts:4291](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4291)
 
 ***
 
@@ -130,7 +130,7 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4186](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4186)
+[awtk.ts:4208](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4208)
 
 ***
 
@@ -148,7 +148,7 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4224](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4224)
+[awtk.ts:4246](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4246)
 
 ***
 
@@ -172,7 +172,7 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4236](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4236)
+[awtk.ts:4258](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4258)
 
 ***
 
@@ -190,4 +190,4 @@ LCD高度。
 
 #### Defined in
 
-[awtk.ts:4213](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4213)
+[awtk.ts:4235](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4235)

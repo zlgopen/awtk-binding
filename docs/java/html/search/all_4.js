@@ -17,7 +17,7 @@ var searchData=
   ['enable_5fpreview_14',['ENABLE_PREVIEW',['../enumawtk_1_1_t_widget_prop.html#a897cc8379e327c847bd240ab3b98b645',1,'awtk::TWidgetProp']]],
   ['eos_15',['EOS',['../enumawtk_1_1_t_ret.html#ae871894a013cafd5a3579d5777f3d713',1,'awtk::TRet']]],
   ['equal_16',['equal',['../classawtk_1_1_t_value.html#a0b97da4799c2d428b97019cea1d65287',1,'awtk.TValue.equal()'],['../classawtk_1_1_t_widget.html#ac6e1253525c27a3fd49e134ed3f2189d',1,'awtk.TWidget.equal()']]],
-  ['error_17',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR']]],
+  ['error_17',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR'],['../enumawtk_1_1_t_tk_log_level.html#a670ff091c3428cc2b02df4cb3ddafd50',1,'awtk.TTkLogLevel.ERROR'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR']]],
   ['eval_18',['eval',['../classawtk_1_1_t_object.html#a6f8f65ee50225e5420aa14a1d6282021',1,'awtk::TObject']]],
   ['even_5fbg_5fcolor_19',['EVEN_BG_COLOR',['../enumawtk_1_1_t_style_id.html#a89a499aef84f94869adececcd0b77b97',1,'awtk::TStyleId']]],
   ['even_5fodd_20',['EVEN_ODD',['../enumawtk_1_1_t_vgcanvas_fill_mode.html#aa15a3d5c7002df2d8bb4a00c744c7f9d',1,'awtk::TVgcanvasFillMode']]],

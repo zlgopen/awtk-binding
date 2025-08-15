@@ -483,6 +483,10 @@
     return value_equal(((const value_t*)(this->nativeObj)), ((const value_t*)(other.nativeObj)));
  }
 
+ int TValue::Compare(TValue& other)  {
+    return value_compare(((const value_t*)(this->nativeObj)), ((const value_t*)(other.nativeObj)));
+ }
+
  TValue TValue::SetInt(int32_t value)  {
    return TValue((value_t*)(value_set_int(((value_t*)(this->nativeObj)), value)));
  }
@@ -1241,6 +1245,18 @@
 
  ret_t TWidget::AnimateValueTo(float_t value, uint32_t duration)  {
    return widget_animate_value_to(((widget_t*)(this->nativeObj)), value, duration);
+ }
+
+ ret_t TWidget::AnimatePropFloatTo(const char* name, float_t value, uint32_t duration)  {
+   return widget_animate_prop_float_to(((widget_t*)(this->nativeObj)), name, value, duration);
+ }
+
+ ret_t TWidget::AnimatePositionTo(xy_t x, xy_t y, uint32_t duration)  {
+   return widget_animate_position_to(((widget_t*)(this->nativeObj)), x, y, duration);
+ }
+
+ ret_t TWidget::AnimateSizeTo(wh_t w, wh_t h, uint32_t duration)  {
+   return widget_animate_size_to(((widget_t*)(this->nativeObj)), w, h, duration);
  }
 
  bool TWidget::IsStyleExist(const char* style_name, const char* state_name)  {
@@ -2017,6 +2033,14 @@
 
  int32_t TDateTime::GetYear() const {
    return ((date_time_t*)(this->nativeObj))->year;
+ }
+
+ tk_log_level_t TLog::GetLogLevel()  {
+   return log_get_log_level();
+ }
+
+ ret_t TLog::SetLogLevel(tk_log_level_t log_level)  {
+   return log_set_log_level(log_level);
  }
 
  TRlog TRlog::Create(const char* filename_pattern, uint32_t max_size, uint32_t buff_size)  {

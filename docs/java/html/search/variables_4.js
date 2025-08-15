@@ -14,7 +14,7 @@ var searchData=
   ['enable_5flong_5fpress_11',['ENABLE_LONG_PRESS',['../enumawtk_1_1_t_widget_prop.html#a2b41b1e9d7627abb03d411aa6c7b2045',1,'awtk::TWidgetProp']]],
   ['enable_5fpreview_12',['ENABLE_PREVIEW',['../enumawtk_1_1_t_widget_prop.html#a897cc8379e327c847bd240ab3b98b645',1,'awtk::TWidgetProp']]],
   ['eos_13',['EOS',['../enumawtk_1_1_t_ret.html#ae871894a013cafd5a3579d5777f3d713',1,'awtk::TRet']]],
-  ['error_14',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR']]],
+  ['error_14',['ERROR',['../enumawtk_1_1_t_event_type.html#a347c42e6f5f44799f7a01835a5b6cd75',1,'awtk.TEventType.ERROR'],['../enumawtk_1_1_t_tk_log_level.html#a670ff091c3428cc2b02df4cb3ddafd50',1,'awtk.TTkLogLevel.ERROR'],['../enumawtk_1_1_t_widget_state.html#abab71056adc8489c58983defd2995cb5',1,'awtk.TWidgetState.ERROR']]],
   ['even_5fbg_5fcolor_15',['EVEN_BG_COLOR',['../enumawtk_1_1_t_style_id.html#a89a499aef84f94869adececcd0b77b97',1,'awtk::TStyleId']]],
   ['even_5fodd_16',['EVEN_ODD',['../enumawtk_1_1_t_vgcanvas_fill_mode.html#aa15a3d5c7002df2d8bb4a00c744c7f9d',1,'awtk::TVgcanvasFillMode']]],
   ['exceed_5frange_17',['EXCEED_RANGE',['../enumawtk_1_1_t_ret.html#ab091aae0d90bfd131a25ce69424d47fb',1,'awtk::TRet']]],

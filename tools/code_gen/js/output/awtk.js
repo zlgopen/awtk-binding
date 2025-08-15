@@ -16,9 +16,9 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TIndicatorDefaultPaint = exports.TExtWidgets = exports.TAppConf = exports.TWidget = exports.TWidgetCursor = exports.TWidgetState = exports.TWindowClosable = exports.TWindowStage = exports.TWidgetType = exports.TWidgetProp = exports.TVgcanvasLineJoin = exports.TVgcanvasLineCap = exports.TVgcanvas = exports.TVgcanvasFillMode = exports.TBitmapFlag = exports.TBitmapFormat = exports.TAppType = exports.TAlignH = exports.TAlignV = exports.TTimer = exports.TTheme = exports.TSystemInfoFlag = exports.TStyle = exports.TStyleId = exports.TLocaleInfos = exports.TLocaleInfo = exports.TKeyCode = exports.TInputMethod = exports.TInputType = exports.TImageManager = exports.TIdle = exports.TGlyphFormat = exports.TEvent = exports.TEventType = exports.TDialogQuitCode = exports.TClipBoard = exports.TClipBoardDataType = exports.TCanvas = exports.TCanvasOffline = exports.TImageDrawType = exports.TBidiType = exports.TGlobal = exports.TValue = exports.TObject = exports.TBitmap = exports.TRect = exports.TRectf = exports.TPointf = exports.TPoint = exports.TEmitter = void 0;
-exports.TLangIndicator = exports.TCandidates = exports.TImageValue = exports.TImageAnimation = exports.TGauge = exports.TGaugePointer = exports.TFileChooser = exports.TFileBrowserView = exports.TDraggable = exports.TColorPicker = exports.TColorComponent = exports.TCanvasWidget = exports.TWindowManager = exports.TWindowBase = exports.TStyleMutable = exports.TLocaleInfoXml = exports.TImageBase = exports.TFontManager = exports.TUiLoadEvent = exports.TTouchEvent = exports.TSystemEvent = exports.TDropFileEvent = exports.TThemeChangeEvent = exports.TMultiGestureEvent = exports.TWindowEvent = exports.TPaintEvent = exports.TKeyEvent = exports.TPointerEvent = exports.TOffsetChangeEvent = exports.TOrientationEvent = exports.TWheelEvent = exports.TModelEvent = exports.TWidgetAnimatorEvent = exports.TAssetsManager = exports.TValueType = exports.TRet = exports.TTimerManager = exports.TTimeNow = exports.TRlog = exports.TObjectLife = exports.TObjectProp = exports.TObjectCmd = exports.TMIME_TYPE = exports.TIdleManager = exports.TEasingType = exports.TDateTime = exports.TColor = exports.TAssetInfo = exports.TAssetType = exports.TVpageEvent = void 0;
-exports.TTabButtonGroup = exports.TSlider = exports.TRow = exports.TProgressBar = exports.TPages = exports.TLabel = exports.TGroupBox = exports.TGrid = exports.TGridItem = exports.TEdit = exports.TDragger = exports.TDigitClock = exports.TDialogTitle = exports.TDialogClient = exports.TComboBoxItem = exports.TColumn = exports.TColorTile = exports.TClipView = exports.TCheckButton = exports.TButton = exports.TButtonGroup = exports.TAppBar = exports.TNamedValue = exports.TLogMessageEvent = exports.TValueChangeEvent = exports.TCmdExecEvent = exports.TErrorEvent = exports.TDoneEvent = exports.TProgressEvent = exports.TPropChangeEvent = exports.TVpage = exports.TTimerWidget = exports.TTimeClock = exports.TTextSelector = exports.TSwitch = exports.TSlideView = exports.TSlideIndicator = exports.TSlideMenu = exports.TSerialWidget = exports.TScrollView = exports.TScrollBar = exports.TListView = exports.TListViewH = exports.TListItem = exports.THscrollLabel = exports.TRichText = exports.TRichTextView = exports.TProgressCircle = exports.TMledit = exports.TLineNumber = void 0;
-exports.TComboBoxEx = exports.TSystemBar = exports.TSpinBox = exports.TPopup = exports.TOverlay = exports.TImage = exports.TComboBox = exports.TCalibrationWin = exports.TTimerInfo = exports.TObjectHash = exports.TObjectDefault = exports.TObjectArray = exports.TNamedValueHash = exports.TIdleInfo = exports.TSvgImage = exports.TListItemSeperator = exports.TMutableImage = exports.TKeyboard = exports.TGifImage = exports.TEditEx = exports.TWindow = exports.TNativeWindow = exports.TDialog = exports.TView = exports.TTabControl = exports.TTabButton = void 0;
+exports.TImageValue = exports.TImageAnimation = exports.TGauge = exports.TGaugePointer = exports.TFileChooser = exports.TFileBrowserView = exports.TDraggable = exports.TColorPicker = exports.TColorComponent = exports.TCanvasWidget = exports.TWindowManager = exports.TWindowBase = exports.TStyleMutable = exports.TLocaleInfoXml = exports.TImageBase = exports.TFontManager = exports.TUiLoadEvent = exports.TTouchEvent = exports.TSystemEvent = exports.TDropFileEvent = exports.TThemeChangeEvent = exports.TMultiGestureEvent = exports.TWindowEvent = exports.TPaintEvent = exports.TKeyEvent = exports.TPointerEvent = exports.TOffsetChangeEvent = exports.TOrientationEvent = exports.TWheelEvent = exports.TModelEvent = exports.TWidgetAnimatorEvent = exports.TAssetsManager = exports.TValueType = exports.TRet = exports.TTimerManager = exports.TTimeNow = exports.TRlog = exports.TObjectLife = exports.TObjectProp = exports.TObjectCmd = exports.TMIME_TYPE = exports.TLog = exports.TTkLogLevel = exports.TIdleManager = exports.TEasingType = exports.TDateTime = exports.TColor = exports.TAssetInfo = exports.TAssetType = exports.TVpageEvent = void 0;
+exports.TRow = exports.TProgressBar = exports.TPages = exports.TLabel = exports.TGroupBox = exports.TGrid = exports.TGridItem = exports.TEdit = exports.TDragger = exports.TDigitClock = exports.TDialogTitle = exports.TDialogClient = exports.TComboBoxItem = exports.TColumn = exports.TColorTile = exports.TClipView = exports.TCheckButton = exports.TButton = exports.TButtonGroup = exports.TAppBar = exports.TNamedValue = exports.TLogMessageEvent = exports.TValueChangeEvent = exports.TCmdExecEvent = exports.TErrorEvent = exports.TDoneEvent = exports.TProgressEvent = exports.TPropChangeEvent = exports.TVpage = exports.TTimerWidget = exports.TTimeClock = exports.TTextSelector = exports.TSwitch = exports.TSlideView = exports.TSlideIndicator = exports.TSlideMenu = exports.TSerialWidget = exports.TScrollView = exports.TScrollBar = exports.TListView = exports.TListViewH = exports.TListItem = exports.THscrollLabel = exports.TRichText = exports.TRichTextView = exports.TProgressCircle = exports.TMledit = exports.TLineNumber = exports.TLangIndicator = exports.TCandidates = void 0;
+exports.TComboBoxEx = exports.TSystemBar = exports.TSpinBox = exports.TPopup = exports.TOverlay = exports.TImage = exports.TComboBox = exports.TCalibrationWin = exports.TTimerInfo = exports.TObjectHash = exports.TObjectDefault = exports.TObjectArray = exports.TNamedValueHash = exports.TIdleInfo = exports.TSvgImage = exports.TListItemSeperator = exports.TMutableImage = exports.TKeyboard = exports.TGifImage = exports.TEditEx = exports.TWindow = exports.TNativeWindow = exports.TDialog = exports.TView = exports.TTabControl = exports.TTabButton = exports.TTabButtonGroup = exports.TSlider = void 0;
 /**
  * 事件分发器, 用于实现观察者模式。
  *
@@ -1412,6 +1412,16 @@ var TValue = /** @class */ (function () {
      */
     TValue.prototype.equal = function (other) {
         return value_equal(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
+    };
+    /**
+     * 比较两个value。
+     *
+     * @param other value对象。
+     *
+     * @returns 小于返回-1，等于返回0，大于返回1。
+     */
+    TValue.prototype.compare = function (other) {
+        return value_compare(this != null ? (this.nativeObj || this) : null, other != null ? (other.nativeObj || other) : null);
     };
     /**
      * 设置类型为int的值。
@@ -7612,6 +7622,42 @@ var TWidget = /** @class */ (function () {
         return widget_animate_value_to(this != null ? (this.nativeObj || this) : null, value, duration);
     };
     /**
+     * 设置控件的属性(以动画形式变化到指定的值)。
+     *
+     * @param name 属性名称。
+     * @param value 值。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TWidget.prototype.animatePropFloatTo = function (name, value, duration) {
+        return widget_animate_prop_float_to(this != null ? (this.nativeObj || this) : null, name, value, duration);
+    };
+    /**
+     * 设置控件的位置(以动画形式变化到指定的位置)。
+     *
+     * @param x x坐标。
+     * @param y y坐标。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TWidget.prototype.animatePositionTo = function (x, y, duration) {
+        return widget_animate_position_to(this != null ? (this.nativeObj || this) : null, x, y, duration);
+    };
+    /**
+     * 设置控件的大小(以动画形式变化到指定的大小)。
+     *
+     * @param w 宽度。
+     * @param h 高度。
+     * @param duration 动画持续时间(毫秒)。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TWidget.prototype.animateSizeTo = function (w, h, duration) {
+        return widget_animate_size_to(this != null ? (this.nativeObj || this) : null, w, h, duration);
+    };
+    /**
      * 查询指定的style是否存在。
      *
      * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -10092,6 +10138,64 @@ var TIdleManager = /** @class */ (function () {
     return TIdleManager;
 }());
 exports.TIdleManager = TIdleManager;
+;
+/**
+ * LOG的级别。
+ *
+ */
+var TTkLogLevel;
+(function (TTkLogLevel) {
+    /**
+     * DEBUG
+     *
+     */
+    TTkLogLevel[TTkLogLevel["DEBUG"] = LOG_LEVEL_DEBUG()] = "DEBUG";
+    /**
+     * INFO
+     *
+     */
+    TTkLogLevel[TTkLogLevel["INFO"] = LOG_LEVEL_INFO()] = "INFO";
+    /**
+     * WARN
+     *
+     */
+    TTkLogLevel[TTkLogLevel["WARN"] = LOG_LEVEL_WARN()] = "WARN";
+    /**
+     * ERROR
+     *
+     */
+    TTkLogLevel[TTkLogLevel["ERROR"] = LOG_LEVEL_ERROR()] = "ERROR";
+})(TTkLogLevel || (exports.TTkLogLevel = TTkLogLevel = {}));
+;
+/**
+ * log。
+ *
+ */
+var TLog = /** @class */ (function () {
+    function TLog() {
+    }
+    /**
+     * 获取log的级别。
+     *
+     *
+     * @returns 返回log的级别。
+     */
+    TLog.getLogLevel = function () {
+        return log_get_log_level();
+    };
+    /**
+     * 设置log的级别。
+     *
+     * @param log_level log的级别。
+     *
+     * @returns 返回RET_OK表示成功，否则表示失败。
+     */
+    TLog.setLogLevel = function (log_level) {
+        return log_set_log_level(log_level);
+    };
+    return TLog;
+}());
+exports.TLog = TLog;
 ;
 /**
  * MIME_TYPE。

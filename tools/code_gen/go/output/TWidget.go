@@ -108,6 +108,20 @@ func (this TWidget) AnimateValueTo(value float64, duration uint32) TRet {
   return TRet(C.widget_animate_value_to((*C.widget_t)(this.handle), (C.float_t)(value), (C.uint32_t)(duration)));
 }
 
+func (this TWidget) AnimatePropFloatTo(name string, value float64, duration uint32) TRet {
+  aname := C.CString(name)
+  defer C.free(unsafe.Pointer(aname))
+  return TRet(C.widget_animate_prop_float_to((*C.widget_t)(this.handle), aname, (C.float_t)(value), (C.uint32_t)(duration)));
+}
+
+func (this TWidget) AnimatePositionTo(x int, y int, duration uint32) TRet {
+  return TRet(C.widget_animate_position_to((*C.widget_t)(this.handle), (C.xy_t)(x), (C.xy_t)(y), (C.uint32_t)(duration)));
+}
+
+func (this TWidget) AnimateSizeTo(w int, h int, duration uint32) TRet {
+  return TRet(C.widget_animate_size_to((*C.widget_t)(this.handle), (C.wh_t)(w), (C.wh_t)(h), (C.uint32_t)(duration)));
+}
+
 func (this TWidget) IsStyleExist(style_name string, state_name string) bool {
   astyle_name := C.CString(style_name)
   defer C.free(unsafe.Pointer(astyle_name))

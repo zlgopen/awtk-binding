@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[awtk.ts:14931](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14931)
+[awtk.ts:15056](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15056)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[awtk.ts:14871](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14871)
+[awtk.ts:14996](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14996)
 
 ***
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[awtk.ts:14913](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14913)
+[awtk.ts:15038](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15038)
 
 ***
 
@@ -54,7 +54,7 @@ CRC错误。
 
 #### Defined in
 
-[awtk.ts:14943](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14943)
+[awtk.ts:15068](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15068)
 
 ***
 
@@ -66,7 +66,7 @@ CRC错误。
 
 #### Defined in
 
-[awtk.ts:14895](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14895)
+[awtk.ts:15020](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15020)
 
 ***
 
@@ -78,7 +78,7 @@ End of Stream
 
 #### Defined in
 
-[awtk.ts:14955](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14955)
+[awtk.ts:15080](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15080)
 
 ***
 
@@ -90,7 +90,7 @@ End of Stream
 
 #### Defined in
 
-[awtk.ts:14979](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14979)
+[awtk.ts:15104](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15104)
 
 ***
 
@@ -102,7 +102,7 @@ End of Stream
 
 #### Defined in
 
-[awtk.ts:14847](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14847)
+[awtk.ts:14972](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14972)
 
 ***
 
@@ -114,7 +114,7 @@ End of Stream
 
 #### Defined in
 
-[awtk.ts:14865](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14865)
+[awtk.ts:14990](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14990)
 
 ***
 
@@ -126,7 +126,7 @@ End of Stream
 
 #### Defined in
 
-[awtk.ts:14973](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14973)
+[awtk.ts:15098](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15098)
 
 ***
 
@@ -138,7 +138,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14949](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14949)
+[awtk.ts:15074](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15074)
 
 ***
 
@@ -150,7 +150,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14925](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14925)
+[awtk.ts:15050](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15050)
 
 ***
 
@@ -162,7 +162,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14985](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14985)
+[awtk.ts:15110](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15110)
 
 ***
 
@@ -174,7 +174,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14889](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14889)
+[awtk.ts:15014](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15014)
 
 ***
 
@@ -186,7 +186,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14853](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14853)
+[awtk.ts:14978](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14978)
 
 ***
 
@@ -198,7 +198,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14961](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14961)
+[awtk.ts:15086](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15086)
 
 ***
 
@@ -210,7 +210,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14967](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14967)
+[awtk.ts:15092](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15092)
 
 ***
 
@@ -222,7 +222,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14919](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14919)
+[awtk.ts:15044](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15044)
 
 ***
 
@@ -234,7 +234,7 @@ IO错误。
 
 #### Defined in
 
-[awtk.ts:14835](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14835)
+[awtk.ts:14960](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14960)
 
 ***
 
@@ -246,7 +246,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14841](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14841)
+[awtk.ts:14966](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14966)
 
 ***
 
@@ -258,7 +258,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14859](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14859)
+[awtk.ts:14984](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14984)
 
 ***
 
@@ -270,7 +270,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14877](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14877)
+[awtk.ts:15002](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15002)
 
 ***
 
@@ -282,7 +282,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14883](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14883)
+[awtk.ts:15008](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15008)
 
 ***
 
@@ -294,7 +294,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14907](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14907)
+[awtk.ts:15032](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15032)
 
 ***
 
@@ -306,7 +306,7 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14901](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14901)
+[awtk.ts:15026](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15026)
 
 ***
 
@@ -318,4 +318,4 @@ Out of memory。
 
 #### Defined in
 
-[awtk.ts:14937](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L14937)
+[awtk.ts:15062](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15062)

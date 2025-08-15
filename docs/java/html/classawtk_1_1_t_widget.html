@@ -215,6 +215,12 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:ac075edf40a980ffa560a4e927a8c4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72faf65ae1c9c8e61f5e3c753d0b17d" id="r_ac72faf65ae1c9c8e61f5e3c753d0b17d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac72faf65ae1c9c8e61f5e3c753d0b17d">animateValueTo</a> (double value, int duration)</td></tr>
 <tr class="separator:ac72faf65ae1c9c8e61f5e3c753d0b17d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe75a14fa494c6857feef379aa91477" id="r_acbe75a14fa494c6857feef379aa91477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbe75a14fa494c6857feef379aa91477">animatePropFloatTo</a> (String name, double value, int duration)</td></tr>
+<tr class="separator:acbe75a14fa494c6857feef379aa91477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab873566dc0bcfad841c5fc655f98ef0c" id="r_ab873566dc0bcfad841c5fc655f98ef0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab873566dc0bcfad841c5fc655f98ef0c">animatePositionTo</a> (int x, int y, int duration)</td></tr>
+<tr class="separator:ab873566dc0bcfad841c5fc655f98ef0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0082d9765e84c9cbd1cef74d18bc492f" id="r_a0082d9765e84c9cbd1cef74d18bc492f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0082d9765e84c9cbd1cef74d18bc492f">animateSizeTo</a> (int w, int h, int duration)</td></tr>
+<tr class="separator:a0082d9765e84c9cbd1cef74d18bc492f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a857bd2ce0c2b4560ddeaf7a19d3a1a38" id="r_a857bd2ce0c2b4560ddeaf7a19d3a1a38"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a857bd2ce0c2b4560ddeaf7a19d3a1a38">isStyleExist</a> (String style_name, String state_name)</td></tr>
 <tr class="separator:a857bd2ce0c2b4560ddeaf7a19d3a1a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e46b156e8e06f7c0b3a2afa9ed81b9" id="r_ab1e46b156e8e06f7c0b3a2afa9ed81b9"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1e46b156e8e06f7c0b3a2afa9ed81b9">isSupportHighlighter</a> ()</td></tr>
@@ -655,6 +661,138 @@ Public 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">delta</td><td>增量。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="ab873566dc0bcfad841c5fc655f98ef0c" name="ab873566dc0bcfad841c5fc655f98ef0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab873566dc0bcfad841c5fc655f98ef0c">&#9670;&#160;</a></span>animatePositionTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TWidget.animatePositionTo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置控件的位置(以动画形式变化到指定的位置)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
+    <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
+    <tr><td class="paramname">duration</td><td>动画持续时间(毫秒)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="acbe75a14fa494c6857feef379aa91477" name="acbe75a14fa494c6857feef379aa91477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe75a14fa494c6857feef379aa91477">&#9670;&#160;</a></span>animatePropFloatTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TWidget.animatePropFloatTo </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置控件的属性(以动画形式变化到指定的值)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>属性名称。 </td></tr>
+    <tr><td class="paramname">value</td><td>值。 </td></tr>
+    <tr><td class="paramname">duration</td><td>动画持续时间(毫秒)。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a0082d9765e84c9cbd1cef74d18bc492f" name="a0082d9765e84c9cbd1cef74d18bc492f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0082d9765e84c9cbd1cef74d18bc492f">&#9670;&#160;</a></span>animateSizeTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TWidget.animateSizeTo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>duration</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置控件的大小(以动画形式变化到指定的大小)。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>宽度。 </td></tr>
+    <tr><td class="paramname">h</td><td>高度。 </td></tr>
+    <tr><td class="paramname">duration</td><td>动画持续时间(毫秒)。</td></tr>
   </table>
   </dd>
 </dl>

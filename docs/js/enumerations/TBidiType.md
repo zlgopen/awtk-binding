@@ -18,7 +18,7 @@ bidi 类型常量定义。
 
 #### Defined in
 
-[awtk.ts:4284](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4284)
+[awtk.ts:4306](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4306)
 
 ***
 
@@ -30,7 +30,7 @@ Left-To-Right letter Override。
 
 #### Defined in
 
-[awtk.ts:4302](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4302)
+[awtk.ts:4324](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4324)
 
 ***
 
@@ -42,7 +42,7 @@ Left-To-Right letter。
 
 #### Defined in
 
-[awtk.ts:4290](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4290)
+[awtk.ts:4312](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4312)
 
 ***
 
@@ -54,7 +54,7 @@ Right-To-Left letter Override。
 
 #### Defined in
 
-[awtk.ts:4308](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4308)
+[awtk.ts:4330](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4330)
 
 ***
 
@@ -66,7 +66,7 @@ Right-To-Left letter。
 
 #### Defined in
 
-[awtk.ts:4296](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4296)
+[awtk.ts:4318](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4318)
 
 ***
 
@@ -78,7 +78,7 @@ Weak Left To Right paragraph。
 
 #### Defined in
 
-[awtk.ts:4314](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4314)
+[awtk.ts:4336](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4336)
 
 ***
 
@@ -90,4 +90,4 @@ Weak Right To Left paragraph。
 
 #### Defined in
 
-[awtk.ts:4320](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L4320)
+[awtk.ts:4342](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4342)

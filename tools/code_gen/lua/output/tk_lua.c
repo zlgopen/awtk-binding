@@ -38,6 +38,7 @@
 #include "tkc/date_time.h"
 #include "tkc/easing.h"
 #include "tkc/idle_manager.h"
+#include "tkc/log.h"
 #include "tkc/mime_types.h"
 #include "tkc/rlog.h"
 #include "tkc/time_now.h"
@@ -2056,6 +2057,17 @@ static int wrap_value_equal(lua_State* L) {
   return 1;
 }
 
+static int wrap_value_compare(lua_State* L) {
+  int ret = 0;
+  const value_t* v = (const value_t*)tk_checkudata(L, 1, "const value_t");
+  const value_t* other = (const value_t*)tk_checkudata(L, 2, "const value_t");
+  ret = (int)value_compare(v, other);
+
+  lua_pushinteger(L,(lua_Integer)(ret));
+
+  return 1;
+}
+
 static int wrap_value_set_int(lua_State* L) {
   value_t* ret = NULL;
   value_t* v = (value_t*)tk_checkudata(L, 1, "value_t");
@@ -2206,6 +2218,7 @@ static const struct luaL_Reg value_t_member_funcs[] = {
   {"str_ex", wrap_value_str_ex},
   {"is_null", wrap_value_is_null},
   {"equal", wrap_value_equal},
+  {"compare", wrap_value_compare},
   {"set_int", wrap_value_set_int},
   {"set_object", wrap_value_set_object},
   {"object", wrap_value_object},
@@ -7779,6 +7792,45 @@ static int wrap_widget_animate_value_to(lua_State* L) {
   return 1;
 }
 
+static int wrap_widget_animate_prop_float_to(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  const char* name = (const char*)luaL_checkstring(L, 2);
+  float_t value = (float_t)luaL_checknumber(L, 3);
+  uint32_t duration = (uint32_t)luaL_checkinteger(L, 4);
+  ret = (ret_t)widget_animate_prop_float_to(widget, name, value, duration);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_animate_position_to(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  xy_t x = (xy_t)luaL_checkinteger(L, 2);
+  xy_t y = (xy_t)luaL_checkinteger(L, 3);
+  uint32_t duration = (uint32_t)luaL_checkinteger(L, 4);
+  ret = (ret_t)widget_animate_position_to(widget, x, y, duration);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_widget_animate_size_to(lua_State* L) {
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
+  wh_t w = (wh_t)luaL_checkinteger(L, 2);
+  wh_t h = (wh_t)luaL_checkinteger(L, 3);
+  uint32_t duration = (uint32_t)luaL_checkinteger(L, 4);
+  ret = (ret_t)widget_animate_size_to(widget, w, h, duration);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
 static int wrap_widget_is_style_exist(lua_State* L) {
   bool_t ret = 0;
   widget_t* widget = (widget_t*)tk_checkudata(L, 1, "widget_t");
@@ -9023,6 +9075,9 @@ static const struct luaL_Reg widget_t_member_funcs[] = {
   {"set_value_int", wrap_widget_set_value_int},
   {"add_value_int", wrap_widget_add_value_int},
   {"animate_value_to", wrap_widget_animate_value_to},
+  {"animate_prop_float_to", wrap_widget_animate_prop_float_to},
+  {"animate_position_to", wrap_widget_animate_position_to},
+  {"animate_size_to", wrap_widget_animate_size_to},
   {"is_style_exist", wrap_widget_is_style_exist},
   {"is_support_highlighter", wrap_widget_is_support_highlighter},
   {"has_highlighter", wrap_widget_has_highlighter},
@@ -10299,6 +10354,58 @@ static void idle_manager_t_init(lua_State* L) {
   lua_settable(L, -3);
   luaL_openlib(L, NULL, index_funcs, 0);
   luaL_openlib(L, "IdleManager", static_funcs, 0);
+  lua_settop(L, 0);
+}
+static void tk_log_level_t_init(lua_State* L) {
+  lua_newtable(L);
+  lua_setglobal(L, "TkLogLevel");
+  lua_getglobal(L, "TkLogLevel");
+
+  lua_pushstring(L, "DEBUG");
+  lua_pushinteger(L, LOG_LEVEL_DEBUG);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "INFO");
+  lua_pushinteger(L, LOG_LEVEL_INFO);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "WARN");
+  lua_pushinteger(L, LOG_LEVEL_WARN);
+  lua_settable(L, -3); 
+
+  lua_pushstring(L, "ERROR");
+  lua_pushinteger(L, LOG_LEVEL_ERROR);
+  lua_settable(L, -3); 
+
+}
+
+static int wrap_log_get_log_level(lua_State* L) {
+  tk_log_level_t ret = 0;
+  ret = (tk_log_level_t)log_get_log_level();
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static int wrap_log_set_log_level(lua_State* L) {
+  ret_t ret = 0;
+  tk_log_level_t log_level = (tk_log_level_t)luaL_checkinteger(L, 1);
+  ret = (ret_t)log_set_log_level(log_level);
+
+  lua_pushnumber(L,(lua_Number)(ret));
+
+  return 1;
+}
+
+static void log_t_init(lua_State* L) {
+  static const struct luaL_Reg static_funcs[] = {
+    {"get_log_level", wrap_log_get_log_level},
+    {"set_log_level", wrap_log_set_log_level},
+    {NULL, NULL}
+  };
+
+  luaL_openlib(L, "Log", static_funcs, 0);
   lua_settop(L, 0);
 }
 static void MIME_TYPE_init(lua_State* L) {
@@ -25488,6 +25595,8 @@ void luaL_openawtk(lua_State* L) {
   date_time_t_init(L);
   easing_type_t_init(L);
   idle_manager_t_init(L);
+  tk_log_level_t_init(L);
+  log_t_init(L);
   MIME_TYPE_init(L);
   object_cmd_t_init(L);
   object_prop_t_init(L);

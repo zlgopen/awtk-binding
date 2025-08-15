@@ -21,7 +21,7 @@ var searchData=
   ['closewindow_18',['CloseWindow',['../class_t_widget.html#a035af692306753c1971710b4b3b99de8',1,'TWidget']]],
   ['closewindowforce_19',['CloseWindowForce',['../class_t_widget.html#ab21b75d2ab60efbaf114e1a712d7e073',1,'TWidget']]],
   ['committext_20',['CommitText',['../class_t_input_method.html#adfc3baefddac2f2c5ee69d5dafeb8714',1,'TInputMethod']]],
-  ['compare_21',['Compare',['../class_t_object.html#a4d3555772c321b619eff660367e5ef37',1,'TObject']]],
+  ['compare_21',['Compare',['../class_t_object.html#a4d3555772c321b619eff660367e5ef37',1,'TObject::Compare()'],['../class_t_value.html#ab48ae492aab13223b2f64c39f660f165',1,'TValue::Compare()']]],
   ['confirm_22',['Confirm',['../class_t_dialog.html#a342592b1255b2c735b13d9e681264572',1,'TDialog']]],
   ['copyprop_23',['CopyProp',['../class_t_object.html#a50ba4b37006ad1d0791475a39d4ac256',1,'TObject']]],
   ['copyprops_24',['CopyProps',['../class_t_object.html#aef604c3c9c82b33038dae6b679afe164',1,'TObject']]],

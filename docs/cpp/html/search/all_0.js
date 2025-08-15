@@ -8,9 +8,12 @@ var searchData=
   ['addhighlightline_5',['AddHighlightLine',['../class_t_line_number.html#a1608ce79e84dfd690ecb2cc2b72cd8ea',1,'TLineNumber']]],
   ['addvalue_6',['AddValue',['../class_t_widget.html#ae5d866d717d1a3d632a6001afe4ebba2',1,'TWidget']]],
   ['addvalueint_7',['AddValueInt',['../class_t_widget.html#a896c0ae5903a50197b74d8cd59f07479',1,'TWidget']]],
-  ['animatevalueto_8',['AnimateValueTo',['../class_t_widget.html#a07fe74634b763ea924cae366d67516dd',1,'TWidget']]],
-  ['appendoption_9',['AppendOption',['../class_t_text_selector.html#a3acea66ef67e86a2dd922b9501ba9382',1,'TTextSelector::AppendOption()'],['../class_t_combo_box.html#a912f99e90e457cd5e7c7530c80651ab0',1,'TComboBox::AppendOption()']]],
-  ['arc_10',['Arc',['../class_t_vgcanvas.html#a526c1eb6abb162b159fca0582d9b0c40',1,'TVgcanvas']]],
-  ['arcto_11',['ArcTo',['../class_t_vgcanvas.html#afe69c74ebac3fccc57cbfafbf7ddf9b8',1,'TVgcanvas']]],
-  ['awtk_20cpp_12',['AWTK-CPP',['../index.html',1,'']]]
+  ['animatepositionto_8',['AnimatePositionTo',['../class_t_widget.html#a70f973ea7b205681b5c020aac5546a9e',1,'TWidget']]],
+  ['animatepropfloatto_9',['AnimatePropFloatTo',['../class_t_widget.html#a60c1d8e7dbd7bba5ed4edee472d464d9',1,'TWidget']]],
+  ['animatesizeto_10',['AnimateSizeTo',['../class_t_widget.html#a14b25e99918f8e04f3d627f174f8d4fe',1,'TWidget']]],
+  ['animatevalueto_11',['AnimateValueTo',['../class_t_widget.html#a07fe74634b763ea924cae366d67516dd',1,'TWidget']]],
+  ['appendoption_12',['AppendOption',['../class_t_text_selector.html#a3acea66ef67e86a2dd922b9501ba9382',1,'TTextSelector::AppendOption()'],['../class_t_combo_box.html#a912f99e90e457cd5e7c7530c80651ab0',1,'TComboBox::AppendOption()']]],
+  ['arc_13',['Arc',['../class_t_vgcanvas.html#a526c1eb6abb162b159fca0582d9b0c40',1,'TVgcanvas']]],
+  ['arcto_14',['ArcTo',['../class_t_vgcanvas.html#afe69c74ebac3fccc57cbfafbf7ddf9b8',1,'TVgcanvas']]],
+  ['awtk_20cpp_15',['AWTK-CPP',['../index.html',1,'']]]
 ];

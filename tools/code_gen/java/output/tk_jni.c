@@ -37,6 +37,7 @@
 #include "tkc/date_time.h"
 #include "tkc/easing.h"
 #include "tkc/idle_manager.h"
+#include "tkc/log.h"
 #include "tkc/mime_types.h"
 #include "tkc/rlog.h"
 #include "tkc/time_now.h"
@@ -1168,6 +1169,15 @@ JNIEXPORT jboolean JNICALL Java_awtk_TValue_value_1equal(JNIEnv* env,  jclass aj
   ret = (bool_t)value_equal(value, other);
 
   return (jboolean)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TValue_value_1compare(JNIEnv* env,  jclass ajc, jlong jv, jlong jother) { /*func*/
+  int ret;
+  const value_t* v = (const value_t*)jv;
+  const value_t* other = (const value_t*)jother;
+  ret = (int)value_compare(v, other);
+
+  return (jint)(ret);
 }
 
 JNIEXPORT jlong JNICALL Java_awtk_TValue_value_1set_1int(JNIEnv* env,  jclass ajc, jlong jv, jint value) { /*func*/
@@ -6272,6 +6282,32 @@ JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1animate_1value_1to(JNIEnv* env,
   return (jint)(ret);
 }
 
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1animate_1prop_1float_1to(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jname, jdouble value, jint duration) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  const char* name = (char*)(*env)->GetStringUTFChars(env, jname, 0);
+  ret = (ret_t)widget_animate_prop_float_to(widget, name, value, duration);
+  (*env)->ReleaseStringUTFChars(env, jname, name);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1animate_1position_1to(JNIEnv* env,  jclass ajc, jlong jwidget, jint x, jint y, jint duration) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_animate_position_to(widget, x, y, duration);
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TWidget_widget_1animate_1size_1to(JNIEnv* env,  jclass ajc, jlong jwidget, jint w, jint h, jint duration) { /*func*/
+  ret_t ret;
+  widget_t* widget = (widget_t*)jwidget;
+  ret = (ret_t)widget_animate_size_to(widget, w, h, duration);
+
+  return (jint)(ret);
+}
+
 JNIEXPORT jboolean JNICALL Java_awtk_TWidget_widget_1is_1style_1exist(JNIEnv* env,  jclass ajc, jlong jwidget, jstring jstyle_name, jstring jstate_name) { /*func*/
   bool_t ret;
   widget_t* widget = (widget_t*)jwidget;
@@ -8085,6 +8121,40 @@ JNIEXPORT jint JNICALL Java_awtk_TEasingType_EASING_1BOUNCE_1OUT(JNIEnv* env,  j
 JNIEXPORT jint JNICALL Java_awtk_TEasingType_EASING_1BOUNCE_1INOUT(JNIEnv* env,  jclass ajc) {/*const*/
 
   return (jint)(EASING_BOUNCE_INOUT);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTkLogLevel_LOG_1LEVEL_1DEBUG(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(LOG_LEVEL_DEBUG);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTkLogLevel_LOG_1LEVEL_1INFO(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(LOG_LEVEL_INFO);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTkLogLevel_LOG_1LEVEL_1WARN(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(LOG_LEVEL_WARN);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TTkLogLevel_LOG_1LEVEL_1ERROR(JNIEnv* env,  jclass ajc) {/*const*/
+
+  return (jint)(LOG_LEVEL_ERROR);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TLog_log_1get_1log_1level(JNIEnv* env,  jclass ajc) { /*func*/
+  tk_log_level_t ret;
+  ret = (tk_log_level_t)log_get_log_level();
+
+  return (jint)(ret);
+}
+
+JNIEXPORT jint JNICALL Java_awtk_TLog_log_1set_1log_1level(JNIEnv* env,  jclass ajc, jint log_level) { /*func*/
+  ret_t ret;
+  ret = (ret_t)log_set_log_level(log_level);
+
+  return (jint)(ret);
 }
 
 JNIEXPORT jstring JNICALL Java_awtk_TMIME_TYPE_MIME_1TYPE_1APPLICATION_1ENVOY(JNIEnv* env,  jclass ajc) {/*const*/

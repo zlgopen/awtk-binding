@@ -18,7 +18,7 @@ bevel。
 
 #### Defined in
 
-[awtk.ts:9042](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L9042)
+[awtk.ts:9064](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9064)
 
 ***
 
@@ -30,7 +30,7 @@ mitter。
 
 #### Defined in
 
-[awtk.ts:9048](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L9048)
+[awtk.ts:9070](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9070)
 
 ***
 
@@ -42,4 +42,4 @@ round。
 
 #### Defined in
 
-[awtk.ts:9036](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L9036)
+[awtk.ts:9058](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9058)

@@ -345,6 +345,18 @@ public class TValue {
 
 
   /**
+   * 比较两个value。
+   * 
+   * @param other value对象。
+   *
+   * @return 小于返回-1，等于返回0，大于返回1。
+   */
+ public  int compare(TValue other)  {
+    return value_compare(this != null ? (this.nativeObj) : 0, other != null ? (other.nativeObj) : 0);
+ }
+
+
+  /**
    * 设置类型为int的值。
    * 
    * @param value 待设置的值。
@@ -529,6 +541,7 @@ static private native String value_str(long v);
 static private native String value_str_ex(long v, String buff, int size);
 static private native boolean value_is_null(long value);
 static private native boolean value_equal(long value, long other);
+static private native int value_compare(long v, long other);
 static private native long value_set_int(long v, int value);
 static private native long value_set_object(long v, long value);
 static private native long value_object(long v);

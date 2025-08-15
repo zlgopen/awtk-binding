@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[awtk.ts:7166](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7166)
+[awtk.ts:7188](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7188)
 
 ## Properties
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[awtk.ts:7165](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7165)
+[awtk.ts:7187](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7187)
 
 ## Methods
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[awtk.ts:7202](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7202)
+[awtk.ts:7224](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7224)
 
 ***
 
@@ -90,7 +90,7 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7214](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7214)
+[awtk.ts:7236](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7236)
 
 ***
 
@@ -114,7 +114,7 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7189](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7189)
+[awtk.ts:7211](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7211)
 
 ***
 
@@ -132,4 +132,4 @@ locale_info_on返回的ID。
 
 #### Defined in
 
-[awtk.ts:7177](https://github.com/zlgopen/awtk-binding/blob/f59cb588237dd9223284af0eed269ac285d66f8b/tools/code_gen/js/output/awtk.ts#L7177)
+[awtk.ts:7199](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7199)

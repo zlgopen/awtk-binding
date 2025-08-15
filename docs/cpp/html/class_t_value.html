@@ -166,6 +166,8 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a4cc6c9f56e29742e5e4400a4dae74739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4ce50633e63cc25907795bfeaab757" id="r_afc4ce50633e63cc25907795bfeaab757"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4ce50633e63cc25907795bfeaab757">Equal</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;other)</td></tr>
 <tr class="separator:afc4ce50633e63cc25907795bfeaab757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48ae492aab13223b2f64c39f660f165" id="r_ab48ae492aab13223b2f64c39f660f165"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab48ae492aab13223b2f64c39f660f165">Compare</a> (<a class="el" href="class_t_value.html">TValue</a> &amp;other)</td></tr>
+<tr class="separator:ab48ae492aab13223b2f64c39f660f165"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f0e72a1e474ecd8a4a2e76a87a2b52f" id="r_a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f0e72a1e474ecd8a4a2e76a87a2b52f">SetInt</a> (int32_t value)</td></tr>
 <tr class="separator:a9f0e72a1e474ecd8a4a2e76a87a2b52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c810c31322d33d3ab3eaed7eb1708b6" id="r_a7c810c31322d33d3ab3eaed7eb1708b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_t_value.html">TValue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c810c31322d33d3ab3eaed7eb1708b6">SetObject</a> (<a class="el" href="class_t_object.html">TObject</a> &amp;value)</td></tr>
@@ -250,6 +252,31 @@ value_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></t
 </div><div class="memdoc">
 <p>获取类型为bool的值。</p>
 <dl class="section return"><dt>返回</dt><dd>值。 </dd></dl>
+
+</div>
+</div>
+<a id="ab48ae492aab13223b2f64c39f660f165" name="ab48ae492aab13223b2f64c39f660f165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48ae492aab13223b2f64c39f660f165">&#9670;&#160;</a></span>Compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int TValue::Compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_t_value.html">TValue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>比较两个value。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>value对象。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>小于返回-1，等于返回0，大于返回1。 </dd></dl>
 
 </div>
 </div>

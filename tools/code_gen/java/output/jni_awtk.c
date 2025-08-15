@@ -1456,6 +1456,18 @@ int awtk_TValue_value_equal(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TValue_value_compare(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  int ret = 0;
+  const value_t* v = (const value_t*)jni_ctx_get_object(&actx);
+  const value_t* other = (const value_t*)jni_ctx_get_object(&actx);
+  ret = (int)value_compare(v, other);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TValue_value_set_int(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -9431,6 +9443,49 @@ int awtk_TWidget_widget_animate_value_to(Runtime *runtime, JClass *clazz) {
   return 0;
 }
 
+int awtk_TWidget_widget_animate_prop_float_to(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  const char* name = (const char*)jni_ctx_get_str(&actx);
+  float_t value = (float_t)jni_ctx_get_float(&actx);
+  uint32_t duration = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)widget_animate_prop_float_to(widget, name, value, duration);
+  TKMEM_FREE(name);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_animate_position_to(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  xy_t x = (xy_t)jni_ctx_get_int(&actx);
+  xy_t y = (xy_t)jni_ctx_get_int(&actx);
+  uint32_t duration = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)widget_animate_position_to(widget, x, y, duration);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TWidget_widget_animate_size_to(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  widget_t* widget = (widget_t*)jni_ctx_get_object(&actx);
+  wh_t w = (wh_t)jni_ctx_get_int(&actx);
+  wh_t h = (wh_t)jni_ctx_get_int(&actx);
+  uint32_t duration = (uint32_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)widget_animate_size_to(widget, w, h, duration);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
 int awtk_TWidget_widget_is_style_exist(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
@@ -12007,6 +12062,59 @@ int awtk_TEasingType_EASING_BOUNCE_INOUT(Runtime *runtime, JClass *clazz) {
   jni_ctx_t actx = jni_ctx_init(runtime, clazz);
 
   jni_ctx_return_int(&actx, (int32_t)(EASING_BOUNCE_INOUT));
+
+  return 0;
+}
+
+int awtk_TTkLogLevel_LOG_LEVEL_DEBUG(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(LOG_LEVEL_DEBUG));
+
+  return 0;
+}
+
+int awtk_TTkLogLevel_LOG_LEVEL_INFO(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(LOG_LEVEL_INFO));
+
+  return 0;
+}
+
+int awtk_TTkLogLevel_LOG_LEVEL_WARN(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(LOG_LEVEL_WARN));
+
+  return 0;
+}
+
+int awtk_TTkLogLevel_LOG_LEVEL_ERROR(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  jni_ctx_return_int(&actx, (int32_t)(LOG_LEVEL_ERROR));
+
+  return 0;
+}
+
+int awtk_TLog_log_get_log_level(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  tk_log_level_t ret = 0;
+  ret = (tk_log_level_t)log_get_log_level();
+  jni_ctx_return_int(&actx, (int32_t)(ret));
+
+  return 0;
+}
+
+int awtk_TLog_log_set_log_level(Runtime *runtime, JClass *clazz) {
+  jni_ctx_t actx = jni_ctx_init(runtime, clazz);
+
+  ret_t ret = 0;
+  tk_log_level_t log_level = (tk_log_level_t)jni_ctx_get_int(&actx);
+  ret = (ret_t)log_set_log_level(log_level);
+  jni_ctx_return_int(&actx, (int32_t)(ret));
 
   return 0;
 }
@@ -24510,6 +24618,7 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TValue",  "value_str_ex",  "(JLjava/lang/String;I)Ljava/lang/String;",  awtk_TValue_value_str_ex},
 {"awtk/TValue",  "value_is_null",  "(J)Z",  awtk_TValue_value_is_null},
 {"awtk/TValue",  "value_equal",  "(JJ)Z",  awtk_TValue_value_equal},
+{"awtk/TValue",  "value_compare",  "(JJ)I",  awtk_TValue_value_compare},
 {"awtk/TValue",  "value_set_int",  "(JI)J",  awtk_TValue_value_set_int},
 {"awtk/TValue",  "value_set_object",  "(JJ)J",  awtk_TValue_value_set_object},
 {"awtk/TValue",  "value_object",  "(J)J",  awtk_TValue_value_object},
@@ -25412,6 +25521,9 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TWidget",  "widget_set_value_int",  "(JI)I",  awtk_TWidget_widget_set_value_int},
 {"awtk/TWidget",  "widget_add_value_int",  "(JI)I",  awtk_TWidget_widget_add_value_int},
 {"awtk/TWidget",  "widget_animate_value_to",  "(JFI)I",  awtk_TWidget_widget_animate_value_to},
+{"awtk/TWidget",  "widget_animate_prop_float_to",  "(JLjava/lang/String;FI)I",  awtk_TWidget_widget_animate_prop_float_to},
+{"awtk/TWidget",  "widget_animate_position_to",  "(JIII)I",  awtk_TWidget_widget_animate_position_to},
+{"awtk/TWidget",  "widget_animate_size_to",  "(JIII)I",  awtk_TWidget_widget_animate_size_to},
 {"awtk/TWidget",  "widget_is_style_exist",  "(JLjava/lang/String;Ljava/lang/String;)Z",  awtk_TWidget_widget_is_style_exist},
 {"awtk/TWidget",  "widget_is_support_highlighter",  "(J)Z",  awtk_TWidget_widget_is_support_highlighter},
 {"awtk/TWidget",  "widget_has_highlighter",  "(J)Z",  awtk_TWidget_widget_has_highlighter},
@@ -25649,6 +25761,12 @@ static java_native_method s_metho_awtk_table[] = {
 {"awtk/TEasingType",  "EASING_BOUNCE_IN",  "()I",  awtk_TEasingType_EASING_BOUNCE_IN},
 {"awtk/TEasingType",  "EASING_BOUNCE_OUT",  "()I",  awtk_TEasingType_EASING_BOUNCE_OUT},
 {"awtk/TEasingType",  "EASING_BOUNCE_INOUT",  "()I",  awtk_TEasingType_EASING_BOUNCE_INOUT},
+{"awtk/TTkLogLevel",  "LOG_LEVEL_DEBUG",  "()I",  awtk_TTkLogLevel_LOG_LEVEL_DEBUG},
+{"awtk/TTkLogLevel",  "LOG_LEVEL_INFO",  "()I",  awtk_TTkLogLevel_LOG_LEVEL_INFO},
+{"awtk/TTkLogLevel",  "LOG_LEVEL_WARN",  "()I",  awtk_TTkLogLevel_LOG_LEVEL_WARN},
+{"awtk/TTkLogLevel",  "LOG_LEVEL_ERROR",  "()I",  awtk_TTkLogLevel_LOG_LEVEL_ERROR},
+{"awtk/TLog",  "log_get_log_level",  "()I",  awtk_TLog_log_get_log_level},
+{"awtk/TLog",  "log_set_log_level",  "(I)I",  awtk_TLog_log_set_log_level},
 {"awtk/TMIME_TYPE",  "MIME_TYPE_APPLICATION_ENVOY",  "()Ljava/lang/String;",  awtk_TMIME_TYPE_MIME_TYPE_APPLICATION_ENVOY},
 {"awtk/TMIME_TYPE",  "MIME_TYPE_APPLICATION_FRACTALS",  "()Ljava/lang/String;",  awtk_TMIME_TYPE_MIME_TYPE_APPLICATION_FRACTALS},
 {"awtk/TMIME_TYPE",  "MIME_TYPE_APPLICATION_FUTURESPLASH",  "()Ljava/lang/String;",  awtk_TMIME_TYPE_MIME_TYPE_APPLICATION_FUTURESPLASH},

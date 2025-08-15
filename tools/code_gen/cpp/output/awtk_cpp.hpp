@@ -1363,6 +1363,15 @@ public:
   bool Equal(TValue& other) ;
 
   /**
+   * 比较两个value。
+   * 
+   * @param other value对象。
+   *
+   * @return 小于返回-1，等于返回0，大于返回1。
+   */
+  int Compare(TValue& other) ;
+
+  /**
    * 设置类型为int的值。
    * 
    * @param value 待设置的值。
@@ -3661,6 +3670,39 @@ public:
   ret_t AnimateValueTo(float_t value, uint32_t duration) ;
 
   /**
+   * 设置控件的属性(以动画形式变化到指定的值)。
+   * 
+   * @param name 属性名称。
+   * @param value 值。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t AnimatePropFloatTo(const char* name, float_t value, uint32_t duration) ;
+
+  /**
+   * 设置控件的位置(以动画形式变化到指定的位置)。
+   * 
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t AnimatePositionTo(xy_t x, xy_t y, uint32_t duration) ;
+
+  /**
+   * 设置控件的大小(以动画形式变化到指定的大小)。
+   * 
+   * @param w 宽度。
+   * @param h 高度。
+   * @param duration 动画持续时间(毫秒)。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  ret_t AnimateSizeTo(wh_t w, wh_t h, uint32_t duration) ;
+
+  /**
    * 查询指定的style是否存在。
    * 
    * @param style_name style的名称（如果为 NULL，则默认为 default）。
@@ -5549,6 +5591,32 @@ public:
     return TIdleManager((idle_manager_t*)nativeObj);
   }
 
+};
+
+
+/**
+ * log。
+ *
+ */
+class TLog { 
+public:
+
+  /**
+   * 获取log的级别。
+   * 
+   *
+   * @return 返回log的级别。
+   */
+  static  tk_log_level_t GetLogLevel() ;
+
+  /**
+   * 设置log的级别。
+   * 
+   * @param log_level log的级别。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+  static  ret_t SetLogLevel(tk_log_level_t log_level) ;
 };
 
 
