@@ -90,6 +90,26 @@ func (this TMledit) GetCurrentRowIndex() uint32 {
   return (uint32)(C.mledit_get_current_row_index((*C.widget_t)(this.handle)));
 }
 
+func (this TMledit) GetStartLineIndex() int32 {
+  return (int32)(C.mledit_get_start_line_index((*C.widget_t)(this.handle)));
+}
+
+func (this TMledit) GetStartRowIndex() int32 {
+  return (int32)(C.mledit_get_start_row_index((*C.widget_t)(this.handle)));
+}
+
+func (this TMledit) GetLineAt(offset uint32) int32 {
+  return (int32)(C.mledit_get_line_at((*C.widget_t)(this.handle), (C.uint32_t)(offset)));
+}
+
+func (this TMledit) GetRowAt(offset uint32) int32 {
+  return (int32)(C.mledit_get_row_at((*C.widget_t)(this.handle), (C.uint32_t)(offset)));
+}
+
+func (this TMledit) GetRowOfLine(line uint32) int32 {
+  return (int32)(C.mledit_get_row_of_line((*C.widget_t)(this.handle), (C.uint32_t)(line)));
+}
+
 func (this TMledit) InsertText(offset uint32, text string) TRet {
   atext := C.CString(text)
   defer C.free(unsafe.Pointer(atext))
@@ -152,5 +172,9 @@ func (this TMledit) GetAcceptReturn() bool {
 
 func (this TMledit) GetAcceptTab() bool {
   return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).accept_tab);
+}
+
+func (this TMledit) GetAutoAdjustHeight() bool {
+  return (bool)((*C.mledit_t)(unsafe.Pointer(this.handle)).auto_adjust_height);
 }
 

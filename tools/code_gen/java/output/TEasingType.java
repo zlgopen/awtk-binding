@@ -66,7 +66,7 @@ public enum TEasingType {
   SIN_OUT (EASING_SIN_OUT()),
   
   /**
-   * EASING_SIN_OUT
+   * EASING_SIN_INOUT
    *
    */
  

@@ -249,7 +249,7 @@ public class TScrollView extends TWidget {
 
 
   /**
-   * 滚动到指定的偏移量。
+   * 在当前偏移量基础上滚动指定偏移量。
    * 
    * @param xoffset_delta x偏移量。
    * @param yoffset_delta y偏移量。
@@ -259,6 +259,42 @@ public class TScrollView extends TWidget {
    */
  public  TRet scrollDeltaTo(int xoffset_delta, int yoffset_delta, int duration)  {
    return TRet.from(scroll_view_scroll_delta_to(this != null ? (this.nativeObj) : 0, xoffset_delta, yoffset_delta, duration));
+ }
+
+
+  /**
+   * 是否使用虚拟宽度，默认否。
+   *
+   */
+ public boolean getUseVirtualW() {
+   return scroll_view_t_get_prop_use_virtual_w(this.nativeObj);
+ }
+
+
+  /**
+   * 是否使用滚动视图宽度，默认否。
+   *
+   */
+ public boolean getUseWidgetW() {
+   return scroll_view_t_get_prop_use_widget_w(this.nativeObj);
+ }
+
+
+  /**
+   * 是否使用虚拟高度，默认否。
+   *
+   */
+ public boolean getUseVirtualH() {
+   return scroll_view_t_get_prop_use_virtual_h(this.nativeObj);
+ }
+
+
+  /**
+   * 是否使用滚动视图高度，默认否。
+   *
+   */
+ public boolean getUseWidgetH() {
+   return scroll_view_t_get_prop_use_widget_h(this.nativeObj);
  }
 
 
@@ -385,6 +421,10 @@ static private native int scroll_view_set_speed_scale(long widget, double xspeed
 static private native int scroll_view_set_slide_limit_ratio(long widget, double slide_limit_ratio);
 static private native int scroll_view_scroll_to(long widget, int xoffset_end, int yoffset_end, int duration);
 static private native int scroll_view_scroll_delta_to(long widget, int xoffset_delta, int yoffset_delta, int duration);
+static private native boolean scroll_view_t_get_prop_use_virtual_w(long nativeObj);
+static private native boolean scroll_view_t_get_prop_use_widget_w(long nativeObj);
+static private native boolean scroll_view_t_get_prop_use_virtual_h(long nativeObj);
+static private native boolean scroll_view_t_get_prop_use_widget_h(long nativeObj);
 static private native int scroll_view_t_get_prop_virtual_w(long nativeObj);
 static private native int scroll_view_t_get_prop_virtual_h(long nativeObj);
 static private native int scroll_view_t_get_prop_xoffset(long nativeObj);

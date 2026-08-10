@@ -18,6 +18,10 @@ func (this TEdit) GetInt() int32 {
   return (int32)(C.edit_get_int((*C.widget_t)(this.handle)));
 }
 
+func (this TEdit) GetInt64() int64 {
+  return (int64)(C.edit_get_int64((*C.widget_t)(this.handle)));
+}
+
 func (this TEdit) GetDouble() float64 {
   return (float64)(C.edit_get_double((*C.widget_t)(this.handle)));
 }

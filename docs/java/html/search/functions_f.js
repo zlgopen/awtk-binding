@@ -2,7 +2,7 @@ var searchData=
 [
   ['r_0',['r',['../classawtk_1_1_t_color.html#aaabe897c0e7697d470ea821d3f0ef6da',1,'awtk::TColor']]],
   ['rect_1',['rect',['../classawtk_1_1_t_value.html#a636ddc6b2e4d539fe5927b68de7a08a3',1,'awtk.TValue.rect()'],['../classawtk_1_1_t_vgcanvas.html#a482195f71ccdf98dc68adce23c448488',1,'awtk.TVgcanvas.rect()']]],
-  ['ref_2',['ref',['../classawtk_1_1_t_assets_manager.html#ac063b5ff6c0620cf87368fdddb33b165',1,'awtk.TAssetsManager.ref()'],['../classawtk_1_1_t_locale_infos.html#ac9328637f55bad763059bc6e9c401784',1,'awtk.TLocaleInfos.ref()'],['../classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03',1,'awtk.TObject.ref()']]],
+  ['ref_2',['ref',['../classawtk_1_1_t_assets_manager.html#ac063b5ff6c0620cf87368fdddb33b165',1,'awtk.TAssetsManager.ref()'],['../classawtk_1_1_t_locale_infos.html#ac9328637f55bad763059bc6e9c401784',1,'awtk.TLocaleInfos.ref()'],['../classawtk_1_1_t_object.html#a061dbbad49785d66c518927ebbb57f03',1,'awtk.TObject.ref()'],['../classawtk_1_1_t_widget.html#a83153a985b27a49fc9e546c5ce71160b',1,'awtk.TWidget.ref()']]],
   ['refex_3',['refEx',['../classawtk_1_1_t_assets_manager.html#a9c0c97ffca6ef7f2f62b2c9206904f33',1,'awtk::TAssetsManager']]],
   ['registercustomname_4',['registerCustomName',['../classawtk_1_1_t_event.html#a4bdc42af19da75878d8b16f35b2e33d3',1,'awtk::TEvent']]],
   ['reinit_5',['reinit',['../classawtk_1_1_t_list_view.html#a6e15f8b3b6580e17229f0061580de789',1,'awtk::TListView']]],

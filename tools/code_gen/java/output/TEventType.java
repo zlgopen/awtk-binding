@@ -52,20 +52,6 @@ public enum TEventType {
   POINTER_UP_BEFORE_CHILDREN (EVT_POINTER_UP_BEFORE_CHILDREN()),
   
   /**
-   * 滚轮事件名(wheel_event_t)。
-   *
-   */
- 
-  WHEEL (EVT_WHEEL()),
-  
-  /**
-   * 鼠标滚轮事件名，在子控件处理之前触发(wheel_event_t)。
-   *
-   */
- 
-  WHEEL_BEFORE_CHILDREN (EVT_WHEEL_BEFORE_CHILDREN()),
-  
-  /**
    * 取消前一个指针按下事件名(pointer_event_t)。
    *
    */
@@ -78,6 +64,20 @@ public enum TEventType {
    */
  
   CONTEXT_MENU (EVT_CONTEXT_MENU()),
+  
+  /**
+   * 鼠标额外按键按下事件名(pointer_event_t)。
+   *
+   */
+ 
+  MOUSE_EXTRA_BUTTON_DOWN (EVT_MOUSE_EXTRA_BUTTON_DOWN()),
+  
+  /**
+   * 鼠标额外按键抬起事件名(pointer_event_t)。
+   *
+   */
+ 
+  MOUSE_EXTRA_BUTTON_UP (EVT_MOUSE_EXTRA_BUTTON_UP()),
   
   /**
    * 指针进入事件名(pointer_event_t)。
@@ -113,6 +113,20 @@ public enum TEventType {
    */
  
   DOUBLE_CLICK (EVT_DOUBLE_CLICK()),
+  
+  /**
+   * 滚轮事件名(wheel_event_t)。
+   *
+   */
+ 
+  WHEEL (EVT_WHEEL()),
+  
+  /**
+   * 鼠标滚轮事件名，在子控件处理之前触发(wheel_event_t)。
+   *
+   */
+ 
+  WHEEL_BEFORE_CHILDREN (EVT_WHEEL_BEFORE_CHILDREN()),
   
   /**
    * 得到焦点事件名(event_t)。
@@ -315,6 +329,7 @@ public enum TEventType {
   /**
    * 窗口被切换到后台事件(event_t)。
    *打开新窗口时，当前窗口被切换到后台时，对当前窗口触发本事件。
+   *或者切换窗口时，对切换到后台的窗口触发本事件。
    *
    */
  
@@ -323,6 +338,8 @@ public enum TEventType {
   /**
    * 窗口被切换到前台事件(event_t)。
    *关闭当前窗口时，前一个窗口被切换到前台时，对前一个窗口触发本事件。
+   *或者切换窗口时，对切换到前台的窗口触发本事件。
+   *打开窗口时不会触发本事件。
    *
    */
  
@@ -893,15 +910,17 @@ public enum TEventType {
   static private native int EVT_POINTER_MOVE_BEFORE_CHILDREN();
   static private native int EVT_POINTER_UP();
   static private native int EVT_POINTER_UP_BEFORE_CHILDREN();
-  static private native int EVT_WHEEL();
-  static private native int EVT_WHEEL_BEFORE_CHILDREN();
   static private native int EVT_POINTER_DOWN_ABORT();
   static private native int EVT_CONTEXT_MENU();
+  static private native int EVT_MOUSE_EXTRA_BUTTON_DOWN();
+  static private native int EVT_MOUSE_EXTRA_BUTTON_UP();
   static private native int EVT_POINTER_ENTER();
   static private native int EVT_POINTER_LEAVE();
   static private native int EVT_LONG_PRESS();
   static private native int EVT_CLICK();
   static private native int EVT_DOUBLE_CLICK();
+  static private native int EVT_WHEEL();
+  static private native int EVT_WHEEL_BEFORE_CHILDREN();
   static private native int EVT_FOCUS();
   static private native int EVT_BLUR();
   static private native int EVT_KEY_DOWN();

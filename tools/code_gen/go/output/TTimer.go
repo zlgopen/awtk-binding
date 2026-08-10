@@ -18,3 +18,7 @@ func TTimerModify(timer_id uint32, duration uint32) TRet {
   return TRet(C.timer_modify((C.uint32_t)(timer_id), (C.uint32_t)(duration)));
 }
 
+func TTimerModifyEx(timer_id uint32, duration uint32, reset_timer bool) TRet {
+  return TRet(C.timer_modify_ex((C.uint32_t)(timer_id), (C.uint32_t)(duration), (C.bool_t)(reset_timer)));
+}
+

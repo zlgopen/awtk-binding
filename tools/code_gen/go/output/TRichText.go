@@ -18,6 +18,10 @@ func (this TRichText) SetYslidable(yslidable bool) TRet {
   return TRet(C.rich_text_set_yslidable((*C.widget_t)(this.handle), (C.bool_t)(yslidable)));
 }
 
+func (this TRichText) SetWordWrap(word_wrap bool) TRet {
+  return TRet(C.rich_text_set_word_wrap((*C.widget_t)(this.handle), (C.bool_t)(word_wrap)));
+}
+
 func TRichTextCast(widget TWidget) TRichText {
   retObj := TRichText{}
   retObj.handle = unsafe.Pointer(C.rich_text_cast((*C.widget_t)(widget.handle)))
@@ -30,5 +34,9 @@ func (this TRichText) GetLineGap() uint32 {
 
 func (this TRichText) GetYslidable() bool {
   return (bool)((*C.rich_text_t)(unsafe.Pointer(this.handle)).yslidable);
+}
+
+func (this TRichText) GetWordWrap() bool {
+  return (bool)((*C.rich_text_t)(unsafe.Pointer(this.handle)).word_wrap);
 }
 

@@ -297,6 +297,64 @@ public class TMledit extends TWidget {
 
 
   /**
+   * 获取当前显示部分的起始视觉行号(一行文本可能分多行显示)。
+   * 
+   *
+   * @return 返回行号。
+   */
+ public  int getStartLineIndex()  {
+    return mledit_get_start_line_index(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取当前显示部分的起始物理行号。
+   * 
+   *
+   * @return 返回行号。
+   */
+ public  int getStartRowIndex()  {
+    return mledit_get_start_row_index(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 获取指定偏移所在的视觉行号(一行文本可能分多行显示)。
+   * 
+   * @param offset 偏移。
+   *
+   * @return 返回行号，不在范围内则返回-1。
+   */
+ public  int getLineAt(int offset)  {
+    return mledit_get_line_at(this != null ? (this.nativeObj) : 0, offset);
+ }
+
+
+  /**
+   * 获取指定偏移所在的物理行号。
+   * 
+   * @param offset 偏移。
+   *
+   * @return 返回行号，不在范围内则返回-1。
+   */
+ public  int getRowAt(int offset)  {
+    return mledit_get_row_at(this != null ? (this.nativeObj) : 0, offset);
+ }
+
+
+  /**
+   * 获取指定视觉行号所在的物理行号。
+   * 
+   * @param line 视觉行号。
+   *
+   * @return 返回物理行号，不在范围内则返回-1。
+   */
+ public  int getRowOfLine(int line)  {
+    return mledit_get_row_of_line(this != null ? (this.nativeObj) : 0, line);
+ }
+
+
+  /**
    * 插入一段文本。
    * 
    * @param offset 插入的偏移位置。
@@ -442,6 +500,15 @@ public class TMledit extends TWidget {
    return mledit_t_get_prop_accept_tab(this.nativeObj);
  }
 
+
+  /**
+   * 是否根据文本自动调整控件自身高度。
+   *
+   */
+ public boolean getAutoAdjustHeight() {
+   return mledit_t_get_prop_auto_adjust_height(this.nativeObj);
+ }
+
 static private native long mledit_create(long parent, int x, int y, int w, int h);
 static private native int mledit_set_readonly(long widget, boolean readonly);
 static private native int mledit_set_cancelable(long widget, boolean cancelable);
@@ -462,6 +529,11 @@ static private native int mledit_set_select(long widget, int start, int end);
 static private native String mledit_get_selected_text(long widget);
 static private native int mledit_get_current_line_index(long widget);
 static private native int mledit_get_current_row_index(long widget);
+static private native int mledit_get_start_line_index(long widget);
+static private native int mledit_get_start_row_index(long widget);
+static private native int mledit_get_line_at(long widget, int offset);
+static private native int mledit_get_row_at(long widget, int offset);
+static private native int mledit_get_row_of_line(long widget, int line);
 static private native int mledit_insert_text(long widget, int offset, String text);
 static private native long mledit_cast(long widget);
 static private native String mledit_t_get_prop_tips(long nativeObj);
@@ -477,4 +549,5 @@ static private native boolean mledit_t_get_prop_open_im_when_focused(long native
 static private native boolean mledit_t_get_prop_close_im_when_blured(long nativeObj);
 static private native boolean mledit_t_get_prop_accept_return(long nativeObj);
 static private native boolean mledit_t_get_prop_accept_tab(long nativeObj);
+static private native boolean mledit_t_get_prop_auto_adjust_height(long nativeObj);
 };

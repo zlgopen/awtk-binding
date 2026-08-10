@@ -121,6 +121,17 @@ public class TEdit extends TWidget {
 
 
   /**
+   * 获取int64类型的值。
+   * 
+   *
+   * @return 返回int的值。
+   */
+ public  long getInt64()  {
+    return edit_get_int64(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 获取double类型的值。
    * 
    *
@@ -599,6 +610,7 @@ public class TEdit extends TWidget {
 static private native long edit_create(long parent, int x, int y, int w, int h);
 static private native long edit_cast(long widget);
 static private native int edit_get_int(long widget);
+static private native long edit_get_int64(long widget);
 static private native double edit_get_double(long widget);
 static private native int edit_set_int(long widget, int value);
 static private native int edit_set_double(long widget, double value);

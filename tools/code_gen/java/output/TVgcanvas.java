@@ -4,7 +4,7 @@ package awtk;
 /**
  * 矢量图画布抽象基类。
  *
- *具体实现时可以使用agg，nanovg, cairo和skia等方式。
+ *具体实现时可以使用nanovg, cairo和skia等方式。
  *
  *cairo和skia体积太大，不适合嵌入式平台，但在PC平台也是一种选择。
  *
@@ -12,9 +12,7 @@ package awtk;
  *
  *我们对nanovg进行了一些改进:
  *
- ** 可以用agg/agge实现软件渲染(暂时不支持文本绘制)。
- *
- ** 可以用bgfx使用DirectX(Windows平台)和Metal(iOS)平台硬件加速。
+ ** 可以用agge实现软件渲染(暂时不支持文本绘制)。
  *
  *
  *

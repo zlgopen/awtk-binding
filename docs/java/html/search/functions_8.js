@@ -44,10 +44,12 @@ var searchData=
   ['isrectfincliprect_41',['isRectfInClipRect',['../classawtk_1_1_t_vgcanvas.html#a6b4f5f8e5cfdff61e6ddc754b79a1066',1,'awtk::TVgcanvas']]],
   ['isstyleexist_42',['isStyleExist',['../classawtk_1_1_t_widget.html#a857bd2ce0c2b4560ddeaf7a19d3a1a38',1,'awtk::TWidget']]],
   ['issupporthighlighter_43',['isSupportHighlighter',['../classawtk_1_1_t_widget.html#ab1e46b156e8e06f7c0b3a2afa9ed81b9',1,'awtk::TWidget']]],
-  ['issystembar_44',['isSystemBar',['../classawtk_1_1_t_widget.html#ad83c1b58dfa8433ef4270b4b48bce143',1,'awtk::TWidget']]],
-  ['isvalid_45',['isValid',['../classawtk_1_1_t_style.html#a3aecd4172c3cdd847fe302360115ef6e',1,'awtk::TStyle']]],
-  ['iswindow_46',['isWindow',['../classawtk_1_1_t_widget.html#a6595dedc8352ec559cbcab9cbf89f5c6',1,'awtk::TWidget']]],
-  ['iswindowcreated_47',['isWindowCreated',['../classawtk_1_1_t_widget.html#ab31383f5e6a402f9ed2e49349aa776e9',1,'awtk::TWidget']]],
-  ['iswindowmanager_48',['isWindowManager',['../classawtk_1_1_t_widget.html#affffc25f9c376ac0df23056a6be8452b',1,'awtk::TWidget']]],
-  ['iswindowopened_49',['isWindowOpened',['../classawtk_1_1_t_widget.html#ad03d5c024deb4e1cade14e055276e655',1,'awtk::TWidget']]]
+  ['issuspenddialog_44',['isSuspendDialog',['../classawtk_1_1_t_widget.html#aa7f28432476a8037fa8fa1b6115056a4',1,'awtk::TWidget']]],
+  ['issuspendpopup_45',['isSuspendPopup',['../classawtk_1_1_t_widget.html#a736be4886eec3c2c892d7a8662984abf',1,'awtk::TWidget']]],
+  ['issystembar_46',['isSystemBar',['../classawtk_1_1_t_widget.html#ad83c1b58dfa8433ef4270b4b48bce143',1,'awtk::TWidget']]],
+  ['isvalid_47',['isValid',['../classawtk_1_1_t_style.html#a3aecd4172c3cdd847fe302360115ef6e',1,'awtk::TStyle']]],
+  ['iswindow_48',['isWindow',['../classawtk_1_1_t_widget.html#a6595dedc8352ec559cbcab9cbf89f5c6',1,'awtk::TWidget']]],
+  ['iswindowcreated_49',['isWindowCreated',['../classawtk_1_1_t_widget.html#ab31383f5e6a402f9ed2e49349aa776e9',1,'awtk::TWidget']]],
+  ['iswindowmanager_50',['isWindowManager',['../classawtk_1_1_t_widget.html#affffc25f9c376ac0df23056a6be8452b',1,'awtk::TWidget']]],
+  ['iswindowopened_51',['isWindowOpened',['../classawtk_1_1_t_widget.html#ad03d5c024deb4e1cade14e055276e655',1,'awtk::TWidget']]]
 ];

@@ -378,11 +378,11 @@ func (this TObject) ClearProps() TRet {
   return TRet(C.object_clear_props((*C.object_t)(this.handle)));
 }
 
-func (this TObject) GetRefCount() int32 {
-  return (int32)((*C.object_t)(unsafe.Pointer(this.handle)).ref_count);
-}
-
 func (this TObject) GetName() string {
   return C.GoString((*C.object_t)(unsafe.Pointer(this.handle)).name);
+}
+
+func (this TObject) GetRefCount() int32 {
+  return (int32)((*C.object_t)(unsafe.Pointer(this.handle)).ref_count);
 }
 

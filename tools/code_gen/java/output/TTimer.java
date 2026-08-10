@@ -88,10 +88,25 @@ public class TTimer {
    return TRet.from(timer_modify(timer_id, duration));
  }
 
+
+  /**
+   * 修改指定的timer的duration，修改之后定时器重新开始计时。
+   * 
+   * @param timer_id timerID。
+   * @param duration 新的时间(毫秒)。
+   * @param reset_timer 修改后是否重新计时。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  static TRet modifyEx(int timer_id, int duration, boolean reset_timer)  {
+   return TRet.from(timer_modify_ex(timer_id, duration, reset_timer));
+ }
+
 static private native int timer_add(TOnTimer on_timer, long ctx, int duration);
 static private native int timer_remove(int timer_id);
 static private native int timer_reset(int timer_id);
 static private native int timer_suspend(int timer_id);
 static private native int timer_resume(int timer_id);
 static private native int timer_modify(int timer_id, int duration);
+static private native int timer_modify_ex(int timer_id, int duration, boolean reset_timer);
 };

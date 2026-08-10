@@ -274,6 +274,18 @@ public class TScrollBar extends TWidget {
 
 
   /**
+   * 设置每次鼠标滚动行数(仅对desktop风格的滚动条有效)。
+   * 
+   * @param scroll_rows 每次鼠标滚动行数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setScrollRows(int scroll_rows)  {
+   return TRet.from(scroll_bar_set_scroll_rows(this != null ? (this.nativeObj) : 0, scroll_rows));
+ }
+
+
+  /**
    * 虚拟宽度或高度。
    *
    */
@@ -310,6 +322,15 @@ public class TScrollBar extends TWidget {
 
 
   /**
+   * 每次鼠标滚动行数。（与 scroll_delta 互斥，缺省值为0，0 则使用 scroll_delta）
+   *
+   */
+ public int getScrollRows() {
+   return scroll_bar_t_get_prop_scroll_rows(this.nativeObj);
+ }
+
+
+  /**
    * 滚动时是否启用动画。
    *
    */
@@ -328,11 +349,20 @@ public class TScrollBar extends TWidget {
 
 
   /**
-   * 设置鼠标滚轮是否滚动(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为TRUE，水平滚动条缺省值为FALSE）。
+   * 设置鼠标滚轮是否滚动。
    *
    */
  public boolean getWheelScroll() {
    return scroll_bar_t_get_prop_wheel_scroll(this.nativeObj);
+ }
+
+
+  /**
+   * 滚轮辅助键(仅对desktop风格的滚动条有效)（垂直滚动条缺省值为空，水平滚动条缺省值为shift）。
+   *
+   */
+ public String getWheelModifierKey() {
+   return scroll_bar_t_get_prop_wheel_modifier_key(this.nativeObj);
  }
 
 static private native long scroll_bar_create(long parent, int x, int y, int w, int h);
@@ -351,12 +381,15 @@ static private native int scroll_bar_hide_by_opacity_animation(long widget, int 
 static private native int scroll_bar_show_by_opacity_animation(long widget, int duration, int delay);
 static private native int scroll_bar_set_wheel_scroll(long widget, boolean scroll);
 static private native int scroll_bar_set_scroll_delta(long widget, int scroll_delta);
+static private native int scroll_bar_set_scroll_rows(long widget, int scroll_rows);
 static private native int scroll_bar_t_get_prop_virtual_size(long nativeObj);
 static private native int scroll_bar_t_get_prop_value(long nativeObj);
 static private native int scroll_bar_t_get_prop_row(long nativeObj);
 static private native int scroll_bar_t_get_prop_animator_time(long nativeObj);
 static private native int scroll_bar_t_get_prop_scroll_delta(long nativeObj);
+static private native int scroll_bar_t_get_prop_scroll_rows(long nativeObj);
 static private native boolean scroll_bar_t_get_prop_animatable(long nativeObj);
 static private native boolean scroll_bar_t_get_prop_auto_hide(long nativeObj);
 static private native boolean scroll_bar_t_get_prop_wheel_scroll(long nativeObj);
+static private native String scroll_bar_t_get_prop_wheel_modifier_key(long nativeObj);
 };

@@ -24,6 +24,10 @@ func (this TGifImage) SetLoop(loop uint32) TRet {
   return TRet(C.gif_image_set_loop((*C.widget_t)(this.handle), (C.uint32_t)(loop)));
 }
 
+func (this TGifImage) SetPartBufferLoadMode(part_buffer_load_mode bool) TRet {
+  return TRet(C.gif_image_set_part_buffer_load_mode((*C.widget_t)(this.handle), (C.bool_t)(part_buffer_load_mode)));
+}
+
 func TGifImageCast(widget TWidget) TGifImage {
   retObj := TGifImage{}
   retObj.handle = unsafe.Pointer(C.gif_image_cast((*C.widget_t)(widget.handle)))
@@ -32,5 +36,9 @@ func TGifImageCast(widget TWidget) TGifImage {
 
 func (this TGifImage) GetLoop() uint32 {
   return (uint32)((*C.gif_image_t)(unsafe.Pointer(this.handle)).loop);
+}
+
+func (this TGifImage) GetPartBufferLoadMode() bool {
+  return (bool)((*C.gif_image_t)(unsafe.Pointer(this.handle)).part_buffer_load_mode);
 }
 

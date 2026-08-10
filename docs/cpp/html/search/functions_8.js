@@ -44,10 +44,12 @@ var searchData=
   ['isrectfincliprect_41',['IsRectfInClipRect',['../class_t_vgcanvas.html#ae0e97e81a0cf8e3a542ec93df1663e26',1,'TVgcanvas']]],
   ['isstyleexist_42',['IsStyleExist',['../class_t_widget.html#ad5ee3ed70c0d3372fa8e6ae509daaada',1,'TWidget']]],
   ['issupporthighlighter_43',['IsSupportHighlighter',['../class_t_widget.html#a1659d972c34d0591a8daacbf8926e9c6',1,'TWidget']]],
-  ['issystembar_44',['IsSystemBar',['../class_t_widget.html#afb241facdd92ed8a27c4c70c50253137',1,'TWidget']]],
-  ['isvalid_45',['IsValid',['../class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52',1,'TStyle']]],
-  ['iswindow_46',['IsWindow',['../class_t_widget.html#abf835ec6b0f44cfb396e1d04180fc776',1,'TWidget']]],
-  ['iswindowcreated_47',['IsWindowCreated',['../class_t_widget.html#a2fd97d5886818e8fac09d8bc1e3697f6',1,'TWidget']]],
-  ['iswindowmanager_48',['IsWindowManager',['../class_t_widget.html#a852ef98bacf69ed61d6a346bf952f001',1,'TWidget']]],
-  ['iswindowopened_49',['IsWindowOpened',['../class_t_widget.html#aa3110ff12cc60e86b0ddfdf97c50364a',1,'TWidget']]]
+  ['issuspenddialog_44',['IsSuspendDialog',['../class_t_widget.html#afd2984ea28bb97f58a48d3e32536f96b',1,'TWidget']]],
+  ['issuspendpopup_45',['IsSuspendPopup',['../class_t_widget.html#a6c707fa61795694eb119a736d43820e2',1,'TWidget']]],
+  ['issystembar_46',['IsSystemBar',['../class_t_widget.html#afb241facdd92ed8a27c4c70c50253137',1,'TWidget']]],
+  ['isvalid_47',['IsValid',['../class_t_style.html#ab338f7bae3dfe4da88d4f64b5efedf52',1,'TStyle']]],
+  ['iswindow_48',['IsWindow',['../class_t_widget.html#abf835ec6b0f44cfb396e1d04180fc776',1,'TWidget']]],
+  ['iswindowcreated_49',['IsWindowCreated',['../class_t_widget.html#a2fd97d5886818e8fac09d8bc1e3697f6',1,'TWidget']]],
+  ['iswindowmanager_50',['IsWindowManager',['../class_t_widget.html#a852ef98bacf69ed61d6a346bf952f001',1,'TWidget']]],
+  ['iswindowopened_51',['IsWindowOpened',['../class_t_widget.html#aa3110ff12cc60e86b0ddfdf97c50364a',1,'TWidget']]]
 ];

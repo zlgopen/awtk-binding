@@ -11,6 +11,7 @@ var searchData=
   ['updatestate_8',['updateState',['../classawtk_1_1_t_style.html#afd62670fb4ed1160ae46d0438af45801',1,'awtk::TStyle']]],
   ['updatestyle_9',['updateStyle',['../classawtk_1_1_t_widget.html#a353d34ffb4f55cb82f3479cc58ec487a',1,'awtk::TWidget']]],
   ['updatestylerecursive_10',['updateStyleRecursive',['../classawtk_1_1_t_widget.html#a8cc0a822b1b85da9e9a9cbd140e57aec',1,'awtk::TWidget']]],
-  ['us_11',['us',['../classawtk_1_1_t_time_now.html#a0e28f6c5ed7eaf03d32566c124efffec',1,'awtk::TTimeNow']]],
-  ['usestyle_12',['useStyle',['../classawtk_1_1_t_widget.html#a9b37f27732230bff2f4a8e56057880ae',1,'awtk::TWidget']]]
+  ['updatesuggestwordspopup_11',['updateSuggestWordsPopup',['../classawtk_1_1_t_edit_ex.html#abad0f021577c746890338c41a9fc478e',1,'awtk::TEditEx']]],
+  ['us_12',['us',['../classawtk_1_1_t_time_now.html#a0e28f6c5ed7eaf03d32566c124efffec',1,'awtk::TTimeNow']]],
+  ['usestyle_13',['useStyle',['../classawtk_1_1_t_widget.html#a9b37f27732230bff2f4a8e56057880ae',1,'awtk::TWidget']]]
 ];

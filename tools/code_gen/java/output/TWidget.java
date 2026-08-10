@@ -1401,6 +1401,28 @@ public class TWidget {
 
 
   /**
+   * 检查控件弹出对话框控件是否是挂起状态。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+ public  boolean isSuspendDialog()  {
+    return widget_is_suspend_dialog(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
+   * 检查控件弹出窗口控件是否是挂起状态。
+   * 
+   *
+   * @return 返回FALSE表示不是，否则表示是。
+   */
+ public  boolean isSuspendPopup()  {
+    return widget_is_suspend_popup(this != null ? (this.nativeObj) : 0);
+ }
+
+
+  /**
    * 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
    * 
    *
@@ -1566,6 +1588,17 @@ public class TWidget {
    */
  public  TRet destroyAsync()  {
    return TRet.from(widget_destroy_async(this != null ? (this.nativeObj) : 0));
+ }
+
+
+  /**
+   * 增加控件的引用计数。
+   * 
+   *
+   * @return 返回控件对象。
+   */
+ public  TWidget ref()  {
+    return new TWidget(widget_ref(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -2079,6 +2112,8 @@ static private native boolean widget_is_dialog(long widget);
 static private native boolean widget_is_popup(long widget);
 static private native boolean widget_is_overlay(long widget);
 static private native boolean widget_is_always_on_top(long widget);
+static private native boolean widget_is_suspend_dialog(long widget);
+static private native boolean widget_is_suspend_popup(long widget);
 static private native boolean widget_is_opened_dialog(long widget);
 static private native boolean widget_is_opened_popup(long widget);
 static private native boolean widget_is_keyboard(long widget);
@@ -2093,6 +2128,7 @@ static private native boolean widget_equal(long widget, long other);
 static private native long widget_cast(long widget);
 static private native int widget_destroy(long widget);
 static private native int widget_destroy_async(long widget);
+static private native long widget_ref(long widget);
 static private native int widget_unref(long widget);
 static private native int widget_stroke_border_rect(long widget, long c, long r);
 static private native int widget_fill_bg_rect(long widget, long c, long r, int draw_type);

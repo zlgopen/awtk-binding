@@ -132,6 +132,18 @@ public class TGifImage extends TImageBase {
 
 
   /**
+   * 设置是否使用部分加载模式。
+   * 
+   * @param part_buffer_load_mode 循环播放次数。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setPartBufferLoadMode(boolean part_buffer_load_mode)  {
+   return TRet.from(gif_image_set_part_buffer_load_mode(this != null ? (this.nativeObj) : 0, part_buffer_load_mode));
+ }
+
+
+  /**
    * 转换为gif_image对象(供脚本语言使用)。
    * 
    * @param widget gif_image对象。
@@ -151,11 +163,22 @@ public class TGifImage extends TImageBase {
    return gif_image_t_get_prop_loop(this.nativeObj);
  }
 
+
+  /**
+   * 边加载边播放模式。（比较耗费性能，但占用内存较小）
+   *
+   */
+ public boolean getPartBufferLoadMode() {
+   return gif_image_t_get_prop_part_buffer_load_mode(this.nativeObj);
+ }
+
 static private native long gif_image_create(long parent, int x, int y, int w, int h);
 static private native int gif_image_play(long widget);
 static private native int gif_image_stop(long widget);
 static private native int gif_image_pause(long widget);
 static private native int gif_image_set_loop(long widget, int loop);
+static private native int gif_image_set_part_buffer_load_mode(long widget, boolean part_buffer_load_mode);
 static private native long gif_image_cast(long widget);
 static private native int gif_image_t_get_prop_loop(long nativeObj);
+static private native boolean gif_image_t_get_prop_part_buffer_load_mode(long nativeObj);
 };

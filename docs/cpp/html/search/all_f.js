@@ -2,7 +2,7 @@ var searchData=
 [
   ['r_0',['R',['../class_t_color.html#ad8104e48b26a70e7805af11bedb69d9d',1,'TColor']]],
   ['rect_1',['Rect',['../class_t_value.html#af0699c0296d3a2429482a0d2cb2d46b1',1,'TValue::Rect()'],['../class_t_vgcanvas.html#a07feea57b3ba5566c341f1ff06d90f92',1,'TVgcanvas::Rect()']]],
-  ['ref_2',['Ref',['../class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba',1,'TObject::Ref()'],['../class_t_locale_infos.html#a7ceba06a09cc5af57b0131b57d889e54',1,'TLocaleInfos::Ref()'],['../class_t_assets_manager.html#a6aa3aca6ded46e2d47c051a52b6a4a8f',1,'TAssetsManager::Ref(asset_type_t type, const char *name)']]],
+  ['ref_2',['Ref',['../class_t_object.html#aaf537435d8cfe6994777b886e25cc2ba',1,'TObject::Ref()'],['../class_t_locale_infos.html#a7ceba06a09cc5af57b0131b57d889e54',1,'TLocaleInfos::Ref()'],['../class_t_widget.html#aaecac558bb2622cc82438af25cf5c1e6',1,'TWidget::Ref()'],['../class_t_assets_manager.html#a6aa3aca6ded46e2d47c051a52b6a4a8f',1,'TAssetsManager::Ref(asset_type_t type, const char *name)']]],
   ['refex_3',['RefEx',['../class_t_assets_manager.html#a079e78560f79ce4319f6181912b9ac95',1,'TAssetsManager']]],
   ['registercustomname_4',['RegisterCustomName',['../class_t_event.html#a210ad29bd1d35a7c9fde9f2d56e7689a',1,'TEvent']]],
   ['reinit_5',['Reinit',['../class_t_list_view.html#a76d89b0c447847b9413fdcadb7f150f8',1,'TListView']]],

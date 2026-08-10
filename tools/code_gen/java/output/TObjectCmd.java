@@ -85,7 +85,21 @@ public enum TObjectCmd {
    *
    */
  
-  EDIT (OBJECT_CMD_EDIT());
+  EDIT (OBJECT_CMD_EDIT()),
+  
+  /**
+   * 执行
+   *
+   */
+ 
+  EXEC (OBJECT_CMD_EXEC()),
+  
+  /**
+   * 撤销
+   *
+   */
+ 
+  UNDO (OBJECT_CMD_UNDO());
  
  
   private TObjectCmd(String value) {
@@ -130,5 +144,7 @@ public enum TObjectCmd {
   static private native String OBJECT_CMD_ADD();
   static private native String OBJECT_CMD_DETAIL();
   static private native String OBJECT_CMD_EDIT();
+  static private native String OBJECT_CMD_EXEC();
+  static private native String OBJECT_CMD_UNDO();
 
 }

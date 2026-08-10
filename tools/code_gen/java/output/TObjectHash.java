@@ -73,6 +73,18 @@ public class TObjectHash extends TObject {
 
 
   /**
+   * 设置属性名是否大小写不敏感。
+   * 
+   * @param name_case_insensitive 属性名是否大小写不敏感。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setNameCaseInsensitive(boolean name_case_insensitive)  {
+   return TRet.from(object_hash_set_name_case_insensitive(this != null ? (this.nativeObj) : 0, name_case_insensitive));
+ }
+
+
+  /**
    * 设置是否保持属性间的顺序。
    * 
    * @param keep_props_order 保持属性间的顺序。
@@ -86,5 +98,6 @@ public class TObjectHash extends TObject {
 static private native long object_hash_create();
 static private native long object_hash_create_ex(boolean enable_path);
 static private native int object_hash_set_keep_prop_type(long obj, boolean keep_prop_type);
+static private native int object_hash_set_name_case_insensitive(long obj, boolean name_case_insensitive);
 static private native int object_hash_set_keep_props_order(long obj, boolean keep_props_order);
 };

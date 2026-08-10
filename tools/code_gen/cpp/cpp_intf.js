@@ -152,6 +152,7 @@ class CppIntfGenerator extends CppGenerator {
     this.result += '#include "awtk.h"\n';
     this.result += '#include "tkc/rlog.h"\n';
     this.result += '#include "conf_io/app_conf.h"\n';
+    this.result += '#include "conf_io/conf_utils.h"\n';
 
     this.result += 'class TValue;\n';
     this.result += 'class TTheme;\n';

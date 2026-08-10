@@ -4,6 +4,7 @@ package awtk;
 /**
  * 扩展edit控件。支持以下功能：
  ** 支持搜索建议功能。
+ ** 支持多行编辑功能。
  *
  */
 public class TEditEx extends TEdit { 
@@ -49,6 +50,19 @@ public class TEditEx extends TEdit {
 
 
   /**
+   * 设置多行编辑。
+   *> 与搜索建议功能互斥。
+   * 
+   * @param multiline 是否多行编辑。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setMultiline(boolean multiline)  {
+   return TRet.from(edit_ex_set_multiline(this != null ? (this.nativeObj) : 0, multiline));
+ }
+
+
+  /**
    * 设置输入建议词源。
    *> EVT_VALUE_CHANGED 事件请求词源更新，new_value 为 edit 输入内容。
    * 
@@ -83,6 +97,18 @@ public class TEditEx extends TEdit {
    */
  public  TRet setSuggestWordsInputName(String name)  {
    return TRet.from(edit_ex_set_suggest_words_input_name(this != null ? (this.nativeObj) : 0, name));
+ }
+
+
+  /**
+   * 请求刷新显示建议词窗口。
+   *> suggest_words 为空时关闭窗口。
+   * 
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet updateSuggestWordsPopup()  {
+   return TRet.from(edit_ex_update_suggest_words_popup(this != null ? (this.nativeObj) : 0));
  }
 
 
@@ -125,12 +151,35 @@ public class TEditEx extends TEdit {
    return edit_ex_t_get_prop_suggest_words_input_name(this.nativeObj);
  }
 
+
+  /**
+   * 是否选中输入建议词。
+   *
+   */
+ public boolean getIsSelectSuggestWord() {
+   return edit_ex_t_get_prop_is_select_suggest_word(this.nativeObj);
+ }
+
+
+  /**
+   * 多行编辑。
+   *> 与搜索建议功能互斥。
+   *
+   */
+ public boolean getMultiline() {
+   return edit_ex_t_get_prop_multiline(this.nativeObj);
+ }
+
 static private native long edit_ex_create(long parent, int x, int y, int w, int h);
+static private native int edit_ex_set_multiline(long widget, boolean multiline);
 static private native int edit_ex_set_suggest_words(long widget, long suggest_words);
 static private native int edit_ex_set_suggest_words_item_formats(long widget, String formats);
 static private native int edit_ex_set_suggest_words_input_name(long widget, String name);
+static private native int edit_ex_update_suggest_words_popup(long widget);
 static private native long edit_ex_cast(long widget);
 static private native long edit_ex_t_get_prop_suggest_words(long nativeObj);
 static private native String edit_ex_t_get_prop_suggest_words_item_formats(long nativeObj);
 static private native String edit_ex_t_get_prop_suggest_words_input_name(long nativeObj);
+static private native boolean edit_ex_t_get_prop_is_select_suggest_word(long nativeObj);
+static private native boolean edit_ex_t_get_prop_multiline(long nativeObj);
 };

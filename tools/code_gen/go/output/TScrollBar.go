@@ -74,6 +74,10 @@ func (this TScrollBar) SetScrollDelta(scroll_delta uint32) TRet {
   return TRet(C.scroll_bar_set_scroll_delta((*C.widget_t)(this.handle), (C.uint32_t)(scroll_delta)));
 }
 
+func (this TScrollBar) SetScrollRows(scroll_rows uint8) TRet {
+  return TRet(C.scroll_bar_set_scroll_rows((*C.widget_t)(this.handle), (C.uint8_t)(scroll_rows)));
+}
+
 func (this TScrollBar) GetVirtualSize() int32 {
   return (int32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).virtual_size);
 }
@@ -90,6 +94,10 @@ func (this TScrollBar) GetScrollDelta() uint32 {
   return (uint32)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).scroll_delta);
 }
 
+func (this TScrollBar) GetScrollRows() uint8 {
+  return (uint8)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).scroll_rows);
+}
+
 func (this TScrollBar) GetAnimatable() bool {
   return (bool)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).animatable);
 }
@@ -100,5 +108,9 @@ func (this TScrollBar) GetAutoHide() bool {
 
 func (this TScrollBar) GetWheelScroll() bool {
   return (bool)((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).wheel_scroll);
+}
+
+func (this TScrollBar) GetWheelModifierKey() string {
+  return C.GoString((*C.scroll_bar_t)(unsafe.Pointer(this.handle)).wheel_modifier_key);
 }
 

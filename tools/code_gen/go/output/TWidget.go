@@ -529,6 +529,14 @@ func (this TWidget) IsAlwaysOnTop() bool {
   return (bool)(C.widget_is_always_on_top((*C.widget_t)(this.handle)));
 }
 
+func (this TWidget) IsSuspendDialog() bool {
+  return (bool)(C.widget_is_suspend_dialog((*C.widget_t)(this.handle)));
+}
+
+func (this TWidget) IsSuspendPopup() bool {
+  return (bool)(C.widget_is_suspend_popup((*C.widget_t)(this.handle)));
+}
+
 func (this TWidget) IsOpenedDialog() bool {
   return (bool)(C.widget_is_opened_dialog((*C.widget_t)(this.handle)));
 }
@@ -587,6 +595,12 @@ func (this TWidget) Destroy() TRet {
 
 func (this TWidget) DestroyAsync() TRet {
   return TRet(C.widget_destroy_async((*C.widget_t)(this.handle)));
+}
+
+func (this TWidget) Ref() TWidget {
+  retObj := TWidget{}
+  retObj.handle = unsafe.Pointer(C.widget_ref((*C.widget_t)(this.handle)))
+  return retObj
 }
 
 func (this TWidget) Unref() TRet {

@@ -109,6 +109,18 @@ public class TRichText extends TWidget {
 
 
   /**
+   * 设置是否只允许在单词之间自动换行。
+   * 
+   * @param word_wrap 是否只允许在单词之间自动换行。
+   *
+   * @return 返回RET_OK表示成功，否则表示失败。
+   */
+ public  TRet setWordWrap(boolean word_wrap)  {
+   return TRet.from(rich_text_set_word_wrap(this != null ? (this.nativeObj) : 0, word_wrap));
+ }
+
+
+  /**
    * 转换为rich_text对象(供脚本语言使用)。
    * 
    * @param widget rich_text对象。
@@ -137,10 +149,21 @@ public class TRichText extends TWidget {
    return rich_text_t_get_prop_yslidable(this.nativeObj);
  }
 
+
+  /**
+   * 是否只允许在单词之间自动换行(默认TRUE)。
+   *
+   */
+ public boolean getWordWrap() {
+   return rich_text_t_get_prop_word_wrap(this.nativeObj);
+ }
+
 static private native long rich_text_create(long parent, int x, int y, int w, int h);
 static private native int rich_text_set_text(long widget, String text);
 static private native int rich_text_set_yslidable(long widget, boolean yslidable);
+static private native int rich_text_set_word_wrap(long widget, boolean word_wrap);
 static private native long rich_text_cast(long widget);
 static private native int rich_text_t_get_prop_line_gap(long nativeObj);
 static private native boolean rich_text_t_get_prop_yslidable(long nativeObj);
+static private native boolean rich_text_t_get_prop_word_wrap(long nativeObj);
 };

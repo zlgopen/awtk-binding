@@ -17,6 +17,20 @@ public enum TObjectProp {
   SIZE (OBJECT_PROP_SIZE()),
   
   /**
+   * 是否禁用按路径访问属性。
+   *
+   */
+ 
+  DISABLE_PATH (OBJECT_PROP_DISABLE_PATH()),
+  
+  /**
+   * 是否保持属性间的顺序。
+   *
+   */
+ 
+  KEEP_PROPS_ORDER (OBJECT_PROP_KEEP_PROPS_ORDER()),
+  
+  /**
    * 属性是否勾选。
    *
    */
@@ -64,6 +78,8 @@ public enum TObjectProp {
   private String value;
 
   static private native String OBJECT_PROP_SIZE();
+  static private native String OBJECT_PROP_DISABLE_PATH();
+  static private native String OBJECT_PROP_KEEP_PROPS_ORDER();
   static private native String OBJECT_PROP_CHECKED();
   static private native String OBJECT_PROP_SELECTED_INDEX();
 

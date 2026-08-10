@@ -827,20 +827,20 @@ public class TObject extends TEmitter {
 
 
   /**
-   * 引用计数。
-   *
-   */
- public int getRefCount() {
-   return object_t_get_prop_ref_count(this.nativeObj);
- }
-
-
-  /**
    * 对象的名称。
    *
    */
  public String getName() {
    return object_t_get_prop_name(this.nativeObj);
+ }
+
+
+  /**
+   * 引用计数。
+   *
+   */
+ public int getRefCount() {
+   return object_t_get_prop_ref_count(this.nativeObj);
  }
 
 static private native int object_unref(long obj);
@@ -906,6 +906,6 @@ static private native int object_set_prop_int64(long obj, String name, long valu
 static private native long object_get_prop_uint64(long obj, String name, long defval);
 static private native int object_set_prop_uint64(long obj, String name, long value);
 static private native int object_clear_props(long obj);
-static private native int object_t_get_prop_ref_count(long nativeObj);
 static private native String object_t_get_prop_name(long nativeObj);
+static private native int object_t_get_prop_ref_count(long nativeObj);
 };

@@ -11,6 +11,7 @@ var searchData=
   ['updatestate_8',['UpdateState',['../class_t_style.html#a2a7160b804d2f886c1ae312d600a7b64',1,'TStyle']]],
   ['updatestyle_9',['UpdateStyle',['../class_t_widget.html#ae873a1bb14b88913591e43ed27c6dd4c',1,'TWidget']]],
   ['updatestylerecursive_10',['UpdateStyleRecursive',['../class_t_widget.html#afd7562acc93c75052c0efd9a452c24e1',1,'TWidget']]],
-  ['us_11',['Us',['../class_t_time_now.html#a60fc88b53386eb263ee8151142d7952c',1,'TTimeNow']]],
-  ['usestyle_12',['UseStyle',['../class_t_widget.html#a21e95f72fbaf1b54e4f38797a51ea4a4',1,'TWidget']]]
+  ['updatesuggestwordspopup_11',['UpdateSuggestWordsPopup',['../class_t_edit_ex.html#a41317def212b93c05a6aec1d85f94348',1,'TEditEx']]],
+  ['us_12',['Us',['../class_t_time_now.html#a60fc88b53386eb263ee8151142d7952c',1,'TTimeNow']]],
+  ['usestyle_13',['UseStyle',['../class_t_widget.html#a21e95f72fbaf1b54e4f38797a51ea4a4',1,'TWidget']]]
 ];

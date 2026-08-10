@@ -60,9 +60,16 @@ var searchData=
   ['stroke_5frect_57',['STROKE_RECT',['../enumawtk_1_1_t_indicator_default_paint.html#a97cc9d3a93d2f9b9eda9f7f699039dfd',1,'awtk::TIndicatorDefaultPaint']]],
   ['strongly_5ffocus_58',['STRONGLY_FOCUS',['../enumawtk_1_1_t_widget_prop.html#a63aa50c583d4847c3011d511652ae1f2',1,'awtk::TWidgetProp']]],
   ['style_59',['STYLE',['../enumawtk_1_1_t_asset_type.html#a02f075d0e484563ff534b8f74feffdfc',1,'awtk.TAssetType.STYLE'],['../enumawtk_1_1_t_widget_prop.html#a94f092aec9d222ab5bd98d1dbb137a56',1,'awtk.TWidgetProp.STYLE']]],
-  ['suspend_60',['SUSPEND',['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk::TWindowStage']]],
-  ['sync_5fstate_5fto_5fchildren_61',['SYNC_STATE_TO_CHILDREN',['../enumawtk_1_1_t_widget_prop.html#ad5992053cfe13c5d7f970ac5047784c2',1,'awtk::TWidgetProp']]],
-  ['system_62',['SYSTEM',['../enumawtk_1_1_t_event_type.html#adcf9e75d87a89440fba895a1ffb99fd0',1,'awtk::TEventType']]],
-  ['system_5fbar_63',['SYSTEM_BAR',['../enumawtk_1_1_t_widget_type.html#a01a3e1f331504cb34f8bb54e2aff2f8e',1,'awtk::TWidgetType']]],
-  ['system_5fbar_5fbottom_64',['SYSTEM_BAR_BOTTOM',['../enumawtk_1_1_t_widget_type.html#a9a3353e9f5b7df43ae3bf566c295fb51',1,'awtk::TWidgetType']]]
+  ['suggest_5fwords_60',['SUGGEST_WORDS',['../enumawtk_1_1_t_edit_ex_prop.html#a3c4e429dec541427f350042263395505',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5finput_5fname_61',['SUGGEST_WORDS_INPUT_NAME',['../enumawtk_1_1_t_edit_ex_prop.html#aebfff95212e12d4df7b6c6f2719722db',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5fitem_5feven_5fstyle_62',['SUGGEST_WORDS_ITEM_EVEN_STYLE',['../enumawtk_1_1_t_edit_ex_prop.html#a4dd947bcc6b195512716d9921199e457',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5fitem_5fformats_63',['SUGGEST_WORDS_ITEM_FORMATS',['../enumawtk_1_1_t_edit_ex_prop.html#abe6148560e91b8168a1ec5043714222a',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5fitem_5fodd_5fstyle_64',['SUGGEST_WORDS_ITEM_ODD_STYLE',['../enumawtk_1_1_t_edit_ex_prop.html#a9e67cf21b74a86f20ca7371e3dd79808',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5fitem_5fseparate_5fstyle_65',['SUGGEST_WORDS_ITEM_SEPARATE_STYLE',['../enumawtk_1_1_t_edit_ex_prop.html#a99888c61050037e4b33d0d92b2497101',1,'awtk::TEditExProp']]],
+  ['suggest_5fwords_5fui_5fprops_66',['SUGGEST_WORDS_UI_PROPS',['../enumawtk_1_1_t_edit_ex_prop.html#ad7d5636adb5a181625d80d32d5476f58',1,'awtk::TEditExProp']]],
+  ['suspend_67',['SUSPEND',['../enumawtk_1_1_t_window_stage.html#a9ed381f79b12c3cc484f2331fe4eb768',1,'awtk::TWindowStage']]],
+  ['sync_5fstate_5fto_5fchildren_68',['SYNC_STATE_TO_CHILDREN',['../enumawtk_1_1_t_widget_prop.html#ad5992053cfe13c5d7f970ac5047784c2',1,'awtk::TWidgetProp']]],
+  ['system_69',['SYSTEM',['../enumawtk_1_1_t_event_type.html#adcf9e75d87a89440fba895a1ffb99fd0',1,'awtk::TEventType']]],
+  ['system_5fbar_70',['SYSTEM_BAR',['../enumawtk_1_1_t_widget_type.html#a01a3e1f331504cb34f8bb54e2aff2f8e',1,'awtk::TWidgetType']]],
+  ['system_5fbar_5fbottom_71',['SYSTEM_BAR_BOTTOM',['../enumawtk_1_1_t_widget_type.html#a9a3353e9f5b7df43ae3bf566c295fb51',1,'awtk::TWidgetType']]]
 ];

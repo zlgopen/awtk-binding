@@ -70,6 +70,22 @@ func (this TScrollView) ScrollDeltaTo(xoffset_delta int32, yoffset_delta int32, 
   return TRet(C.scroll_view_scroll_delta_to((*C.widget_t)(this.handle), (C.int32_t)(xoffset_delta), (C.int32_t)(yoffset_delta), (C.int32_t)(duration)));
 }
 
+func (this TScrollView) GetUseVirtualW() bool {
+  return (bool)((*C.scroll_view_t)(unsafe.Pointer(this.handle)).use_virtual_w);
+}
+
+func (this TScrollView) GetUseWidgetW() bool {
+  return (bool)((*C.scroll_view_t)(unsafe.Pointer(this.handle)).use_widget_w);
+}
+
+func (this TScrollView) GetUseVirtualH() bool {
+  return (bool)((*C.scroll_view_t)(unsafe.Pointer(this.handle)).use_virtual_h);
+}
+
+func (this TScrollView) GetUseWidgetH() bool {
+  return (bool)((*C.scroll_view_t)(unsafe.Pointer(this.handle)).use_widget_h);
+}
+
 func (this TScrollView) GetVirtualW() int {
   return (int)((*C.scroll_view_t)(unsafe.Pointer(this.handle)).virtual_w);
 }

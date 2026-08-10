@@ -120,9 +120,9 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 设置是否允许整个单词换行。(需要开启自动换行才有效果)
+   * 设置是否只允许在单词之间自动换行(需要开启自动换行才有效果)。
    * 
-   * @param word_wrap 是否允许整个单词换行。
+   * @param word_wrap 是否只允许在单词之间自动换行。
    *
    * @return 返回RET_OK表示成功，否则表示失败。
    */
@@ -173,7 +173,6 @@ public class TLabel extends TWidget {
   /**
    * 显示字符的个数(小于0时全部显示)。
    *主要用于动态改变显示字符的个数，来实现类似[拨号中...]的动画效果。
-   *> 和换行是冲突的，换行后，该属性不生效
    *
    */
  public int getLength() {
@@ -191,7 +190,7 @@ public class TLabel extends TWidget {
 
 
   /**
-   * 是否允许整个单词换行(默认FALSE)。
+   * 是否只允许在单词之间自动换行(默认FALSE)。
    *> 需要开启自动换行才有效果
    *
    */
