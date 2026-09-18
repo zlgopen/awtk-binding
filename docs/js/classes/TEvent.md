@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TEvent
 
 # Class: TEvent
+
+Defined in: [awtk.ts:5818](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5818)
 
 事件基类。
 
@@ -32,24 +34,30 @@
 - [`TCmdExecEvent`](TCmdExecEvent.md)
 - [`TValueChangeEvent`](TValueChangeEvent.md)
 - [`TLogMessageEvent`](TLogMessageEvent.md)
+- [`TObjectFifoSetEvent`](TObjectFifoSetEvent.md)
+- [`TObjectFifoPushEvent`](TObjectFifoPushEvent.md)
+- [`TObjectFifoPushHeadEvent`](TObjectFifoPushHeadEvent.md)
+- [`TObjectFifoPopEvent`](TObjectFifoPopEvent.md)
+- [`TObjectFifoPopTailEvent`](TObjectFifoPopTailEvent.md)
+- [`TObjectFifoValueChangeEvent`](TObjectFifoValueChangeEvent.md)
 
 ## Constructors
 
-### new TEvent()
+### Constructor
 
-> **new TEvent**(`nativeObj`): [`TEvent`](TEvent.md)
+> **new TEvent**(`nativeObj`): `TEvent`
+
+Defined in: [awtk.ts:5820](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5820)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TEvent`](TEvent.md)
-
-#### Defined in
-
-[awtk.ts:5790](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5790)
+`TEvent`
 
 ## Properties
 
@@ -57,79 +65,79 @@
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:5789](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5789)
+Defined in: [awtk.ts:5819](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5819)
 
 ## Accessors
 
 ### size
 
-> `get` **size**(): `number`
+#### Get Signature
+
+> **get** **size**(): `number`
+
+Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5927)
 
 结构体的大小。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:5897](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5897)
 
 ***
 
 ### target
 
-> `get` **target**(): `any`
+#### Get Signature
+
+> **get** **target**(): `any`
+
+Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5945)
 
 事件发生的目标对象。
 
-#### Returns
+##### Returns
 
 `any`
-
-#### Defined in
-
-[awtk.ts:5915](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5915)
 
 ***
 
 ### time
 
-> `get` **time**(): `number`
+#### Get Signature
+
+> **get** **time**(): `number`
+
+Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5936)
 
 事件发生的时间点（该时间点并非真实时间）。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:5906](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5906)
 
 ***
 
 ### type
 
-> `get` **type**(): `number`
+#### Get Signature
+
+> **get** **type**(): `number`
+
+Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5918)
 
 类型。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:5888](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5888)
 
 ## Methods
 
 ### destroy()
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5909)
 
 销毁事件对象。
 
@@ -141,15 +149,13 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:5879](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5879)
-
 ***
 
 ### getType()
 
 > **getType**(): `number`
+
+Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5882)
 
 获取event类型。
 
@@ -159,15 +165,13 @@
 
 返回event类型。
 
-#### Defined in
-
-[awtk.ts:5852](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5852)
-
 ***
 
 ### cast()
 
-> `static` **cast**(`event`): [`TEvent`](TEvent.md)
+> `static` **cast**(`event`): `TEvent`
+
+Defined in: [awtk.ts:5871](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5871)
 
 转换为event对象。
 
@@ -175,25 +179,25 @@
 
 #### Parameters
 
-• **event**: [`TEvent`](TEvent.md)
+##### event
+
+`TEvent`
 
 event对象。
 
 #### Returns
 
-[`TEvent`](TEvent.md)
+`TEvent`
 
 event对象。
-
-#### Defined in
-
-[awtk.ts:5841](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5841)
 
 ***
 
 ### create()
 
-> `static` **create**(`type`): [`TEvent`](TEvent.md)
+> `static` **create**(`type`): `TEvent`
+
+Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5896)
 
 创建event对象。
 
@@ -201,19 +205,17 @@ event对象。
 
 #### Parameters
 
-• **type**: `number`
+##### type
+
+`number`
 
 事件类型。
 
 #### Returns
 
-[`TEvent`](TEvent.md)
+`TEvent`
 
 返回事件对象。
-
-#### Defined in
-
-[awtk.ts:5866](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5866)
 
 ***
 
@@ -221,11 +223,15 @@ event对象。
 
 > `static` **fromName**(`name`): `number`
 
+Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5832)
+
 将事件名转换成事件的类型。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 事件名。
 
@@ -235,25 +241,27 @@ event对象。
 
 返回事件的类型。
 
-#### Defined in
-
-[awtk.ts:5802](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5802)
-
 ***
 
 ### registerCustomName()
 
 > `static` **registerCustomName**(`event_type`, `name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5845)
+
 给事件注册名称。
 
 #### Parameters
 
-• **event\_type**: `number`
+##### event\_type
+
+`number`
 
 事件类型。
 
-• **name**: `string`
+##### name
+
+`string`
 
 事件名。
 
@@ -262,10 +270,6 @@ event对象。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:5815](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5815)
 
 ***
 
@@ -273,11 +277,15 @@ event对象。
 
 > `static` **unregisterCustomName**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5857)
+
 注销事件名称。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 事件名。
 
@@ -286,7 +294,3 @@ event对象。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:5827](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5827)

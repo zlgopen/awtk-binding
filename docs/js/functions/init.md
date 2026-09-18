@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -8,20 +8,26 @@
 
 > **init**(`w`, `h`, `name`, `isDesktop`): `any`
 
+Defined in: [awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L3)
+
 ## Parameters
 
-• **w**: `number`
+### w
 
-• **h**: `number`
+`number`
 
-• **name**: `string`
+### h
 
-• **isDesktop**: `boolean`
+`number`
+
+### name
+
+`string`
+
+### isDesktop
+
+`boolean`
 
 ## Returns
 
 `any`
-
-## Defined in
-
-[awtk.ts:3](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L3)

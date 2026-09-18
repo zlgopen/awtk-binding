@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Class: TIdleManager
 
+Defined in: [awtk.ts:14333](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14333)
+
 idle_manager_t管理器。
 
 ## Constructors
 
-### new TIdleManager()
+### Constructor
 
-> **new TIdleManager**(`nativeObj`): [`TIdleManager`](TIdleManager.md)
+> **new TIdleManager**(`nativeObj`): `TIdleManager`
+
+Defined in: [awtk.ts:14335](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14335)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TIdleManager`](TIdleManager.md)
-
-#### Defined in
-
-[awtk.ts:14034](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14034)
+`TIdleManager`
 
 ## Properties
 
@@ -32,6 +34,4 @@ idle_manager_t管理器。
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:14033](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14033)
+Defined in: [awtk.ts:14334](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14334)

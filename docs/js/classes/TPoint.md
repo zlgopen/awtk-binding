@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Class: TPoint
 
+Defined in: [awtk.ts:2643](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2643)
+
 点。包括一个x坐标和一个y坐标。
 
 ## Constructors
 
-### new TPoint()
+### Constructor
 
-> **new TPoint**(`nativeObj`): [`TPoint`](TPoint.md)
+> **new TPoint**(`nativeObj`): `TPoint`
+
+Defined in: [awtk.ts:2645](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2645)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TPoint`](TPoint.md)
-
-#### Defined in
-
-[awtk.ts:2580](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2580)
+`TPoint`
 
 ## Properties
 
@@ -32,6 +34,4 @@
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:2579](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2579)
+Defined in: [awtk.ts:2644](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2644)

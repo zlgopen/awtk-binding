@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TFileChooser
 
 # Class: TFileChooser
+
+Defined in: [awtk.ts:18331](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18331)
 
 文件/目录选择器
 
@@ -14,25 +16,25 @@
 
 ## Constructors
 
-### new TFileChooser()
+### Constructor
 
-> **new TFileChooser**(`nativeObj`): [`TFileChooser`](TFileChooser.md)
+> **new TFileChooser**(`nativeObj`): `TFileChooser`
+
+Defined in: [awtk.ts:18333](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18333)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TFileChooser`](TFileChooser.md)
+`TFileChooser`
 
 #### Overrides
 
-[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructors)
-
-#### Defined in
-
-[awtk.ts:18008](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18008)
+[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructor)
 
 ## Properties
 
@@ -40,19 +42,19 @@
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:18332](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18332)
+
 #### Overrides
 
 [`TEmitter`](TEmitter.md).[`nativeObj`](TEmitter.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:18007](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18007)
 
 ## Methods
 
 ### chooseFileForOpen()
 
 > **chooseFileForOpen**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:18415](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18415)
 
 为了打开而选择文件。
 
@@ -62,15 +64,13 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:18090](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18090)
-
 ***
 
 ### chooseFileForSave()
 
 > **chooseFileForSave**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:18404](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18404)
 
 为了保存而选择文件。
 
@@ -80,15 +80,13 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:18079](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18079)
-
 ***
 
 ### chooseFolder()
 
 > **chooseFolder**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:18426](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18426)
 
 选择目录。
 
@@ -98,15 +96,13 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:18101](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18101)
-
 ***
 
 ### destroy()
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2620)
 
 销毁。
 
@@ -120,15 +116,13 @@
 
 [`TEmitter`](TEmitter.md).[`destroy`](TEmitter.md#destroy)
 
-#### Defined in
-
-[awtk.ts:2555](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2555)
-
 ***
 
 ### disable()
 
 > **disable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2609)
 
 禁用。
 
@@ -144,22 +138,22 @@
 
 [`TEmitter`](TEmitter.md).[`disable`](TEmitter.md#disable)
 
-#### Defined in
-
-[awtk.ts:2544](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2544)
-
 ***
 
 ### dispatch()
 
 > **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2545)
+
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
 
 #### Parameters
 
-• **e**: [`TEvent`](TEvent.md)
+##### e
+
+[`TEvent`](TEvent.md)
 
 事件对象。
 
@@ -173,15 +167,13 @@
 
 [`TEmitter`](TEmitter.md).[`dispatch`](TEmitter.md#dispatch)
 
-#### Defined in
-
-[awtk.ts:2480](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2480)
-
 ***
 
 ### dispatchSimpleEvent()
 
 > **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2559)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -189,7 +181,9 @@
 
 #### Parameters
 
-• **type**: `number`
+##### type
+
+`number`
 
 事件类型。
 
@@ -201,15 +195,13 @@
 
 [`TEmitter`](TEmitter.md).[`dispatchSimpleEvent`](TEmitter.md#dispatchsimpleevent)
 
-#### Defined in
-
-[awtk.ts:2494](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2494)
-
 ***
 
 ### enable()
 
 > **enable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2596)
 
 启用。
 
@@ -223,15 +215,13 @@
 
 [`TEmitter`](TEmitter.md).[`enable`](TEmitter.md#enable)
 
-#### Defined in
-
-[awtk.ts:2531](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2531)
-
 ***
 
 ### getDir()
 
 > **getDir**(): `string`
+
+Defined in: [awtk.ts:18437](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18437)
 
 获取目录。
 
@@ -241,15 +231,13 @@
 
 返回选择的目录。
 
-#### Defined in
-
-[awtk.ts:18112](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18112)
-
 ***
 
 ### getFilename()
 
 > **getFilename**(): `string`
+
+Defined in: [awtk.ts:18448](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18448)
 
 获取文件名。
 
@@ -259,15 +247,13 @@
 
 返回选择的文件名。
 
-#### Defined in
-
-[awtk.ts:18123](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18123)
-
 ***
 
 ### isAborted()
 
 > **isAborted**(): `boolean`
+
+Defined in: [awtk.ts:18459](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18459)
 
 用户是否取消了选择。
 
@@ -277,21 +263,21 @@
 
 返回用户是否取消了选择。
 
-#### Defined in
-
-[awtk.ts:18134](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18134)
-
 ***
 
 ### off()
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2585)
+
 注销指定事件的处理函数。
 
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 emitter_on返回的ID。
 
@@ -305,29 +291,33 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`off`](TEmitter.md#off)
 
-#### Defined in
-
-[awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2520)
-
 ***
 
 ### on()
 
 > **on**(`etype`, `handler`, `ctx`): `number`
 
+Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2573)
+
 注册指定事件的处理函数。
 
 #### Parameters
 
-• **etype**: `number`
+##### etype
+
+`number`
 
 事件类型。
 
-• **handler**: `Function`
+##### handler
+
+`Function`
 
 事件处理函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 事件处理函数上下文。
 
@@ -341,22 +331,22 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`on`](TEmitter.md#on)
 
-#### Defined in
-
-[awtk.ts:2508](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2508)
-
 ***
 
 ### setFilter()
 
 > **setFilter**(`filter`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:18381](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18381)
+
 设置过滤规则。
 > files_only 表示只列出文件，dir_only 表示只列出目录，其它表示只列出满足扩展名文件集合(如：.jpg.png.gif)。
 
 #### Parameters
 
-• **filter**: `string`
+##### filter
+
+`string`
 
 过滤规则。
 
@@ -366,21 +356,21 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:18056](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18056)
-
 ***
 
 ### setInitDir()
 
 > **setInitDir**(`init_dir`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:18356](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18356)
+
 设置初始目录。
 
 #### Parameters
 
-• **init\_dir**: `string`
+##### init\_dir
+
+`string`
 
 初始目录
 
@@ -389,10 +379,6 @@ emitter_on返回的ID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:18031](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18031)
 
 ***
 
@@ -400,11 +386,15 @@ emitter_on返回的ID。
 
 > **setTopDir**(`top_dir`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:18368](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18368)
+
 设置初始目录。
 
 #### Parameters
 
-• **top\_dir**: `string`
+##### top\_dir
+
+`string`
 
 初始目录
 
@@ -414,27 +404,27 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:18043](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18043)
-
 ***
 
 ### cast()
 
-> `static` **cast**(`chooser`): [`TFileChooser`](TFileChooser.md)
+> `static` **cast**(`chooser`): `TFileChooser`
+
+Defined in: [awtk.ts:18393](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18393)
 
 转换为file_chooser对象(供脚本语言使用)。
 
 #### Parameters
 
-• **chooser**: [`TFileChooser`](TFileChooser.md)
+##### chooser
+
+`TFileChooser`
 
 file_chooser对象。
 
 #### Returns
 
-[`TFileChooser`](TFileChooser.md)
+`TFileChooser`
 
 对象。
 
@@ -442,28 +432,22 @@ file_chooser对象。
 
 [`TEmitter`](TEmitter.md).[`cast`](TEmitter.md#cast)
 
-#### Defined in
-
-[awtk.ts:18068](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18068)
-
 ***
 
 ### create()
 
-> `static` **create**(): [`TFileChooser`](TFileChooser.md)
+> `static` **create**(): `TFileChooser`
+
+Defined in: [awtk.ts:18344](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L18344)
 
 创建file_chooser对象
 
 #### Returns
 
-[`TFileChooser`](TFileChooser.md)
+`TFileChooser`
 
 对象。
 
 #### Overrides
 
 [`TEmitter`](TEmitter.md).[`create`](TEmitter.md#create)
-
-#### Defined in
-
-[awtk.ts:18019](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L18019)

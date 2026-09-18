@@ -1,4 +1,4 @@
-**AWTK** • [**Docs**](globals.md)
+**AWTK**
 
 ***
 

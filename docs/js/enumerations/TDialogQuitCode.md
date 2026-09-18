@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TDialogQuitCode
 
 # Enumeration: TDialogQuitCode
+
+Defined in: [awtk.ts:5026](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5026)
 
 对话框退出码。
 
@@ -16,11 +18,9 @@
 
 > **CANCEL**: `number`
 
+Defined in: [awtk.ts:5050](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5050)
+
 点击“CANCEL”按钮关闭。
-
-#### Defined in
-
-[awtk.ts:5035](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5035)
 
 ***
 
@@ -28,11 +28,9 @@
 
 > **NO**: `number`
 
+Defined in: [awtk.ts:5056](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5056)
+
 点击“NO”按钮关闭。
-
-#### Defined in
-
-[awtk.ts:5041](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5041)
 
 ***
 
@@ -40,11 +38,9 @@
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:5032](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5032)
+
 对话框被强行关闭或不关心关闭原因。
-
-#### Defined in
-
-[awtk.ts:5017](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5017)
 
 ***
 
@@ -52,11 +48,9 @@
 
 > **OK**: `number`
 
+Defined in: [awtk.ts:5038](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5038)
+
 点击“OK”按钮关闭。
-
-#### Defined in
-
-[awtk.ts:5023](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5023)
 
 ***
 
@@ -64,11 +58,9 @@
 
 > **OTHER**: `number`
 
+Defined in: [awtk.ts:5062](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5062)
+
 点击其它按钮关闭。
-
-#### Defined in
-
-[awtk.ts:5047](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5047)
 
 ***
 
@@ -76,8 +68,6 @@
 
 > **YES**: `number`
 
+Defined in: [awtk.ts:5044](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5044)
+
 点击“YES”按钮关闭。
-
-#### Defined in
-
-[awtk.ts:5029](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5029)

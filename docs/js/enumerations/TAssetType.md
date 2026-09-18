@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TAssetType
 
 # Enumeration: TAssetType
+
+Defined in: [awtk.ts:13562](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13562)
 
 资源类型常量定义。
 
@@ -14,11 +16,9 @@
 
 > **DATA**: `number`
 
+Defined in: [awtk.ts:13622](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13622)
+
 其它数据资源。
-
-#### Defined in
-
-[awtk.ts:13321](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13321)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **FLOW**: `number`
 
+Defined in: [awtk.ts:13616](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13616)
+
 流图资源。
-
-#### Defined in
-
-[awtk.ts:13315](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13315)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **FONT**: `number`
 
+Defined in: [awtk.ts:13574](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13574)
+
 字体资源。
-
-#### Defined in
-
-[awtk.ts:13273](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13273)
 
 ***
 
@@ -50,11 +46,9 @@
 
 > **IMAGE**: `number`
 
+Defined in: [awtk.ts:13580](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13580)
+
 图片资源。
-
-#### Defined in
-
-[awtk.ts:13279](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13279)
 
 ***
 
@@ -62,11 +56,9 @@
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:13568](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13568)
+
 无效资源。
-
-#### Defined in
-
-[awtk.ts:13267](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13267)
 
 ***
 
@@ -74,11 +66,9 @@
 
 > **SCRIPT**: `number`
 
+Defined in: [awtk.ts:13610](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13610)
+
 JS等脚本资源。
-
-#### Defined in
-
-[awtk.ts:13309](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13309)
 
 ***
 
@@ -86,11 +76,9 @@ JS等脚本资源。
 
 > **STRINGS**: `number`
 
+Defined in: [awtk.ts:13604](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13604)
+
 字符串数据资源。
-
-#### Defined in
-
-[awtk.ts:13303](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13303)
 
 ***
 
@@ -98,11 +86,9 @@ JS等脚本资源。
 
 > **STYLE**: `number`
 
+Defined in: [awtk.ts:13586](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13586)
+
 窗体样式资源。
-
-#### Defined in
-
-[awtk.ts:13285](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13285)
 
 ***
 
@@ -110,11 +96,9 @@ JS等脚本资源。
 
 > **UI**: `number`
 
+Defined in: [awtk.ts:13592](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13592)
+
 UI数据资源。
-
-#### Defined in
-
-[awtk.ts:13291](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13291)
 
 ***
 
@@ -122,8 +106,6 @@ UI数据资源。
 
 > **XML**: `number`
 
+Defined in: [awtk.ts:13598](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13598)
+
 XML数据资源。
-
-#### Defined in
-
-[awtk.ts:13297](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13297)

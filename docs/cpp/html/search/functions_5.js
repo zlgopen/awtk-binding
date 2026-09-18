@@ -1,7 +1,23 @@
 var searchData=
 [
-  ['float32_0',['Float32',['../class_t_value.html#a7bb1a3fa57deb2158b407be2c95e8a63',1,'TValue']]],
-  ['float64_1',['Float64',['../class_t_value.html#a0e6a08a868d8966fcb984c30b52465a1',1,'TValue']]],
-  ['fromstr_2',['FromStr',['../class_t_color.html#ad3a8c4dbabe791570d46009fa7200cac',1,'TColor']]],
-  ['fromtime_3',['FromTime',['../class_t_date_time.html#a28627e07d81bc96254bd6c9e2c1c4bd8',1,'TDateTime']]]
+  ['fill_0',['Fill',['../class_t_vgcanvas.html#a14f818062de7fa7926b2e7d5ce8e189d',1,'TVgcanvas']]],
+  ['fillbgrect_1',['FillBgRect',['../class_t_widget.html#a544985b07a01a98c7f3e11b388453d29',1,'TWidget']]],
+  ['fillfgrect_2',['FillFgRect',['../class_t_widget.html#afa493dd135566a8e7051b0bcdadef9b9',1,'TWidget']]],
+  ['fillrect_3',['FillRect',['../class_t_canvas.html#a470b0fecb53c44d66a879e1c0331de4e',1,'TCanvas']]],
+  ['filltext_4',['FillText',['../class_t_vgcanvas.html#ad52e8fb00145fe90783ef4c279540aa5',1,'TVgcanvas']]],
+  ['filltextbyglyphs_5',['FillTextByGlyphs',['../class_t_vgcanvas.html#a63554dfddfcc95c000fb41aa744e477b',1,'TVgcanvas']]],
+  ['findparentbyname_6',['FindParentByName',['../class_t_widget.html#ac65db68777733933f61fd63de2c2d3be',1,'TWidget']]],
+  ['findparentbytype_7',['FindParentByType',['../class_t_widget.html#aae99ae1afabf7b3879b0cfd616614782',1,'TWidget']]],
+  ['fixoffset_8',['FixOffset',['../class_t_scroll_view.html#a208673a94446c374fcc03169e7358740',1,'TScrollView']]],
+  ['float32_9',['Float32',['../class_t_value.html#a7bb1a3fa57deb2158b407be2c95e8a63',1,'TValue']]],
+  ['float64_10',['Float64',['../class_t_value.html#a0e6a08a868d8966fcb984c30b52465a1',1,'TValue']]],
+  ['flush_11',['Flush',['../class_t_vgcanvas.html#a4cef1db770b88a58da3eae2dd9f8d3d3',1,'TVgcanvas']]],
+  ['focusnext_12',['FocusNext',['../class_t_widget.html#a75f481d1ab9be2450a0c94d58407a085',1,'TWidget']]],
+  ['focusprev_13',['FocusPrev',['../class_t_widget.html#a7363917c8e5bbb6f00a10b0987e0e661',1,'TWidget']]],
+  ['foreach_14',['Foreach',['../class_t_widget.html#ad58eb9c24b629e4f5c863cd6c33627f4',1,'TWidget']]],
+  ['fromname_15',['FromName',['../class_t_event.html#a95a746a2230504d7c86376fff0196ac3',1,'TEvent']]],
+  ['fromstr_16',['FromStr',['../class_t_color.html#ad3a8c4dbabe791570d46009fa7200cac',1,'TColor']]],
+  ['fromtime_17',['FromTime',['../class_t_date_time.html#a30114aaa6fc5816a4cbf8db7ac9219b1',1,'TDateTime']]],
+  ['func_18',['Func',['../class_t_value.html#a2f9f5c0a3563c664b2a0bea2181485e5',1,'TValue']]],
+  ['funcdef_19',['FuncDef',['../class_t_value.html#a0c75b19a9eeabe7d1c3a631b8a13e19a',1,'TValue']]]
 ];

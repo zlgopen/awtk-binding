@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TObjectCmd
 
 # Enumeration: TObjectCmd
+
+Defined in: [awtk.ts:15051](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15051)
 
 对象常见命令定义
 
@@ -14,12 +16,10 @@
 
 > **ADD**: `number`
 
+Defined in: [awtk.ts:15105](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15105)
+
 增加子项。
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14778](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14778)
 
 ***
 
@@ -27,12 +27,10 @@
 
 > **CLEAR**: `number`
 
+Defined in: [awtk.ts:15098](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15098)
+
 清除全部属性。
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14771](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14771)
 
 ***
 
@@ -40,12 +38,10 @@
 
 > **DETAIL**: `number`
 
+Defined in: [awtk.ts:15112](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15112)
+
 显示对象详细信息。
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14785](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14785)
 
 ***
 
@@ -53,12 +49,20 @@
 
 > **EDIT**: `number`
 
+Defined in: [awtk.ts:15119](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15119)
+
 编辑子项。
 >参数为属性的名称或路径。
 
-#### Defined in
+***
 
-[awtk.ts:14792](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14792)
+### EXEC
+
+> **EXEC**: `number`
+
+Defined in: [awtk.ts:15125](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15125)
+
+执行
 
 ***
 
@@ -66,12 +70,10 @@
 
 > **MOVE\_DOWN**: `number`
 
+Defined in: [awtk.ts:15077](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15077)
+
 和后一个属性交换位置
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14750](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14750)
 
 ***
 
@@ -79,12 +81,10 @@
 
 > **MOVE\_UP**: `number`
 
+Defined in: [awtk.ts:15070](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15070)
+
 和前一个属性交换位置
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14743](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14743)
 
 ***
 
@@ -92,11 +92,9 @@
 
 > **RELOAD**: `number`
 
+Defined in: [awtk.ts:15063](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15063)
+
 重新加载命令
-
-#### Defined in
-
-[awtk.ts:14736](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14736)
 
 ***
 
@@ -104,12 +102,10 @@
 
 > **REMOVE**: `number`
 
+Defined in: [awtk.ts:15084](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15084)
+
 删除属性。
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14757](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14757)
 
 ***
 
@@ -117,12 +113,10 @@
 
 > **REMOVE\_CHECKED**: `number`
 
+Defined in: [awtk.ts:15091](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15091)
+
 删除勾选的属性。
 >参数为属性的名称或路径。
-
-#### Defined in
-
-[awtk.ts:14764](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14764)
 
 ***
 
@@ -130,8 +124,16 @@
 
 > **SAVE**: `number`
 
+Defined in: [awtk.ts:15057](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15057)
+
 保存命令
 
-#### Defined in
+***
 
-[awtk.ts:14730](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14730)
+### UNDO
+
+> **UNDO**: `number`
+
+Defined in: [awtk.ts:15131](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15131)
+
+撤销

@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TStyleId
 
 # Enumeration: TStyleId
+
+Defined in: [awtk.ts:7406](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7406)
 
 style常量定义。
 
@@ -14,11 +16,9 @@ style常量定义。
 
 > **ACTIVE\_ICON**: `number`
 
+Defined in: [awtk.ts:7586](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7586)
+
 Active图标的名称。
-
-#### Defined in
-
-[awtk.ts:7506](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7506)
 
 ***
 
@@ -26,11 +26,9 @@ Active图标的名称。
 
 > **BG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7412](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7412)
+
 背景颜色。
-
-#### Defined in
-
-[awtk.ts:7332](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7332)
 
 ***
 
@@ -38,11 +36,9 @@ Active图标的名称。
 
 > **BG\_IMAGE**: `number`
 
+Defined in: [awtk.ts:7514](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7514)
+
 图片的名称。
-
-#### Defined in
-
-[awtk.ts:7434](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7434)
 
 ***
 
@@ -50,11 +46,9 @@ Active图标的名称。
 
 > **BG\_IMAGE\_DRAW\_TYPE**: `number`
 
+Defined in: [awtk.ts:7520](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7520)
+
 图片的显示方式。
-
-#### Defined in
-
-[awtk.ts:7440](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7440)
 
 ***
 
@@ -62,11 +56,9 @@ Active图标的名称。
 
 > **BORDER**: `number`
 
+Defined in: [awtk.ts:7508](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7508)
+
 边框类型。
-
-#### Defined in
-
-[awtk.ts:7428](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7428)
 
 ***
 
@@ -74,11 +66,9 @@ Active图标的名称。
 
 > **BORDER\_COLOR**: `number`
 
+Defined in: [awtk.ts:7496](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7496)
+
 边框颜色。
-
-#### Defined in
-
-[awtk.ts:7416](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7416)
 
 ***
 
@@ -86,11 +76,9 @@ Active图标的名称。
 
 > **BORDER\_WIDTH**: `number`
 
+Defined in: [awtk.ts:7502](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7502)
+
 边框线宽。
-
-#### Defined in
-
-[awtk.ts:7422](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7422)
 
 ***
 
@@ -98,11 +86,9 @@ Active图标的名称。
 
 > **CHILDREN\_LAYOUT**: `number`
 
+Defined in: [awtk.ts:7652](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7652)
+
 子控件布局参数。
-
-#### Defined in
-
-[awtk.ts:7572](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7572)
 
 ***
 
@@ -110,11 +96,9 @@ Active图标的名称。
 
 > **CLEAR\_BG**: `number`
 
+Defined in: [awtk.ts:7676](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7676)
+
 是否用clear_rect代替fill_rect绘制背景。
-
-#### Defined in
-
-[awtk.ts:7596](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7596)
 
 ***
 
@@ -122,11 +106,9 @@ Active图标的名称。
 
 > **DRAGGER\_COLOR**: `number`
 
+Defined in: [awtk.ts:7424](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7424)
+
 dragger颜色。
-
-#### Defined in
-
-[awtk.ts:7344](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7344)
 
 ***
 
@@ -134,11 +116,9 @@ dragger颜色。
 
 > **EVEN\_BG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7688](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7688)
+
 偶数行背景颜色(grid控件)
-
-#### Defined in
-
-[awtk.ts:7608](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7608)
 
 ***
 
@@ -146,11 +126,9 @@ dragger颜色。
 
 > **FEEDBACK**: `number`
 
+Defined in: [awtk.ts:7670](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7670)
+
 是否启用按键音、触屏音和震动等反馈。
-
-#### Defined in
-
-[awtk.ts:7590](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7590)
 
 ***
 
@@ -158,11 +136,9 @@ dragger颜色。
 
 > **FG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7418](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7418)
+
 前景颜色。
-
-#### Defined in
-
-[awtk.ts:7338](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7338)
 
 ***
 
@@ -170,11 +146,9 @@ dragger颜色。
 
 > **FG\_IMAGE**: `number`
 
+Defined in: [awtk.ts:7532](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7532)
+
 图片的名称。
-
-#### Defined in
-
-[awtk.ts:7452](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7452)
 
 ***
 
@@ -182,11 +156,9 @@ dragger颜色。
 
 > **FG\_IMAGE\_DRAW\_TYPE**: `number`
 
+Defined in: [awtk.ts:7538](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7538)
+
 图片的显示方式。
-
-#### Defined in
-
-[awtk.ts:7458](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7458)
 
 ***
 
@@ -194,11 +166,9 @@ dragger颜色。
 
 > **FOCUSABLE**: `number`
 
+Defined in: [awtk.ts:7664](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7664)
+
 是否支持焦点停留。
-
-#### Defined in
-
-[awtk.ts:7584](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7584)
 
 ***
 
@@ -206,11 +176,9 @@ dragger颜色。
 
 > **FONT\_NAME**: `number`
 
+Defined in: [awtk.ts:7436](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7436)
+
 字体名称。
-
-#### Defined in
-
-[awtk.ts:7356](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7356)
 
 ***
 
@@ -218,11 +186,9 @@ dragger颜色。
 
 > **FONT\_SIZE**: `number`
 
+Defined in: [awtk.ts:7442](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7442)
+
 字体大小。
-
-#### Defined in
-
-[awtk.ts:7362](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7362)
 
 ***
 
@@ -230,11 +196,9 @@ dragger颜色。
 
 > **FONT\_STYLE**: `number`
 
+Defined in: [awtk.ts:7448](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7448)
+
 字体风格(粗体、斜体等)。
-
-#### Defined in
-
-[awtk.ts:7368](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7368)
 
 ***
 
@@ -242,11 +206,9 @@ dragger颜色。
 
 > **GRID\_COLOR**: `number`
 
+Defined in: [awtk.ts:7682](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7682)
+
 网格线颜色(grid控件)
-
-#### Defined in
-
-[awtk.ts:7602](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7602)
 
 ***
 
@@ -254,11 +216,9 @@ dragger颜色。
 
 > **HIGHLIGHT\_FONT\_NAME**: `number`
 
+Defined in: [awtk.ts:7460](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7460)
+
 高亮文本的字体名称。
-
-#### Defined in
-
-[awtk.ts:7380](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7380)
 
 ***
 
@@ -266,11 +226,9 @@ dragger颜色。
 
 > **HIGHLIGHT\_FONT\_SIZE**: `number`
 
+Defined in: [awtk.ts:7466](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7466)
+
 高亮文本的字体大小。
-
-#### Defined in
-
-[awtk.ts:7386](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7386)
 
 ***
 
@@ -278,11 +236,9 @@ dragger颜色。
 
 > **HIGHLIGHT\_TEXT\_COLOR**: `number`
 
+Defined in: [awtk.ts:7472](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7472)
+
 高亮文本的文本颜色。
-
-#### Defined in
-
-[awtk.ts:7392](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7392)
 
 ***
 
@@ -290,11 +246,9 @@ dragger颜色。
 
 > **ICON**: `number`
 
+Defined in: [awtk.ts:7526](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7526)
+
 图标的名称。
-
-#### Defined in
-
-[awtk.ts:7446](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7446)
 
 ***
 
@@ -302,11 +256,9 @@ dragger颜色。
 
 > **ICON\_AT**: `number`
 
+Defined in: [awtk.ts:7580](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7580)
+
 图标的位置。
-
-#### Defined in
-
-[awtk.ts:7500](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7500)
 
 ***
 
@@ -314,11 +266,9 @@ dragger颜色。
 
 > **MARGIN**: `number`
 
+Defined in: [awtk.ts:7550](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7550)
+
 边距。
-
-#### Defined in
-
-[awtk.ts:7470](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7470)
 
 ***
 
@@ -326,11 +276,9 @@ dragger颜色。
 
 > **MARGIN\_BOTTOM**: `number`
 
+Defined in: [awtk.ts:7574](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7574)
+
 底边距。
-
-#### Defined in
-
-[awtk.ts:7494](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7494)
 
 ***
 
@@ -338,11 +286,9 @@ dragger颜色。
 
 > **MARGIN\_LEFT**: `number`
 
+Defined in: [awtk.ts:7556](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7556)
+
 左边距。
-
-#### Defined in
-
-[awtk.ts:7476](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7476)
 
 ***
 
@@ -350,11 +296,9 @@ dragger颜色。
 
 > **MARGIN\_RIGHT**: `number`
 
+Defined in: [awtk.ts:7562](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7562)
+
 右边距。
-
-#### Defined in
-
-[awtk.ts:7482](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7482)
 
 ***
 
@@ -362,11 +306,9 @@ dragger颜色。
 
 > **MARGIN\_TOP**: `number`
 
+Defined in: [awtk.ts:7568](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7568)
+
 顶边距。
-
-#### Defined in
-
-[awtk.ts:7488](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7488)
 
 ***
 
@@ -374,11 +316,9 @@ dragger颜色。
 
 > **MASK\_COLOR**: `number`
 
+Defined in: [awtk.ts:7430](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7430)
+
 蒙版颜色。
-
-#### Defined in
-
-[awtk.ts:7350](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7350)
 
 ***
 
@@ -386,11 +326,9 @@ dragger颜色。
 
 > **ODD\_BG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7694](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7694)
+
 奇数行背景颜色(grid控件)
-
-#### Defined in
-
-[awtk.ts:7614](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7614)
 
 ***
 
@@ -398,11 +336,9 @@ dragger颜色。
 
 > **ROUND\_RADIUS**: `number`
 
+Defined in: [awtk.ts:7622](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7622)
+
 圆角半径(仅在WITH_VGCANVAS定义时生效)。
-
-#### Defined in
-
-[awtk.ts:7542](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7542)
 
 ***
 
@@ -410,11 +346,9 @@ dragger颜色。
 
 > **ROUND\_RADIUS\_BOTTOM\_LEFT**: `number`
 
+Defined in: [awtk.ts:7640](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7640)
+
 左下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
-
-#### Defined in
-
-[awtk.ts:7560](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7560)
 
 ***
 
@@ -422,11 +356,9 @@ dragger颜色。
 
 > **ROUND\_RADIUS\_BOTTOM\_RIGHT**: `number`
 
+Defined in: [awtk.ts:7646](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7646)
+
 右下角圆角半径(仅在WITH_VGCANVAS定义时生效)。
-
-#### Defined in
-
-[awtk.ts:7566](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7566)
 
 ***
 
@@ -434,11 +366,9 @@ dragger颜色。
 
 > **ROUND\_RADIUS\_TOP\_LEFT**: `number`
 
+Defined in: [awtk.ts:7628](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7628)
+
 左上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
-
-#### Defined in
-
-[awtk.ts:7548](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7548)
 
 ***
 
@@ -446,11 +376,9 @@ dragger颜色。
 
 > **ROUND\_RADIUS\_TOP\_RIGHT**: `number`
 
+Defined in: [awtk.ts:7634](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7634)
+
 右上角圆角半径(仅在WITH_VGCANVAS定义时生效)。
-
-#### Defined in
-
-[awtk.ts:7554](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7554)
 
 ***
 
@@ -458,11 +386,9 @@ dragger颜色。
 
 > **SELECTED\_BG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7604](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7604)
+
 编辑器中选中区域的背景颜色。
-
-#### Defined in
-
-[awtk.ts:7524](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7524)
 
 ***
 
@@ -470,11 +396,9 @@ dragger颜色。
 
 > **SELECTED\_FG\_COLOR**: `number`
 
+Defined in: [awtk.ts:7610](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7610)
+
 编辑器中选中区域的前景颜色。
-
-#### Defined in
-
-[awtk.ts:7530](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7530)
 
 ***
 
@@ -482,11 +406,9 @@ dragger颜色。
 
 > **SELECTED\_TEXT\_COLOR**: `number`
 
+Defined in: [awtk.ts:7616](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7616)
+
 编辑器中选中区域的文本颜色。
-
-#### Defined in
-
-[awtk.ts:7536](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7536)
 
 ***
 
@@ -494,11 +416,9 @@ dragger颜色。
 
 > **SELF\_LAYOUT**: `number`
 
+Defined in: [awtk.ts:7658](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7658)
+
 控件布局参数。
-
-#### Defined in
-
-[awtk.ts:7578](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7578)
 
 ***
 
@@ -506,11 +426,9 @@ dragger颜色。
 
 > **SPACER**: `number`
 
+Defined in: [awtk.ts:7544](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7544)
+
 间距。
-
-#### Defined in
-
-[awtk.ts:7464](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7464)
 
 ***
 
@@ -518,11 +436,9 @@ dragger颜色。
 
 > **TEXT\_ALIGN\_H**: `number`
 
+Defined in: [awtk.ts:7484](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7484)
+
 文本水平对齐的方式。
-
-#### Defined in
-
-[awtk.ts:7404](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7404)
 
 ***
 
@@ -530,11 +446,9 @@ dragger颜色。
 
 > **TEXT\_ALIGN\_V**: `number`
 
+Defined in: [awtk.ts:7490](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7490)
+
 文本垂直对齐的方式。
-
-#### Defined in
-
-[awtk.ts:7410](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7410)
 
 ***
 
@@ -542,11 +456,9 @@ dragger颜色。
 
 > **TEXT\_COLOR**: `number`
 
+Defined in: [awtk.ts:7454](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7454)
+
 文本颜色。
-
-#### Defined in
-
-[awtk.ts:7374](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7374)
 
 ***
 
@@ -554,11 +466,9 @@ dragger颜色。
 
 > **TIPS\_TEXT\_COLOR**: `number`
 
+Defined in: [awtk.ts:7478](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7478)
+
 提示文本颜色。
-
-#### Defined in
-
-[awtk.ts:7398](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7398)
 
 ***
 
@@ -566,11 +476,9 @@ dragger颜色。
 
 > **X\_OFFSET**: `number`
 
+Defined in: [awtk.ts:7592](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7592)
+
 X方向的偏移，方便实现按下的效果。
-
-#### Defined in
-
-[awtk.ts:7512](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7512)
 
 ***
 
@@ -578,8 +486,6 @@ X方向的偏移，方便实现按下的效果。
 
 > **Y\_OFFSET**: `number`
 
+Defined in: [awtk.ts:7598](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7598)
+
 Y方向的偏移，方便实现按下的效果。
-
-#### Defined in
-
-[awtk.ts:7518](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7518)

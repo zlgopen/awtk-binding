@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,8 +6,11 @@
 
 # Class: TEditEx
 
+Defined in: [awtk.ts:29492](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29492)
+
 扩展edit控件。支持以下功能：
 * 支持搜索建议功能。
+* 支持多行编辑功能。
 
 ## Extends
 
@@ -15,25 +18,25 @@
 
 ## Constructors
 
-### new TEditEx()
+### Constructor
 
-> **new TEditEx**(`nativeObj`): [`TEditEx`](TEditEx.md)
+> **new TEditEx**(`nativeObj`): `TEditEx`
+
+Defined in: [awtk.ts:29494](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29494)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TEditEx`](TEditEx.md)
+`TEditEx`
 
 #### Overrides
 
-[`TEdit`](TEdit.md).[`constructor`](TEdit.md#constructors)
-
-#### Defined in
-
-[awtk.ts:28730](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28730)
+[`TEdit`](TEdit.md).[`constructor`](TEdit.md#constructor)
 
 ## Properties
 
@@ -41,19 +44,21 @@
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:29493](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29493)
+
 #### Overrides
 
 [`TEdit`](TEdit.md).[`nativeObj`](TEdit.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:28729](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28729)
 
 ## Accessors
 
 ### actionText
 
-> `get` **actionText**(): `string`
+#### Get Signature
+
+> **get** **actionText**(): `string`
+
+Defined in: [awtk.ts:26867](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26867)
 
 软键盘上action按钮的文本。内置取值有：
 
@@ -62,327 +67,447 @@
 
 也可以使用其它文本，比如send表示发送。这个需要自己实现相应的功能，处理EVT\_IM\_ACTION事件即可。
 
-> `set` **actionText**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **actionText**(`v`): `void`
+
+Defined in: [awtk.ts:26871](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26871)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`actionText`](TEdit.md#actiontext)
 
-#### Defined in
-
-[awtk.ts:26116](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26116)
-
 ***
 
 ### animation
 
-> `get` **animation**(): `string`
+#### Get Signature
+
+> **get** **animation**(): `string`
+
+Defined in: [awtk.ts:12947](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12947)
 
 动画参数。请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
 
-> `set` **animation**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **animation**(`v`): `void`
+
+Defined in: [awtk.ts:12951](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12951)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`animation`](TEdit.md#animation)
 
-#### Defined in
-
-[awtk.ts:12799](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12799)
-
 ***
 
 ### autoAdjustSize
 
-> `get` **autoAdjustSize**(): `boolean`
+#### Get Signature
+
+> **get** **autoAdjustSize**(): `boolean`
+
+Defined in: [awtk.ts:13038](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13038)
 
 是否根据子控件和文本自动调整控件自身大小。
 
 > 为true时，最好不要使用 layout 的相关东西，否则可能有冲突。
 > 注意：只是调整控件的本身的宽高，不会修改控件本身的位置，仅部分控件实现该效果。
 
-> `set` **autoAdjustSize**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **autoAdjustSize**(`v`): `void`
+
+Defined in: [awtk.ts:13042](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13042)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`autoAdjustSize`](TEdit.md#autoadjustsize)
 
-#### Defined in
-
-[awtk.ts:12890](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12890)
-
 ***
 
 ### autoFix
 
-> `get` **autoFix**(): `boolean`
+#### Get Signature
+
+> **get** **autoFix**(): `boolean`
+
+Defined in: [awtk.ts:26971](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26971)
 
 输入无效时，是否自动改正。
 
-> `set` **autoFix**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **autoFix**(`v`): `void`
+
+Defined in: [awtk.ts:26975](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26975)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`autoFix`](TEdit.md#autofix)
 
-#### Defined in
-
-[awtk.ts:26220](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26220)
-
 ***
 
 ### cancelable
 
-> `get` **cancelable**(): `boolean`
+#### Get Signature
+
+> **get** **cancelable**(): `boolean`
+
+Defined in: [awtk.ts:27030](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27030)
 
 是否支持撤销编辑。如果为TRUE，在失去焦点之前可以撤销所有修改(恢复获得焦点之前的内容)。
 
 > * 1.一般配合keyboard的"cancel"按钮使用。
 > * 2.为TRUE时，如果内容有变化，会设置编辑器的状态为changed，所以此时编辑器需要支持changed状态的style。
 
-> `set` **cancelable**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **cancelable**(`v`): `void`
+
+Defined in: [awtk.ts:27034](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27034)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`cancelable`](TEdit.md#cancelable)
 
-#### Defined in
-
-[awtk.ts:26279](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26279)
-
 ***
 
 ### closeImWhenBlured
 
-> `get` **closeImWhenBlured**(): `boolean`
+#### Get Signature
+
+> **get** **closeImWhenBlured**(): `boolean`
+
+Defined in: [awtk.ts:27014](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27014)
 
 是否在失去焦点时关闭输入法(默认是)。
 
-> `set` **closeImWhenBlured**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **closeImWhenBlured**(`v`): `void`
+
+Defined in: [awtk.ts:27018](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27018)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`closeImWhenBlured`](TEdit.md#closeimwhenblured)
 
-#### Defined in
-
-[awtk.ts:26263](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26263)
-
 ***
 
 ### dirtyRectTolerance
 
-> `get` **dirtyRectTolerance**(): `number`
+#### Get Signature
+
+> **get** **dirtyRectTolerance**(): `number`
+
+Defined in: [awtk.ts:13105](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13105)
 
 脏矩形超出控件本身大小的最大范围(一般不用指定)。
 
 > 如果 border 太粗或 offset 太大等原因，导致脏矩形超出控件本身大小太多（大于缺省值）时，才需要指定。
 
-> `set` **dirtyRectTolerance**(`v`): `void`
-
-#### Parameters
-
-• **v**: `number`
-
-#### Returns
+##### Returns
 
 `number`
+
+#### Set Signature
+
+> **set** **dirtyRectTolerance**(`v`): `void`
+
+Defined in: [awtk.ts:13109](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13109)
+
+##### Parameters
+
+###### v
+
+`number`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`dirtyRectTolerance`](TEdit.md#dirtyrecttolerance)
 
-#### Defined in
-
-[awtk.ts:12957](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12957)
-
 ***
 
 ### enable
 
-> `get` **enable**(): `boolean`
+#### Get Signature
+
+> **get** **enable**(): `boolean`
+
+Defined in: [awtk.ts:12960](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12960)
 
 启用/禁用状态。
 
-> `set` **enable**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **enable**(`v`): `void`
+
+Defined in: [awtk.ts:12964](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12964)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`enable`](TEdit.md#enable)
 
-#### Defined in
-
-[awtk.ts:12812](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12812)
-
 ***
 
 ### feedback
 
-> `get` **feedback**(): `boolean`
+#### Get Signature
+
+> **get** **feedback**(): `boolean`
+
+Defined in: [awtk.ts:12973](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12973)
 
 是否启用按键音、触屏音和震动等反馈。
 
-> `set` **feedback**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **feedback**(`v`): `void`
+
+Defined in: [awtk.ts:12977](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12977)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`feedback`](TEdit.md#feedback)
 
-#### Defined in
-
-[awtk.ts:12825](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12825)
-
 ***
 
 ### floating
 
-> `get` **floating**(): `boolean`
+#### Get Signature
+
+> **get** **floating**(): `boolean`
+
+Defined in: [awtk.ts:13051](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13051)
 
 标识控件是否启用浮动布局，不受父控件的children_layout的控制。
 
-> `set` **floating**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **floating**(`v`): `void`
+
+Defined in: [awtk.ts:13055](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13055)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`floating`](TEdit.md#floating)
 
-#### Defined in
-
-[awtk.ts:12903](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12903)
-
-***
-
-### focusNextWhenEnter
-
-> `get` **focusNextWhenEnter**(): `boolean`
-
-输入回车后是否跳到下一个控件中。
-
-> `set` **focusNextWhenEnter**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`focusNextWhenEnter`](TEdit.md#focusnextwhenenter)
-
-#### Defined in
-
-[awtk.ts:26292](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26292)
-
 ***
 
 ### focusable
 
-> `get` **focusable**(): `boolean`
+#### Get Signature
+
+> **get** **focusable**(): `boolean`
+
+Defined in: [awtk.ts:13012](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13012)
 
 是否支持焦点停留。
 
-> `set` **focusable**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **focusable**(`v`): `void`
+
+Defined in: [awtk.ts:13016](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13016)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`focusable`](TEdit.md#focusable)
 
-#### Defined in
+***
 
-[awtk.ts:12864](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12864)
+### focusNextWhenEnter
+
+#### Get Signature
+
+> **get** **focusNextWhenEnter**(): `boolean`
+
+Defined in: [awtk.ts:27043](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27043)
+
+输入回车后是否跳到下一个控件中。
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+> **set** **focusNextWhenEnter**(`v`): `void`
+
+Defined in: [awtk.ts:27047](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27047)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`focusNextWhenEnter`](TEdit.md#focusnextwhenenter)
 
 ***
 
 ### h
 
-> `get` **h**(): `number`
+#### Get Signature
+
+> **get** **h**(): `number`
+
+Defined in: [awtk.ts:12890](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12890)
 
 高度。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -390,71 +515,107 @@
 
 [`TEdit`](TEdit.md).[`h`](TEdit.md#h)
 
-#### Defined in
-
-[awtk.ts:12742](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12742)
-
 ***
 
 ### inputType
 
-> `get` **inputType**(): [`TInputType`](../enumerations/TInputType.md)
+#### Get Signature
+
+> **get** **inputType**(): [`TInputType`](../enumerations/TInputType.md)
+
+Defined in: [awtk.ts:26932](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26932)
 
 输入类型。
 
-> `set` **inputType**(`v`): `void`
-
-#### Parameters
-
-• **v**: [`TInputType`](../enumerations/TInputType.md)
-
-#### Returns
+##### Returns
 
 [`TInputType`](../enumerations/TInputType.md)
+
+#### Set Signature
+
+> **set** **inputType**(`v`): `void`
+
+Defined in: [awtk.ts:26936](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26936)
+
+##### Parameters
+
+###### v
+
+[`TInputType`](../enumerations/TInputType.md)
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`inputType`](TEdit.md#inputtype)
 
-#### Defined in
+***
 
-[awtk.ts:26181](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26181)
+### isSelectSuggestWord
+
+#### Get Signature
+
+> **get** **isSelectSuggestWord**(): `boolean`
+
+Defined in: [awtk.ts:29634](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29634)
+
+是否选中输入建议词。
+
+##### Returns
+
+`boolean`
 
 ***
 
 ### keyboard
 
-> `get` **keyboard**(): `string`
+#### Get Signature
+
+> **get** **keyboard**(): `string`
+
+Defined in: [awtk.ts:26891](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26891)
 
 自定义软键盘名称。AWTK优先查找keyboard属性设置的键盘文件名（该键盘的XML文件需要在default\raw\ui目录下存在），如果没有指定keyboard，就找input_type设置的键盘类型。如果指定为空字符串，则表示不需要软键盘。
 
-> `set` **keyboard**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **keyboard**(`v`): `void`
+
+Defined in: [awtk.ts:26895](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26895)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`keyboard`](TEdit.md#keyboard)
 
-#### Defined in
-
-[awtk.ts:26140](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26140)
-
 ***
 
 ### max
 
-> `get` **max**(): `number`
+#### Get Signature
+
+> **get** **max**(): `number`
+
+Defined in: [awtk.ts:26913](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26913)
 
 最大值或最大长度。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -462,19 +623,19 @@
 
 [`TEdit`](TEdit.md).[`max`](TEdit.md#max)
 
-#### Defined in
-
-[awtk.ts:26162](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26162)
-
 ***
 
 ### min
 
-> `get` **min**(): `number`
+#### Get Signature
+
+> **get** **min**(): `number`
+
+Defined in: [awtk.ts:26904](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26904)
 
 最小值或最小长度。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -482,99 +643,162 @@
 
 [`TEdit`](TEdit.md).[`min`](TEdit.md#min)
 
-#### Defined in
+***
 
-[awtk.ts:26153](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26153)
+### multiline
+
+#### Get Signature
+
+> **get** **multiline**(): `boolean`
+
+Defined in: [awtk.ts:29644](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29644)
+
+多行编辑。
+> 与搜索建议功能互斥。
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+> **set** **multiline**(`v`): `void`
+
+Defined in: [awtk.ts:29648](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29648)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 ***
 
 ### name
 
-> `get` **name**(): `string`
+#### Get Signature
+
+> **get** **name**(): `string`
+
+Defined in: [awtk.ts:12899](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12899)
 
 控件名字。
 
-> `set` **name**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **name**(`v`): `void`
+
+Defined in: [awtk.ts:12903](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12903)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`name`](TEdit.md#name)
 
-#### Defined in
-
-[awtk.ts:12751](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12751)
-
 ***
 
 ### opacity
 
-> `get` **opacity**(): `number`
+#### Get Signature
+
+> **get** **opacity**(): `number`
+
+Defined in: [awtk.ts:13090](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13090)
 
 不透明度(0-255)，0完全透明，255完全不透明。
 
-> `set` **opacity**(`v`): `void`
-
-#### Parameters
-
-• **v**: `number`
-
-#### Returns
+##### Returns
 
 `number`
+
+#### Set Signature
+
+> **set** **opacity**(`v`): `void`
+
+Defined in: [awtk.ts:13094](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13094)
+
+##### Parameters
+
+###### v
+
+`number`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`opacity`](TEdit.md#opacity)
 
-#### Defined in
-
-[awtk.ts:12942](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12942)
-
 ***
 
 ### openImWhenFocused
 
-> `get` **openImWhenFocused**(): `boolean`
+#### Get Signature
+
+> **get** **openImWhenFocused**(): `boolean`
+
+Defined in: [awtk.ts:27001](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27001)
 
 获得焦点时打开输入法。
 
 > 主要用于没有指针设备的情况，否则每次切换焦点时都打开输入法。
 
-> `set` **openImWhenFocused**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **openImWhenFocused**(`v`): `void`
+
+Defined in: [awtk.ts:27005](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27005)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`openImWhenFocused`](TEdit.md#openimwhenfocused)
 
-#### Defined in
-
-[awtk.ts:26250](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26250)
-
 ***
 
 ### parent
 
-> `get` **parent**(): [`TWidget`](TWidget.md)
+#### Get Signature
+
+> **get** **parent**(): [`TWidget`](TWidget.md)
+
+Defined in: [awtk.ts:13118](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13118)
 
 父控件
 
-#### Returns
+##### Returns
 
 [`TWidget`](TWidget.md)
 
@@ -582,178 +806,274 @@
 
 [`TEdit`](TEdit.md).[`parent`](TEdit.md#parent)
 
-#### Defined in
-
-[awtk.ts:12970](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12970)
-
 ***
 
 ### passwordVisible
 
-> `get` **passwordVisible**(): `boolean`
+#### Get Signature
+
+> **get** **passwordVisible**(): `boolean`
+
+Defined in: [awtk.ts:26958](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26958)
 
 密码是否可见。
 
-> `set` **passwordVisible**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **passwordVisible**(`v`): `void`
+
+Defined in: [awtk.ts:26962](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26962)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`passwordVisible`](TEdit.md#passwordvisible)
 
-#### Defined in
-
-[awtk.ts:26207](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26207)
-
 ***
 
 ### pointerCursor
 
-> `get` **pointerCursor**(): `string`
+#### Get Signature
+
+> **get** **pointerCursor**(): `string`
+
+Defined in: [awtk.ts:12912](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12912)
 
 鼠标光标图片名称。
 
-> `set` **pointerCursor**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **pointerCursor**(`v`): `void`
+
+Defined in: [awtk.ts:12916](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12916)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`pointerCursor`](TEdit.md#pointercursor)
 
-#### Defined in
-
-[awtk.ts:12764](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12764)
-
 ***
 
 ### readonly
 
-> `get` **readonly**(): `boolean`
+#### Get Signature
+
+> **get** **readonly**(): `boolean`
+
+Defined in: [awtk.ts:26945](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26945)
 
 编辑器是否为只读。
 
-> `set` **readonly**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **readonly**(`v`): `void`
+
+Defined in: [awtk.ts:26949](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26949)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`readonly`](TEdit.md#readonly)
 
-#### Defined in
+***
 
-[awtk.ts:26194](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26194)
+### scrollToBeginOnBlur
+
+#### Get Signature
+
+> **get** **scrollToBeginOnBlur**(): `boolean`
+
+Defined in: [awtk.ts:27056](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27056)
+
+失去焦点时是否滚动回开头(默认 FALSE)
+
+##### Returns
+
+`boolean`
+
+#### Set Signature
+
+> **set** **scrollToBeginOnBlur**(`v`): `void`
+
+Defined in: [awtk.ts:27060](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L27060)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`scrollToBeginOnBlur`](TEdit.md#scrolltobeginonblur)
 
 ***
 
 ### selectNoneWhenFocused
 
-> `get` **selectNoneWhenFocused**(): `boolean`
+#### Get Signature
+
+> **get** **selectNoneWhenFocused**(): `boolean`
+
+Defined in: [awtk.ts:26986](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26986)
 
 获得焦点时不选中文本。
 
 > 主要用于没有指针设备的情况，否则软键盘无法取消选中文本。
 
-> `set` **selectNoneWhenFocused**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **selectNoneWhenFocused**(`v`): `void`
+
+Defined in: [awtk.ts:26990](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26990)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`selectNoneWhenFocused`](TEdit.md#selectnonewhenfocused)
 
-#### Defined in
-
-[awtk.ts:26235](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26235)
-
 ***
 
 ### sensitive
 
-> `get` **sensitive**(): `boolean`
+#### Get Signature
+
+> **get** **sensitive**(): `boolean`
+
+Defined in: [awtk.ts:12999](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12999)
 
 是否接受用户事件。
 
-> `set` **sensitive**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **sensitive**(`v`): `void`
+
+Defined in: [awtk.ts:13003](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13003)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`sensitive`](TEdit.md#sensitive)
 
-#### Defined in
-
-[awtk.ts:12851](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12851)
-
 ***
 
 ### stateFromParentSync
 
-> `get` **stateFromParentSync**(): `boolean`
+#### Get Signature
+
+> **get** **stateFromParentSync**(): `boolean`
+
+Defined in: [awtk.ts:13077](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13077)
 
 标识是否接收父控件的状态同步。
 
-> `set` **stateFromParentSync**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **stateFromParentSync**(`v`): `void`
+
+Defined in: [awtk.ts:13081](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13081)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`stateFromParentSync`](TEdit.md#statefromparentsync)
 
-#### Defined in
-
-[awtk.ts:12929](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12929)
-
 ***
 
 ### step
 
-> `get` **step**(): `number`
+#### Get Signature
+
+> **get** **step**(): `number`
+
+Defined in: [awtk.ts:26923](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26923)
 
 步长。
 作为数值型编辑器时，一次增加和减少时的数值。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -761,19 +1081,19 @@
 
 [`TEdit`](TEdit.md).[`step`](TEdit.md#step)
 
-#### Defined in
-
-[awtk.ts:26172](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26172)
-
 ***
 
 ### style
 
-> `get` **style**(): `string`
+#### Get Signature
+
+> **get** **style**(): `string`
+
+Defined in: [awtk.ts:12938](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12938)
 
 style的名称。
 
-#### Returns
+##### Returns
 
 `string`
 
@@ -781,192 +1101,262 @@ style的名称。
 
 [`TEdit`](TEdit.md).[`style`](TEdit.md#style)
 
-#### Defined in
-
-[awtk.ts:12790](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12790)
-
 ***
 
 ### suggestWords
 
-> `get` **suggestWords**(): [`TObject`](TObject.md)
+#### Get Signature
+
+> **get** **suggestWords**(): [`TObject`](TObject.md)
+
+Defined in: [awtk.ts:29594](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29594)
 
 输入建议词。
 
-> `set` **suggestWords**(`v`): `void`
-
-#### Parameters
-
-• **v**: [`TObject`](TObject.md)
-
-#### Returns
+##### Returns
 
 [`TObject`](TObject.md)
 
-#### Defined in
+#### Set Signature
 
-[awtk.ts:28805](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28805)
+> **set** **suggestWords**(`v`): `void`
+
+Defined in: [awtk.ts:29598](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29598)
+
+##### Parameters
+
+###### v
+
+[`TObject`](TObject.md)
+
+##### Returns
+
+`void`
 
 ***
 
 ### suggestWordsInputName
 
-> `get` **suggestWordsInputName**(): `string`
+#### Get Signature
+
+> **get** **suggestWordsInputName**(): `string`
+
+Defined in: [awtk.ts:29621](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29621)
 
 最终输入到edit控件的文本的属性名。
 > 设置了 suggest_words_item_formats 才会被用到。
 
-> `set` **suggestWordsInputName**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
+#### Set Signature
 
-[awtk.ts:28832](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28832)
+> **set** **suggestWordsInputName**(`v`): `void`
+
+Defined in: [awtk.ts:29625](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29625)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 ***
 
 ### suggestWordsItemFormats
 
-> `get` **suggestWordsItemFormats**(): `string`
+#### Get Signature
+
+> **get** **suggestWordsItemFormats**(): `string`
+
+Defined in: [awtk.ts:29607](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29607)
 
 输入建议词的项格式。
 
-> `set` **suggestWordsItemFormats**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
+#### Set Signature
 
-[awtk.ts:28818](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28818)
+> **set** **suggestWordsItemFormats**(`v`): `void`
+
+Defined in: [awtk.ts:29611](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29611)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 ***
 
 ### syncStateToChildren
 
-> `get` **syncStateToChildren**(): `boolean`
+#### Get Signature
+
+> **get** **syncStateToChildren**(): `boolean`
+
+Defined in: [awtk.ts:13064](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13064)
 
 标识是否将当前控件状态同步到子控件中。
 
-> `set` **syncStateToChildren**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **syncStateToChildren**(`v`): `void`
+
+Defined in: [awtk.ts:13068](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13068)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`syncStateToChildren`](TEdit.md#syncstatetochildren)
 
-#### Defined in
-
-[awtk.ts:12916](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12916)
-
 ***
 
 ### tips
 
-> `get` **tips**(): `string`
+#### Get Signature
+
+> **get** **tips**(): `string`
+
+Defined in: [awtk.ts:26836](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26836)
 
 输入提示。
 
-> `set` **tips**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **tips**(`v`): `void`
+
+Defined in: [awtk.ts:26840](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26840)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`tips`](TEdit.md#tips)
 
-#### Defined in
-
-[awtk.ts:26085](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26085)
-
 ***
 
 ### trText
 
-> `get` **trText**(): `string`
+#### Get Signature
+
+> **get** **trText**(): `string`
+
+Defined in: [awtk.ts:12925](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12925)
 
 保存用于翻译的字符串。
 
-> `set` **trText**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **trText**(`v`): `void`
+
+Defined in: [awtk.ts:12929](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12929)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`trText`](TEdit.md#trtext)
 
-#### Defined in
-
-[awtk.ts:12777](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12777)
-
 ***
 
 ### trTips
 
-> `get` **trTips**(): `string`
+#### Get Signature
+
+> **get** **trTips**(): `string`
+
+Defined in: [awtk.ts:26849](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26849)
 
 保存用于翻译的提示信息。
 
-> `set` **trTips**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
+
+#### Set Signature
+
+> **set** **trTips**(`v`): `void`
+
+Defined in: [awtk.ts:26853](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26853)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`trTips`](TEdit.md#trtips)
 
-#### Defined in
-
-[awtk.ts:26098](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26098)
-
 ***
 
 ### validator
 
-> `get` **validator**(): `string`
+#### Get Signature
+
+> **get** **validator**(): `string`
+
+Defined in: [awtk.ts:26882](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26882)
 
 fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
 
 > 用于校验输入的文本是否合法。
 
-#### Returns
+##### Returns
 
 `string`
 
@@ -974,45 +1364,55 @@ fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
 
 [`TEdit`](TEdit.md).[`validator`](TEdit.md#validator)
 
-#### Defined in
-
-[awtk.ts:26131](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26131)
-
 ***
 
 ### visible
 
-> `get` **visible**(): `boolean`
+#### Get Signature
+
+> **get** **visible**(): `boolean`
+
+Defined in: [awtk.ts:12986](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12986)
 
 是否可见。
 
-> `set` **visible**(`v`): `void`
-
-#### Parameters
-
-• **v**: `boolean`
-
-#### Returns
+##### Returns
 
 `boolean`
+
+#### Set Signature
+
+> **set** **visible**(`v`): `void`
+
+Defined in: [awtk.ts:12990](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12990)
+
+##### Parameters
+
+###### v
+
+`boolean`
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`TEdit`](TEdit.md).[`visible`](TEdit.md#visible)
 
-#### Defined in
-
-[awtk.ts:12838](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12838)
-
 ***
 
 ### w
 
-> `get` **w**(): `number`
+#### Get Signature
+
+> **get** **w**(): `number`
+
+Defined in: [awtk.ts:12881](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12881)
 
 宽度。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -1020,20 +1420,20 @@ fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
 
 [`TEdit`](TEdit.md).[`w`](TEdit.md#w)
 
-#### Defined in
-
-[awtk.ts:12733](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12733)
-
 ***
 
 ### withFocusState
 
-> `get` **withFocusState**(): `boolean`
+#### Get Signature
+
+> **get** **withFocusState**(): `boolean`
+
+Defined in: [awtk.ts:13026](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13026)
 
 是否支持焦点状态。
 > 如果希望style支持焦点状态，但又不希望焦点停留，可用本属性。
 
-#### Returns
+##### Returns
 
 `boolean`
 
@@ -1041,19 +1441,19 @@ fscript脚本，用输入校验，如：(len(text) 3) && (len(text) < 10)。
 
 [`TEdit`](TEdit.md).[`withFocusState`](TEdit.md#withfocusstate)
 
-#### Defined in
-
-[awtk.ts:12878](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12878)
-
 ***
 
 ### x
 
-> `get` **x**(): `number`
+#### Get Signature
+
+> **get** **x**(): `number`
+
+Defined in: [awtk.ts:12863](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12863)
 
 x坐标(相对于父控件的x坐标)。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -1061,19 +1461,19 @@ x坐标(相对于父控件的x坐标)。
 
 [`TEdit`](TEdit.md).[`x`](TEdit.md#x)
 
-#### Defined in
-
-[awtk.ts:12715](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12715)
-
 ***
 
 ### y
 
-> `get` **y**(): `number`
+#### Get Signature
+
+> **get** **y**(): `number`
+
+Defined in: [awtk.ts:12872](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12872)
 
 y坐标(相对于父控件的y坐标)。
 
-#### Returns
+##### Returns
 
 `number`
 
@@ -1081,21 +1481,21 @@ y坐标(相对于父控件的y坐标)。
 
 [`TEdit`](TEdit.md).[`y`](TEdit.md#y)
 
-#### Defined in
-
-[awtk.ts:12724](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12724)
-
 ## Methods
 
 ### addChild()
 
 > **addChild**(`child`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11921](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11921)
+
 加入一个子控件。
 
 #### Parameters
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 子控件对象。
 
@@ -1109,21 +1509,21 @@ y坐标(相对于父控件的y坐标)。
 
 [`TEdit`](TEdit.md).[`addChild`](TEdit.md#addchild)
 
-#### Defined in
-
-[awtk.ts:11806](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11806)
-
 ***
 
 ### addChildDefault()
 
 > **addChildDefault**(`child`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12854](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12854)
+
 加入一个子控件默认实现(供子类调用)。
 
 #### Parameters
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 子控件对象。
 
@@ -1137,22 +1537,22 @@ y坐标(相对于父控件的y坐标)。
 
 [`TEdit`](TEdit.md).[`addChildDefault`](TEdit.md#addchilddefault)
 
-#### Defined in
-
-[awtk.ts:12706](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12706)
-
 ***
 
 ### addValue()
 
 > **addValue**(`delta`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11276](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11276)
+
 增加控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-• **delta**: `number`
+##### delta
+
+`number`
 
 增量。
 
@@ -1166,22 +1566,22 @@ y坐标(相对于父控件的y坐标)。
 
 [`TEdit`](TEdit.md).[`addValue`](TEdit.md#addvalue)
 
-#### Defined in
-
-[awtk.ts:11161](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11161)
-
 ***
 
 ### addValueInt()
 
 > **addValueInt**(`delta`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11313](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11313)
+
 增加控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-• **delta**: `number`
+##### delta
+
+`number`
 
 增量。
 
@@ -1195,29 +1595,33 @@ y坐标(相对于父控件的y坐标)。
 
 [`TEdit`](TEdit.md).[`addValueInt`](TEdit.md#addvalueint)
 
-#### Defined in
-
-[awtk.ts:11198](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11198)
-
 ***
 
 ### animatePositionTo()
 
 > **animatePositionTo**(`x`, `y`, `duration`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11355](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11355)
+
 设置控件的位置(以动画形式变化到指定的位置)。
 
 #### Parameters
 
-• **x**: `number`
+##### x
+
+`number`
 
 x坐标。
 
-• **y**: `number`
+##### y
+
+`number`
 
 y坐标。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 动画持续时间(毫秒)。
 
@@ -1231,29 +1635,33 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`animatePositionTo`](TEdit.md#animatepositionto)
 
-#### Defined in
-
-[awtk.ts:11240](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11240)
-
 ***
 
 ### animatePropFloatTo()
 
 > **animatePropFloatTo**(`name`, `value`, `duration`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11341](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11341)
+
 设置控件的属性(以动画形式变化到指定的值)。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名称。
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 动画持续时间(毫秒)。
 
@@ -1267,29 +1675,33 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`animatePropFloatTo`](TEdit.md#animatepropfloatto)
 
-#### Defined in
-
-[awtk.ts:11226](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11226)
-
 ***
 
 ### animateSizeTo()
 
 > **animateSizeTo**(`w`, `h`, `duration`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11369](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11369)
+
 设置控件的大小(以动画形式变化到指定的大小)。
 
 #### Parameters
 
-• **w**: `number`
+##### w
+
+`number`
 
 宽度。
 
-• **h**: `number`
+##### h
+
+`number`
 
 高度。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 动画持续时间(毫秒)。
 
@@ -1303,26 +1715,28 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`animateSizeTo`](TEdit.md#animatesizeto)
 
-#### Defined in
-
-[awtk.ts:11254](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11254)
-
 ***
 
 ### animateValueTo()
 
 > **animateValueTo**(`value`, `duration`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11327](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11327)
+
 设置控件的值(以动画形式变化到指定的值)。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 动画持续时间(毫秒)。
 
@@ -1336,15 +1750,13 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`animateValueTo`](TEdit.md#animatevalueto)
 
-#### Defined in
-
-[awtk.ts:11212](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11212)
-
 ***
 
 ### back()
 
 > **back**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11160](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11160)
 
 请求返回到前一个窗口。
 
@@ -1358,15 +1770,13 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`back`](TEdit.md#back)
 
-#### Defined in
-
-[awtk.ts:11045](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11045)
-
 ***
 
 ### backToHome()
 
 > **backToHome**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11171](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11171)
 
 请求返回到home窗口。
 
@@ -1380,21 +1790,21 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`backToHome`](TEdit.md#backtohome)
 
-#### Defined in
-
-[awtk.ts:11056](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11056)
-
 ***
 
 ### child()
 
 > **child**(`name`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11970](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11970)
+
 查找指定名称的子控件(同widget_lookup(widget, name, FALSE))。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 子控件的名称。
 
@@ -1408,21 +1818,21 @@ y坐标。
 
 [`TEdit`](TEdit.md).[`child`](TEdit.md#child)
 
-#### Defined in
-
-[awtk.ts:11855](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11855)
-
 ***
 
 ### clone()
 
 > **clone**(`parent`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:12516](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12516)
+
 clone。
 
 #### Parameters
 
-• **parent**: [`TWidget`](TWidget.md)
+##### parent
+
+[`TWidget`](TWidget.md)
 
 clone新控件的parent对象。
 
@@ -1436,15 +1846,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`clone`](TEdit.md#clone)
 
-#### Defined in
-
-[awtk.ts:12379](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12379)
-
 ***
 
 ### closeWindow()
 
 > **closeWindow**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11138](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11138)
 
 关闭控件所在的窗口。
 
@@ -1458,15 +1866,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`closeWindow`](TEdit.md#closewindow)
 
-#### Defined in
-
-[awtk.ts:11023](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11023)
-
 ***
 
 ### closeWindowForce()
 
 > **closeWindowForce**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11149](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11149)
 
 关闭控件所在的窗口。
 
@@ -1480,15 +1886,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`closeWindowForce`](TEdit.md#closewindowforce)
 
-#### Defined in
-
-[awtk.ts:11034](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11034)
-
 ***
 
 ### countChildren()
 
 > **countChildren**(): `number`
+
+Defined in: [awtk.ts:11058](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11058)
 
 获取子控件的个数。
 
@@ -1502,15 +1906,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`countChildren`](TEdit.md#countchildren)
 
-#### Defined in
-
-[awtk.ts:10943](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10943)
-
 ***
 
 ### createAnimator()
 
 > **createAnimator**(`animation`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11677](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11677)
 
 创建动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -1520,7 +1922,9 @@ clone新控件的parent对象。
 
 #### Parameters
 
-• **animation**: `string`
+##### animation
+
+`string`
 
 动画参数。
 
@@ -1534,15 +1938,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`createAnimator`](TEdit.md#createanimator)
 
-#### Defined in
-
-[awtk.ts:11562](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11562)
-
 ***
 
 ### destroy()
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12553](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12553)
 
 从父控件中移除控件，并调用unref函数销毁控件。
 
@@ -1558,15 +1960,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`destroy`](TEdit.md#destroy)
 
-#### Defined in
-
-[awtk.ts:12416](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12416)
-
 ***
 
 ### destroyAnimator()
 
 > **destroyAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11763](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11763)
 
 销毁动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -1577,7 +1977,9 @@ clone新控件的parent对象。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 动画名称。
 
@@ -1591,15 +1993,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`destroyAnimator`](TEdit.md#destroyanimator)
 
-#### Defined in
-
-[awtk.ts:11648](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11648)
-
 ***
 
 ### destroyAsync()
 
 > **destroyAsync**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12566](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12566)
 
 从父控件中移除控件，并调用unref函数销毁控件。
 
@@ -1615,15 +2015,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`destroyAsync`](TEdit.md#destroyasync)
 
-#### Defined in
-
-[awtk.ts:12429](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12429)
-
 ***
 
 ### destroyChildren()
 
 > **destroyChildren**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11909](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11909)
 
 销毁全部子控件。
 
@@ -1637,21 +2035,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`destroyChildren`](TEdit.md#destroychildren)
 
-#### Defined in
-
-[awtk.ts:11794](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11794)
-
 ***
 
 ### dispatchToKeyTarget()
 
 > **dispatchToKeyTarget**(`e`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12653](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12653)
+
 递归的分发一个事件到所有key_target子控件。
 
 #### Parameters
 
-• **e**: [`TEvent`](TEvent.md)
+##### e
+
+[`TEvent`](TEvent.md)
 
 事件。
 
@@ -1665,21 +2063,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`dispatchToKeyTarget`](TEdit.md#dispatchtokeytarget)
 
-#### Defined in
-
-[awtk.ts:12505](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12505)
-
 ***
 
 ### dispatchToTarget()
 
 > **dispatchToTarget**(`e`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12641](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12641)
+
 递归的分发一个事件到所有target子控件。
 
 #### Parameters
 
-• **e**: [`TEvent`](TEvent.md)
+##### e
+
+[`TEvent`](TEvent.md)
 
 事件。
 
@@ -1693,21 +2091,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`dispatchToTarget`](TEdit.md#dispatchtotarget)
 
-#### Defined in
-
-[awtk.ts:12493](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12493)
-
 ***
 
 ### equal()
 
 > **equal**(`other`): `boolean`
 
+Defined in: [awtk.ts:12528](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12528)
+
 判断两个widget是否相同。
 
 #### Parameters
 
-• **other**: [`TWidget`](TWidget.md)
+##### other
+
+[`TWidget`](TWidget.md)
 
 要比较的控件对象。
 
@@ -1721,29 +2119,33 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`equal`](TEdit.md#equal)
 
-#### Defined in
-
-[awtk.ts:12391](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12391)
-
 ***
 
 ### fillBgRect()
 
 > **fillBgRect**(`c`, `r`, `draw_type`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12615](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12615)
+
 根据控件的style绘制背景矩形。
 
 #### Parameters
 
-• **c**: [`TCanvas`](TCanvas.md)
+##### c
+
+[`TCanvas`](TCanvas.md)
 
 画布对象。
 
-• **r**: [`TRect`](TRect.md)
+##### r
+
+[`TRect`](TRect.md)
 
 矩形区域。
 
-• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+##### draw\_type
+
+[`TImageDrawType`](../enumerations/TImageDrawType.md)
 
 图片缺省绘制方式。
 
@@ -1757,29 +2159,33 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`fillBgRect`](TEdit.md#fillbgrect)
 
-#### Defined in
-
-[awtk.ts:12467](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12467)
-
 ***
 
 ### fillFgRect()
 
 > **fillFgRect**(`c`, `r`, `draw_type`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12629](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12629)
+
 根据控件的style绘制前景矩形。
 
 #### Parameters
 
-• **c**: [`TCanvas`](TCanvas.md)
+##### c
+
+[`TCanvas`](TCanvas.md)
 
 画布对象。
 
-• **r**: [`TRect`](TRect.md)
+##### r
+
+[`TRect`](TRect.md)
 
 矩形区域。
 
-• **draw\_type**: [`TImageDrawType`](../enumerations/TImageDrawType.md)
+##### draw\_type
+
+[`TImageDrawType`](../enumerations/TImageDrawType.md)
 
 图片缺省绘制方式。
 
@@ -1793,21 +2199,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`fillFgRect`](TEdit.md#fillfgrect)
 
-#### Defined in
-
-[awtk.ts:12481](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12481)
-
 ***
 
 ### findParentByName()
 
 > **findParentByName**(`name`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11082](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11082)
+
 通过名称查找父控件。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 名称。
 
@@ -1821,21 +2227,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`findParentByName`](TEdit.md#findparentbyname)
 
-#### Defined in
-
-[awtk.ts:10967](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10967)
-
 ***
 
 ### findParentByType()
 
 > **findParentByType**(`type`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11094](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11094)
+
 通过类型查找父控件。
 
 #### Parameters
 
-• **type**: `string`
+##### type
+
+`string`
 
 类型。
 
@@ -1849,15 +2255,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`findParentByType`](TEdit.md#findparentbytype)
 
-#### Defined in
-
-[awtk.ts:10979](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10979)
-
 ***
 
 ### focusNext()
 
 > **focusNext**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12710](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12710)
 
 把焦点移动下一个控件。
 
@@ -1873,15 +2277,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`focusNext`](TEdit.md#focusnext)
 
-#### Defined in
-
-[awtk.ts:12562](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12562)
-
 ***
 
 ### focusPrev()
 
 > **focusPrev**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12723](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12723)
 
 把焦点移动前一个控件。
 
@@ -1897,25 +2299,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`focusPrev`](TEdit.md#focusprev)
 
-#### Defined in
-
-[awtk.ts:12575](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12575)
-
 ***
 
 ### foreach()
 
 > **foreach**(`visit`, `ctx`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12471](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12471)
+
 遍历当前控件及子控件。
 
 #### Parameters
 
-• **visit**: `Function`
+##### visit
+
+`Function`
 
 遍历的回调函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 回调函数的上下文。
 
@@ -1929,15 +2333,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`foreach`](TEdit.md#foreach)
 
-#### Defined in
-
-[awtk.ts:12334](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12334)
-
 ***
 
 ### getAutoAdjustSize()
 
 > **getAutoAdjustSize**(): `boolean`
+
+Defined in: [awtk.ts:11530](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11530)
 
 获取控件auto_adjust_size属性值。
 
@@ -1951,21 +2353,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getAutoAdjustSize`](TEdit.md#getautoadjustsize)
 
-#### Defined in
-
-[awtk.ts:11415](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11415)
-
 ***
 
 ### getChild()
 
 > **getChild**(`index`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11070](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11070)
+
 获取指定索引的子控件。
 
 #### Parameters
 
-• **index**: `number`
+##### index
+
+`number`
 
 索引。
 
@@ -1979,15 +2381,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getChild`](TEdit.md#getchild)
 
-#### Defined in
-
-[awtk.ts:10955](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10955)
-
 ***
 
 ### getCursor()
 
 > **getCursor**(): `number`
+
+Defined in: [awtk.ts:26778](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26778)
 
 获取输入框的光标位置。
 
@@ -2001,15 +2401,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getCursor`](TEdit.md#getcursor)
 
-#### Defined in
-
-[awtk.ts:26039](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26039)
-
 ***
 
 ### getDouble()
 
 > **getDouble**(): `number`
+
+Defined in: [awtk.ts:26518](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26518)
 
 获取double类型的值。
 
@@ -2023,15 +2421,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getDouble`](TEdit.md#getdouble)
 
-#### Defined in
-
-[awtk.ts:25779](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25779)
-
 ***
 
 ### getEnable()
 
 > **getEnable**(): `boolean`
+
+Defined in: [awtk.ts:11508](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11508)
 
 获取控件enable属性值。
 
@@ -2045,15 +2441,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getEnable`](TEdit.md#getenable)
 
-#### Defined in
-
-[awtk.ts:11393](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11393)
-
 ***
 
 ### getFeedback()
 
 > **getFeedback**(): `boolean`
+
+Defined in: [awtk.ts:11585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11585)
 
 获取控件feedback属性值。
 
@@ -2067,15 +2461,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getFeedback`](TEdit.md#getfeedback)
 
-#### Defined in
-
-[awtk.ts:11470](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11470)
-
 ***
 
 ### getFloating()
 
 > **getFloating**(): `boolean`
+
+Defined in: [awtk.ts:11519](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11519)
 
 获取控件floating属性值。
 
@@ -2089,15 +2481,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getFloating`](TEdit.md#getfloating)
 
-#### Defined in
-
-[awtk.ts:11404](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11404)
-
 ***
 
 ### getFocusable()
 
 > **getFocusable**(): `boolean`
+
+Defined in: [awtk.ts:11552](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11552)
 
 获取控件focusable属性值。
 
@@ -2111,15 +2501,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getFocusable`](TEdit.md#getfocusable)
 
-#### Defined in
-
-[awtk.ts:11437](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11437)
-
 ***
 
 ### getFocusedWidget()
 
 > **getFocusedWidget**(): [`TWidget`](TWidget.md)
+
+Defined in: [awtk.ts:11105](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11105)
 
 获取当前窗口中的焦点控件。
 
@@ -2133,15 +2521,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getFocusedWidget`](TEdit.md#getfocusedwidget)
 
-#### Defined in
-
-[awtk.ts:10990](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10990)
-
 ***
 
 ### getInt()
 
 > **getInt**(): `number`
+
+Defined in: [awtk.ts:26496](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26496)
 
 获取int类型的值。
 
@@ -2155,15 +2541,33 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getInt`](TEdit.md#getint)
 
-#### Defined in
+***
 
-[awtk.ts:25768](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25768)
+### getInt64()
+
+> **getInt64**(): `number`
+
+Defined in: [awtk.ts:26507](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26507)
+
+获取int64类型的值。
+
+#### Returns
+
+`number`
+
+返回int的值。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`getInt64`](TEdit.md#getint64)
 
 ***
 
 ### getNativeWindow()
 
 > **getNativeWindow**(): [`TNativeWindow`](TNativeWindow.md)
+
+Defined in: [awtk.ts:11116](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11116)
 
 获取原生窗口对象。
 
@@ -2177,25 +2581,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getNativeWindow`](TEdit.md#getnativewindow)
 
-#### Defined in
-
-[awtk.ts:11001](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11001)
-
 ***
 
 ### getProp()
 
 > **getProp**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12086](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12086)
+
 获取控件指定属性的值。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: [`TValue`](TValue.md)
+##### v
+
+[`TValue`](TValue.md)
 
 返回属性的值。
 
@@ -2209,25 +2615,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getProp`](TEdit.md#getprop)
 
-#### Defined in
-
-[awtk.ts:11971](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11971)
-
 ***
 
 ### getPropBool()
 
 > **getPropBool**(`name`, `defval`): `boolean`
 
+Defined in: [awtk.ts:12241](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12241)
+
 获取布尔格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **defval**: `boolean`
+##### defval
+
+`boolean`
 
 缺省值。
 
@@ -2241,25 +2649,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getPropBool`](TEdit.md#getpropbool)
 
-#### Defined in
-
-[awtk.ts:12126](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12126)
-
 ***
 
 ### getPropFloat()
 
 > **getPropFloat**(`name`, `defval`): `number`
 
+Defined in: [awtk.ts:12189](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12189)
+
 获取浮点数格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **defval**: `number`
+##### defval
+
+`number`
 
 缺省值。
 
@@ -2273,25 +2683,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getPropFloat`](TEdit.md#getpropfloat)
 
-#### Defined in
-
-[awtk.ts:12074](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12074)
-
 ***
 
 ### getPropInt()
 
 > **getPropInt**(`name`, `defval`): `number`
 
+Defined in: [awtk.ts:12215](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12215)
+
 获取整数格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **defval**: `number`
+##### defval
+
+`number`
 
 缺省值。
 
@@ -2305,21 +2717,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getPropInt`](TEdit.md#getpropint)
 
-#### Defined in
-
-[awtk.ts:12100](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12100)
-
 ***
 
 ### getPropPointer()
 
 > **getPropPointer**(`name`): `any`
 
+Defined in: [awtk.ts:12163](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12163)
+
 获取指针格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
@@ -2333,25 +2745,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getPropPointer`](TEdit.md#getproppointer)
 
-#### Defined in
-
-[awtk.ts:12048](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12048)
-
 ***
 
 ### getPropStr()
 
 > **getPropStr**(`name`, `defval`): `string`
 
+Defined in: [awtk.ts:12138](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12138)
+
 获取字符串格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **defval**: `string`
+##### defval
+
+`string`
 
 缺省值。
 
@@ -2365,15 +2779,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getPropStr`](TEdit.md#getpropstr)
 
-#### Defined in
-
-[awtk.ts:12023](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12023)
-
 ***
 
 ### getSelectedText()
 
 > **getSelectedText**(): `string`
+
+Defined in: [awtk.ts:26803](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26803)
 
 获取选中的文本。
 使用完后需调用 TKMEM_FREE() 进行释放文本占有内存。
@@ -2388,15 +2800,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getSelectedText`](TEdit.md#getselectedtext)
 
-#### Defined in
-
-[awtk.ts:26064](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26064)
-
 ***
 
 ### getSensitive()
 
 > **getSensitive**(): `boolean`
+
+Defined in: [awtk.ts:11563](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11563)
 
 获取控件sensitive属性值。
 
@@ -2410,25 +2820,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getSensitive`](TEdit.md#getsensitive)
 
-#### Defined in
-
-[awtk.ts:11448](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11448)
-
 ***
 
 ### getStateForStyle()
 
 > **getStateForStyle**(`active`, `checked`): `string`
 
+Defined in: [awtk.ts:12736](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12736)
+
 把控件的状态转成获取style选要的状态，一般只在子类中使用。
 
 #### Parameters
 
-• **active**: `boolean`
+##### active
+
+`boolean`
 
 控件是否为当前项。
 
-• **checked**: `boolean`
+##### checked
+
+`boolean`
 
 控件是否为选中项。
 
@@ -2442,15 +2854,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getStateForStyle`](TEdit.md#getstateforstyle)
 
-#### Defined in
-
-[awtk.ts:12588](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12588)
-
 ***
 
 ### getStyleType()
 
 > **getStyleType**(): `string`
+
+Defined in: [awtk.ts:12664](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12664)
 
 获取 widget 对应风格类型
 
@@ -2464,15 +2874,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getStyleType`](TEdit.md#getstyletype)
 
-#### Defined in
-
-[awtk.ts:12516](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12516)
-
 ***
 
 ### getText()
 
 > **getText**(): `any`
+
+Defined in: [awtk.ts:11601](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11601)
 
 获取控件的文本。
 只是对widget\_get\_prop的包装，文本的意义由子类控件决定。
@@ -2489,15 +2897,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getText`](TEdit.md#gettext)
 
-#### Defined in
-
-[awtk.ts:11486](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11486)
-
 ***
 
 ### getThemeName()
 
 > **getThemeName**(): `string`
+
+Defined in: [awtk.ts:11636](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11636)
 
 获取 theme 的名称
 
@@ -2511,15 +2917,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getThemeName`](TEdit.md#getthemename)
 
-#### Defined in
-
-[awtk.ts:11521](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11521)
-
 ***
 
 ### getType()
 
 > **getType**(): `string`
+
+Defined in: [awtk.ts:12504](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12504)
 
 获取当前控件的类型名称。
 
@@ -2533,15 +2937,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getType`](TEdit.md#gettype)
 
-#### Defined in
-
-[awtk.ts:12367](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12367)
-
 ***
 
 ### getValue()
 
 > **getValue**(): `number`
+
+Defined in: [awtk.ts:11250](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11250)
 
 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
 
@@ -2555,15 +2957,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getValue`](TEdit.md#getvalue)
 
-#### Defined in
-
-[awtk.ts:11135](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11135)
-
 ***
 
 ### getValueInt()
 
 > **getValueInt**(): `number`
+
+Defined in: [awtk.ts:11287](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11287)
 
 获取控件的值。只是对widget\_get\_prop的包装，值的意义由子类控件决定。
 
@@ -2577,15 +2977,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getValueInt`](TEdit.md#getvalueint)
 
-#### Defined in
-
-[awtk.ts:11172](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11172)
-
 ***
 
 ### getVisible()
 
 > **getVisible**(): `boolean`
+
+Defined in: [awtk.ts:11574](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11574)
 
 获取控件visible属性值。
 
@@ -2599,15 +2997,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getVisible`](TEdit.md#getvisible)
 
-#### Defined in
-
-[awtk.ts:11459](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11459)
-
 ***
 
 ### getWindow()
 
 > **getWindow**(): [`TWidget`](TWidget.md)
+
+Defined in: [awtk.ts:12482](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12482)
 
 获取当前控件所在的窗口。
 
@@ -2621,15 +3017,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getWindow`](TEdit.md#getwindow)
 
-#### Defined in
-
-[awtk.ts:12345](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12345)
-
 ***
 
 ### getWindowManager()
 
 > **getWindowManager**(): [`TWidget`](TWidget.md)
+
+Defined in: [awtk.ts:12493](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12493)
 
 获取当前的窗口管理器。
 
@@ -2643,15 +3037,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getWindowManager`](TEdit.md#getwindowmanager)
 
-#### Defined in
-
-[awtk.ts:12356](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12356)
-
 ***
 
 ### getWithFocusState()
 
 > **getWithFocusState**(): `boolean`
+
+Defined in: [awtk.ts:11541](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11541)
 
 获取控件with_focus_state属性值。
 
@@ -2665,15 +3057,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`getWithFocusState`](TEdit.md#getwithfocusstate)
 
-#### Defined in
-
-[awtk.ts:11426](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11426)
-
 ***
 
 ### hasHighlighter()
 
 > **hasHighlighter**(): `boolean`
+
+Defined in: [awtk.ts:11404](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11404)
 
 判断widget拥有高亮属性。
 
@@ -2687,15 +3077,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`hasHighlighter`](TEdit.md#hashighlighter)
 
-#### Defined in
-
-[awtk.ts:11289](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11289)
-
 ***
 
 ### indexOf()
 
 > **indexOf**(): `number`
+
+Defined in: [awtk.ts:11127](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11127)
 
 获取控件在父控件中的索引编号。
 
@@ -2709,25 +3097,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`indexOf`](TEdit.md#indexof)
 
-#### Defined in
-
-[awtk.ts:11012](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11012)
-
 ***
 
 ### insertChild()
 
 > **insertChild**(`index`, `child`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11946](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11946)
+
 插入子控件到指定的位置。
 
 #### Parameters
 
-• **index**: `number`
+##### index
+
+`number`
 
 位置序数(大于等于总个数，则放到最后)。
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 子控件对象。
 
@@ -2741,21 +3131,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`insertChild`](TEdit.md#insertchild)
 
-#### Defined in
-
-[awtk.ts:11831](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11831)
-
 ***
 
 ### invalidateForce()
 
 > **invalidateForce**(`r`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12073](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12073)
+
 请求强制重绘控件。
 
 #### Parameters
 
-• **r**: [`TRect`](TRect.md)
+##### r
+
+[`TRect`](TRect.md)
 
 矩形对象(widget本地坐标)。
 
@@ -2769,15 +3159,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`invalidateForce`](TEdit.md#invalidateforce)
 
-#### Defined in
-
-[awtk.ts:11958](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11958)
-
 ***
 
 ### isAlwaysOnTop()
 
 > **isAlwaysOnTop**(): `boolean`
+
+Defined in: [awtk.ts:12375](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12375)
 
 检查控件是否总在最上层。
 
@@ -2791,15 +3179,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isAlwaysOnTop`](TEdit.md#isalwaysontop)
 
-#### Defined in
-
-[awtk.ts:12260](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12260)
-
 ***
 
 ### isDesigningWindow()
 
 > **isDesigningWindow**(): `boolean`
+
+Defined in: [awtk.ts:12447](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12447)
 
 判断当前控件是否是设计窗口。
 
@@ -2813,15 +3199,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isDesigningWindow`](TEdit.md#isdesigningwindow)
 
-#### Defined in
-
-[awtk.ts:12310](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12310)
-
 ***
 
 ### isDialog()
 
 > **isDialog**(): `boolean`
+
+Defined in: [awtk.ts:12342](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12342)
 
 检查控件是否是对话框类型。
 
@@ -2835,21 +3219,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isDialog`](TEdit.md#isdialog)
 
-#### Defined in
-
-[awtk.ts:12227](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12227)
-
 ***
 
 ### isDirectParentOf()
 
 > **isDirectParentOf**(`child`): `boolean`
 
+Defined in: [awtk.ts:12287](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12287)
+
 判断当前控件是否是指定控件的直系父控件。
 
 #### Parameters
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 控件对象。
 
@@ -2863,15 +3247,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isDirectParentOf`](TEdit.md#isdirectparentof)
 
-#### Defined in
-
-[awtk.ts:12172](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12172)
-
 ***
 
 ### isFullscreenWindow()
 
 > **isFullscreenWindow**(): `boolean`
+
+Defined in: [awtk.ts:12331](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12331)
 
 检查控件是否是全屏窗口。
 
@@ -2885,15 +3267,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isFullscreenWindow`](TEdit.md#isfullscreenwindow)
 
-#### Defined in
-
-[awtk.ts:12216](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12216)
-
 ***
 
 ### isKeyboard()
 
 > **isKeyboard**(): `boolean`
+
+Defined in: [awtk.ts:12436](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12436)
 
 判断当前控件是否是keyboard。
 
@@ -2911,15 +3291,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isKeyboard`](TEdit.md#iskeyboard)
 
-#### Defined in
-
-[awtk.ts:12299](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12299)
-
 ***
 
 ### isNormalWindow()
 
 > **isNormalWindow**(): `boolean`
+
+Defined in: [awtk.ts:12320](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12320)
 
 检查控件是否是普通窗口类型。
 
@@ -2933,15 +3311,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isNormalWindow`](TEdit.md#isnormalwindow)
 
-#### Defined in
-
-[awtk.ts:12205](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12205)
-
 ***
 
 ### isOpenedDialog()
 
 > **isOpenedDialog**(): `boolean`
+
+Defined in: [awtk.ts:12408](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12408)
 
 检查控件弹出对话框控件是否已经打开了（而非挂起状态）。
 
@@ -2955,15 +3331,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isOpenedDialog`](TEdit.md#isopeneddialog)
 
-#### Defined in
-
-[awtk.ts:12271](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12271)
-
 ***
 
 ### isOpenedPopup()
 
 > **isOpenedPopup**(): `boolean`
+
+Defined in: [awtk.ts:12419](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12419)
 
 检查控件弹出窗口控件是否已经打开了（而非挂起状态）。
 
@@ -2977,15 +3351,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isOpenedPopup`](TEdit.md#isopenedpopup)
 
-#### Defined in
-
-[awtk.ts:12282](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12282)
-
 ***
 
 ### isOverlay()
 
 > **isOverlay**(): `boolean`
+
+Defined in: [awtk.ts:12364](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12364)
 
 检查控件是否是overlay窗口类型。
 
@@ -2999,21 +3371,21 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isOverlay`](TEdit.md#isoverlay)
 
-#### Defined in
-
-[awtk.ts:12249](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12249)
-
 ***
 
 ### isParentOf()
 
 > **isParentOf**(`child`): `boolean`
 
+Defined in: [awtk.ts:12275](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12275)
+
 判断当前控件是否是指定控件的父控件(包括非直系)。
 
 #### Parameters
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 控件对象。
 
@@ -3027,15 +3399,13 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isParentOf`](TEdit.md#isparentof)
 
-#### Defined in
-
-[awtk.ts:12160](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12160)
-
 ***
 
 ### isPopup()
 
 > **isPopup**(): `boolean`
+
+Defined in: [awtk.ts:12353](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12353)
 
 检查控件是否是弹出窗口类型。
 
@@ -3049,25 +3419,27 @@ clone新控件的parent对象。
 
 [`TEdit`](TEdit.md).[`isPopup`](TEdit.md#ispopup)
 
-#### Defined in
-
-[awtk.ts:12238](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12238)
-
 ***
 
 ### isStyleExist()
 
 > **isStyleExist**(`style_name`, `state_name`): `boolean`
 
+Defined in: [awtk.ts:11382](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11382)
+
 查询指定的style是否存在。
 
 #### Parameters
 
-• **style\_name**: `string`
+##### style\_name
+
+`string`
 
 style的名称（如果为 NULL，则默认为 default）。
 
-• **state\_name**: `string`
+##### state\_name
+
+`string`
 
 state的名称（如果为 NULL，则默认为 normal）。
 
@@ -3081,15 +3453,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isStyleExist`](TEdit.md#isstyleexist)
 
-#### Defined in
-
-[awtk.ts:11267](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11267)
-
 ***
 
 ### isSupportHighlighter()
 
 > **isSupportHighlighter**(): `boolean`
+
+Defined in: [awtk.ts:11393](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11393)
 
 判断widget是否支持高亮。
 
@@ -3103,15 +3473,53 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isSupportHighlighter`](TEdit.md#issupporthighlighter)
 
-#### Defined in
+***
 
-[awtk.ts:11278](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11278)
+### isSuspendDialog()
+
+> **isSuspendDialog**(): `boolean`
+
+Defined in: [awtk.ts:12386](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12386)
+
+检查控件弹出对话框控件是否是挂起状态。
+
+#### Returns
+
+`boolean`
+
+返回FALSE表示不是，否则表示是。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`isSuspendDialog`](TEdit.md#issuspenddialog)
+
+***
+
+### isSuspendPopup()
+
+> **isSuspendPopup**(): `boolean`
+
+Defined in: [awtk.ts:12397](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12397)
+
+检查控件弹出窗口控件是否是挂起状态。
+
+#### Returns
+
+`boolean`
+
+返回FALSE表示不是，否则表示是。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`isSuspendPopup`](TEdit.md#issuspendpopup)
 
 ***
 
 ### isSystemBar()
 
 > **isSystemBar**(): `boolean`
+
+Defined in: [awtk.ts:12309](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12309)
 
 检查控件是否是system bar类型。
 
@@ -3125,15 +3533,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isSystemBar`](TEdit.md#issystembar)
 
-#### Defined in
-
-[awtk.ts:12194](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12194)
-
 ***
 
 ### isWindow()
 
 > **isWindow**(): `boolean`
+
+Defined in: [awtk.ts:12298](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12298)
 
 判断当前控件是否是窗口。
 
@@ -3147,15 +3553,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isWindow`](TEdit.md#iswindow)
 
-#### Defined in
-
-[awtk.ts:12183](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12183)
-
 ***
 
 ### isWindowCreated()
 
 > **isWindowCreated**(): `boolean`
+
+Defined in: [awtk.ts:12263](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12263)
 
 判断窗口及子控件创建或加载是否完成。
 
@@ -3169,15 +3573,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isWindowCreated`](TEdit.md#iswindowcreated)
 
-#### Defined in
-
-[awtk.ts:12148](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12148)
-
 ***
 
 ### isWindowManager()
 
 > **isWindowManager**(): `boolean`
+
+Defined in: [awtk.ts:12458](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12458)
 
 判断当前控件是否是窗口管理器。
 
@@ -3191,15 +3593,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isWindowManager`](TEdit.md#iswindowmanager)
 
-#### Defined in
-
-[awtk.ts:12321](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12321)
-
 ***
 
 ### isWindowOpened()
 
 > **isWindowOpened**(): `boolean`
+
+Defined in: [awtk.ts:12252](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12252)
 
 判断当前控件所在的窗口是否已经打开。
 
@@ -3213,15 +3613,13 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`isWindowOpened`](TEdit.md#iswindowopened)
 
-#### Defined in
-
-[awtk.ts:12137](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12137)
-
 ***
 
 ### layout()
 
 > **layout**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12747](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12747)
 
 布局当前控件及子控件。
 
@@ -3235,25 +3633,27 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`layout`](TEdit.md#layout)
 
-#### Defined in
-
-[awtk.ts:12599](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12599)
-
 ***
 
 ### lookup()
 
 > **lookup**(`name`, `recursive`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11983](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11983)
+
 查找指定名称的子控件(返回第一个)。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 子控件的名称。
 
-• **recursive**: `boolean`
+##### recursive
+
+`boolean`
 
 是否递归查找全部子控件。
 
@@ -3267,25 +3667,27 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`lookup`](TEdit.md#lookup)
 
-#### Defined in
-
-[awtk.ts:11868](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11868)
-
 ***
 
 ### lookupByType()
 
 > **lookupByType**(`type`, `recursive`): [`TWidget`](TWidget.md)
 
+Defined in: [awtk.ts:11996](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11996)
+
 查找指定类型的子控件(返回第一个)。
 
 #### Parameters
 
-• **type**: `string`
+##### type
+
+`string`
 
 子控件的名称。
 
-• **recursive**: `boolean`
+##### recursive
+
+`boolean`
 
 是否递归查找全部子控件。
 
@@ -3299,25 +3701,27 @@ state的名称（如果为 NULL，则默认为 normal）。
 
 [`TEdit`](TEdit.md).[`lookupByType`](TEdit.md#lookupbytype)
 
-#### Defined in
-
-[awtk.ts:11881](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11881)
-
 ***
 
 ### move()
 
 > **move**(`x`, `y`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11184](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11184)
+
 移动控件。
 
 #### Parameters
 
-• **x**: `number`
+##### x
+
+`number`
 
 x坐标
 
-• **y**: `number`
+##### y
+
+`number`
 
 y坐标
 
@@ -3331,33 +3735,39 @@ y坐标
 
 [`TEdit`](TEdit.md).[`move`](TEdit.md#move)
 
-#### Defined in
-
-[awtk.ts:11069](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11069)
-
 ***
 
 ### moveResize()
 
 > **moveResize**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11223](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11223)
+
 移动控件并调整控件的大小。
 
 #### Parameters
 
-• **x**: `number`
+##### x
+
+`number`
 
 x坐标
 
-• **y**: `number`
+##### y
+
+`number`
 
 y坐标
 
-• **w**: `number`
+##### w
+
+`number`
 
 宽度
 
-• **h**: `number`
+##### h
+
+`number`
 
 高度
 
@@ -3371,37 +3781,45 @@ y坐标
 
 [`TEdit`](TEdit.md).[`moveResize`](TEdit.md#moveresize)
 
-#### Defined in
-
-[awtk.ts:11108](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11108)
-
 ***
 
 ### moveResizeEx()
 
 > **moveResizeEx**(`x`, `y`, `w`, `h`, `update_layout`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11239](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11239)
+
 移动控件并调整控件的大小。
 
 #### Parameters
 
-• **x**: `number`
+##### x
+
+`number`
 
 x坐标
 
-• **y**: `number`
+##### y
+
+`number`
 
 y坐标
 
-• **w**: `number`
+##### w
+
+`number`
 
 宽度
 
-• **h**: `number`
+##### h
+
+`number`
 
 高度
 
-• **update\_layout**: `boolean`
+##### update\_layout
+
+`boolean`
 
 是否更新布局
 
@@ -3415,15 +3833,13 @@ y坐标
 
 [`TEdit`](TEdit.md).[`moveResizeEx`](TEdit.md#moveresizeex)
 
-#### Defined in
-
-[awtk.ts:11124](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11124)
-
 ***
 
 ### moveToCenter()
 
 > **moveToCenter**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11195](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11195)
 
 移动控件到父控件中间。
 
@@ -3437,21 +3853,21 @@ y坐标
 
 [`TEdit`](TEdit.md).[`moveToCenter`](TEdit.md#movetocenter)
 
-#### Defined in
-
-[awtk.ts:11080](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11080)
-
 ***
 
 ### off()
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12061](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12061)
+
 注销指定事件的处理函数。
 
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 widget_on返回的ID。
 
@@ -3465,30 +3881,34 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`off`](TEdit.md#off)
 
-#### Defined in
-
-[awtk.ts:11946](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11946)
-
 ***
 
 ### on()
 
 > **on**(`type`, `on_event`, `ctx`): `number`
 
+Defined in: [awtk.ts:12049](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12049)
+
 注册指定事件的处理函数。
 使用示例：
 
 #### Parameters
 
-• **type**: `number`
+##### type
+
+`number`
 
 事件类型。
 
-• **on\_event**: `Function`
+##### on\_event
+
+`Function`
 
 事件处理函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 事件处理函数上下文。
 
@@ -3502,15 +3922,13 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`on`](TEdit.md#on)
 
-#### Defined in
-
-[awtk.ts:11934](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11934)
-
 ***
 
 ### pauseAnimator()
 
 > **pauseAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11729](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11729)
 
 暂停动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -3521,7 +3939,9 @@ widget_on返回的ID。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 动画名称。
 
@@ -3535,9 +3955,25 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`pauseAnimator`](TEdit.md#pauseanimator)
 
-#### Defined in
+***
 
-[awtk.ts:11614](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11614)
+### ref()
+
+> **ref**(): [`TWidget`](TWidget.md)
+
+Defined in: [awtk.ts:12577](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12577)
+
+增加控件的引用计数。
+
+#### Returns
+
+[`TWidget`](TWidget.md)
+
+返回控件对象。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`ref`](TEdit.md#ref)
 
 ***
 
@@ -3545,11 +3981,15 @@ widget_on返回的ID。
 
 > **removeChild**(`child`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11933](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11933)
+
 移出指定的子控件(并不销毁)。
 
 #### Parameters
 
-• **child**: [`TWidget`](TWidget.md)
+##### child
+
+[`TWidget`](TWidget.md)
 
 子控件对象。
 
@@ -3563,25 +4003,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`removeChild`](TEdit.md#removechild)
 
-#### Defined in
-
-[awtk.ts:11818](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11818)
-
 ***
 
 ### resize()
 
 > **resize**(`w`, `h`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11208](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11208)
+
 调整控件的大小。
 
 #### Parameters
 
-• **w**: `number`
+##### w
+
+`number`
 
 宽度
 
-• **h**: `number`
+##### h
+
+`number`
 
 高度
 
@@ -3595,21 +4037,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`resize`](TEdit.md#resize)
 
-#### Defined in
-
-[awtk.ts:11093](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11093)
-
 ***
 
 ### restack()
 
 > **restack**(`index`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11958](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11958)
+
 调整控件在父控件中的位置序数。
 
 #### Parameters
 
-• **index**: `number`
+##### index
+
+`number`
 
 位置序数(大于等于总个数，则放到最后)。
 
@@ -3623,21 +4065,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`restack`](TEdit.md#restack)
 
-#### Defined in
-
-[awtk.ts:11843](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11843)
-
 ***
 
 ### setActionText()
 
 > **setActionText**(`action_text`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26695](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26695)
+
 设置软键盘上action按钮的文本。
 
 #### Parameters
 
-• **action\_text**: `string`
+##### action\_text
+
+`string`
 
 软键盘上action按钮的文本。
 
@@ -3651,22 +4093,22 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setActionText`](TEdit.md#setactiontext)
 
-#### Defined in
-
-[awtk.ts:25956](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25956)
-
 ***
 
 ### setAnimation()
 
 > **setAnimation**(`animation`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11661](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11661)
+
 设置控件的动画参数(仅用于在UI文件使用)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
 
 #### Parameters
 
-• **animation**: `string`
+##### animation
+
+`string`
 
 动画参数。
 
@@ -3680,15 +4122,13 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setAnimation`](TEdit.md#setanimation)
 
-#### Defined in
-
-[awtk.ts:11546](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11546)
-
 ***
 
 ### setAnimatorTimeScale()
 
 > **setAnimatorTimeScale**(`name`, `time_scale`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11712](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11712)
 
 设置动画的时间倍率，<0: 时间倒退，<1: 时间变慢，>1 时间变快。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -3699,11 +4139,15 @@ widget_on返回的ID。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 动画名称。
 
-• **time\_scale**: `number`
+##### time\_scale
+
+`number`
 
 时间倍率。
 
@@ -3717,15 +4161,13 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setAnimatorTimeScale`](TEdit.md#setanimatortimescale)
 
-#### Defined in
-
-[awtk.ts:11597](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11597)
-
 ***
 
 ### setAsKeyTarget()
 
 > **setAsKeyTarget**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12697](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12697)
 
 递归的把父控件的key_target设置为自己。
 
@@ -3739,21 +4181,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setAsKeyTarget`](TEdit.md#setaskeytarget)
 
-#### Defined in
-
-[awtk.ts:12549](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12549)
-
 ***
 
 ### setAutoAdjustSize()
 
 > **setAutoAdjustSize**(`auto_adjust_size`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11799](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11799)
+
 设置控件是否根据子控件和文本自动调整控件自身大小。
 
 #### Parameters
 
-• **auto\_adjust\_size**: `boolean`
+##### auto\_adjust\_size
+
+`boolean`
 
 是否根据子控件和文本自动调整控件自身大小。
 
@@ -3767,21 +4209,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setAutoAdjustSize`](TEdit.md#setautoadjustsize)
 
-#### Defined in
-
-[awtk.ts:11684](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11684)
-
 ***
 
 ### setAutoFix()
 
 > **setAutoFix**(`auto_fix`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26632](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26632)
+
 设置编辑器是否为自动改正。
 
 #### Parameters
 
-• **auto\_fix**: `boolean`
+##### auto\_fix
+
+`boolean`
 
 自动改正。
 
@@ -3795,21 +4237,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setAutoFix`](TEdit.md#setautofix)
 
-#### Defined in
-
-[awtk.ts:25893](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25893)
-
 ***
 
 ### setCancelable()
 
 > **setCancelable**(`cancelable`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26620](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26620)
+
 设置编辑器是否为可撤销修改。
 
 #### Parameters
 
-• **cancelable**: `boolean`
+##### cancelable
+
+`boolean`
 
 是否为可撤销修。
 
@@ -3823,129 +4265,22 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setCancelable`](TEdit.md#setcancelable)
 
-#### Defined in
-
-[awtk.ts:25881](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25881)
-
-***
-
-### setChildText()
-
-> **setChildText**(`name`, `text`): [`TRet`](../enumerations/TRet.md)
-
-设置子控件的文本。
-只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
-
-#### Parameters
-
-• **name**: `string`
-
-子控件的名称。
-
-• **text**: `string`
-
-文本。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setChildText`](TEdit.md#setchildtext)
-
-#### Defined in
-
-[awtk.ts:11340](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11340)
-
-***
-
-### setChildTextWithDouble()
-
-> **setChildTextWithDouble**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
-
-用一个浮点数去设置子控件的文本。
-只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
-
-#### Parameters
-
-• **name**: `string`
-
-子控件的名称。
-
-• **format**: `string`
-
-格式字符串(如："%2.2lf")。
-
-• **value**: `any`
-
-浮点数值。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setChildTextWithDouble`](TEdit.md#setchildtextwithdouble)
-
-#### Defined in
-
-[awtk.ts:11355](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11355)
-
-***
-
-### setChildTextWithInt()
-
-> **setChildTextWithInt**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
-
-用一个整数去设置子控件的文本。
-只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
-
-#### Parameters
-
-• **name**: `string`
-
-子控件的名称。
-
-• **format**: `string`
-
-格式字符串(如："%d")。
-
-• **value**: `any`
-
-值。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setChildTextWithInt`](TEdit.md#setchildtextwithint)
-
-#### Defined in
-
-[awtk.ts:11370](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11370)
-
 ***
 
 ### setChildrenLayout()
 
 > **setChildrenLayout**(`params`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12773](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12773)
+
 设置子控件的布局参数。
 备注：下一帧才会生效数据
 
 #### Parameters
 
-• **params**: `string`
+##### params
+
+`string`
 
 布局参数。
 
@@ -3959,9 +4294,122 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setChildrenLayout`](TEdit.md#setchildrenlayout)
 
-#### Defined in
+***
 
-[awtk.ts:12625](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12625)
+### setChildText()
+
+> **setChildText**(`name`, `text`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11455](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11455)
+
+设置子控件的文本。
+只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+
+#### Parameters
+
+##### name
+
+`string`
+
+子控件的名称。
+
+##### text
+
+`string`
+
+文本。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setChildText`](TEdit.md#setchildtext)
+
+***
+
+### setChildTextWithDouble()
+
+> **setChildTextWithDouble**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11470](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11470)
+
+用一个浮点数去设置子控件的文本。
+只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+
+#### Parameters
+
+##### name
+
+`string`
+
+子控件的名称。
+
+##### format
+
+`string`
+
+格式字符串(如："%2.2lf")。
+
+##### value
+
+`any`
+
+浮点数值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setChildTextWithDouble`](TEdit.md#setchildtextwithdouble)
+
+***
+
+### setChildTextWithInt()
+
+> **setChildTextWithInt**(`name`, `format`, `value`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11485](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11485)
+
+用一个整数去设置子控件的文本。
+只是对widget\_set\_prop的包装，文本的意义由子类控件决定。
+
+#### Parameters
+
+##### name
+
+`string`
+
+子控件的名称。
+
+##### format
+
+`string`
+
+格式字符串(如："%d")。
+
+##### value
+
+`any`
+
+值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setChildTextWithInt`](TEdit.md#setchildtextwithint)
 
 ***
 
@@ -3969,11 +4417,15 @@ widget_on返回的ID。
 
 > **setCloseImWhenBlured**(`close_im_when_blured`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26671](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26671)
+
 设置编辑器是否在失去焦点时关闭输入法。
 
 #### Parameters
 
-• **close\_im\_when\_blured**: `boolean`
+##### close\_im\_when\_blured
+
+`boolean`
 
 是否是否在失去焦点时关闭输入法。在失去焦点时关闭输入法。
 
@@ -3987,21 +4439,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setCloseImWhenBlured`](TEdit.md#setcloseimwhenblured)
 
-#### Defined in
-
-[awtk.ts:25932](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25932)
-
 ***
 
 ### setCursor()
 
 > **setCursor**(`cursor`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26767](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26767)
+
 设置输入框的光标位置。
 
 #### Parameters
 
-• **cursor**: `number`
+##### cursor
+
+`number`
 
 光标位置。
 
@@ -4015,21 +4467,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setCursor`](TEdit.md#setcursor)
 
-#### Defined in
-
-[awtk.ts:26028](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26028)
-
 ***
 
 ### setDirtyRectTolerance()
 
 > **setDirtyRectTolerance**(`dirty_rect_tolerance`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11898](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11898)
+
 设置控件脏矩形超出控件本身大小的最大范围(一般不用指定)。
 
 #### Parameters
 
-• **dirty\_rect\_tolerance**: `number`
+##### dirty\_rect\_tolerance
+
+`number`
 
 控件脏脏矩形超出控件本身大小的最大范。
 
@@ -4043,21 +4495,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setDirtyRectTolerance`](TEdit.md#setdirtyrecttolerance)
 
-#### Defined in
-
-[awtk.ts:11783](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11783)
-
 ***
 
 ### setDouble()
 
 > **setDouble**(`value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26542](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26542)
+
 设置double类型的值。
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -4071,25 +4523,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setDouble`](TEdit.md#setdouble)
 
-#### Defined in
-
-[awtk.ts:25803](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25803)
-
 ***
 
 ### setDoubleEx()
 
 > **setDoubleEx**(`format`, `value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26555](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26555)
+
 设置double类型的值。
 
 #### Parameters
 
-• **format**: `string`
+##### format
+
+`string`
 
 格式(缺省为"%2.2lf")。
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -4103,21 +4557,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setDoubleEx`](TEdit.md#setdoubleex)
 
-#### Defined in
-
-[awtk.ts:25816](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25816)
-
 ***
 
 ### setEnable()
 
 > **setEnable**(`enable`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11775](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11775)
+
 设置控件的可用性。
 
 #### Parameters
 
-• **enable**: `boolean`
+##### enable
+
+`boolean`
 
 是否可用性。
 
@@ -4131,21 +4585,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setEnable`](TEdit.md#setenable)
 
-#### Defined in
-
-[awtk.ts:11660](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11660)
-
 ***
 
 ### setFeedback()
 
 > **setFeedback**(`feedback`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11787](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11787)
+
 设置控件是否启用反馈。
 
 #### Parameters
 
-• **feedback**: `boolean`
+##### feedback
+
+`boolean`
 
 是否启用反馈。
 
@@ -4159,58 +4613,22 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setFeedback`](TEdit.md#setfeedback)
 
-#### Defined in
-
-[awtk.ts:11672](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11672)
-
-***
-
-### setFloatLimit()
-
-> **setFloatLimit**(`min`, `max`, `step`): [`TRet`](../enumerations/TRet.md)
-
-设置为浮点数输入及取值范围。
-
-#### Parameters
-
-• **min**: `number`
-
-最小值。
-
-• **max**: `number`
-
-最大值。
-
-• **step**: `number`
-
-步长。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setFloatLimit`](TEdit.md#setfloatlimit)
-
-#### Defined in
-
-[awtk.ts:25857](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25857)
-
 ***
 
 ### setFloating()
 
 > **setFloating**(`floating`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11812](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11812)
+
 设置控件的floating标志。
 > floating的控件不受父控件的子控件布局参数的影响。
 
 #### Parameters
 
-• **floating**: `boolean`
+##### floating
+
+`boolean`
 
 是否启用floating布局。
 
@@ -4224,9 +4642,45 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setFloating`](TEdit.md#setfloating)
 
-#### Defined in
+***
 
-[awtk.ts:11697](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11697)
+### setFloatLimit()
+
+> **setFloatLimit**(`min`, `max`, `step`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:26596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26596)
+
+设置为浮点数输入及取值范围。
+
+#### Parameters
+
+##### min
+
+`number`
+
+最小值。
+
+##### max
+
+`number`
+
+最大值。
+
+##### step
+
+`number`
+
+步长。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setFloatLimit`](TEdit.md#setfloatlimit)
 
 ***
 
@@ -4234,11 +4688,15 @@ widget_on返回的ID。
 
 > **setFocus**(`focus`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26755](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26755)
+
 设置为焦点。
 
 #### Parameters
 
-• **focus**: `boolean`
+##### focus
+
+`boolean`
 
 是否为焦点。
 
@@ -4252,49 +4710,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setFocus`](TEdit.md#setfocus)
 
-#### Defined in
-
-[awtk.ts:26016](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26016)
-
-***
-
-### setFocusNextWhenEnter()
-
-> **setFocusNextWhenEnter**(`focus_next_when_enter`): [`TRet`](../enumerations/TRet.md)
-
-设置输入回车后是否跳到下一个控件中。
-
-#### Parameters
-
-• **focus\_next\_when\_enter**: `boolean`
-
-是否跳入下一个控件中。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setFocusNextWhenEnter`](TEdit.md#setfocusnextwhenenter)
-
-#### Defined in
-
-[awtk.ts:26076](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26076)
-
 ***
 
 ### setFocusable()
 
 > **setFocusable**(`focusable`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11836](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11836)
+
 设置控件是否可获得焦点。
 
 #### Parameters
 
-• **focusable**: `boolean`
+##### focusable
+
+`boolean`
 
 是否可获得焦点。
 
@@ -4308,21 +4738,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setFocusable`](TEdit.md#setfocusable)
 
-#### Defined in
-
-[awtk.ts:11721](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11721)
-
 ***
 
 ### setFocused()
 
 > **setFocused**(`focused`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11824](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11824)
+
 设置控件是否获得焦点。
 
 #### Parameters
 
-• **focused**: `boolean`
+##### focused
+
+`boolean`
 
 是否获得焦点。
 
@@ -4336,9 +4766,33 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setFocused`](TEdit.md#setfocused)
 
-#### Defined in
+***
 
-[awtk.ts:11709](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11709)
+### setFocusNextWhenEnter()
+
+> **setFocusNextWhenEnter**(`focus_next_when_enter`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:26815](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26815)
+
+设置输入回车后是否跳到下一个控件中。
+
+#### Parameters
+
+##### focus\_next\_when\_enter
+
+`boolean`
+
+是否跳入下一个控件中。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setFocusNextWhenEnter`](TEdit.md#setfocusnextwhenenter)
 
 ***
 
@@ -4346,11 +4800,15 @@ widget_on返回的ID。
 
 > **setInputType**(`type`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26683](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26683)
+
 设置编辑器的输入类型。
 
 #### Parameters
 
-• **type**: [`TInputType`](../enumerations/TInputType.md)
+##### type
+
+[`TInputType`](../enumerations/TInputType.md)
 
 输入类型。
 
@@ -4364,21 +4822,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setInputType`](TEdit.md#setinputtype)
 
-#### Defined in
-
-[awtk.ts:25944](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25944)
-
 ***
 
 ### setInt()
 
 > **setInt**(`value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26530](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26530)
+
 设置int类型的值。
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -4392,29 +4850,33 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setInt`](TEdit.md#setint)
 
-#### Defined in
-
-[awtk.ts:25791](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25791)
-
 ***
 
 ### setIntLimit()
 
 > **setIntLimit**(`min`, `max`, `step`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26582](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26582)
+
 设置为整数输入及取值范围。
 
 #### Parameters
 
-• **min**: `number`
+##### min
+
+`number`
 
 最小值。
 
-• **max**: `number`
+##### max
+
+`number`
 
 最大值。
 
-• **step**: `number`
+##### step
+
+`number`
 
 步长。
 
@@ -4428,21 +4890,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setIntLimit`](TEdit.md#setintlimit)
 
-#### Defined in
-
-[awtk.ts:25843](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25843)
-
 ***
 
 ### setKeyboard()
 
 > **setKeyboard**(`keyboard`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26731](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26731)
+
 设置自定义软键盘名称。
 
 #### Parameters
 
-• **keyboard**: `string`
+##### keyboard
+
+`string`
 
 键盘名称(相应UI资源必须存在)。
 
@@ -4456,9 +4918,30 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setKeyboard`](TEdit.md#setkeyboard)
 
-#### Defined in
+***
 
-[awtk.ts:25992](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25992)
+### setMultiline()
+
+> **setMultiline**(`multiline`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:29523](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29523)
+
+设置多行编辑。
+> 与搜索建议功能互斥。
+
+#### Parameters
+
+##### multiline
+
+`boolean`
+
+是否多行编辑。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
 
 ***
 
@@ -4466,11 +4949,15 @@ widget_on返回的ID。
 
 > **setName**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11613](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11613)
+
 设置控件的名称。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 名称。
 
@@ -4484,15 +4971,13 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setName`](TEdit.md#setname)
 
-#### Defined in
-
-[awtk.ts:11498](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11498)
-
 ***
 
 ### setOpacity()
 
 > **setOpacity**(`opacity`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11886](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11886)
 
 设置控件的不透明度。
 
@@ -4500,7 +4985,9 @@ widget_on返回的ID。
 
 #### Parameters
 
-• **opacity**: `number`
+##### opacity
+
+`number`
 
 不透明度(取值0-255，0表示完全透明，255表示完全不透明)。
 
@@ -4514,15 +5001,13 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setOpacity`](TEdit.md#setopacity)
 
-#### Defined in
-
-[awtk.ts:11771](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11771)
-
 ***
 
 ### setOpenImWhenFocused()
 
 > **setOpenImWhenFocused**(`open_im_when_focused`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:26659](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26659)
 
 设置编辑器是否在获得焦点时打开输入法。
 
@@ -4531,7 +5016,9 @@ widget_on返回的ID。
 
 #### Parameters
 
-• **open\_im\_when\_focused**: `boolean`
+##### open\_im\_when\_focused
+
+`boolean`
 
 是否在获得焦点时打开输入法。
 
@@ -4545,21 +5032,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setOpenImWhenFocused`](TEdit.md#setopenimwhenfocused)
 
-#### Defined in
-
-[awtk.ts:25920](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25920)
-
 ***
 
 ### setPasswordVisible()
 
 > **setPasswordVisible**(`password_visible`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26743](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26743)
+
 当编辑器输入类型为密码时，设置密码是否可见。
 
 #### Parameters
 
-• **password\_visible**: `boolean`
+##### password\_visible
+
+`boolean`
 
 密码是否可见。
 
@@ -4573,21 +5060,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPasswordVisible`](TEdit.md#setpasswordvisible)
 
-#### Defined in
-
-[awtk.ts:26004](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26004)
-
 ***
 
 ### setPointerCursor()
 
 > **setPointerCursor**(`cursor`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11648](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11648)
+
 设置鼠标指针的图片名。
 
 #### Parameters
 
-• **cursor**: `string`
+##### cursor
+
+`string`
 
 图片名称(无扩展名)。
 
@@ -4601,25 +5088,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPointerCursor`](TEdit.md#setpointercursor)
 
-#### Defined in
-
-[awtk.ts:11533](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11533)
-
 ***
 
 ### setProp()
 
 > **setProp**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12099](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12099)
+
 设置控件指定属性的值。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: [`TValue`](TValue.md)
+##### v
+
+[`TValue`](TValue.md)
 
 属性的值。
 
@@ -4633,25 +5122,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setProp`](TEdit.md#setprop)
 
-#### Defined in
-
-[awtk.ts:11984](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11984)
-
 ***
 
 ### setPropBool()
 
 > **setPropBool**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12228](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12228)
+
 设置布尔格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: `boolean`
+##### v
+
+`boolean`
 
 属性的值。
 
@@ -4665,25 +5156,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPropBool`](TEdit.md#setpropbool)
 
-#### Defined in
-
-[awtk.ts:12113](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12113)
-
 ***
 
 ### setPropFloat()
 
 > **setPropFloat**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12176](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12176)
+
 设置浮点数格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: `number`
+##### v
+
+`number`
 
 属性的值。
 
@@ -4697,25 +5190,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPropFloat`](TEdit.md#setpropfloat)
 
-#### Defined in
-
-[awtk.ts:12061](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12061)
-
 ***
 
 ### setPropInt()
 
 > **setPropInt**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12202](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12202)
+
 设置整数格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: `number`
+##### v
+
+`number`
 
 属性的值。
 
@@ -4729,25 +5224,27 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPropInt`](TEdit.md#setpropint)
 
-#### Defined in
-
-[awtk.ts:12087](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12087)
-
 ***
 
 ### setPropPointer()
 
 > **setPropPointer**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12151](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12151)
+
 设置指针格式的属性。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性的名称。
 
-• **v**: `any`
+##### v
+
+`any`
 
 属性的值。
 
@@ -4761,54 +5258,22 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setPropPointer`](TEdit.md#setproppointer)
 
-#### Defined in
-
-[awtk.ts:12036](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12036)
-
-***
-
-### setPropStr()
-
-> **setPropStr**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
-
-设置字符串格式的属性。
-
-#### Parameters
-
-• **name**: `string`
-
-属性的名称。
-
-• **v**: `string`
-
-属性的值。
-
-#### Returns
-
-[`TRet`](../enumerations/TRet.md)
-
-返回RET_OK表示成功，否则表示失败。
-
-#### Inherited from
-
-[`TEdit`](TEdit.md).[`setPropStr`](TEdit.md#setpropstr)
-
-#### Defined in
-
-[awtk.ts:12010](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12010)
-
 ***
 
 ### setProps()
 
 > **setProps**(`params`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12112](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12112)
+
 设置多个参数。
 >参数之间用&分隔，名称和值之间用=分隔。如: name=awtk&min=10&max=100
 
 #### Parameters
 
-• **params**: `string`
+##### params
+
+`string`
 
 参数列表。
 
@@ -4822,9 +5287,39 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setProps`](TEdit.md#setprops)
 
-#### Defined in
+***
 
-[awtk.ts:11997](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11997)
+### setPropStr()
+
+> **setPropStr**(`name`, `v`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12125](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12125)
+
+设置字符串格式的属性。
+
+#### Parameters
+
+##### name
+
+`string`
+
+属性的名称。
+
+##### v
+
+`string`
+
+属性的值。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setPropStr`](TEdit.md#setpropstr)
 
 ***
 
@@ -4832,11 +5327,15 @@ widget_on返回的ID。
 
 > **setReadonly**(`readonly`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26608](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26608)
+
 设置编辑器是否为只读。
 
 #### Parameters
 
-• **readonly**: `boolean`
+##### readonly
+
+`boolean`
 
 只读。
 
@@ -4850,9 +5349,33 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setReadonly`](TEdit.md#setreadonly)
 
-#### Defined in
+***
 
-[awtk.ts:25869](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25869)
+### setScrollToBeginOnBlur()
+
+> **setScrollToBeginOnBlur**(`scroll_to_begin_on_blur`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:26827](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26827)
+
+设置编辑器是否在失去焦点时滚动回开头。
+
+#### Parameters
+
+##### scroll\_to\_begin\_on\_blur
+
+`boolean`
+
+是否在失去焦点时滚动回开头。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
+
+#### Inherited from
+
+[`TEdit`](TEdit.md).[`setScrollToBeginOnBlur`](TEdit.md#setscrolltobeginonblur)
 
 ***
 
@@ -4860,15 +5383,21 @@ widget_on返回的ID。
 
 > **setSelect**(`start`, `end`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26791](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26791)
+
 选择指定范围的文本。
 
 #### Parameters
 
-• **start**: `number`
+##### start
+
+`number`
 
 起始偏移。
 
-• **end**: `number`
+##### end
+
+`number`
 
 结束偏移。
 
@@ -4882,21 +5411,21 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setSelect`](TEdit.md#setselect)
 
-#### Defined in
-
-[awtk.ts:26052](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L26052)
-
 ***
 
 ### setSelectNoneWhenFocused()
 
 > **setSelectNoneWhenFocused**(`select_none_when_focused`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26644](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26644)
+
 设置编辑器是否在获得焦点时不选中文本。
 
 #### Parameters
 
-• **select\_none\_when\_focused**: `boolean`
+##### select\_none\_when\_focused
+
+`boolean`
 
 是否在获得焦点时不选中文本。
 
@@ -4910,22 +5439,22 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setSelectNoneWhenFocused`](TEdit.md#setselectnonewhenfocused)
 
-#### Defined in
-
-[awtk.ts:25905](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25905)
-
 ***
 
 ### setSelfLayout()
 
 > **setSelfLayout**(`params`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12760](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12760)
+
 设置控件自己的布局参数。
 备注：下一帧才会生效数据
 
 #### Parameters
 
-• **params**: `string`
+##### params
+
+`string`
 
 布局参数。
 
@@ -4939,34 +5468,40 @@ widget_on返回的ID。
 
 [`TEdit`](TEdit.md).[`setSelfLayout`](TEdit.md#setselflayout)
 
-#### Defined in
-
-[awtk.ts:12612](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12612)
-
 ***
 
 ### setSelfLayoutParams()
 
 > **setSelfLayoutParams**(`x`, `y`, `w`, `h`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12789](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12789)
+
 设置控件自己的布局(缺省布局器)参数(建议用widget\_set\_self\_layout)。
 备注：下一帧才会生效数据
 
 #### Parameters
 
-• **x**: `string`
+##### x
+
+`string`
 
 x参数。
 
-• **y**: `string`
+##### y
+
+`string`
 
 y参数。
 
-• **w**: `string`
+##### w
+
+`string`
 
 w参数。
 
-• **h**: `string`
+##### h
+
+`string`
 
 h参数。
 
@@ -4980,21 +5515,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setSelfLayoutParams`](TEdit.md#setselflayoutparams)
 
-#### Defined in
-
-[awtk.ts:12641](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12641)
-
 ***
 
 ### setSensitive()
 
 > **setSensitive**(`sensitive`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12032](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12032)
+
 设置控件是否接受用户事件。
 
 #### Parameters
 
-• **sensitive**: `boolean`
+##### sensitive
+
+`boolean`
 
 是否接受用户事件。
 
@@ -5008,21 +5543,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setSensitive`](TEdit.md#setsensitive)
 
-#### Defined in
-
-[awtk.ts:11917](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11917)
-
 ***
 
 ### setState()
 
 > **setState**(`state`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11848](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11848)
+
 设置控件的状态。
 
 #### Parameters
 
-• **state**: `string`
+##### state
+
+`string`
 
 状态。
 
@@ -5036,21 +5571,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setState`](TEdit.md#setstate)
 
-#### Defined in
-
-[awtk.ts:11733](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11733)
-
 ***
 
 ### setStateFromParentSync()
 
 > **setStateFromParentSync**(`state_from_parent_sync`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11872](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11872)
+
 标识是否接收父控件的状态同步。
 
 #### Parameters
 
-• **state\_from\_parent\_sync**: `boolean`
+##### state\_from\_parent\_sync
+
+`boolean`
 
 是否接收父控件的状态同步。
 
@@ -5064,15 +5599,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setStateFromParentSync`](TEdit.md#setstatefromparentsync)
 
-#### Defined in
-
-[awtk.ts:11757](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11757)
-
 ***
 
 ### setStyleColor()
 
 > **setStyleColor**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12842](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12842)
 
 设置颜色类型的style。
 
@@ -5083,11 +5616,15 @@ h参数。
 
 #### Parameters
 
-• **state\_and\_name**: `string`
+##### state\_and\_name
+
+`string`
 
 状态和名字，用英文的冒号分隔。
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。颜色值一般用十六进制表示，每两个数字表示一个颜色通道，从高位到低位，依次是ABGR。
 
@@ -5101,15 +5638,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setStyleColor`](TEdit.md#setstylecolor)
 
-#### Defined in
-
-[awtk.ts:12694](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12694)
-
 ***
 
 ### setStyleInt()
 
 > **setStyleInt**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12805](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12805)
 
 设置整数类型的style。
 
@@ -5118,11 +5653,15 @@ h参数。
 
 #### Parameters
 
-• **state\_and\_name**: `string`
+##### state\_and\_name
+
+`string`
 
 状态和名字，用英文的冒号分隔。
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -5136,15 +5675,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setStyleInt`](TEdit.md#setstyleint)
 
-#### Defined in
-
-[awtk.ts:12657](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12657)
-
 ***
 
 ### setStyleStr()
 
 > **setStyleStr**(`state_and_name`, `value`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12821](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12821)
 
 设置字符串类型的style。
 
@@ -5153,11 +5690,15 @@ h参数。
 
 #### Parameters
 
-• **state\_and\_name**: `string`
+##### state\_and\_name
+
+`string`
 
 状态和名字，用英文的冒号分隔。
 
-• **value**: `string`
+##### value
+
+`string`
 
 值。
 
@@ -5171,22 +5712,22 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setStyleStr`](TEdit.md#setstylestr)
 
-#### Defined in
-
-[awtk.ts:12673](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12673)
-
 ***
 
 ### setSuggestWords()
 
 > **setSuggestWords**(`suggest_words`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:29536](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29536)
+
 设置输入建议词源。
 > EVT_VALUE_CHANGED 事件请求词源更新，new_value 为 edit 输入内容。
 
 #### Parameters
 
-• **suggest\_words**: [`TObject`](TObject.md)
+##### suggest\_words
+
+[`TObject`](TObject.md)
 
 输入建议词源。
 
@@ -5196,22 +5737,22 @@ h参数。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:28759](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28759)
-
 ***
 
 ### setSuggestWordsInputName()
 
 > **setSuggestWordsInputName**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:29561](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29561)
+
 最终输入到edit控件的文本的属性名。
 > 设置了 suggest_words_item_formats 才会被用到。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 最终输入到edit控件的文本的属性名。
 
@@ -5221,21 +5762,21 @@ h参数。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:28784](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28784)
-
 ***
 
 ### setSuggestWordsItemFormats()
 
 > **setSuggestWordsItemFormats**(`formats`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:29548](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29548)
+
 设置输入建议词的项格式。
 
 #### Parameters
 
-• **formats**: `string`
+##### formats
+
+`string`
 
 输入建议词的项格式。
 
@@ -5245,21 +5786,21 @@ h参数。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:28771](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28771)
-
 ***
 
 ### setSyncStateToChildren()
 
 > **setSyncStateToChildren**(`sync_state_to_children`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11860](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11860)
+
 标识是否将当前控件状态同步到子控件中。
 
 #### Parameters
 
-• **sync\_state\_to\_children**: `boolean`
+##### sync\_state\_to\_children
+
+`boolean`
 
 是否将当前控件状态同步到子控件中。
 
@@ -5273,21 +5814,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setSyncStateToChildren`](TEdit.md#setsyncstatetochildren)
 
-#### Defined in
-
-[awtk.ts:11745](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11745)
-
 ***
 
 ### setText()
 
 > **setText**(`text`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11428](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11428)
+
 设置控件的文本。（如果字符串相同，则不会重复设置以及触发事件）
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 文本。
 
@@ -5301,25 +5842,27 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setText`](TEdit.md#settext)
 
-#### Defined in
-
-[awtk.ts:11313](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11313)
-
 ***
 
 ### setTextEx()
 
 > **setTextEx**(`text`, `check_diff`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11441](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11441)
+
 设置控件的文本。
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 文本。
 
-• **check\_diff**: `boolean`
+##### check\_diff
+
+`boolean`
 
 是否检查设置的文本是否和控件中的文本一样。
 
@@ -5333,25 +5876,27 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTextEx`](TEdit.md#settextex)
 
-#### Defined in
-
-[awtk.ts:11326](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11326)
-
 ***
 
 ### setTextLimit()
 
 > **setTextLimit**(`min`, `max`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26568](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26568)
+
 设置为文本输入及其长度限制，不允许输入超过max个字符，少于min个字符时进入error状态。
 
 #### Parameters
 
-• **min**: `number`
+##### min
+
+`number`
 
 最小长度。
 
-• **max**: `number`
+##### max
+
+`number`
 
 最大长度。
 
@@ -5365,21 +5910,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTextLimit`](TEdit.md#settextlimit)
 
-#### Defined in
-
-[awtk.ts:25829](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25829)
-
 ***
 
 ### setTheme()
 
 > **setTheme**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11625](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11625)
+
 设置theme的名称，用于动态切换主题。名称与当前主题名称相同，则重新加载全部资源。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 主题的名称。
 
@@ -5393,21 +5938,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTheme`](TEdit.md#settheme)
 
-#### Defined in
-
-[awtk.ts:11510](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11510)
-
 ***
 
 ### setTips()
 
 > **setTips**(`tips`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26707](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26707)
+
 设置编辑器的输入提示。
 
 #### Parameters
 
-• **tips**: `string`
+##### tips
+
+`string`
 
 输入提示。
 
@@ -5421,21 +5966,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTips`](TEdit.md#settips)
 
-#### Defined in
-
-[awtk.ts:25968](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25968)
-
 ***
 
 ### setTrText()
 
 > **setTrText**(`text`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11497](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11497)
+
 获取翻译之后的文本，然后调用widget_set_text。
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 文本。
 
@@ -5449,21 +5994,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTrText`](TEdit.md#settrtext)
 
-#### Defined in
-
-[awtk.ts:11382](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11382)
-
 ***
 
 ### setTrTips()
 
 > **setTrTips**(`tr_tips`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:26719](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L26719)
+
 获取翻译之后的文本，然后调用edit_set_tips。
 
 #### Parameters
 
-• **tr\_tips**: `string`
+##### tr\_tips
+
+`string`
 
 提示信息。
 
@@ -5477,22 +6022,22 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setTrTips`](TEdit.md#settrtips)
 
-#### Defined in
-
-[awtk.ts:25980](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L25980)
-
 ***
 
 ### setValue()
 
 > **setValue**(`value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11263](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11263)
+
 设置控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -5506,22 +6051,22 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setValue`](TEdit.md#setvalue)
 
-#### Defined in
-
-[awtk.ts:11148](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11148)
-
 ***
 
 ### setValueInt()
 
 > **setValueInt**(`value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11300](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11300)
+
 设置控件的值。
 只是对widget\_set\_prop的包装，值的意义由子类控件决定。
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 值。
 
@@ -5535,21 +6080,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setValueInt`](TEdit.md#setvalueint)
 
-#### Defined in
-
-[awtk.ts:11185](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11185)
-
 ***
 
 ### setVisible()
 
 > **setVisible**(`visible`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12008](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12008)
+
 设置控件的可见性。
 
 #### Parameters
 
-• **visible**: `boolean`
+##### visible
+
+`boolean`
 
 是否可见。
 
@@ -5563,21 +6108,21 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setVisible`](TEdit.md#setvisible)
 
-#### Defined in
-
-[awtk.ts:11893](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11893)
-
 ***
 
 ### setVisibleOnly()
 
 > **setVisibleOnly**(`visible`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12020](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12020)
+
 设置控件的可见性(不触发repaint和relayout)。
 
 #### Parameters
 
-• **visible**: `boolean`
+##### visible
+
+`boolean`
 
 是否可见。
 
@@ -5591,15 +6136,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`setVisibleOnly`](TEdit.md#setvisibleonly)
 
-#### Defined in
-
-[awtk.ts:11905](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11905)
-
 ***
 
 ### startAnimator()
 
 > **startAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11694](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11694)
 
 播放动画。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -5610,7 +6153,9 @@ h参数。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 动画名称。
 
@@ -5624,15 +6169,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`startAnimator`](TEdit.md#startanimator)
 
-#### Defined in
-
-[awtk.ts:11579](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11579)
-
 ***
 
 ### stopAnimator()
 
 > **stopAnimator**(`name`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:11746](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11746)
 
 停止动画(控件的相应属性回归原位)。
 请参考[控件动画](https://github.com/zlgopen/awtk/blob/master/docs/widget_animator.md)
@@ -5643,7 +6186,9 @@ h参数。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 动画名称。
 
@@ -5657,25 +6202,27 @@ h参数。
 
 [`TEdit`](TEdit.md).[`stopAnimator`](TEdit.md#stopanimator)
 
-#### Defined in
-
-[awtk.ts:11631](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11631)
-
 ***
 
 ### strokeBorderRect()
 
 > **strokeBorderRect**(`c`, `r`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:12601](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12601)
+
 根据控件的style绘制边框矩形。
 
 #### Parameters
 
-• **c**: [`TCanvas`](TCanvas.md)
+##### c
+
+[`TCanvas`](TCanvas.md)
 
 画布对象。
 
-• **r**: [`TRect`](TRect.md)
+##### r
+
+[`TRect`](TRect.md)
 
 矩形区域。
 
@@ -5689,15 +6236,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`strokeBorderRect`](TEdit.md#strokeborderrect)
 
-#### Defined in
-
-[awtk.ts:12453](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12453)
-
 ***
 
 ### unref()
 
 > **unref**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12588](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12588)
 
 减少控件的引用计数。引用计数为0时销毁控件。
 
@@ -5711,15 +6256,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`unref`](TEdit.md#unref)
 
-#### Defined in
-
-[awtk.ts:12440](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12440)
-
 ***
 
 ### updateStyle()
 
 > **updateStyle**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12675](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12675)
 
 让控件根据自己当前状态更新style。
 
@@ -5733,15 +6276,13 @@ h参数。
 
 [`TEdit`](TEdit.md).[`updateStyle`](TEdit.md#updatestyle)
 
-#### Defined in
-
-[awtk.ts:12527](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12527)
-
 ***
 
 ### updateStyleRecursive()
 
 > **updateStyleRecursive**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:12686](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L12686)
 
 让控件及子控件根据自己当前状态更新style。
 
@@ -5755,9 +6296,22 @@ h参数。
 
 [`TEdit`](TEdit.md).[`updateStyleRecursive`](TEdit.md#updatestylerecursive)
 
-#### Defined in
+***
 
-[awtk.ts:12538](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L12538)
+### updateSuggestWordsPopup()
+
+> **updateSuggestWordsPopup**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:29573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29573)
+
+请求刷新显示建议词窗口。
+> suggest_words 为空时关闭窗口。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
 
 ***
 
@@ -5765,11 +6319,15 @@ h参数。
 
 > **useStyle**(`style`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:11416](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L11416)
+
 启用指定的style。
 
 #### Parameters
 
-• **style**: `string`
+##### style
+
+`string`
 
 style的名称。
 
@@ -5783,27 +6341,27 @@ style的名称。
 
 [`TEdit`](TEdit.md).[`useStyle`](TEdit.md#usestyle)
 
-#### Defined in
-
-[awtk.ts:11301](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L11301)
-
 ***
 
 ### cast()
 
-> `static` **cast**(`widget`): [`TEditEx`](TEditEx.md)
+> `static` **cast**(`widget`): `TEditEx`
+
+Defined in: [awtk.ts:29585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29585)
 
 转换为edit对象(供脚本语言使用)。
 
 #### Parameters
 
-• **widget**: [`TWidget`](TWidget.md)
+##### widget
+
+[`TWidget`](TWidget.md)
 
 edit_ex对象。
 
 #### Returns
 
-[`TEditEx`](TEditEx.md)
+`TEditEx`
 
 edit对象。
 
@@ -5811,50 +6369,54 @@ edit对象。
 
 [`TEdit`](TEdit.md).[`cast`](TEdit.md#cast)
 
-#### Defined in
-
-[awtk.ts:28796](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28796)
-
 ***
 
 ### create()
 
-> `static` **create**(`parent`, `x`, `y`, `w`, `h`): [`TEditEx`](TEditEx.md)
+> `static` **create**(`parent`, `x`, `y`, `w`, `h`): `TEditEx`
+
+Defined in: [awtk.ts:29510](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L29510)
 
 创建edit_ex对象
 
 #### Parameters
 
-• **parent**: [`TWidget`](TWidget.md)
+##### parent
+
+[`TWidget`](TWidget.md)
 
 父控件
 
-• **x**: `number`
+##### x
+
+`number`
 
 x坐标
 
-• **y**: `number`
+##### y
+
+`number`
 
 y坐标
 
-• **w**: `number`
+##### w
+
+`number`
 
 宽度
 
-• **h**: `number`
+##### h
+
+`number`
 
 高度
 
 #### Returns
 
-[`TEditEx`](TEditEx.md)
+`TEditEx`
 
 对象。
 
 #### Overrides
 
 [`TEdit`](TEdit.md).[`create`](TEdit.md#create)
-
-#### Defined in
-
-[awtk.ts:28746](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L28746)

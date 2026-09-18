@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TGlyphFormat
 
 # Enumeration: TGlyphFormat
+
+Defined in: [awtk.ts:6004](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6004)
 
 字模格式常量定义。
 
@@ -14,11 +16,9 @@
 
 > **ALPHA**: `number`
 
+Defined in: [awtk.ts:6010](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6010)
+
 每个像素占用1个字节(缺省)。
-
-#### Defined in
-
-[awtk.ts:5930](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5930)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **ALPHA2**: `number`
 
+Defined in: [awtk.ts:6028](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6028)
+
 每个像素占用2bit。
-
-#### Defined in
-
-[awtk.ts:5948](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5948)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **ALPHA4**: `number`
 
+Defined in: [awtk.ts:6034](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6034)
+
 每个像素占用4bit。
-
-#### Defined in
-
-[awtk.ts:5954](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5954)
 
 ***
 
@@ -50,11 +46,9 @@
 
 > **MONO**: `number`
 
+Defined in: [awtk.ts:6016](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6016)
+
 每个像素占用1个比特。
-
-#### Defined in
-
-[awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5936)
 
 ***
 
@@ -62,8 +56,6 @@
 
 > **RGBA**: `number`
 
+Defined in: [awtk.ts:6022](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6022)
+
 每个像素占用4个字节。
-
-#### Defined in
-
-[awtk.ts:5942](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5942)

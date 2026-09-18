@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TWindowStage
 
 # Enumeration: TWindowStage
+
+Defined in: [awtk.ts:10676](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10676)
 
 窗口的生命周期常量定义。
 
@@ -14,11 +16,9 @@
 
 > **CLOSED**: `number`
 
+Defined in: [awtk.ts:10706](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10706)
+
 窗口已关闭。
-
-#### Defined in
-
-[awtk.ts:10591](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10591)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **CREATED**: `number`
 
+Defined in: [awtk.ts:10694](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10694)
+
 创建完成。
-
-#### Defined in
-
-[awtk.ts:10579](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10579)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **LOADED**: `number`
 
+Defined in: [awtk.ts:10688](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10688)
+
 从UI资源加载完成。
-
-#### Defined in
-
-[awtk.ts:10573](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10573)
 
 ***
 
@@ -50,11 +46,9 @@
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:10682](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10682)
+
 初始状态。
-
-#### Defined in
-
-[awtk.ts:10567](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10567)
 
 ***
 
@@ -62,11 +56,9 @@
 
 > **OPENED**: `number`
 
+Defined in: [awtk.ts:10700](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10700)
+
 窗口已经打开(窗口打开动画完成后)
-
-#### Defined in
-
-[awtk.ts:10585](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10585)
 
 ***
 
@@ -74,8 +66,6 @@
 
 > **SUSPEND**: `number`
 
+Defined in: [awtk.ts:10712](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10712)
+
 窗口挂起状态。
-
-#### Defined in
-
-[awtk.ts:10597](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10597)

@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TVgcanvasFillMode
 
 # Enumeration: TVgcanvasFillMode
+
+Defined in: [awtk.ts:8228](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8228)
 
 填充规则。
 
@@ -14,11 +16,9 @@
 
 > **ALL\_FILL**: `number`
 
+Defined in: [awtk.ts:8234](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8234)
+
 全部填充。（部分vg渲染引擎可能不支持，会退化为非零规则填充）
-
-#### Defined in
-
-[awtk.ts:8140](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L8140)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **EVEN\_ODD**: `number`
 
+Defined in: [awtk.ts:8246](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8246)
+
 奇偶规则填充。
-
-#### Defined in
-
-[awtk.ts:8152](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L8152)
 
 ***
 
@@ -38,8 +36,6 @@
 
 > **NON\_ZERO**: `number`
 
+Defined in: [awtk.ts:8240](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8240)
+
 非零规则填充。
-
-#### Defined in
-
-[awtk.ts:8146](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L8146)

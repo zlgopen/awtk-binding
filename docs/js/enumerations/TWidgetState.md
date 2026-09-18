@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TWidgetState
 
 # Enumeration: TWidgetState
+
+Defined in: [awtk.ts:10748](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10748)
 
 控件状态常量定义。
 
@@ -16,11 +18,9 @@
 
 > **ACTIVATED**: `number`
 
+Defined in: [awtk.ts:10766](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10766)
+
 3/5keys模式时，进入激活状态(此时方向键用于修改值)。
-
-#### Defined in
-
-[awtk.ts:10651](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10651)
 
 ***
 
@@ -28,11 +28,9 @@
 
 > **CHANGED**: `number`
 
+Defined in: [awtk.ts:10772](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10772)
+
 内容被修改的状态。
-
-#### Defined in
-
-[awtk.ts:10657](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10657)
 
 ***
 
@@ -40,11 +38,9 @@
 
 > **CHECKED**: `number`
 
+Defined in: [awtk.ts:10802](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10802)
+
 勾选状态。
-
-#### Defined in
-
-[awtk.ts:10687](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10687)
 
 ***
 
@@ -52,11 +48,9 @@
 
 > **DISABLE**: `number`
 
+Defined in: [awtk.ts:10790](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10790)
+
 禁用状态。
-
-#### Defined in
-
-[awtk.ts:10675](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10675)
 
 ***
 
@@ -64,11 +58,9 @@
 
 > **DISABLE\_OF\_ACTIVE**: `number`
 
+Defined in: [awtk.ts:10892](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10892)
+
 禁用状态(当前项)。
-
-#### Defined in
-
-[awtk.ts:10777](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10777)
 
 ***
 
@@ -76,11 +68,9 @@
 
 > **DISABLE\_OF\_CHECKED**: `number`
 
+Defined in: [awtk.ts:10862](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10862)
+
 禁用状态(选中项)。
-
-#### Defined in
-
-[awtk.ts:10747](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10747)
 
 ***
 
@@ -88,11 +78,9 @@
 
 > **DISABLE\_OF\_INDETERMINATE**: `number`
 
+Defined in: [awtk.ts:10922](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10922)
+
 禁用状态(选项不确定)。
-
-#### Defined in
-
-[awtk.ts:10807](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10807)
 
 ***
 
@@ -100,11 +88,9 @@
 
 > **EMPTY**: `number`
 
+Defined in: [awtk.ts:10814](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10814)
+
 编辑器无内容状态。
-
-#### Defined in
-
-[awtk.ts:10699](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10699)
 
 ***
 
@@ -112,11 +98,9 @@
 
 > **EMPTY\_FOCUS**: `number`
 
+Defined in: [awtk.ts:10820](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10820)
+
 编辑器无内容同时聚焦的状态。
-
-#### Defined in
-
-[awtk.ts:10705](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10705)
 
 ***
 
@@ -124,11 +108,9 @@
 
 > **EMPTY\_OVER**: `number`
 
+Defined in: [awtk.ts:10826](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10826)
+
 编辑器无内容同时指针悬浮的状态。
-
-#### Defined in
-
-[awtk.ts:10711](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10711)
 
 ***
 
@@ -136,11 +118,9 @@
 
 > **ERROR**: `number`
 
+Defined in: [awtk.ts:10832](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10832)
+
 输入错误状态。
-
-#### Defined in
-
-[awtk.ts:10717](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10717)
 
 ***
 
@@ -148,11 +128,9 @@
 
 > **FOCUSED**: `number`
 
+Defined in: [awtk.ts:10796](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10796)
+
 聚焦状态。
-
-#### Defined in
-
-[awtk.ts:10681](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10681)
 
 ***
 
@@ -160,11 +138,9 @@
 
 > **FOCUSED\_OF\_ACTIVE**: `number`
 
+Defined in: [awtk.ts:10898](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10898)
+
 焦点状态(当前项)。
-
-#### Defined in
-
-[awtk.ts:10783](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10783)
 
 ***
 
@@ -172,11 +148,9 @@
 
 > **FOCUSED\_OF\_CHECKED**: `number`
 
+Defined in: [awtk.ts:10868](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10868)
+
 焦点状态(选中项)。
-
-#### Defined in
-
-[awtk.ts:10753](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10753)
 
 ***
 
@@ -184,11 +158,9 @@
 
 > **FOCUSED\_OF\_INDETERMINATE**: `number`
 
+Defined in: [awtk.ts:10928](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10928)
+
 焦点状态(选项不确定)。
-
-#### Defined in
-
-[awtk.ts:10813](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10813)
 
 ***
 
@@ -196,11 +168,9 @@
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:10754](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10754)
+
 无效状态。
-
-#### Defined in
-
-[awtk.ts:10639](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10639)
 
 ***
 
@@ -208,11 +178,9 @@
 
 > **NORMAL**: `number`
 
+Defined in: [awtk.ts:10760](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10760)
+
 正常状态。
-
-#### Defined in
-
-[awtk.ts:10645](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10645)
 
 ***
 
@@ -220,11 +188,9 @@
 
 > **NORMAL\_OF\_ACTIVE**: `number`
 
+Defined in: [awtk.ts:10874](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10874)
+
 正常状态(当前项)。
-
-#### Defined in
-
-[awtk.ts:10759](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10759)
 
 ***
 
@@ -232,11 +198,9 @@
 
 > **NORMAL\_OF\_CHECKED**: `number`
 
+Defined in: [awtk.ts:10844](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10844)
+
 正常状态(选中项)。
-
-#### Defined in
-
-[awtk.ts:10729](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10729)
 
 ***
 
@@ -244,11 +208,9 @@
 
 > **NORMAL\_OF\_INDETERMINATE**: `number`
 
+Defined in: [awtk.ts:10904](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10904)
+
 正常状态(选项不确定)。
-
-#### Defined in
-
-[awtk.ts:10789](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10789)
 
 ***
 
@@ -256,11 +218,9 @@
 
 > **OVER**: `number`
 
+Defined in: [awtk.ts:10784](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10784)
+
 指针悬浮状态。
-
-#### Defined in
-
-[awtk.ts:10669](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10669)
 
 ***
 
@@ -268,11 +228,9 @@
 
 > **OVER\_OF\_ACTIVE**: `number`
 
+Defined in: [awtk.ts:10886](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10886)
+
 指针悬浮状态(当前项)。
-
-#### Defined in
-
-[awtk.ts:10771](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10771)
 
 ***
 
@@ -280,11 +238,9 @@
 
 > **OVER\_OF\_CHECKED**: `number`
 
+Defined in: [awtk.ts:10856](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10856)
+
 指针悬浮状态(选中项)。
-
-#### Defined in
-
-[awtk.ts:10741](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10741)
 
 ***
 
@@ -292,11 +248,9 @@
 
 > **OVER\_OF\_INDETERMINATE**: `number`
 
+Defined in: [awtk.ts:10916](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10916)
+
 指针悬浮状态(选项不确定)。
-
-#### Defined in
-
-[awtk.ts:10801](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10801)
 
 ***
 
@@ -304,11 +258,9 @@
 
 > **PRESSED**: `number`
 
+Defined in: [awtk.ts:10778](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10778)
+
 指针按下状态。
-
-#### Defined in
-
-[awtk.ts:10663](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10663)
 
 ***
 
@@ -316,11 +268,9 @@
 
 > **PRESSED\_OF\_ACTIVE**: `number`
 
+Defined in: [awtk.ts:10880](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10880)
+
 指针按下状态(当前项)。
-
-#### Defined in
-
-[awtk.ts:10765](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10765)
 
 ***
 
@@ -328,11 +278,9 @@
 
 > **PRESSED\_OF\_CHECKED**: `number`
 
+Defined in: [awtk.ts:10850](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10850)
+
 指针按下状态(选中项)。
-
-#### Defined in
-
-[awtk.ts:10735](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10735)
 
 ***
 
@@ -340,11 +288,9 @@
 
 > **PRESSED\_OF\_INDETERMINATE**: `number`
 
+Defined in: [awtk.ts:10910](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10910)
+
 指针按下状态(选项不确定)。
-
-#### Defined in
-
-[awtk.ts:10795](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10795)
 
 ***
 
@@ -352,11 +298,9 @@
 
 > **SELECTED**: `number`
 
+Defined in: [awtk.ts:10838](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10838)
+
 选中状态。
-
-#### Defined in
-
-[awtk.ts:10723](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10723)
 
 ***
 
@@ -364,8 +308,6 @@
 
 > **UNCHECKED**: `number`
 
+Defined in: [awtk.ts:10808](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L10808)
+
 没勾选状态。
-
-#### Defined in
-
-[awtk.ts:10693](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L10693)

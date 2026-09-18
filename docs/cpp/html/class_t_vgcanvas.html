@@ -120,6 +120,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad16bdbbca115556988f0d442d8d6b460" id="r_ad16bdbbca115556988f0d442d8d6b460"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad16bdbbca115556988f0d442d8d6b460">SetTextAlign</a> (const char *value)</td></tr>
 <tr class="memitem:a7d60da8b841152856c5b352361c1540a" id="r_a7d60da8b841152856c5b352361c1540a"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d60da8b841152856c5b352361c1540a">SetTextBaseline</a> (const char *value)</td></tr>
 <tr class="memitem:ad52e8fb00145fe90783ef4c279540aa5" id="r_ad52e8fb00145fe90783ef4c279540aa5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52e8fb00145fe90783ef4c279540aa5">FillText</a> (const char *text, float_t x, float_t y, float_t max_width)</td></tr>
+<tr class="memitem:a63554dfddfcc95c000fb41aa744e477b" id="r_a63554dfddfcc95c000fb41aa744e477b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63554dfddfcc95c000fb41aa744e477b">FillTextByGlyphs</a> (glyphs_t *glyphs, uint32_t start, uint32_t len, xy_t x, xy_t y, float_t max_width)</td></tr>
 <tr class="memitem:a9c0d31eb69398b195d4143e03a1fa6d5" id="r_a9c0d31eb69398b195d4143e03a1fa6d5"><td class="memItemLeft" align="right" valign="top">float_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c0d31eb69398b195d4143e03a1fa6d5">MeasureText</a> (const char *text)</td></tr>
 <tr class="memitem:afeecd9b59291fbced10e03dc83348c49" id="r_afeecd9b59291fbced10e03dc83348c49"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeecd9b59291fbced10e03dc83348c49">DrawImage</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh)</td></tr>
 <tr class="memitem:a0a626925e5174c21b5e9492acf74eacc" id="r_a0a626925e5174c21b5e9492acf74eacc"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a626925e5174c21b5e9492acf74eacc">DrawImageRepeat</a> (<a class="el" href="class_t_bitmap.html">TBitmap</a> &amp;img, float_t sx, float_t sy, float_t sw, float_t sh, float_t dx, float_t dy, float_t dw, float_t dh, float_t dst_w, float_t dst_h)</td></tr>
@@ -754,6 +755,60 @@ vgcanvas_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>text </td></tr>
+    <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
+    <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
+    <tr><td class="paramname">max_width</td><td>最大宽度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a63554dfddfcc95c000fb41aa744e477b" name="a63554dfddfcc95c000fb41aa744e477b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63554dfddfcc95c000fb41aa744e477b">&#9670;&#160;</a></span>FillTextByGlyphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TVgcanvas::FillTextByGlyphs </td>
+          <td>(</td>
+          <td class="paramtype">glyphs_t *</td>          <td class="paramname"><span class="paramname"><em>glyphs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xy_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float_t</td>          <td class="paramname"><span class="paramname"><em>max_width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>绘制文本。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glyphs</td><td>字模列表对象。 </td></tr>
+    <tr><td class="paramname">start</td><td>字模开始序号。 </td></tr>
+    <tr><td class="paramname">len</td><td>字模长度。 </td></tr>
     <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
     <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
     <tr><td class="paramname">max_width</td><td>最大宽度。</td></tr>

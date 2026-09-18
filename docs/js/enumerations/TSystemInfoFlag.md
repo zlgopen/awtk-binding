@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TSystemInfoFlag
 
 # Enumeration: TSystemInfoFlag
+
+Defined in: [awtk.ts:7858](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7858)
 
 SystemInfo常量定义。
 
@@ -14,11 +16,9 @@ SystemInfo常量定义。
 
 > **FAST\_LCD\_PORTRAIT**: `number`
 
+Defined in: [awtk.ts:7870](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7870)
+
 使用快速旋转功能。
-
-#### Defined in
-
-[awtk.ts:7790](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7790)
 
 ***
 
@@ -26,8 +26,6 @@ SystemInfo常量定义。
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:7864](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7864)
+
 无特殊标志。
-
-#### Defined in
-
-[awtk.ts:7784](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7784)

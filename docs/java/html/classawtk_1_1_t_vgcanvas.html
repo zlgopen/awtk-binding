@@ -119,6 +119,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a8ba563e227e61919622bea93e31c9e1b" id="r_a8ba563e227e61919622bea93e31c9e1b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ba563e227e61919622bea93e31c9e1b">setTextAlign</a> (String value)</td></tr>
 <tr class="memitem:a84c85c2889ec7d5b5183e0d48fbdda58" id="r_a84c85c2889ec7d5b5183e0d48fbdda58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84c85c2889ec7d5b5183e0d48fbdda58">setTextBaseline</a> (String value)</td></tr>
 <tr class="memitem:af690bddaae368bf6db636231d4f90244" id="r_af690bddaae368bf6db636231d4f90244"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af690bddaae368bf6db636231d4f90244">fillText</a> (String text, double x, double y, double max_width)</td></tr>
+<tr class="memitem:a1eb08353be88d06504c1977a8357dd26" id="r_a1eb08353be88d06504c1977a8357dd26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eb08353be88d06504c1977a8357dd26">fillTextByGlyphs</a> (long glyphs, int start, int len, int x, int y, double max_width)</td></tr>
 <tr class="memitem:aac9a70b2d4e742624a411d4e27ebfb79" id="r_aac9a70b2d4e742624a411d4e27ebfb79"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac9a70b2d4e742624a411d4e27ebfb79">measureText</a> (String text)</td></tr>
 <tr class="memitem:a301d0529193ed5c3f3ba740b8d1d72ea" id="r_a301d0529193ed5c3f3ba740b8d1d72ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a301d0529193ed5c3f3ba740b8d1d72ea">drawImage</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh)</td></tr>
 <tr class="memitem:a4456aed8bb9266d7cff49a43da8d420e" id="r_a4456aed8bb9266d7cff49a43da8d420e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4456aed8bb9266d7cff49a43da8d420e">drawImageRepeat</a> (<a class="el" href="classawtk_1_1_t_bitmap.html">TBitmap</a> img, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh, double dst_w, double dst_h)</td></tr>
@@ -954,6 +955,68 @@ Public 属性</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>text </td></tr>
+    <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
+    <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
+    <tr><td class="paramname">max_width</td><td>最大宽度。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a1eb08353be88d06504c1977a8357dd26" name="a1eb08353be88d06504c1977a8357dd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb08353be88d06504c1977a8357dd26">&#9670;&#160;</a></span>fillTextByGlyphs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumawtk_1_1_t_ret.html">TRet</a> awtk.TVgcanvas.fillTextByGlyphs </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>glyphs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>max_width</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>绘制文本。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">glyphs</td><td>字模列表对象。 </td></tr>
+    <tr><td class="paramname">start</td><td>字模开始序号。 </td></tr>
+    <tr><td class="paramname">len</td><td>字模长度。 </td></tr>
     <tr><td class="paramname">x</td><td>x坐标。 </td></tr>
     <tr><td class="paramname">y</td><td>y坐标。 </td></tr>
     <tr><td class="paramname">max_width</td><td>最大宽度。</td></tr>

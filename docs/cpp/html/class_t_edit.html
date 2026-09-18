@@ -128,6 +128,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a9bf23bda2694a7f2529f87f092889b4b" id="r_a9bf23bda2694a7f2529f87f092889b4b"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf23bda2694a7f2529f87f092889b4b">SetSelect</a> (uint32_t start, uint32_t end)</td></tr>
 <tr class="memitem:acf008c83829a4317556f1a4bfa2d06f7" id="r_acf008c83829a4317556f1a4bfa2d06f7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf008c83829a4317556f1a4bfa2d06f7">GetSelectedText</a> ()</td></tr>
 <tr class="memitem:aa6b3afbf89027eda3c973a5d391f14e5" id="r_aa6b3afbf89027eda3c973a5d391f14e5"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6b3afbf89027eda3c973a5d391f14e5">SetFocusNextWhenEnter</a> (bool focus_next_when_enter)</td></tr>
+<tr class="memitem:a3402b5d2a8767fa3773deb2523263f94" id="r_a3402b5d2a8767fa3773deb2523263f94"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3402b5d2a8767fa3773deb2523263f94">SetScrollToBeginOnBlur</a> (bool scroll_to_begin_on_blur)</td></tr>
 <tr class="memitem:a21b711e8d494ca01cb5a3169f536b3ce" id="r_a21b711e8d494ca01cb5a3169f536b3ce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21b711e8d494ca01cb5a3169f536b3ce">GetTips</a> () const</td></tr>
 <tr class="memitem:a58485d30ef1da24cb25853b3992239da" id="r_a58485d30ef1da24cb25853b3992239da"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58485d30ef1da24cb25853b3992239da">GetTrTips</a> () const</td></tr>
 <tr class="memitem:aa8de6404e2ac04f2736edd7dd3854c2d" id="r_aa8de6404e2ac04f2736edd7dd3854c2d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8de6404e2ac04f2736edd7dd3854c2d">GetActionText</a> () const</td></tr>
@@ -145,6 +146,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a048fb5f8ac4a99a1575b71107d8e6f75" id="r_a048fb5f8ac4a99a1575b71107d8e6f75"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048fb5f8ac4a99a1575b71107d8e6f75">GetCloseImWhenBlured</a> () const</td></tr>
 <tr class="memitem:aff3d12d20a9dfd522d173bdbdfcc385f" id="r_aff3d12d20a9dfd522d173bdbdfcc385f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff3d12d20a9dfd522d173bdbdfcc385f">GetCancelable</a> () const</td></tr>
 <tr class="memitem:a4c553e3f8aa71899e92804b9576067f9" id="r_a4c553e3f8aa71899e92804b9576067f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c553e3f8aa71899e92804b9576067f9">GetFocusNextWhenEnter</a> () const</td></tr>
+<tr class="memitem:a8b73efc9cd04401f7857e5972bd12402" id="r_a8b73efc9cd04401f7857e5972bd12402"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b73efc9cd04401f7857e5972bd12402">GetScrollToBeginOnBlur</a> () const</td></tr>
 <tr class="inherit_header pub_methods_class_t_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_t_widget')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public 成员函数 继承自 <a class="el" href="class_t_widget.html">TWidget</a></td></tr>
 <tr class="memitem:af23714eb7e2edc75682da261210b3fbd inherit pub_methods_class_t_widget" id="r_af23714eb7e2edc75682da261210b3fbd"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_t_widget.html#af23714eb7e2edc75682da261210b3fbd">SetTextW</a> (const wchar_t *text)</td></tr>
 <tr class="memitem:a54bed420ee715631c17259514facd211 inherit pub_methods_class_t_widget" id="r_a54bed420ee715631c17259514facd211"><td class="memItemLeft" align="right" valign="top">
@@ -732,6 +734,24 @@ widget_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 
 </div>
 </div>
+<a id="a8b73efc9cd04401f7857e5972bd12402" name="a8b73efc9cd04401f7857e5972bd12402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b73efc9cd04401f7857e5972bd12402">&#9670;&#160;</a></span>GetScrollToBeginOnBlur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TEdit::GetScrollToBeginOnBlur </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>失去焦点时是否滚动回开头(默认 FALSE) </p>
+
+</div>
+</div>
 <a id="acf008c83829a4317556f1a4bfa2d06f7" name="acf008c83829a4317556f1a4bfa2d06f7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf008c83829a4317556f1a4bfa2d06f7">&#9670;&#160;</a></span>GetSelectedText()</h2>
 
@@ -1298,6 +1318,31 @@ widget_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b></
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">readonly</td><td>只读。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
+
+</div>
+</div>
+<a id="a3402b5d2a8767fa3773deb2523263f94" name="a3402b5d2a8767fa3773deb2523263f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3402b5d2a8767fa3773deb2523263f94">&#9670;&#160;</a></span>SetScrollToBeginOnBlur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TEdit::SetScrollToBeginOnBlur </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>scroll_to_begin_on_blur</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置编辑器是否在失去焦点时滚动回开头。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scroll_to_begin_on_blur</td><td>是否在失去焦点时滚动回开头。</td></tr>
   </table>
   </dd>
 </dl>

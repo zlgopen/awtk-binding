@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TIdle
 
 # Class: TIdle
+
+Defined in: [awtk.ts:6050](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6050)
 
 idle可以看作是duration为0的定时器。
 
@@ -16,13 +18,13 @@ idle可以看作是duration为0的定时器。
 
 ## Constructors
 
-### new TIdle()
+### Constructor
 
-> **new TIdle**(): [`TIdle`](TIdle.md)
+> **new TIdle**(): `TIdle`
 
 #### Returns
 
-[`TIdle`](TIdle.md)
+`TIdle`
 
 ## Methods
 
@@ -30,15 +32,21 @@ idle可以看作是duration为0的定时器。
 
 > `static` **add**(`on_idle`, `ctx`): `number`
 
+Defined in: [awtk.ts:6060](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6060)
+
 增加一个idle。
 
 #### Parameters
 
-• **on\_idle**: `Function`
+##### on\_idle
+
+`Function`
 
 idle回调函数，回调函数返回RET_REPEAT，则下次继续执行，否则自动移出。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 idle回调函数的上下文。
 
@@ -48,21 +56,21 @@ idle回调函数的上下文。
 
 返回idle的ID，0表示失败。
 
-#### Defined in
-
-[awtk.ts:5980](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5980)
-
 ***
 
 ### remove()
 
 > `static` **remove**(`idle_id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:6072](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6072)
+
 删除指定的idle。
 
 #### Parameters
 
-• **idle\_id**: `number`
+##### idle\_id
+
+`number`
 
 idleID。
 
@@ -71,7 +79,3 @@ idleID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:5992](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5992)

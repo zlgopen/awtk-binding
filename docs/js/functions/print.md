@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **print**(`str`): `any`
 
+Defined in: [awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2)
+
 ## Parameters
 
-• **str**: `any`
+### str
+
+`any`
 
 ## Returns
 
 `any`
-
-## Defined in
-
-[awtk.ts:2](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2)

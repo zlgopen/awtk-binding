@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Class: TClipBoard
 
+Defined in: [awtk.ts:4990](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4990)
+
 剪切板接口。
 
 ## Constructors
 
-### new TClipBoard()
+### Constructor
 
-> **new TClipBoard**(`nativeObj`): [`TClipBoard`](TClipBoard.md)
+> **new TClipBoard**(`nativeObj`): `TClipBoard`
+
+Defined in: [awtk.ts:4992](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4992)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TClipBoard`](TClipBoard.md)
-
-#### Defined in
-
-[awtk.ts:4977](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4977)
+`TClipBoard`
 
 ## Properties
 
@@ -32,15 +34,15 @@
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:4976](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4976)
+Defined in: [awtk.ts:4991](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4991)
 
 ## Methods
 
 ### getText()
 
 > `static` **getText**(): `string`
+
+Defined in: [awtk.ts:5015](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5015)
 
 从剪切板中获取文本(UTF8)数据。
 
@@ -50,21 +52,21 @@
 
 返回文本数据。
 
-#### Defined in
-
-[awtk.ts:5000](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L5000)
-
 ***
 
 ### setText()
 
 > `static` **setText**(`text`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:5004](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5004)
+
 设置文本(UTF8)数据到剪切板。
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 文本。
 
@@ -73,7 +75,3 @@
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:4989](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4989)

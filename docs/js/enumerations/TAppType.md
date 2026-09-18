@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TAppType
 
 # Enumeration: TAppType
+
+Defined in: [awtk.ts:8066](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8066)
 
 应用程序类型。
 
@@ -14,11 +16,9 @@
 
 > **CONSOLE**: `number`
 
+Defined in: [awtk.ts:8090](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8090)
+
 控制台（没有界面）。
-
-#### Defined in
-
-[awtk.ts:7996](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7996)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **DESKTOP**: `number`
 
+Defined in: [awtk.ts:8084](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8084)
+
 桌面应用程序。
-
-#### Defined in
-
-[awtk.ts:7990](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7990)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **MOBILE**: `number`
 
+Defined in: [awtk.ts:8072](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8072)
+
 嵌入式或移动APP
-
-#### Defined in
-
-[awtk.ts:7978](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7978)
 
 ***
 
@@ -50,8 +46,6 @@
 
 > **SIMULATOR**: `number`
 
+Defined in: [awtk.ts:8078](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8078)
+
 模拟器。
-
-#### Defined in
-
-[awtk.ts:7984](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7984)

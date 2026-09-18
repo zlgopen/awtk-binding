@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TVgcanvasLineCap
 
 # Enumeration: TVgcanvasLineCap
+
+Defined in: [awtk.ts:9135](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9135)
 
 线帽类型。
 
@@ -14,11 +16,9 @@
 
 > **BUTT**: `number`
 
+Defined in: [awtk.ts:9153](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9153)
+
 平头。
-
-#### Defined in
-
-[awtk.ts:9044](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9044)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **ROUND**: `number`
 
+Defined in: [awtk.ts:9141](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9141)
+
 圆头。
-
-#### Defined in
-
-[awtk.ts:9032](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9032)
 
 ***
 
@@ -38,8 +36,6 @@
 
 > **SQUARE**: `number`
 
+Defined in: [awtk.ts:9147](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9147)
+
 方头。
-
-#### Defined in
-
-[awtk.ts:9038](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L9038)

@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TTimer
 
 # Class: TTimer
+
+Defined in: [awtk.ts:7907](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7907)
 
 定时器系统。
 
@@ -16,13 +18,13 @@
 
 ## Constructors
 
-### new TTimer()
+### Constructor
 
-> **new TTimer**(): [`TTimer`](TTimer.md)
+> **new TTimer**(): `TTimer`
 
 #### Returns
 
-[`TTimer`](TTimer.md)
+`TTimer`
 
 ## Methods
 
@@ -30,19 +32,27 @@
 
 > `static` **add**(`on_timer`, `ctx`, `duration`): `number`
 
+Defined in: [awtk.ts:7918](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7918)
+
 增加一个timer。
 
 #### Parameters
 
-• **on\_timer**: `Function`
+##### on\_timer
+
+`Function`
 
 timer回调函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 timer回调函数的上下文。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 时间(毫秒)。
 
@@ -52,25 +62,27 @@ timer回调函数的上下文。
 
 返回timer的ID，TK_INVALID_ID表示失败。
 
-#### Defined in
-
-[awtk.ts:7838](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7838)
-
 ***
 
 ### modify()
 
 > `static` **modify**(`timer_id`, `duration`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7979](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7979)
+
 修改指定的timer的duration，修改之后定时器重新开始计时。
 
 #### Parameters
 
-• **timer\_id**: `number`
+##### timer\_id
+
+`number`
 
 timerID。
 
-• **duration**: `number`
+##### duration
+
+`number`
 
 新的时间(毫秒)。
 
@@ -80,9 +92,41 @@ timerID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
+***
 
-[awtk.ts:7899](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7899)
+### modifyEx()
+
+> `static` **modifyEx**(`timer_id`, `duration`, `reset_timer`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:7993](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7993)
+
+修改指定的timer的duration，修改之后定时器重新开始计时。
+
+#### Parameters
+
+##### timer\_id
+
+`number`
+
+timerID。
+
+##### duration
+
+`number`
+
+新的时间(毫秒)。
+
+##### reset\_timer
+
+`boolean`
+
+修改后是否重新计时。
+
+#### Returns
+
+[`TRet`](../enumerations/TRet.md)
+
+返回RET_OK表示成功，否则表示失败。
 
 ***
 
@@ -90,11 +134,15 @@ timerID。
 
 > `static` **remove**(`timer_id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7930](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7930)
+
 删除指定的timer。
 
 #### Parameters
 
-• **timer\_id**: `number`
+##### timer\_id
+
+`number`
 
 timerID。
 
@@ -103,10 +151,6 @@ timerID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:7850](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7850)
 
 ***
 
@@ -114,11 +158,15 @@ timerID。
 
 > `static` **reset**(`timer_id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7942](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7942)
+
 重置指定的timer，重置之后定时器重新开始计时。
 
 #### Parameters
 
-• **timer\_id**: `number`
+##### timer\_id
+
+`number`
 
 timerID。
 
@@ -127,10 +175,6 @@ timerID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:7862](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7862)
 
 ***
 
@@ -138,11 +182,15 @@ timerID。
 
 > `static` **resume**(`timer_id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7966](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7966)
+
 唤醒挂起指定的timer，并且重置定时器重新开始计时
 
 #### Parameters
 
-• **timer\_id**: `number`
+##### timer\_id
+
+`number`
 
 timerID。
 
@@ -151,10 +199,6 @@ timerID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:7886](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7886)
 
 ***
 
@@ -162,11 +206,15 @@ timerID。
 
 > `static` **suspend**(`timer_id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7954](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7954)
+
 挂起指定的timer，一般用于不断循环触发的计时器。
 
 #### Parameters
 
-• **timer\_id**: `number`
+##### timer\_id
+
+`number`
 
 timerID。
 
@@ -175,7 +223,3 @@ timerID。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:7874](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7874)

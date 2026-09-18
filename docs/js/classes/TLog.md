@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,23 +6,27 @@
 
 # Class: TLog
 
+Defined in: [awtk.ts:14376](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14376)
+
 log。
 
 ## Constructors
 
-### new TLog()
+### Constructor
 
-> **new TLog**(): [`TLog`](TLog.md)
+> **new TLog**(): `TLog`
 
 #### Returns
 
-[`TLog`](TLog.md)
+`TLog`
 
 ## Methods
 
 ### getLogLevel()
 
 > `static` **getLogLevel**(): [`TTkLogLevel`](../enumerations/TTkLogLevel.md)
+
+Defined in: [awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14384)
 
 获取log的级别。
 
@@ -32,21 +36,21 @@ log。
 
 返回log的级别。
 
-#### Defined in
-
-[awtk.ts:14083](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14083)
-
 ***
 
 ### setLogLevel()
 
 > `static` **setLogLevel**(`log_level`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:14396](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14396)
+
 设置log的级别。
 
 #### Parameters
 
-• **log\_level**: [`TTkLogLevel`](../enumerations/TTkLogLevel.md)
+##### log\_level
+
+[`TTkLogLevel`](../enumerations/TTkLogLevel.md)
 
 log的级别。
 
@@ -55,7 +59,3 @@ log的级别。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:14095](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14095)

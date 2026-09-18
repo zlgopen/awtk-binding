@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TLocaleInfoXml
 
 # Class: TLocaleInfoXml
+
+Defined in: [awtk.ts:16846](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16846)
 
 本地化信息。
 locale_info_t 的子类。
@@ -18,25 +20,25 @@ locale_info_t 的子类。
 
 ## Constructors
 
-### new TLocaleInfoXml()
+### Constructor
 
-> **new TLocaleInfoXml**(`nativeObj`): [`TLocaleInfoXml`](TLocaleInfoXml.md)
+> **new TLocaleInfoXml**(`nativeObj`): `TLocaleInfoXml`
+
+Defined in: [awtk.ts:16848](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16848)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TLocaleInfoXml`](TLocaleInfoXml.md)
+`TLocaleInfoXml`
 
 #### Overrides
 
-[`TLocaleInfo`](TLocaleInfo.md).[`constructor`](TLocaleInfo.md#constructors)
-
-#### Defined in
-
-[awtk.ts:16523](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16523)
+[`TLocaleInfo`](TLocaleInfo.md).[`constructor`](TLocaleInfo.md#constructor)
 
 ## Properties
 
@@ -44,13 +46,11 @@ locale_info_t 的子类。
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:16847](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16847)
+
 #### Overrides
 
 [`TLocaleInfo`](TLocaleInfo.md).[`nativeObj`](TLocaleInfo.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:16522](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16522)
 
 ## Methods
 
@@ -58,15 +58,21 @@ locale_info_t 的子类。
 
 > **change**(`language`, `country`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7304](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7304)
+
 设置当前的国家和语言。
 
 #### Parameters
 
-• **language**: `string`
+##### language
+
+`string`
 
 语言。
 
-• **country**: `string`
+##### country
+
+`string`
 
 国家或地区。
 
@@ -80,21 +86,21 @@ locale_info_t 的子类。
 
 [`TLocaleInfo`](TLocaleInfo.md).[`change`](TLocaleInfo.md#change)
 
-#### Defined in
-
-[awtk.ts:7224](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7224)
-
 ***
 
 ### off()
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7316](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7316)
+
 注销指定事件的处理函数。
 
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 locale_info_on返回的ID。
 
@@ -108,21 +114,21 @@ locale_info_on返回的ID。
 
 [`TLocaleInfo`](TLocaleInfo.md).[`off`](TLocaleInfo.md#off)
 
-#### Defined in
-
-[awtk.ts:7236](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7236)
-
 ***
 
 ### tr()
 
 > **tr**(`text`): `string`
 
+Defined in: [awtk.ts:7291](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7291)
+
 翻译字符串。
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 待翻译的文本。
 
@@ -136,15 +142,13 @@ locale_info_on返回的ID。
 
 [`TLocaleInfo`](TLocaleInfo.md).[`tr`](TLocaleInfo.md#tr)
 
-#### Defined in
-
-[awtk.ts:7211](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7211)
-
 ***
 
 ### instance()
 
 > `static` **instance**(): [`TLocaleInfo`](TLocaleInfo.md)
+
+Defined in: [awtk.ts:7279](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7279)
 
 获取缺省locale_info。
 
@@ -157,7 +161,3 @@ locale_info_on返回的ID。
 #### Inherited from
 
 [`TLocaleInfo`](TLocaleInfo.md).[`instance`](TLocaleInfo.md#instance)
-
-#### Defined in
-
-[awtk.ts:7199](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7199)

@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,23 +6,27 @@
 
 # Class: TExtWidgets
 
+Defined in: [awtk.ts:13481](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13481)
+
 扩展控件。
 
 ## Constructors
 
-### new TExtWidgets()
+### Constructor
 
-> **new TExtWidgets**(): [`TExtWidgets`](TExtWidgets.md)
+> **new TExtWidgets**(): `TExtWidgets`
 
 #### Returns
 
-[`TExtWidgets`](TExtWidgets.md)
+`TExtWidgets`
 
 ## Methods
 
 ### init()
 
 > `static` **init**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:13489](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13489)
 
 初始化AWTK扩展控件。
 
@@ -31,7 +35,3 @@
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:13188](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13188)

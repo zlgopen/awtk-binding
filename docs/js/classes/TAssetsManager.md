@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TAssetsManager
 
 # Class: TAssetsManager
+
+Defined in: [awtk.ts:15647](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15647)
 
 资源管理器。
 这里的资源管理器并非Windows下的文件浏览器，而是负责对各种资源，比如字体、窗体样式、图片、界面数据、字符串和其它数据的进行集中管理的组件。引入资源管理器的目的有以下几个：
@@ -42,25 +44,25 @@ ui      UI描述数据。
 
 ## Constructors
 
-### new TAssetsManager()
+### Constructor
 
-> **new TAssetsManager**(`nativeObj`): [`TAssetsManager`](TAssetsManager.md)
+> **new TAssetsManager**(`nativeObj`): `TAssetsManager`
+
+Defined in: [awtk.ts:15649](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15649)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TAssetsManager`](TAssetsManager.md)
+`TAssetsManager`
 
 #### Overrides
 
-[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructors)
-
-#### Defined in
-
-[awtk.ts:15324](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15324)
+[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructor)
 
 ## Properties
 
@@ -68,19 +70,19 @@ ui      UI描述数据。
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:15648](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15648)
+
 #### Overrides
 
 [`TEmitter`](TEmitter.md).[`nativeObj`](TEmitter.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:15323](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15323)
 
 ## Methods
 
 ### destroy()
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2620)
 
 销毁。
 
@@ -94,15 +96,13 @@ ui      UI描述数据。
 
 [`TEmitter`](TEmitter.md).[`destroy`](TEmitter.md#destroy)
 
-#### Defined in
-
-[awtk.ts:2555](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2555)
-
 ***
 
 ### disable()
 
 > **disable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2609)
 
 禁用。
 
@@ -118,22 +118,22 @@ ui      UI描述数据。
 
 [`TEmitter`](TEmitter.md).[`disable`](TEmitter.md#disable)
 
-#### Defined in
-
-[awtk.ts:2544](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2544)
-
 ***
 
 ### dispatch()
 
 > **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2545)
+
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
 
 #### Parameters
 
-• **e**: [`TEvent`](TEvent.md)
+##### e
+
+[`TEvent`](TEvent.md)
 
 事件对象。
 
@@ -147,15 +147,13 @@ ui      UI描述数据。
 
 [`TEmitter`](TEmitter.md).[`dispatch`](TEmitter.md#dispatch)
 
-#### Defined in
-
-[awtk.ts:2480](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2480)
-
 ***
 
 ### dispatchSimpleEvent()
 
 > **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2559)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -163,7 +161,9 @@ ui      UI描述数据。
 
 #### Parameters
 
-• **type**: `number`
+##### type
+
+`number`
 
 事件类型。
 
@@ -175,15 +175,13 @@ ui      UI描述数据。
 
 [`TEmitter`](TEmitter.md).[`dispatchSimpleEvent`](TEmitter.md#dispatchsimpleevent)
 
-#### Defined in
-
-[awtk.ts:2494](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2494)
-
 ***
 
 ### enable()
 
 > **enable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2596)
 
 启用。
 
@@ -197,21 +195,21 @@ ui      UI描述数据。
 
 [`TEmitter`](TEmitter.md).[`enable`](TEmitter.md#enable)
 
-#### Defined in
-
-[awtk.ts:2531](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2531)
-
 ***
 
 ### off()
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2585)
+
 注销指定事件的处理函数。
 
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 emitter_on返回的ID。
 
@@ -225,29 +223,33 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`off`](TEmitter.md#off)
 
-#### Defined in
-
-[awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2520)
-
 ***
 
 ### on()
 
 > **on**(`etype`, `handler`, `ctx`): `number`
 
+Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2573)
+
 注册指定事件的处理函数。
 
 #### Parameters
 
-• **etype**: `number`
+##### etype
+
+`number`
 
 事件类型。
 
-• **handler**: `Function`
+##### handler
+
+`Function`
 
 事件处理函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 事件处理函数上下文。
 
@@ -261,25 +263,27 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`on`](TEmitter.md#on)
 
-#### Defined in
-
-[awtk.ts:2508](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2508)
-
 ***
 
 ### ref()
 
 > **ref**(`type`, `name`): [`TAssetInfo`](TAssetInfo.md)
 
+Defined in: [awtk.ts:15685](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15685)
+
 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
 
 #### Parameters
 
-• **type**: [`TAssetType`](../enumerations/TAssetType.md)
+##### type
+
+[`TAssetType`](../enumerations/TAssetType.md)
 
 资源的类型。
 
-• **name**: `string`
+##### name
+
+`string`
 
 资源的名称。
 
@@ -288,10 +292,6 @@ emitter_on返回的ID。
 [`TAssetInfo`](TAssetInfo.md)
 
 返回资源。
-
-#### Defined in
-
-[awtk.ts:15360](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15360)
 
 ***
 
@@ -299,19 +299,27 @@ emitter_on返回的ID。
 
 > **refEx**(`type`, `subtype`, `name`): [`TAssetInfo`](TAssetInfo.md)
 
+Defined in: [awtk.ts:15699](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15699)
+
 在资源管理器的缓存中查找指定的资源并引用它，如果缓存中不存在，尝试加载该资源。
 
 #### Parameters
 
-• **type**: [`TAssetType`](../enumerations/TAssetType.md)
+##### type
+
+[`TAssetType`](../enumerations/TAssetType.md)
 
 资源的类型。
 
-• **subtype**: `number`
+##### subtype
+
+`number`
 
 资源的子类型。
 
-• **name**: `string`
+##### name
+
+`string`
 
 资源的名称。
 
@@ -321,21 +329,21 @@ emitter_on返回的ID。
 
 返回资源。
 
-#### Defined in
-
-[awtk.ts:15374](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15374)
-
 ***
 
 ### setTheme()
 
 > **setTheme**(`theme`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:15672](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15672)
+
 设置当前的主题。
 
 #### Parameters
 
-• **theme**: `string`
+##### theme
+
+`string`
 
 主题名称。
 
@@ -345,21 +353,21 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:15347](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15347)
-
 ***
 
 ### unref()
 
 > **unref**(`info`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:15711](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15711)
+
 释放指定的资源。
 
 #### Parameters
 
-• **info**: [`TAssetInfo`](TAssetInfo.md)
+##### info
+
+[`TAssetInfo`](TAssetInfo.md)
 
 资源。
 
@@ -369,15 +377,13 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:15386](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15386)
-
 ***
 
 ### cast()
 
 > `static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
+
+Defined in: [awtk.ts:2634](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2634)
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -385,7 +391,9 @@ emitter_on返回的ID。
 
 #### Parameters
 
-• **emitter**: [`TEmitter`](TEmitter.md)
+##### emitter
+
+[`TEmitter`](TEmitter.md)
 
 emitter对象。
 
@@ -399,15 +407,13 @@ emitter对象。
 
 [`TEmitter`](TEmitter.md).[`cast`](TEmitter.md#cast)
 
-#### Defined in
-
-[awtk.ts:2569](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2569)
-
 ***
 
 ### create()
 
 > `static` **create**(): [`TEmitter`](TEmitter.md)
+
+Defined in: [awtk.ts:2532](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2532)
 
 创建emitter对象。
 
@@ -421,24 +427,18 @@ emitter对象。
 
 [`TEmitter`](TEmitter.md).[`create`](TEmitter.md#create)
 
-#### Defined in
-
-[awtk.ts:2467](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2467)
-
 ***
 
 ### instance()
 
-> `static` **instance**(): [`TAssetsManager`](TAssetsManager.md)
+> `static` **instance**(): `TAssetsManager`
+
+Defined in: [awtk.ts:15660](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15660)
 
 获取缺省资源管理器。
 
 #### Returns
 
-[`TAssetsManager`](TAssetsManager.md)
+`TAssetsManager`
 
 返回asset manager对象。
-
-#### Defined in
-
-[awtk.ts:15335](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15335)

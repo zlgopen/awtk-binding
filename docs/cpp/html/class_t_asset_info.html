@@ -91,12 +91,13 @@ Public 成员函数</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TAssetInfo</b> (const asset_info_t *nativeObj)</td></tr>
 <tr class="memitem:a61e78e5ca168f3b803bb75b7b6e9ac3b" id="r_a61e78e5ca168f3b803bb75b7b6e9ac3b"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61e78e5ca168f3b803bb75b7b6e9ac3b">GetType</a> ()</td></tr>
 <tr class="memitem:a53157e6c868a842c42a9fdf5d37dab5f" id="r_a53157e6c868a842c42a9fdf5d37dab5f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53157e6c868a842c42a9fdf5d37dab5f">GetName</a> ()</td></tr>
+<tr class="memitem:add85468ea6382850781a700f399fe86a" id="r_add85468ea6382850781a700f399fe86a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add85468ea6382850781a700f399fe86a">IsInRom</a> ()</td></tr>
+<tr class="memitem:a2428753392d5b24999f60b7f95ea994c" id="r_a2428753392d5b24999f60b7f95ea994c"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2428753392d5b24999f60b7f95ea994c">SetIsInRom</a> (bool is_in_rom)</td></tr>
 <tr class="memitem:a7c4db6c9943b9efd683cc723af6c32b6" id="r_a7c4db6c9943b9efd683cc723af6c32b6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4db6c9943b9efd683cc723af6c32b6">GetType</a> () const</td></tr>
 <tr class="memitem:accedaab423a9ae4adb98728d78ddfbb9" id="r_accedaab423a9ae4adb98728d78ddfbb9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accedaab423a9ae4adb98728d78ddfbb9">GetSubtype</a> () const</td></tr>
-<tr class="memitem:a34c7754410fbc971b5688f19c4a2a2f6" id="r_a34c7754410fbc971b5688f19c4a2a2f6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34c7754410fbc971b5688f19c4a2a2f6">GetIsInRom</a> () const</td></tr>
+<tr class="memitem:adbd5af6987db47e03c127ce399a5131f" id="r_adbd5af6987db47e03c127ce399a5131f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd5af6987db47e03c127ce399a5131f">GetFlags</a> () const</td></tr>
 <tr class="memitem:ad34495a7f8f25a83518e37da717068cd" id="r_ad34495a7f8f25a83518e37da717068cd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad34495a7f8f25a83518e37da717068cd">GetSize</a> () const</td></tr>
 <tr class="memitem:a9bf45655657ebd313a841355b8feed66" id="r_a9bf45655657ebd313a841355b8feed66"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bf45655657ebd313a841355b8feed66">GetRefcount</a> () const</td></tr>
-<tr class="memitem:a53229002b8ced2b02bb400279be075d4" id="r_a53229002b8ced2b02bb400279be075d4"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53229002b8ced2b02bb400279be075d4">GetName</a> () const</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -113,26 +114,26 @@ asset_info_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">详细描述</h2>
 <div class="textblock"><p>单个资源的描述信息。 </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">成员函数说明</h2>
-<a id="a34c7754410fbc971b5688f19c4a2a2f6" name="a34c7754410fbc971b5688f19c4a2a2f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34c7754410fbc971b5688f19c4a2a2f6">&#9670;&#160;</a></span>GetIsInRom()</h2>
+<a id="adbd5af6987db47e03c127ce399a5131f" name="adbd5af6987db47e03c127ce399a5131f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd5af6987db47e03c127ce399a5131f">&#9670;&#160;</a></span>GetFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t TAssetInfo::GetIsInRom </td>
+          <td class="memname">uint8_t TAssetInfo::GetFlags </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>资源是否在ROM中。 </p>
+<p>资源标志。 </p>
 
 </div>
 </div>
 <a id="a53157e6c868a842c42a9fdf5d37dab5f" name="a53157e6c868a842c42a9fdf5d37dab5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53157e6c868a842c42a9fdf5d37dab5f">&#9670;&#160;</a></span>GetName() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a53157e6c868a842c42a9fdf5d37dab5f">&#9670;&#160;</a></span>GetName()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,24 +148,6 @@ asset_info_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</
 </div><div class="memdoc">
 <p>获取名称。</p>
 <dl class="section return"><dt>返回</dt><dd>返回名称。 </dd></dl>
-
-</div>
-</div>
-<a id="a53229002b8ced2b02bb400279be075d4" name="a53229002b8ced2b02bb400279be075d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53229002b8ced2b02bb400279be075d4">&#9670;&#160;</a></span>GetName() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char * TAssetInfo::GetName </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>名称。 </p>
 
 </div>
 </div>
@@ -256,6 +239,50 @@ asset_info_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</
       </table>
 </div><div class="memdoc">
 <p>类型。 </p>
+
+</div>
+</div>
+<a id="add85468ea6382850781a700f399fe86a" name="add85468ea6382850781a700f399fe86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add85468ea6382850781a700f399fe86a">&#9670;&#160;</a></span>IsInRom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TAssetInfo::IsInRom </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>资源是否在ROM中。</p>
+<dl class="section return"><dt>返回</dt><dd>返回 TRUE 为在 ROM 中，返回 FALSE 则不在。 </dd></dl>
+
+</div>
+</div>
+<a id="a2428753392d5b24999f60b7f95ea994c" name="a2428753392d5b24999f60b7f95ea994c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2428753392d5b24999f60b7f95ea994c">&#9670;&#160;</a></span>SetIsInRom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ret_t TAssetInfo::SetIsInRom </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_in_rom</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置资源是否在ROM中的标记位。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_in_rom</td><td>资源是否在ROM中。</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回RET_OK表示成功，否则表示失败。 </dd></dl>
 
 </div>
 </div>

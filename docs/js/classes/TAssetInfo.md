@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Class: TAssetInfo
 
+Defined in: [awtk.ts:13630](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13630)
+
 单个资源的描述信息。
 
 ## Constructors
 
-### new TAssetInfo()
+### Constructor
 
-> **new TAssetInfo**(`nativeObj`): [`TAssetInfo`](TAssetInfo.md)
+> **new TAssetInfo**(`nativeObj`): `TAssetInfo`
+
+Defined in: [awtk.ts:13632](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13632)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TAssetInfo`](TAssetInfo.md)
-
-#### Defined in
-
-[awtk.ts:13331](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13331)
+`TAssetInfo`
 
 ## Properties
 
@@ -32,96 +34,96 @@
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:13330](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13330)
+Defined in: [awtk.ts:13631](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13631)
 
 ## Accessors
 
 ### flags
 
-> `get` **flags**(): `number`
+#### Get Signature
+
+> **get** **flags**(): `number`
+
+Defined in: [awtk.ts:13704](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13704)
 
 资源标志。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:13403](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13403)
 
 ***
 
 ### refcount
 
-> `get` **refcount**(): `number`
+#### Get Signature
+
+> **get** **refcount**(): `number`
+
+Defined in: [awtk.ts:13723](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13723)
 
 引用计数。
 is\_in\_rom == FALSE时才有效。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:13422](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13422)
 
 ***
 
 ### size
 
-> `get` **size**(): `number`
+#### Get Signature
+
+> **get** **size**(): `number`
+
+Defined in: [awtk.ts:13713](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13713)
 
 大小。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:13412](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13412)
 
 ***
 
 ### subtype
 
-> `get` **subtype**(): `number`
+#### Get Signature
+
+> **get** **subtype**(): `number`
+
+Defined in: [awtk.ts:13695](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13695)
 
 子类型。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:13394](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13394)
 
 ***
 
 ### type
 
-> `get` **type**(): `number`
+#### Get Signature
+
+> **get** **type**(): `number`
+
+Defined in: [awtk.ts:13686](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13686)
 
 类型。
 
-#### Returns
+##### Returns
 
 `number`
-
-#### Defined in
-
-[awtk.ts:13385](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13385)
 
 ## Methods
 
 ### getName()
 
 > **getName**(): `string`
+
+Defined in: [awtk.ts:13654](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13654)
 
 获取名称。
 
@@ -131,15 +133,13 @@ is\_in\_rom == FALSE时才有效。
 
 返回名称。
 
-#### Defined in
-
-[awtk.ts:13353](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13353)
-
 ***
 
 ### getType()
 
 > **getType**(): `number`
+
+Defined in: [awtk.ts:13643](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13643)
 
 获取类型。
 
@@ -149,15 +149,13 @@ is\_in\_rom == FALSE时才有效。
 
 返回类型。
 
-#### Defined in
-
-[awtk.ts:13342](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13342)
-
 ***
 
 ### isInRom()
 
 > **isInRom**(): `boolean`
+
+Defined in: [awtk.ts:13665](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13665)
 
 资源是否在ROM中。
 
@@ -167,21 +165,21 @@ is\_in\_rom == FALSE时才有效。
 
 返回 TRUE 为在 ROM 中，返回 FALSE 则不在。
 
-#### Defined in
-
-[awtk.ts:13364](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13364)
-
 ***
 
 ### setIsInRom()
 
 > **setIsInRom**(`is_in_rom`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:13677](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13677)
+
 设置资源是否在ROM中的标记位。
 
 #### Parameters
 
-• **is\_in\_rom**: `boolean`
+##### is\_in\_rom
+
+`boolean`
 
 资源是否在ROM中。
 
@@ -190,7 +188,3 @@ is\_in\_rom == FALSE时才有效。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:13376](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L13376)

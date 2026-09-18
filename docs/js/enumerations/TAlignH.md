@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TAlignH
 
 # Enumeration: TAlignH
+
+Defined in: [awtk.ts:8034](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8034)
 
 水平对齐的常量定义。
 
@@ -14,11 +16,9 @@
 
 > **CENTER**: `number`
 
+Defined in: [awtk.ts:8046](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8046)
+
 居中对齐。
-
-#### Defined in
-
-[awtk.ts:7952](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7952)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **LEFT**: `number`
 
+Defined in: [awtk.ts:8052](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8052)
+
 左边对齐。
-
-#### Defined in
-
-[awtk.ts:7958](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7958)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **NONE**: `number`
 
+Defined in: [awtk.ts:8040](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8040)
+
 无效对齐方式。
-
-#### Defined in
-
-[awtk.ts:7946](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7946)
 
 ***
 
@@ -50,8 +46,6 @@
 
 > **RIGHT**: `number`
 
+Defined in: [awtk.ts:8058](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L8058)
+
 右边对齐。
-
-#### Defined in
-
-[awtk.ts:7964](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7964)

@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Class: TImageManager
 
+Defined in: [awtk.ts:6081](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6081)
+
 图片管理器。负责加载，解码和缓存图片。
 
 ## Constructors
 
-### new TImageManager()
+### Constructor
 
-> **new TImageManager**(`nativeObj`): [`TImageManager`](TImageManager.md)
+> **new TImageManager**(`nativeObj`): `TImageManager`
+
+Defined in: [awtk.ts:6083](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6083)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TImageManager`](TImageManager.md)
-
-#### Defined in
-
-[awtk.ts:6003](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L6003)
+`TImageManager`
 
 ## Properties
 
@@ -32,9 +34,7 @@
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:6002](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L6002)
+Defined in: [awtk.ts:6082](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6082)
 
 ## Methods
 
@@ -42,16 +42,22 @@
 
 > **getBitmap**(`name`, `image`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:6108](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6108)
+
 获取指定的图片。
 先从缓存查找，如果没找到，再加载并缓存。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 图片名称。
 
-• **image**: [`TBitmap`](TBitmap.md)
+##### image
+
+[`TBitmap`](TBitmap.md)
 
 用于返回图片。
 
@@ -61,21 +67,21 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:6028](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L6028)
-
 ***
 
 ### preload()
 
 > **preload**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:6120](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6120)
+
 预加载指定的图片。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 图片名称。
 
@@ -85,24 +91,18 @@
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:6040](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L6040)
-
 ***
 
 ### instance()
 
-> `static` **instance**(): [`TImageManager`](TImageManager.md)
+> `static` **instance**(): `TImageManager`
+
+Defined in: [awtk.ts:6094](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6094)
 
 获取缺省的图片管理器。
 
 #### Returns
 
-[`TImageManager`](TImageManager.md)
+`TImageManager`
 
 返回图片管理器对象。
-
-#### Defined in
-
-[awtk.ts:6014](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L6014)

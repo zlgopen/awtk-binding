@@ -1,4 +1,4 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
@@ -6,23 +6,27 @@
 
 # Class: TGlobal
 
+Defined in: [awtk.ts:4263](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4263)
+
 TK全局对象。
 
 ## Constructors
 
-### new TGlobal()
+### Constructor
 
-> **new TGlobal**(): [`TGlobal`](TGlobal.md)
+> **new TGlobal**(): `TGlobal`
 
 #### Returns
 
-[`TGlobal`](TGlobal.md)
+`TGlobal`
 
 ## Methods
 
 ### getPointerX()
 
 > `static` **getPointerX**(): `number`
+
+Defined in: [awtk.ts:4334](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4334)
 
 获取全局指针的X坐标。
 
@@ -32,15 +36,13 @@ TK全局对象。
 
 返回全局指针的X坐标。
 
-#### Defined in
-
-[awtk.ts:4269](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4269)
-
 ***
 
 ### getPointerY()
 
 > `static` **getPointerY**(): `number`
+
+Defined in: [awtk.ts:4345](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4345)
 
 获取全局指针的Y坐标。
 
@@ -50,37 +52,45 @@ TK全局对象。
 
 返回全局指针的X坐标。
 
-#### Defined in
-
-[awtk.ts:4280](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4280)
-
 ***
 
 ### init()
 
 > `static` **init**(`w`, `h`, `app_type`, `app_name`, `app_root`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:4289](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4289)
+
 初始化TK。
 
 #### Parameters
 
-• **w**: `number`
+##### w
+
+`number`
 
 LCD宽度。
 
-• **h**: `number`
+##### h
+
+`number`
 
 LCD高度。
 
-• **app\_type**: [`TAppType`](../enumerations/TAppType.md)
+##### app\_type
+
+[`TAppType`](../enumerations/TAppType.md)
 
 应用程序的类型。
 
-• **app\_name**: `string`
+##### app\_name
+
+`string`
 
 应用程序的名称(必须为常量字符串)。
 
-• **app\_root**: `string`
+##### app\_root
+
+`string`
 
 应用程序的根目录，用于定位资源文件(必须为常量字符串)。
 
@@ -90,15 +100,13 @@ LCD高度。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:4224](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4224)
-
 ***
 
 ### isPointerPressed()
 
 > `static` **isPointerPressed**(): `boolean`
+
+Defined in: [awtk.ts:4356](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4356)
 
 获取全局指针是否按下。
 
@@ -108,15 +116,13 @@ LCD高度。
 
 返回全局指针是否按下。
 
-#### Defined in
-
-[awtk.ts:4291](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4291)
-
 ***
 
 ### preInit()
 
 > `static` **preInit**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:4273](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4273)
 
 初始化基本功能。
 > 在tk_init之前，应用程序可能需要加载配置文件，
@@ -128,15 +134,13 @@ LCD高度。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:4208](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4208)
-
 ***
 
 ### quit()
 
 > `static` **quit**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:4311](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4311)
 
 退出TK事件主循环。
 
@@ -146,21 +150,21 @@ LCD高度。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:4246](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4246)
-
 ***
 
 ### quitEx()
 
 > `static` **quitEx**(`delay`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:4323](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4323)
+
 退出TK事件主循环。
 
 #### Parameters
 
-• **delay**: `number`
+##### delay
+
+`number`
 
 延迟退出的时间(毫秒)。
 
@@ -170,15 +174,13 @@ LCD高度。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:4258](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4258)
-
 ***
 
 ### run()
 
 > `static` **run**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:4300](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4300)
 
 进入TK事件主循环。
 
@@ -187,7 +189,3 @@ LCD高度。
 [`TRet`](../enumerations/TRet.md)
 
 返回RET_OK表示成功，否则表示失败。
-
-#### Defined in
-
-[awtk.ts:4235](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L4235)

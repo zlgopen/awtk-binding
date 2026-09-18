@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TStyleMutable
 
 # Class: TStyleMutable
+
+Defined in: [awtk.ts:16859](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16859)
 
 可变的style(可实时修改并生效，主要用于在designer中被编辑的控件，或者一些特殊控件)。
 
@@ -16,25 +18,25 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 ## Constructors
 
-### new TStyleMutable()
+### Constructor
 
-> **new TStyleMutable**(`nativeObj`): [`TStyleMutable`](TStyleMutable.md)
+> **new TStyleMutable**(`nativeObj`): `TStyleMutable`
+
+Defined in: [awtk.ts:16861](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16861)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TStyleMutable`](TStyleMutable.md)
+`TStyleMutable`
 
 #### Overrides
 
-[`TStyle`](TStyle.md).[`constructor`](TStyle.md#constructors)
-
-#### Defined in
-
-[awtk.ts:16536](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16536)
+[`TStyle`](TStyle.md).[`constructor`](TStyle.md#constructor)
 
 ## Properties
 
@@ -42,35 +44,43 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:16860](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16860)
+
 #### Overrides
 
 [`TStyle`](TStyle.md).[`nativeObj`](TStyle.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:16535](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16535)
 
 ## Accessors
 
 ### name
 
-> `get` **name**(): `string`
+#### Get Signature
+
+> **get** **name**(): `string`
+
+Defined in: [awtk.ts:16922](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16922)
 
 名称。
 
-> `set` **name**(`v`): `void`
-
-#### Parameters
-
-• **v**: `string`
-
-#### Returns
+##### Returns
 
 `string`
 
-#### Defined in
+#### Set Signature
 
-[awtk.ts:16597](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16597)
+> **set** **name**(`v`): `void`
+
+Defined in: [awtk.ts:16926](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16926)
+
+##### Parameters
+
+###### v
+
+`string`
+
+##### Returns
+
+`void`
 
 ## Methods
 
@@ -78,19 +88,27 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 > **get**(`state`, `name`, `value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7786](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7786)
+
 获取指定状态的指定属性的值。
 
 #### Parameters
 
-• **state**: `string`
+##### state
+
+`string`
 
 状态。
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **value**: [`TValue`](TValue.md)
+##### value
+
+[`TValue`](TValue.md)
 
 值。
 
@@ -104,25 +122,27 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`get`](TStyle.md#get)
 
-#### Defined in
-
-[awtk.ts:7706](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7706)
-
 ***
 
 ### getInt()
 
 > **getInt**(`name`, `defval`): `number`
 
+Defined in: [awtk.ts:7746](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7746)
+
 获取指定name的整数格式的值。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **defval**: `number`
+##### defval
+
+`number`
 
 缺省值。
 
@@ -136,25 +156,27 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`getInt`](TStyle.md#getint)
 
-#### Defined in
-
-[awtk.ts:7666](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7666)
-
 ***
 
 ### getStr()
 
 > **getStr**(`name`, `defval`): `string`
 
+Defined in: [awtk.ts:7772](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7772)
+
 获取指定name的字符串格式的值。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **defval**: `string`
+##### defval
+
+`string`
 
 缺省值。
 
@@ -168,15 +190,13 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`getStr`](TStyle.md#getstr)
 
-#### Defined in
-
-[awtk.ts:7692](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7692)
-
 ***
 
 ### getStyleState()
 
 > **getStyleState**(): `string`
+
+Defined in: [awtk.ts:7827](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7827)
 
 获取风格对象的风格状态
 
@@ -190,15 +210,13 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`getStyleState`](TStyle.md#getstylestate)
 
-#### Defined in
-
-[awtk.ts:7747](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7747)
-
 ***
 
 ### getStyleType()
 
 > **getStyleType**(): `string`
+
+Defined in: [awtk.ts:7849](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7849)
 
 获取 style 的风格类型。
 
@@ -212,25 +230,27 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`getStyleType`](TStyle.md#getstyletype)
 
-#### Defined in
-
-[awtk.ts:7769](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7769)
-
 ***
 
 ### getUint()
 
 > **getUint**(`name`, `defval`): `number`
 
+Defined in: [awtk.ts:7759](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7759)
+
 获取指定name的无符号整数格式的值。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **defval**: `number`
+##### defval
+
+`number`
 
 缺省值。
 
@@ -244,15 +264,13 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`getUint`](TStyle.md#getuint)
 
-#### Defined in
-
-[awtk.ts:7679](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7679)
-
 ***
 
 ### isMutable()
 
 > **isMutable**(): `boolean`
+
+Defined in: [awtk.ts:7838](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7838)
 
 检查style是否是mutable的。
 
@@ -266,15 +284,13 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`isMutable`](TStyle.md#ismutable)
 
-#### Defined in
-
-[awtk.ts:7758](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7758)
-
 ***
 
 ### isValid()
 
 > **isValid**(): `boolean`
+
+Defined in: [awtk.ts:7733](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7733)
 
 检查style对象是否有效
 
@@ -288,21 +304,21 @@ style\_mutable也对style\_const进行了包装，当用户没修改某个值时
 
 [`TStyle`](TStyle.md).[`isValid`](TStyle.md#isvalid)
 
-#### Defined in
-
-[awtk.ts:7653](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7653)
-
 ***
 
 ### notifyWidgetStateChanged()
 
 > **notifyWidgetStateChanged**(`widget`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7722](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7722)
+
 widget状态改变时，通知style更新数据。
 
 #### Parameters
 
-• **widget**: [`TWidget`](TWidget.md)
+##### widget
+
+[`TWidget`](TWidget.md)
 
 控件对象。
 
@@ -316,29 +332,33 @@ widget状态改变时，通知style更新数据。
 
 [`TStyle`](TStyle.md).[`notifyWidgetStateChanged`](TStyle.md#notifywidgetstatechanged)
 
-#### Defined in
-
-[awtk.ts:7642](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7642)
-
 ***
 
 ### set()
 
 > **set**(`state`, `name`, `value`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7800](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7800)
+
 设置指定状态的指定属性的值(仅仅对mutable的style有效)。
 
 #### Parameters
 
-• **state**: `string`
+##### state
+
+`string`
 
 状态。
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **value**: [`TValue`](TValue.md)
+##### value
+
+[`TValue`](TValue.md)
 
 值。
 
@@ -352,29 +372,33 @@ widget状态改变时，通知style更新数据。
 
 [`TStyle`](TStyle.md).[`set`](TStyle.md#set)
 
-#### Defined in
-
-[awtk.ts:7720](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7720)
-
 ***
 
 ### setInt()
 
 > **setInt**(`state`, `name`, `val`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:16887](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16887)
+
 设置指定名称整数格式的值。
 
 #### Parameters
 
-• **state**: `string`
+##### state
+
+`string`
 
 控件状态。
 
-• **name**: `string`
+##### name
+
+`string`
 
 属性名。
 
-• **val**: `number`
+##### val
+
+`number`
 
 值。
 
@@ -384,21 +408,21 @@ widget状态改变时，通知style更新数据。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16562](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16562)
-
 ***
 
 ### setName()
 
 > **setName**(`name`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:16873](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16873)
+
 设置style的名称。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 名称。
 
@@ -408,34 +432,40 @@ widget状态改变时，通知style更新数据。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16548](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16548)
-
 ***
 
 ### updateState()
 
 > **updateState**(`theme`, `widget_type`, `style_name`, `widget_state`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:7816](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7816)
+
 更新风格对象的状态以及对应的数据
 备注：根据 widget_type 和 style_name 以及 widget_state 在 theme 对象中查找对应的数据并且更新到 style 对象中
 
 #### Parameters
 
-• **theme**: [`TTheme`](TTheme.md)
+##### theme
+
+[`TTheme`](TTheme.md)
 
 theme对象。
 
-• **widget\_type**: `string`
+##### widget\_type
+
+`string`
 
 控件的类型名。
 
-• **style\_name**: `string`
+##### style\_name
+
+`string`
 
 style的名称。
 
-• **widget\_state**: `string`
+##### widget\_state
+
+`string`
 
 控件的状态。
 
@@ -449,39 +479,37 @@ style的名称。
 
 [`TStyle`](TStyle.md).[`updateState`](TStyle.md#updatestate)
 
-#### Defined in
-
-[awtk.ts:7736](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L7736)
-
 ***
 
 ### cast()
 
-> `static` **cast**(`s`): [`TStyleMutable`](TStyleMutable.md)
+> `static` **cast**(`s`): `TStyleMutable`
+
+Defined in: [awtk.ts:16899](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16899)
 
 转换为style_mutable对象。
 
 #### Parameters
 
-• **s**: [`TStyle`](TStyle.md)
+##### s
+
+[`TStyle`](TStyle.md)
 
 style对象。
 
 #### Returns
 
-[`TStyleMutable`](TStyleMutable.md)
+`TStyleMutable`
 
 style对象。
-
-#### Defined in
-
-[awtk.ts:16574](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16574)
 
 ***
 
 ### create()
 
-> `static` **create**(`default_style`): [`TStyleMutable`](TStyleMutable.md)
+> `static` **create**(`default_style`): `TStyleMutable`
+
+Defined in: [awtk.ts:16913](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16913)
 
 创建style\_mutable对象。
 
@@ -489,16 +517,14 @@ style对象。
 
 #### Parameters
 
-• **default\_style**: [`TStyle`](TStyle.md)
+##### default\_style
+
+[`TStyle`](TStyle.md)
 
 缺省的style。
 
 #### Returns
 
-[`TStyleMutable`](TStyleMutable.md)
+`TStyleMutable`
 
 style对象。
-
-#### Defined in
-
-[awtk.ts:16588](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16588)

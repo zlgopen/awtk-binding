@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TFontManager
 
 # Class: TFontManager
+
+Defined in: [awtk.ts:16546](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16546)
 
 字体管理器，负责字体的加载和缓存管理。
 (如果使用nanovg，字体由nanovg内部管理)
@@ -15,25 +17,25 @@
 
 ## Constructors
 
-### new TFontManager()
+### Constructor
 
-> **new TFontManager**(`nativeObj`): [`TFontManager`](TFontManager.md)
+> **new TFontManager**(`nativeObj`): `TFontManager`
+
+Defined in: [awtk.ts:16548](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16548)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TFontManager`](TFontManager.md)
+`TFontManager`
 
 #### Overrides
 
-[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructors)
-
-#### Defined in
-
-[awtk.ts:16223](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16223)
+[`TEmitter`](TEmitter.md).[`constructor`](TEmitter.md#constructor)
 
 ## Properties
 
@@ -41,19 +43,19 @@
 
 > **nativeObj**: `any`
 
+Defined in: [awtk.ts:16547](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16547)
+
 #### Overrides
 
 [`TEmitter`](TEmitter.md).[`nativeObj`](TEmitter.md#nativeobj)
-
-#### Defined in
-
-[awtk.ts:16222](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16222)
 
 ## Methods
 
 ### destroy()
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2620)
 
 销毁。
 
@@ -67,15 +69,13 @@
 
 [`TEmitter`](TEmitter.md).[`destroy`](TEmitter.md#destroy)
 
-#### Defined in
-
-[awtk.ts:2555](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2555)
-
 ***
 
 ### disable()
 
 > **disable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2609)
 
 禁用。
 
@@ -91,22 +91,22 @@
 
 [`TEmitter`](TEmitter.md).[`disable`](TEmitter.md#disable)
 
-#### Defined in
-
-[awtk.ts:2544](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2544)
-
 ***
 
 ### dispatch()
 
 > **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2545)
+
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
 
 #### Parameters
 
-• **e**: [`TEvent`](TEvent.md)
+##### e
+
+[`TEvent`](TEvent.md)
 
 事件对象。
 
@@ -120,15 +120,13 @@
 
 [`TEmitter`](TEmitter.md).[`dispatch`](TEmitter.md#dispatch)
 
-#### Defined in
-
-[awtk.ts:2480](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2480)
-
 ***
 
 ### dispatchSimpleEvent()
 
 > **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2559)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -136,7 +134,9 @@
 
 #### Parameters
 
-• **type**: `number`
+##### type
+
+`number`
 
 事件类型。
 
@@ -148,15 +148,13 @@
 
 [`TEmitter`](TEmitter.md).[`dispatchSimpleEvent`](TEmitter.md#dispatchsimpleevent)
 
-#### Defined in
-
-[awtk.ts:2494](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2494)
-
 ***
 
 ### enable()
 
 > **enable**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2596)
 
 启用。
 
@@ -170,15 +168,13 @@
 
 [`TEmitter`](TEmitter.md).[`enable`](TEmitter.md#enable)
 
-#### Defined in
-
-[awtk.ts:2531](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2531)
-
 ***
 
 ### getStandardFontSize()
 
 > **getStandardFontSize**(): `boolean`
+
+Defined in: [awtk.ts:16571](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16571)
 
 获取是否使用标准字号
 
@@ -188,21 +184,21 @@
 
 返回TRUE表示使用标准字号，否则表示不是。
 
-#### Defined in
-
-[awtk.ts:16246](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16246)
-
 ***
 
 ### off()
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:2585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2585)
+
 注销指定事件的处理函数。
 
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 emitter_on返回的ID。
 
@@ -216,29 +212,33 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`off`](TEmitter.md#off)
 
-#### Defined in
-
-[awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2520)
-
 ***
 
 ### on()
 
 > **on**(`etype`, `handler`, `ctx`): `number`
 
+Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2573)
+
 注册指定事件的处理函数。
 
 #### Parameters
 
-• **etype**: `number`
+##### etype
+
+`number`
 
 事件类型。
 
-• **handler**: `Function`
+##### handler
+
+`Function`
 
 事件处理函数。
 
-• **ctx**: `any`
+##### ctx
+
+`any`
 
 事件处理函数上下文。
 
@@ -252,21 +252,21 @@ emitter_on返回的ID。
 
 [`TEmitter`](TEmitter.md).[`on`](TEmitter.md#on)
 
-#### Defined in
-
-[awtk.ts:2508](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2508)
-
 ***
 
 ### setStandardFontSize()
 
 > **setStandardFontSize**(`is_standard`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:16560](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16560)
+
 设置是否使用标准字号
 
 #### Parameters
 
-• **is\_standard**: `boolean`
+##### is\_standard
+
+`boolean`
 
 是否使用标准字号
 
@@ -276,21 +276,21 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16235](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16235)
-
 ***
 
 ### shrinkCache()
 
 > **shrinkCache**(`cache_size`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:16596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16596)
+
 清除最久没有被使用的缓冲字模。
 
 #### Parameters
 
-• **cache\_size**: `number`
+##### cache\_size
+
+`number`
 
 每种字体保留缓存字模的个数。
 
@@ -300,15 +300,13 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16271](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16271)
-
 ***
 
 ### unloadAll()
 
 > **unloadAll**(): [`TRet`](../enumerations/TRet.md)
+
+Defined in: [awtk.ts:16607](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16607)
 
 卸载全部字体。
 
@@ -318,25 +316,27 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16282](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16282)
-
 ***
 
 ### unloadFont()
 
 > **unloadFont**(`name`, `size`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:16584](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L16584)
+
 卸载指定的字体。
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 字体名，为NULL时使用缺省字体。
 
-• **size**: `number`
+##### size
+
+`number`
 
 字体的大小(矢量字体指定为0即可)。
 
@@ -346,15 +346,13 @@ emitter_on返回的ID。
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:16259](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L16259)
-
 ***
 
 ### cast()
 
 > `static` **cast**(`emitter`): [`TEmitter`](TEmitter.md)
+
+Defined in: [awtk.ts:2634](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2634)
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -362,7 +360,9 @@ emitter_on返回的ID。
 
 #### Parameters
 
-• **emitter**: [`TEmitter`](TEmitter.md)
+##### emitter
+
+[`TEmitter`](TEmitter.md)
 
 emitter对象。
 
@@ -376,15 +376,13 @@ emitter对象。
 
 [`TEmitter`](TEmitter.md).[`cast`](TEmitter.md#cast)
 
-#### Defined in
-
-[awtk.ts:2569](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2569)
-
 ***
 
 ### create()
 
 > `static` **create**(): [`TEmitter`](TEmitter.md)
+
+Defined in: [awtk.ts:2532](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2532)
 
 创建emitter对象。
 
@@ -397,7 +395,3 @@ emitter对象。
 #### Inherited from
 
 [`TEmitter`](TEmitter.md).[`create`](TEmitter.md#create)
-
-#### Defined in
-
-[awtk.ts:2467](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L2467)

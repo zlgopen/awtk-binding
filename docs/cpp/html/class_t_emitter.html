@@ -88,11 +88,16 @@ $(function() {
  <div class="center">
   <img src="class_t_emitter.png" usemap="#TEmitter_map" alt=""/>
   <map id="TEmitter_map" name="TEmitter_map">
-<area href="class_t_object.html" alt="TObject" shape="rect" coords="159,56,255,80"/>
-<area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="0,112,96,136"/>
-<area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="106,112,202,136"/>
-<area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="212,112,308,136"/>
-<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="318,112,414,136"/>
+<area href="class_t_assets_manager.html" alt="TAssetsManager" shape="rect" coords="0,56,107,80"/>
+<area href="class_t_file_chooser.html" alt="TFileChooser" shape="rect" coords="117,56,224,80"/>
+<area href="class_t_font_manager.html" alt="TFontManager" shape="rect" coords="234,56,341,80"/>
+<area href="class_t_object.html" alt="TObject" shape="rect" coords="351,56,458,80"/>
+<area href="class_t_idle_info.html" alt="TIdleInfo" shape="rect" coords="58,112,165,136"/>
+<area href="class_t_native_window.html" alt="TNativeWindow" shape="rect" coords="175,112,282,136"/>
+<area href="class_t_object_array.html" alt="TObjectArray" shape="rect" coords="292,112,399,136"/>
+<area href="class_t_object_default.html" alt="TObjectDefault" shape="rect" coords="409,112,516,136"/>
+<area href="class_t_object_hash.html" alt="TObjectHash" shape="rect" coords="526,112,633,136"/>
+<area href="class_t_timer_info.html" alt="TTimerInfo" shape="rect" coords="643,112,750,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -104,7 +109,7 @@ Public 成员函数</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>TEmitter</b> (const emitter_t *nativeObj)</td></tr>
 <tr class="memitem:a0f3943b7219c16dd7d171aaa66fad97e" id="r_a0f3943b7219c16dd7d171aaa66fad97e"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f3943b7219c16dd7d171aaa66fad97e">Dispatch</a> (<a class="el" href="class_t_event.html">TEvent</a> &amp;e)</td></tr>
 <tr class="memitem:aa371beccbd4d2792db21f4da22049673" id="r_aa371beccbd4d2792db21f4da22049673"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa371beccbd4d2792db21f4da22049673">DispatchSimpleEvent</a> (uint32_t type)</td></tr>
-<tr class="memitem:a7f882461790e6a6b9a6f313c79f46492" id="r_a7f882461790e6a6b9a6f313c79f46492"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f882461790e6a6b9a6f313c79f46492">On</a> (event_type_t etype, event_func_t handler, void *ctx)</td></tr>
+<tr class="memitem:a29404a7b2ca8b41b25d6442dfbf6863e" id="r_a29404a7b2ca8b41b25d6442dfbf6863e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29404a7b2ca8b41b25d6442dfbf6863e">On</a> (uint32_t etype, event_func_t handler, void *ctx)</td></tr>
 <tr class="memitem:ad9cfdac85eba8396ffb90a2beea66d3f" id="r_ad9cfdac85eba8396ffb90a2beea66d3f"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9cfdac85eba8396ffb90a2beea66d3f">Off</a> (uint32_t id)</td></tr>
 <tr class="memitem:a7d3788d19cabda5e7be335a8d6b713fb" id="r_a7d3788d19cabda5e7be335a8d6b713fb"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3788d19cabda5e7be335a8d6b713fb">Enable</a> ()</td></tr>
 <tr class="memitem:ab009db7ef16ca18fdf8eac10559501c0" id="r_ab009db7ef16ca18fdf8eac10559501c0"><td class="memItemLeft" align="right" valign="top">ret_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab009db7ef16ca18fdf8eac10559501c0">Disable</a> ()</td></tr>
@@ -288,8 +293,8 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
 
 </div>
 </div>
-<a id="a7f882461790e6a6b9a6f313c79f46492" name="a7f882461790e6a6b9a6f313c79f46492"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f882461790e6a6b9a6f313c79f46492">&#9670;&#160;</a></span>On()</h2>
+<a id="a29404a7b2ca8b41b25d6442dfbf6863e" name="a29404a7b2ca8b41b25d6442dfbf6863e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29404a7b2ca8b41b25d6442dfbf6863e">&#9670;&#160;</a></span>On()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +302,7 @@ emitter_t *&#160;</td><td class="memItemRight" valign="bottom"><b>nativeObj</b><
         <tr>
           <td class="memname">uint32_t TEmitter::On </td>
           <td>(</td>
-          <td class="paramtype">event_type_t</td>          <td class="paramname"><span class="paramname"><em>etype</em></span>, </td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>etype</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

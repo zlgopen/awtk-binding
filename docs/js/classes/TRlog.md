@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TRlog
 
 # Class: TRlog
+
+Defined in: [awtk.ts:15182](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15182)
 
 循环记录日志(支持多线程访问)。
 如果我们把日志写入文件中，随着时间的推移，日志文件会越来越大，最终占满这个磁盘，出现不可预料的错误。
@@ -15,21 +17,21 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 ## Constructors
 
-### new TRlog()
+### Constructor
 
-> **new TRlog**(`nativeObj`): [`TRlog`](TRlog.md)
+> **new TRlog**(`nativeObj`): `TRlog`
+
+Defined in: [awtk.ts:15184](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15184)
 
 #### Parameters
 
-• **nativeObj**: `any`
+##### nativeObj
+
+`any`
 
 #### Returns
 
-[`TRlog`](TRlog.md)
-
-#### Defined in
-
-[awtk.ts:14859](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14859)
+`TRlog`
 
 ## Properties
 
@@ -37,9 +39,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 > **nativeObj**: `any`
 
-#### Defined in
-
-[awtk.ts:14858](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14858)
+Defined in: [awtk.ts:15183](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15183)
 
 ## Methods
 
@@ -47,11 +47,15 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 > **write**(`str`): [`TRet`](../enumerations/TRet.md)
 
+Defined in: [awtk.ts:15212](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15212)
+
 写入一条日志记录。
 
 #### Parameters
 
-• **str**: `string`
+##### str
+
+`string`
 
 日志字符串。
 
@@ -61,38 +65,38 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 返回RET_OK表示成功，否则表示失败。
 
-#### Defined in
-
-[awtk.ts:14887](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14887)
-
 ***
 
 ### create()
 
-> `static` **create**(`filename_pattern`, `max_size`, `buff_size`): [`TRlog`](TRlog.md)
+> `static` **create**(`filename_pattern`, `max_size`, `buff_size`): `TRlog`
+
+Defined in: [awtk.ts:15200](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15200)
 
 创建rlog对象。
 
 #### Parameters
 
-• **filename\_pattern**: `string`
+##### filename\_pattern
+
+`string`
 
 用来确定文件名的路径和文件名。
 
-• **max\_size**: `number`
+##### max\_size
+
+`number`
 
 log文件占用最大磁盘空间(字节)。
 
-• **buff\_size**: `number`
+##### buff\_size
+
+`number`
 
 用于指定print时的buff大小。
 
 #### Returns
 
-[`TRlog`](TRlog.md)
+`TRlog`
 
 返回rlog对象。
-
-#### Defined in
-
-[awtk.ts:14875](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14875)

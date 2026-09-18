@@ -1,10 +1,12 @@
-[**AWTK**](../README.md) • **Docs**
+[**AWTK**](../README.md)
 
 ***
 
 [AWTK](../globals.md) / TRet
 
 # Enumeration: TRet
+
+Defined in: [awtk.ts:15279](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15279)
 
 函数返回值常量定义。
 
@@ -14,11 +16,9 @@
 
 > **BAD\_PARAMS**: `number`
 
+Defined in: [awtk.ts:15381](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15381)
+
 无效参数。
-
-#### Defined in
-
-[awtk.ts:15056](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15056)
 
 ***
 
@@ -26,11 +26,9 @@
 
 > **BUSY**: `number`
 
+Defined in: [awtk.ts:15321](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15321)
+
 对象忙。
-
-#### Defined in
-
-[awtk.ts:14996](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14996)
 
 ***
 
@@ -38,11 +36,9 @@
 
 > **CONTINUE**: `number`
 
+Defined in: [awtk.ts:15363](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15363)
+
 继续后续操作。
-
-#### Defined in
-
-[awtk.ts:15038](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15038)
 
 ***
 
@@ -50,11 +46,9 @@
 
 > **CRC**: `number`
 
+Defined in: [awtk.ts:15393](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15393)
+
 CRC错误。
-
-#### Defined in
-
-[awtk.ts:15068](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15068)
 
 ***
 
@@ -62,11 +56,9 @@ CRC错误。
 
 > **DONE**: `number`
 
+Defined in: [awtk.ts:15345](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15345)
+
 操作完成。
-
-#### Defined in
-
-[awtk.ts:15020](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15020)
 
 ***
 
@@ -74,11 +66,9 @@ CRC错误。
 
 > **EOS**: `number`
 
+Defined in: [awtk.ts:15405](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15405)
+
 End of Stream
-
-#### Defined in
-
-[awtk.ts:15080](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15080)
 
 ***
 
@@ -86,11 +76,9 @@ End of Stream
 
 > **EXCEED\_RANGE**: `number`
 
+Defined in: [awtk.ts:15429](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15429)
+
 超出范围。
-
-#### Defined in
-
-[awtk.ts:15104](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15104)
 
 ***
 
@@ -98,11 +86,9 @@ End of Stream
 
 > **FAIL**: `number`
 
+Defined in: [awtk.ts:15297](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15297)
+
 失败。
-
-#### Defined in
-
-[awtk.ts:14972](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14972)
 
 ***
 
@@ -110,11 +96,9 @@ End of Stream
 
 > **FOUND**: `number`
 
+Defined in: [awtk.ts:15315](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15315)
+
 找到。
-
-#### Defined in
-
-[awtk.ts:14990](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14990)
 
 ***
 
@@ -122,11 +106,9 @@ End of Stream
 
 > **INVALID\_ADDR**: `number`
 
+Defined in: [awtk.ts:15423](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15423)
+
 无效地址。
-
-#### Defined in
-
-[awtk.ts:15098](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15098)
 
 ***
 
@@ -134,11 +116,9 @@ End of Stream
 
 > **IO**: `number`
 
+Defined in: [awtk.ts:15399](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15399)
+
 IO错误。
-
-#### Defined in
-
-[awtk.ts:15074](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15074)
 
 ***
 
@@ -146,11 +126,9 @@ IO错误。
 
 > **ITEMS\_CHANGED**: `number`
 
+Defined in: [awtk.ts:15375](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15375)
+
 集合数目变化。
-
-#### Defined in
-
-[awtk.ts:15050](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15050)
 
 ***
 
@@ -158,47 +136,9 @@ IO错误。
 
 > **MAX\_NR**: `number`
 
+Defined in: [awtk.ts:15435](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15435)
+
 最大值。
-
-#### Defined in
-
-[awtk.ts:15110](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15110)
-
-***
-
-### NOT\_FOUND
-
-> **NOT\_FOUND**: `number`
-
-没找到。
-
-#### Defined in
-
-[awtk.ts:15014](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15014)
-
-***
-
-### NOT\_IMPL
-
-> **NOT\_IMPL**: `number`
-
-没有实现/不支持。
-
-#### Defined in
-
-[awtk.ts:14978](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14978)
-
-***
-
-### NOT\_MODIFIED
-
-> **NOT\_MODIFIED**: `number`
-
-没有改变。
-
-#### Defined in
-
-[awtk.ts:15086](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15086)
 
 ***
 
@@ -206,11 +146,39 @@ IO错误。
 
 > **NO\_PERMISSION**: `number`
 
+Defined in: [awtk.ts:15417](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15417)
+
 没有权限。
 
-#### Defined in
+***
 
-[awtk.ts:15092](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15092)
+### NOT\_FOUND
+
+> **NOT\_FOUND**: `number`
+
+Defined in: [awtk.ts:15339](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15339)
+
+没找到。
+
+***
+
+### NOT\_IMPL
+
+> **NOT\_IMPL**: `number`
+
+Defined in: [awtk.ts:15303](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15303)
+
+没有实现/不支持。
+
+***
+
+### NOT\_MODIFIED
+
+> **NOT\_MODIFIED**: `number`
+
+Defined in: [awtk.ts:15411](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15411)
+
+没有改变。
 
 ***
 
@@ -218,11 +186,9 @@ IO错误。
 
 > **OBJECT\_CHANGED**: `number`
 
+Defined in: [awtk.ts:15369](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15369)
+
 对象属性变化。
-
-#### Defined in
-
-[awtk.ts:15044](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15044)
 
 ***
 
@@ -230,11 +196,9 @@ IO错误。
 
 > **OK**: `number`
 
+Defined in: [awtk.ts:15285](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15285)
+
 成功。
-
-#### Defined in
-
-[awtk.ts:14960](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14960)
 
 ***
 
@@ -242,11 +206,9 @@ IO错误。
 
 > **OOM**: `number`
 
+Defined in: [awtk.ts:15291](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15291)
+
 Out of memory。
-
-#### Defined in
-
-[awtk.ts:14966](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14966)
 
 ***
 
@@ -254,11 +216,9 @@ Out of memory。
 
 > **QUIT**: `number`
 
+Defined in: [awtk.ts:15309](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15309)
+
 退出。通常用于主循环。
-
-#### Defined in
-
-[awtk.ts:14984](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L14984)
 
 ***
 
@@ -266,11 +226,9 @@ Out of memory。
 
 > **REMOVE**: `number`
 
+Defined in: [awtk.ts:15327](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15327)
+
 移出。通常用于定时器。
-
-#### Defined in
-
-[awtk.ts:15002](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15002)
 
 ***
 
@@ -278,11 +236,9 @@ Out of memory。
 
 > **REPEAT**: `number`
 
+Defined in: [awtk.ts:15333](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15333)
+
 重复。通常用于定时器。
-
-#### Defined in
-
-[awtk.ts:15008](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15008)
 
 ***
 
@@ -290,11 +246,9 @@ Out of memory。
 
 > **SKIP**: `number`
 
+Defined in: [awtk.ts:15357](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15357)
+
 跳过当前项。
-
-#### Defined in
-
-[awtk.ts:15032](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15032)
 
 ***
 
@@ -302,11 +256,9 @@ Out of memory。
 
 > **STOP**: `number`
 
+Defined in: [awtk.ts:15351](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15351)
+
 停止后续操作。
-
-#### Defined in
-
-[awtk.ts:15026](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15026)
 
 ***
 
@@ -314,8 +266,6 @@ Out of memory。
 
 > **TIMEOUT**: `number`
 
+Defined in: [awtk.ts:15387](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15387)
+
 超时。
-
-#### Defined in
-
-[awtk.ts:15062](https://github.com/zlgopen/awtk-binding/blob/a700388ad7cc060c10001c4cf776a40433e0a4e7/tools/code_gen/js/output/awtk.ts#L15062)
