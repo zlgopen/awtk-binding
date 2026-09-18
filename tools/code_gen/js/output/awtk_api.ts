@@ -312,20 +312,6 @@ const tk_get_pointer_y = Module.cwrap("tk_get_pointer_y",
     "number", []);
 const tk_is_pointer_pressed = Module.cwrap("tk_is_pointer_pressed", 
     "number", []);
-const BIDI_TYPE_AUTO = Module.cwrap("get_BIDI_TYPE_AUTO", 
-    "number", []);
-const BIDI_TYPE_LTR = Module.cwrap("get_BIDI_TYPE_LTR", 
-    "number", []);
-const BIDI_TYPE_RTL = Module.cwrap("get_BIDI_TYPE_RTL", 
-    "number", []);
-const BIDI_TYPE_LRO = Module.cwrap("get_BIDI_TYPE_LRO", 
-    "number", []);
-const BIDI_TYPE_RLO = Module.cwrap("get_BIDI_TYPE_RLO", 
-    "number", []);
-const BIDI_TYPE_WLTR = Module.cwrap("get_BIDI_TYPE_WLTR", 
-    "number", []);
-const BIDI_TYPE_WRTL = Module.cwrap("get_BIDI_TYPE_WRTL", 
-    "number", []);
 const IMAGE_DRAW_DEFAULT = Module.cwrap("get_IMAGE_DRAW_DEFAULT", 
     "number", []);
 const IMAGE_DRAW_CENTER = Module.cwrap("get_IMAGE_DRAW_CENTER", 
@@ -722,6 +708,20 @@ const event_t_get_prop_time = Module.cwrap("event_t_get_prop_time",
     "number", ["number"]);
 const event_t_get_prop_target = Module.cwrap("event_t_get_prop_target", 
     "number", ["number"]);
+const FONT_BIDI_TYPE_AUTO = Module.cwrap("get_FONT_BIDI_TYPE_AUTO", 
+    "number", []);
+const FONT_BIDI_TYPE_LTR = Module.cwrap("get_FONT_BIDI_TYPE_LTR", 
+    "number", []);
+const FONT_BIDI_TYPE_RTL = Module.cwrap("get_FONT_BIDI_TYPE_RTL", 
+    "number", []);
+const FONT_BIDI_TYPE_LRO = Module.cwrap("get_FONT_BIDI_TYPE_LRO", 
+    "number", []);
+const FONT_BIDI_TYPE_RLO = Module.cwrap("get_FONT_BIDI_TYPE_RLO", 
+    "number", []);
+const FONT_BIDI_TYPE_WLTR = Module.cwrap("get_FONT_BIDI_TYPE_WLTR", 
+    "number", []);
+const FONT_BIDI_TYPE_WRTL = Module.cwrap("get_FONT_BIDI_TYPE_WRTL", 
+    "number", []);
 const GLYPH_FMT_ALPHA = Module.cwrap("get_GLYPH_FMT_ALPHA", 
     "number", []);
 const GLYPH_FMT_MONO = Module.cwrap("get_GLYPH_FMT_MONO", 
@@ -1380,6 +1380,8 @@ const vgcanvas_set_text_baseline = Module.cwrap("vgcanvas_set_text_baseline",
     "number", ["number","string"]);
 const vgcanvas_fill_text = Module.cwrap("vgcanvas_fill_text", 
     "number", ["number","string","number","number","number"]);
+const vgcanvas_fill_text_by_glyphs = Module.cwrap("vgcanvas_fill_text_by_glyphs", 
+    "number", ["number","number","number","number","number","number","number"]);
 const vgcanvas_measure_text = Module.cwrap("vgcanvas_measure_text", 
     "number", ["number","string"]);
 const vgcanvas_draw_image = Module.cwrap("vgcanvas_draw_image", 
@@ -1485,6 +1487,8 @@ const WIDGET_PROP_LINE_HEIGHT = Module.cwrap("get_WIDGET_PROP_LINE_HEIGHT",
 const WIDGET_PROP_DIRTY_RECT_TOLERANCE = Module.cwrap("get_WIDGET_PROP_DIRTY_RECT_TOLERANCE", 
     "string", []);
 const WIDGET_PROP_BIDI = Module.cwrap("get_WIDGET_PROP_BIDI", 
+    "string", []);
+const WIDGET_PROP_SHAPING = Module.cwrap("get_WIDGET_PROP_SHAPING", 
     "string", []);
 const WIDGET_PROP_CANVAS = Module.cwrap("get_WIDGET_PROP_CANVAS", 
     "string", []);
@@ -4062,6 +4066,8 @@ const slide_view_t_get_prop_drag_threshold = Module.cwrap("slide_view_t_get_prop
     "number", ["number"]);
 const slide_view_t_get_prop_animating_time = Module.cwrap("slide_view_t_get_prop_animating_time", 
     "number", ["number"]);
+const slide_view_t_get_prop_active = Module.cwrap("slide_view_t_get_prop_active", 
+    "number", ["number"]);
 const switch_create = Module.cwrap("switch_create", 
     "number", ["number","number","number","number","number"]);
 const switch_set_value = Module.cwrap("switch_set_value", 
@@ -4462,6 +4468,8 @@ const edit_get_selected_text = Module.cwrap("edit_get_selected_text",
     "string", ["number"]);
 const edit_set_focus_next_when_enter = Module.cwrap("edit_set_focus_next_when_enter", 
     "number", ["number","number"]);
+const edit_set_scroll_to_begin_on_blur = Module.cwrap("edit_set_scroll_to_begin_on_blur", 
+    "number", ["number","number"]);
 const edit_t_get_prop_tips = Module.cwrap("edit_t_get_prop_tips", 
     "string", ["number"]);
 const edit_t_get_prop_tr_tips = Module.cwrap("edit_t_get_prop_tr_tips", 
@@ -4495,6 +4503,8 @@ const edit_t_get_prop_close_im_when_blured = Module.cwrap("edit_t_get_prop_close
 const edit_t_get_prop_cancelable = Module.cwrap("edit_t_get_prop_cancelable", 
     "number", ["number"]);
 const edit_t_get_prop_focus_next_when_enter = Module.cwrap("edit_t_get_prop_focus_next_when_enter", 
+    "number", ["number"]);
+const edit_t_get_prop_scroll_to_begin_on_blur = Module.cwrap("edit_t_get_prop_scroll_to_begin_on_blur", 
     "number", ["number"]);
 const grid_item_create = Module.cwrap("grid_item_create", 
     "number", ["number","number","number","number","number"]);
@@ -6876,56 +6886,6 @@ export class TGlobal {
 
 };
 /**
- * bidi 类型常量定义。
- *
- */
-export enum TBidiType {
-
-  /**
-   * 自动检查。
-   *
-   */
- AUTO = BIDI_TYPE_AUTO(),
-
-  /**
-   * Left-To-Right letter。
-   *
-   */
- LTR = BIDI_TYPE_LTR(),
-
-  /**
-   * Right-To-Left letter。
-   *
-   */
- RTL = BIDI_TYPE_RTL(),
-
-  /**
-   * Left-To-Right letter Override。
-   *
-   */
- LRO = BIDI_TYPE_LRO(),
-
-  /**
-   * Right-To-Left letter Override。
-   *
-   */
- RLO = BIDI_TYPE_RLO(),
-
-  /**
-   * Weak Left To Right paragraph。
-   *
-   */
- WLTR = BIDI_TYPE_WLTR(),
-
-  /**
-   * Weak Right To Left paragraph。
-   *
-   */
- WRTL = BIDI_TYPE_WRTL(),
-};
-
-
-/**
  * 图片绘制方法常量定义。
  *
  */
@@ -8514,6 +8474,56 @@ export class TEvent {
  }
 
 };
+/**
+ * 字库 bidi 类型常量定义。
+ *
+ */
+export enum TFontBidiType {
+
+  /**
+   * 自动检查。
+   *
+   */
+ AUTO = FONT_BIDI_TYPE_AUTO(),
+
+  /**
+   * Left-To-Right letter。
+   *
+   */
+ LTR = FONT_BIDI_TYPE_LTR(),
+
+  /**
+   * Right-To-Left letter。
+   *
+   */
+ RTL = FONT_BIDI_TYPE_RTL(),
+
+  /**
+   * Left-To-Right letter Override。
+   *
+   */
+ LRO = FONT_BIDI_TYPE_LRO(),
+
+  /**
+   * Right-To-Left letter Override。
+   *
+   */
+ RLO = FONT_BIDI_TYPE_RLO(),
+
+  /**
+   * Weak Left To Right paragraph。
+   *
+   */
+ WLTR = FONT_BIDI_TYPE_WLTR(),
+
+  /**
+   * Weak Right To Left paragraph。
+   *
+   */
+ WRTL = FONT_BIDI_TYPE_WRTL(),
+};
+
+
 /**
  * 字模格式常量定义。
  *
@@ -11258,6 +11268,23 @@ export class TVgcanvas {
 
 
   /**
+   * 绘制文本。
+   * 
+   * @param glyphs 字模列表对象。
+   * @param start 字模开始序号。
+   * @param len 字模长度。
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param max_width 最大宽度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fillTextByGlyphs(glyphs : any, start : number, len : number, x : number, y : number, max_width : number) : TRet  {
+    return vgcanvas_fill_text_by_glyphs(this != null ? (this.nativeObj || this) : null, glyphs, start, len, x, y, max_width);
+ }
+
+
+  /**
    * 测量文本的宽度。
    * 
    * @param text text
@@ -11799,6 +11826,12 @@ export enum TWidgetProp {
    *
    */
  BIDI = WIDGET_PROP_BIDI(),
+
+  /**
+   * 是否整形（harfbuzz模式下默认开启）。
+   *
+   */
+ SHAPING = WIDGET_PROP_SHAPING(),
 
   /**
    * Canvas。
@@ -26028,6 +26061,19 @@ export class TSlideView extends TWidget {
    this.setAnimatingTime(v);
  }
 
+
+  /**
+   * 当前活跃的page。
+   *
+   */
+ get active() : number {
+   return slide_view_t_get_prop_active(this.nativeObj);
+ }
+
+ set active(v : number) {
+   this.setActive(v);
+ }
+
 };
 /**
  * 开关控件。
@@ -29300,6 +29346,18 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置编辑器是否在失去焦点时滚动回开头。
+   * 
+   * @param scroll_to_begin_on_blur 是否在失去焦点时滚动回开头。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setScrollToBeginOnBlur(scroll_to_begin_on_blur : boolean) : TRet  {
+    return edit_set_scroll_to_begin_on_blur(this != null ? (this.nativeObj || this) : null, scroll_to_begin_on_blur);
+ }
+
+
+  /**
    * 输入提示。
    *
    */
@@ -29516,6 +29574,19 @@ export class TEdit extends TWidget {
 
  set focusNextWhenEnter(v : boolean) {
    this.setFocusNextWhenEnter(v);
+ }
+
+
+  /**
+   * 失去焦点时是否滚动回开头(默认 FALSE)
+   *
+   */
+ get scrollToBeginOnBlur() : boolean {
+   return edit_t_get_prop_scroll_to_begin_on_blur(this.nativeObj);
+ }
+
+ set scrollToBeginOnBlur(v : boolean) {
+   this.setScrollToBeginOnBlur(v);
  }
 
 };

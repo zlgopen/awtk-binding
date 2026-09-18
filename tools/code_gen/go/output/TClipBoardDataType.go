@@ -1,5 +1,0 @@
-type TClipBoardDataType int
-const (
-  CLIP_BOARD_DATA_TYPE_NONE TClipBoardDataType = C.CLIP_BOARD_DATA_TYPE_NONE
-  CLIP_BOARD_DATA_TYPE_TEXT TClipBoardDataType = C.CLIP_BOARD_DATA_TYPE_TEXT
-)

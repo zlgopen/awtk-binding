@@ -3307,47 +3307,6 @@
   },
   {
     "type": "enum",
-    "desc": "bidi 类型常量定义。",
-    "consts": [
-      {
-        "desc": "自动检查。",
-        "name": "BIDI_TYPE_AUTO"
-      },
-      {
-        "desc": "Left-To-Right letter。",
-        "name": "BIDI_TYPE_LTR"
-      },
-      {
-        "desc": "Right-To-Left letter。",
-        "name": "BIDI_TYPE_RTL"
-      },
-      {
-        "desc": "Left-To-Right letter Override。",
-        "name": "BIDI_TYPE_LRO"
-      },
-      {
-        "desc": "Right-To-Left letter Override。",
-        "name": "BIDI_TYPE_RLO"
-      },
-      {
-        "desc": "Weak Left To Right paragraph。",
-        "name": "BIDI_TYPE_WLTR"
-      },
-      {
-        "desc": "Weak Right To Left paragraph。",
-        "name": "BIDI_TYPE_WRTL"
-      }
-    ],
-    "header": "base/bidi.h",
-    "name": "bidi_type_t",
-    "prefix": "BIDI_TYPE_",
-    "annotation": {
-      "scriptable": true
-    },
-    "level": 1
-  },
-  {
-    "type": "enum",
     "desc": "图片绘制方法常量定义。",
     "consts": [
       {
@@ -5090,6 +5049,47 @@
     "header": "base/events.h",
     "desc": "事件基类。",
     "name": "event_t",
+    "annotation": {
+      "scriptable": true
+    },
+    "level": 1
+  },
+  {
+    "type": "enum",
+    "desc": "字库 bidi 类型常量定义。",
+    "consts": [
+      {
+        "desc": "自动检查。",
+        "name": "FONT_BIDI_TYPE_AUTO"
+      },
+      {
+        "desc": "Left-To-Right letter。",
+        "name": "FONT_BIDI_TYPE_LTR"
+      },
+      {
+        "desc": "Right-To-Left letter。",
+        "name": "FONT_BIDI_TYPE_RTL"
+      },
+      {
+        "desc": "Left-To-Right letter Override。",
+        "name": "FONT_BIDI_TYPE_LRO"
+      },
+      {
+        "desc": "Right-To-Left letter Override。",
+        "name": "FONT_BIDI_TYPE_RLO"
+      },
+      {
+        "desc": "Weak Left To Right paragraph。",
+        "name": "FONT_BIDI_TYPE_WLTR"
+      },
+      {
+        "desc": "Weak Right To Left paragraph。",
+        "name": "FONT_BIDI_TYPE_WRTL"
+      }
+    ],
+    "header": "base/font.h",
+    "name": "font_bidi_type_t",
+    "prefix": "FONT_BIDI_TYPE_",
     "annotation": {
       "scriptable": true
     },
@@ -8312,6 +8312,54 @@
             "desc": "vgcanvas对象。"
           },
           {
+            "type": "glyphs_t*",
+            "name": "glyphs",
+            "desc": "字模列表对象。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "start",
+            "desc": "字模开始序号。"
+          },
+          {
+            "type": "uint32_t",
+            "name": "len",
+            "desc": "字模长度。"
+          },
+          {
+            "type": "xy_t",
+            "name": "x",
+            "desc": "x坐标。"
+          },
+          {
+            "type": "xy_t",
+            "name": "y",
+            "desc": "y坐标。"
+          },
+          {
+            "type": "float_t",
+            "name": "max_width",
+            "desc": "最大宽度。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "绘制文本。",
+        "name": "vgcanvas_fill_text_by_glyphs",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
+      },
+      {
+        "params": [
+          {
+            "type": "vgcanvas_t*",
+            "name": "vg",
+            "desc": "vgcanvas对象。"
+          },
+          {
             "type": "const char*",
             "name": "text",
             "desc": "text"
@@ -9017,6 +9065,10 @@
       {
         "desc": "bidi type(rtl,ltr,auto,wrtl,wltr,lro,rlo)。",
         "name": "WIDGET_PROP_BIDI"
+      },
+      {
+        "desc": "是否整形（harfbuzz模式下默认开启）。",
+        "name": "WIDGET_PROP_SHAPING"
       },
       {
         "desc": "Canvas。",
@@ -19325,7 +19377,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       }
     ],
@@ -21712,7 +21765,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -25363,7 +25417,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -26732,7 +26787,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -27220,7 +27276,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -27739,6 +27796,20 @@
           "design": true,
           "scriptable": true
         }
+      },
+      {
+        "name": "active",
+        "desc": "当前活跃的page。",
+        "type": "uint32_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true,
+          "inputable": true
+        }
       }
     ],
     "header": "slide_view/slide_view.h",
@@ -27865,7 +27936,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -28463,7 +28535,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -30818,7 +30891,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       }
     ],
@@ -32454,6 +32528,29 @@
           "type": "ret_t",
           "desc": "返回RET_OK表示成功，否则表示失败。"
         }
+      },
+      {
+        "params": [
+          {
+            "type": "widget_t*",
+            "name": "widget",
+            "desc": "widget对象。"
+          },
+          {
+            "type": "bool_t",
+            "name": "scroll_to_begin_on_blur",
+            "desc": "是否在失去焦点时滚动回开头。"
+          }
+        ],
+        "annotation": {
+          "scriptable": true
+        },
+        "desc": "设置编辑器是否在失去焦点时滚动回开头。",
+        "name": "edit_set_scroll_to_begin_on_blur",
+        "return": {
+          "type": "ret_t",
+          "desc": "返回RET_OK表示成功，否则表示失败。"
+        }
       }
     ],
     "events": [
@@ -32685,6 +32782,19 @@
       {
         "name": "focus_next_when_enter",
         "desc": "输入回车后是否跳到下一个控件中。",
+        "type": "bool_t",
+        "annotation": {
+          "set_prop": true,
+          "get_prop": true,
+          "readable": true,
+          "persitent": true,
+          "design": true,
+          "scriptable": true
+        }
+      },
+      {
+        "name": "scroll_to_begin_on_blur",
+        "desc": "失去焦点时是否滚动回开头(默认 FALSE)",
         "type": "bool_t",
         "annotation": {
           "set_prop": true,
@@ -33074,7 +33184,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       }
     ],
@@ -33537,7 +33648,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -34235,7 +34347,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -34815,7 +34928,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -38129,7 +38243,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {
@@ -38142,7 +38257,8 @@
           "readable": true,
           "persitent": true,
           "design": true,
-          "scriptable": true
+          "scriptable": true,
+          "inputable": true
         }
       },
       {

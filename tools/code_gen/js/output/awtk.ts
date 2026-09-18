@@ -148,13 +148,6 @@ declare function tk_quit_ex(delay : number) : TRet;
 declare function tk_get_pointer_x() : number;
 declare function tk_get_pointer_y() : number;
 declare function tk_is_pointer_pressed() : boolean;
-declare function BIDI_TYPE_AUTO():any;
-declare function BIDI_TYPE_LTR():any;
-declare function BIDI_TYPE_RTL():any;
-declare function BIDI_TYPE_LRO():any;
-declare function BIDI_TYPE_RLO():any;
-declare function BIDI_TYPE_WLTR():any;
-declare function BIDI_TYPE_WRTL():any;
 declare function IMAGE_DRAW_DEFAULT():any;
 declare function IMAGE_DRAW_CENTER():any;
 declare function IMAGE_DRAW_ICON():any;
@@ -353,6 +346,13 @@ declare function event_t_get_prop_type(nativeObj : any) : number;
 declare function event_t_get_prop_size(nativeObj : any) : number;
 declare function event_t_get_prop_time(nativeObj : any) : number;
 declare function event_t_get_prop_target(nativeObj : any) : any;
+declare function FONT_BIDI_TYPE_AUTO():any;
+declare function FONT_BIDI_TYPE_LTR():any;
+declare function FONT_BIDI_TYPE_RTL():any;
+declare function FONT_BIDI_TYPE_LRO():any;
+declare function FONT_BIDI_TYPE_RLO():any;
+declare function FONT_BIDI_TYPE_WLTR():any;
+declare function FONT_BIDI_TYPE_WRTL():any;
 declare function GLYPH_FMT_ALPHA():any;
 declare function GLYPH_FMT_MONO():any;
 declare function GLYPH_FMT_RGBA():any;
@@ -682,6 +682,7 @@ declare function vgcanvas_set_font_size(vg : any, size : number) : TRet;
 declare function vgcanvas_set_text_align(vg : any, value : string) : TRet;
 declare function vgcanvas_set_text_baseline(vg : any, value : string) : TRet;
 declare function vgcanvas_fill_text(vg : any, text : string, x : number, y : number, max_width : number) : TRet;
+declare function vgcanvas_fill_text_by_glyphs(vg : any, glyphs : any, start : number, len : number, x : number, y : number, max_width : number) : TRet;
 declare function vgcanvas_measure_text(vg : any, text : string) : number;
 declare function vgcanvas_draw_image(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number) : TRet;
 declare function vgcanvas_draw_image_repeat(vg : any, img : any, sx : number, sy : number, sw : number, sh : number, dx : number, dy : number, dw : number, dh : number, dst_w : number, dst_h : number) : TRet;
@@ -735,6 +736,7 @@ declare function WIDGET_PROP_CARET_Y():any;
 declare function WIDGET_PROP_LINE_HEIGHT():any;
 declare function WIDGET_PROP_DIRTY_RECT_TOLERANCE():any;
 declare function WIDGET_PROP_BIDI():any;
+declare function WIDGET_PROP_SHAPING():any;
 declare function WIDGET_PROP_CANVAS():any;
 declare function WIDGET_PROP_LOCALIZE_OPTIONS():any;
 declare function WIDGET_PROP_NATIVE_WINDOW():any;
@@ -2023,6 +2025,7 @@ declare function slide_view_t_get_prop_loop(nativeObj : any) : boolean;
 declare function slide_view_t_get_prop_anim_hint(nativeObj : any) : string;
 declare function slide_view_t_get_prop_drag_threshold(nativeObj : any) : number;
 declare function slide_view_t_get_prop_animating_time(nativeObj : any) : number;
+declare function slide_view_t_get_prop_active(nativeObj : any) : number;
 declare function switch_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function switch_set_value(widget : any, value : any) : TRet;
 declare function switch_cast(widget : any) : any;
@@ -2223,6 +2226,7 @@ declare function edit_get_cursor(widget : any) : number;
 declare function edit_set_select(widget : any, start : number, end : number) : TRet;
 declare function edit_get_selected_text(widget : any) : string;
 declare function edit_set_focus_next_when_enter(widget : any, focus_next_when_enter : boolean) : TRet;
+declare function edit_set_scroll_to_begin_on_blur(widget : any, scroll_to_begin_on_blur : boolean) : TRet;
 declare function edit_t_get_prop_tips(nativeObj : any) : string;
 declare function edit_t_get_prop_tr_tips(nativeObj : any) : string;
 declare function edit_t_get_prop_action_text(nativeObj : any) : string;
@@ -2240,6 +2244,7 @@ declare function edit_t_get_prop_open_im_when_focused(nativeObj : any) : boolean
 declare function edit_t_get_prop_close_im_when_blured(nativeObj : any) : boolean;
 declare function edit_t_get_prop_cancelable(nativeObj : any) : boolean;
 declare function edit_t_get_prop_focus_next_when_enter(nativeObj : any) : boolean;
+declare function edit_t_get_prop_scroll_to_begin_on_blur(nativeObj : any) : boolean;
 declare function grid_item_create(parent : any, x : number, y : number, w : number, h : number) : any;
 declare function grid_item_cast(widget : any) : any;
 declare function grid_create(parent : any, x : number, y : number, w : number, h : number) : any;
@@ -4354,56 +4359,6 @@ export class TGlobal {
 
 };
 /**
- * bidi 类型常量定义。
- *
- */
-export enum TBidiType {
-
-  /**
-   * 自动检查。
-   *
-   */
- AUTO = BIDI_TYPE_AUTO(),
-
-  /**
-   * Left-To-Right letter。
-   *
-   */
- LTR = BIDI_TYPE_LTR(),
-
-  /**
-   * Right-To-Left letter。
-   *
-   */
- RTL = BIDI_TYPE_RTL(),
-
-  /**
-   * Left-To-Right letter Override。
-   *
-   */
- LRO = BIDI_TYPE_LRO(),
-
-  /**
-   * Right-To-Left letter Override。
-   *
-   */
- RLO = BIDI_TYPE_RLO(),
-
-  /**
-   * Weak Left To Right paragraph。
-   *
-   */
- WLTR = BIDI_TYPE_WLTR(),
-
-  /**
-   * Weak Right To Left paragraph。
-   *
-   */
- WRTL = BIDI_TYPE_WRTL(),
-};
-
-
-/**
  * 图片绘制方法常量定义。
  *
  */
@@ -5992,6 +5947,56 @@ export class TEvent {
  }
 
 };
+/**
+ * 字库 bidi 类型常量定义。
+ *
+ */
+export enum TFontBidiType {
+
+  /**
+   * 自动检查。
+   *
+   */
+ AUTO = FONT_BIDI_TYPE_AUTO(),
+
+  /**
+   * Left-To-Right letter。
+   *
+   */
+ LTR = FONT_BIDI_TYPE_LTR(),
+
+  /**
+   * Right-To-Left letter。
+   *
+   */
+ RTL = FONT_BIDI_TYPE_RTL(),
+
+  /**
+   * Left-To-Right letter Override。
+   *
+   */
+ LRO = FONT_BIDI_TYPE_LRO(),
+
+  /**
+   * Right-To-Left letter Override。
+   *
+   */
+ RLO = FONT_BIDI_TYPE_RLO(),
+
+  /**
+   * Weak Left To Right paragraph。
+   *
+   */
+ WLTR = FONT_BIDI_TYPE_WLTR(),
+
+  /**
+   * Weak Right To Left paragraph。
+   *
+   */
+ WRTL = FONT_BIDI_TYPE_WRTL(),
+};
+
+
 /**
  * 字模格式常量定义。
  *
@@ -8736,6 +8741,23 @@ export class TVgcanvas {
 
 
   /**
+   * 绘制文本。
+   * 
+   * @param glyphs 字模列表对象。
+   * @param start 字模开始序号。
+   * @param len 字模长度。
+   * @param x x坐标。
+   * @param y y坐标。
+   * @param max_width 最大宽度。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ fillTextByGlyphs(glyphs : any, start : number, len : number, x : number, y : number, max_width : number) : TRet  {
+    return vgcanvas_fill_text_by_glyphs(this != null ? (this.nativeObj || this) : null, glyphs, start, len, x, y, max_width);
+ }
+
+
+  /**
    * 测量文本的宽度。
    * 
    * @param text text
@@ -9277,6 +9299,12 @@ export enum TWidgetProp {
    *
    */
  BIDI = WIDGET_PROP_BIDI(),
+
+  /**
+   * 是否整形（harfbuzz模式下默认开启）。
+   *
+   */
+ SHAPING = WIDGET_PROP_SHAPING(),
 
   /**
    * Canvas。
@@ -23505,6 +23533,19 @@ export class TSlideView extends TWidget {
    this.setAnimatingTime(v);
  }
 
+
+  /**
+   * 当前活跃的page。
+   *
+   */
+ get active() : number {
+   return slide_view_t_get_prop_active(this.nativeObj);
+ }
+
+ set active(v : number) {
+   this.setActive(v);
+ }
+
 };
 /**
  * 开关控件。
@@ -26777,6 +26818,18 @@ export class TEdit extends TWidget {
 
 
   /**
+   * 设置编辑器是否在失去焦点时滚动回开头。
+   * 
+   * @param scroll_to_begin_on_blur 是否在失去焦点时滚动回开头。
+   *
+   * @returns 返回RET_OK表示成功，否则表示失败。
+   */
+ setScrollToBeginOnBlur(scroll_to_begin_on_blur : boolean) : TRet  {
+    return edit_set_scroll_to_begin_on_blur(this != null ? (this.nativeObj || this) : null, scroll_to_begin_on_blur);
+ }
+
+
+  /**
    * 输入提示。
    *
    */
@@ -26993,6 +27046,19 @@ export class TEdit extends TWidget {
 
  set focusNextWhenEnter(v : boolean) {
    this.setFocusNextWhenEnter(v);
+ }
+
+
+  /**
+   * 失去焦点时是否滚动回开头(默认 FALSE)
+   *
+   */
+ get scrollToBeginOnBlur() : boolean {
+   return edit_t_get_prop_scroll_to_begin_on_blur(this.nativeObj);
+ }
+
+ set scrollToBeginOnBlur(v : boolean) {
+   this.setScrollToBeginOnBlur(v);
  }
 
 };

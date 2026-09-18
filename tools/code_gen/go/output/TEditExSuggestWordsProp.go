@@ -1,4 +1,0 @@
-type TEditExSuggestWordsProp string
-const (
-  EDIT_EX_SUGGEST_WORDS_PROP_FORMAT_NAME string = C.EDIT_EX_SUGGEST_WORDS_PROP_FORMAT_NAME
-)

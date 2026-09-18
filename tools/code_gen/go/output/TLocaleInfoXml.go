@@ -1,4 +1,0 @@
-type TLocaleInfoXml struct {
-  TLocaleInfo
-}
-
