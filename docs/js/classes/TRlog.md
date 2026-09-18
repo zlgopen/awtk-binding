@@ -6,7 +6,7 @@
 
 # Class: TRlog
 
-Defined in: [awtk.ts:15182](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15182)
+Defined in: [awtk.ts:15182](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15182)
 
 循环记录日志(支持多线程访问)。
 如果我们把日志写入文件中，随着时间的推移，日志文件会越来越大，最终占满这个磁盘，出现不可预料的错误。
@@ -21,7 +21,7 @@ rlog提供一个循环记录日志的功能，让日志文件始终不会超出�
 
 > **new TRlog**(`nativeObj`): `TRlog`
 
-Defined in: [awtk.ts:15184](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15184)
+Defined in: [awtk.ts:15184](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15184)
 
 #### Parameters
 
@@ -39,7 +39,7 @@ Defined in: [awtk.ts:15184](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:15183](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15183)
+Defined in: [awtk.ts:15183](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15183)
 
 ## Methods
 
@@ -47,7 +47,7 @@ Defined in: [awtk.ts:15183](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **write**(`str`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:15212](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15212)
+Defined in: [awtk.ts:15212](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15212)
 
 写入一条日志记录。
 
@@ -71,7 +71,7 @@ Defined in: [awtk.ts:15212](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **create**(`filename_pattern`, `max_size`, `buff_size`): `TRlog`
 
-Defined in: [awtk.ts:15200](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15200)
+Defined in: [awtk.ts:15200](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15200)
 
 创建rlog对象。
 

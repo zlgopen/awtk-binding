@@ -6,7 +6,7 @@
 
 # Class: TInputMethod
 
-Defined in: [awtk.ts:6245](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6245)
+Defined in: [awtk.ts:6245](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6245)
 
 输入法接口。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:6245](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **new TInputMethod**(`nativeObj`): `TInputMethod`
 
-Defined in: [awtk.ts:6247](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6247)
+Defined in: [awtk.ts:6247](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6247)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: [awtk.ts:6247](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:6246](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6246)
+Defined in: [awtk.ts:6246](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6246)
 
 ## Methods
 
@@ -52,7 +52,7 @@ Defined in: [awtk.ts:6246](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **commitText**(`text`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6259](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6259)
+Defined in: [awtk.ts:6259](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6259)
 
 提交输入文本。
 
@@ -76,7 +76,7 @@ Defined in: [awtk.ts:6259](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchKey**(`key`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6299](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6299)
+Defined in: [awtk.ts:6299](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6299)
 
 提交按键。
 
@@ -100,7 +100,7 @@ Defined in: [awtk.ts:6299](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchKeys**(`keys`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6311](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6311)
+Defined in: [awtk.ts:6311](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6311)
 
 提交按键。
 
@@ -124,7 +124,7 @@ Defined in: [awtk.ts:6311](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchPreedit**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6322](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6322)
+Defined in: [awtk.ts:6322](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6322)
 
 分发进入预编辑状态的事件。
 
@@ -140,7 +140,7 @@ Defined in: [awtk.ts:6322](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchPreeditAbort**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6344](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6344)
+Defined in: [awtk.ts:6344](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6344)
 
 分发取消预编辑状态的事件(提交预编辑内容，退出预编辑状态)。
 
@@ -156,7 +156,7 @@ Defined in: [awtk.ts:6344](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchPreeditConfirm**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6333](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6333)
+Defined in: [awtk.ts:6333](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6333)
 
 分发确认预编辑状态的事件(提交预编辑内容，退出预编辑状态)。
 
@@ -172,7 +172,7 @@ Defined in: [awtk.ts:6333](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **getLang**(): `string`
 
-Defined in: [awtk.ts:6287](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6287)
+Defined in: [awtk.ts:6287](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6287)
 
 获取语言。
 
@@ -188,7 +188,7 @@ Defined in: [awtk.ts:6287](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **setLang**(`lang`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6276](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6276)
+Defined in: [awtk.ts:6276](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6276)
 
 设置语言。
 
@@ -217,7 +217,7 @@ Defined in: [awtk.ts:6276](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **instance**(): `TInputMethod`
 
-Defined in: [awtk.ts:6355](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6355)
+Defined in: [awtk.ts:6355](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6355)
 
 获取全局输入法对象。
 

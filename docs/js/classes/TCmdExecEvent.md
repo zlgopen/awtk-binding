@@ -6,7 +6,7 @@
 
 # Class: TCmdExecEvent
 
-Defined in: [awtk.ts:24818](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24818)
+Defined in: [awtk.ts:24818](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24818)
 
 对象执行命令的事件。
 
@@ -20,7 +20,7 @@ Defined in: [awtk.ts:24818](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **new TCmdExecEvent**(`nativeObj`): `TCmdExecEvent`
 
-Defined in: [awtk.ts:24820](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24820)
+Defined in: [awtk.ts:24820](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24820)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [awtk.ts:24820](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:24819](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24819)
+Defined in: [awtk.ts:24819](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24819)
 
 #### Overrides
 
@@ -56,7 +56,7 @@ Defined in: [awtk.ts:24819](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **args**(): `string`
 
-Defined in: [awtk.ts:24850](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24850)
+Defined in: [awtk.ts:24850](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24850)
 
 命令的参数。
 
@@ -72,7 +72,7 @@ Defined in: [awtk.ts:24850](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **canExec**(): `boolean`
 
-Defined in: [awtk.ts:24868](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24868)
+Defined in: [awtk.ts:24868](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24868)
 
 标识命令是否可以执行(适用于CAN_EXEC)。
 
@@ -88,7 +88,7 @@ Defined in: [awtk.ts:24868](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **name**(): `string`
 
-Defined in: [awtk.ts:24841](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24841)
+Defined in: [awtk.ts:24841](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24841)
 
 命令的名称。
 
@@ -104,7 +104,7 @@ Defined in: [awtk.ts:24841](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **result**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:24859](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24859)
+Defined in: [awtk.ts:24859](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24859)
 
 执行结果(适用于EXECED)。
 
@@ -120,7 +120,7 @@ Defined in: [awtk.ts:24859](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **size**(): `number`
 
-Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5927)
+Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5927)
 
 结构体的大小。
 
@@ -140,7 +140,7 @@ Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **target**(): `any`
 
-Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5945)
+Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5945)
 
 事件发生的目标对象。
 
@@ -160,7 +160,7 @@ Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **time**(): `number`
 
-Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5936)
+Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5936)
 
 事件发生的时间点（该时间点并非真实时间）。
 
@@ -180,7 +180,7 @@ Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **type**(): `number`
 
-Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5918)
+Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5918)
 
 类型。
 
@@ -198,7 +198,7 @@ Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5909)
+Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5909)
 
 销毁事件对象。
 
@@ -220,7 +220,7 @@ Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **getType**(): `number`
 
-Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5882)
+Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5882)
 
 获取event类型。
 
@@ -240,7 +240,7 @@ Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **cast**(`event`): `TCmdExecEvent`
 
-Defined in: [awtk.ts:24832](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L24832)
+Defined in: [awtk.ts:24832](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L24832)
 
 把event对象转cmd_exec_event_t对象。
 
@@ -268,7 +268,7 @@ event对象。
 
 > `static` **create**(`type`): [`TEvent`](TEvent.md)
 
-Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5896)
+Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5896)
 
 创建event对象。
 
@@ -298,7 +298,7 @@ Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **fromName**(`name`): `number`
 
-Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5832)
+Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5832)
 
 将事件名转换成事件的类型。
 
@@ -326,7 +326,7 @@ Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **registerCustomName**(`event_type`, `name`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5845)
+Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5845)
 
 给事件注册名称。
 
@@ -360,7 +360,7 @@ Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **unregisterCustomName**(`name`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5857)
+Defined in: [awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5857)
 
 注销事件名称。
 

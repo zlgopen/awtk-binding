@@ -6,7 +6,7 @@
 
 # Class: TGlobal
 
-Defined in: [awtk.ts:4263](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4263)
+Defined in: [awtk.ts:4263](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4263)
 
 TK全局对象。
 
@@ -26,7 +26,7 @@ TK全局对象。
 
 > `static` **getPointerX**(): `number`
 
-Defined in: [awtk.ts:4334](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4334)
+Defined in: [awtk.ts:4334](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4334)
 
 获取全局指针的X坐标。
 
@@ -42,7 +42,7 @@ Defined in: [awtk.ts:4334](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **getPointerY**(): `number`
 
-Defined in: [awtk.ts:4345](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4345)
+Defined in: [awtk.ts:4345](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4345)
 
 获取全局指针的Y坐标。
 
@@ -58,7 +58,7 @@ Defined in: [awtk.ts:4345](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **init**(`w`, `h`, `app_type`, `app_name`, `app_root`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:4289](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4289)
+Defined in: [awtk.ts:4289](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4289)
 
 初始化TK。
 
@@ -106,7 +106,7 @@ LCD高度。
 
 > `static` **isPointerPressed**(): `boolean`
 
-Defined in: [awtk.ts:4356](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4356)
+Defined in: [awtk.ts:4356](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4356)
 
 获取全局指针是否按下。
 
@@ -122,7 +122,7 @@ Defined in: [awtk.ts:4356](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **preInit**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:4273](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4273)
+Defined in: [awtk.ts:4273](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4273)
 
 初始化基本功能。
 > 在tk_init之前，应用程序可能需要加载配置文件，
@@ -140,7 +140,7 @@ Defined in: [awtk.ts:4273](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **quit**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:4311](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4311)
+Defined in: [awtk.ts:4311](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4311)
 
 退出TK事件主循环。
 
@@ -156,7 +156,7 @@ Defined in: [awtk.ts:4311](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **quitEx**(`delay`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:4323](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4323)
+Defined in: [awtk.ts:4323](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4323)
 
 退出TK事件主循环。
 
@@ -180,7 +180,7 @@ Defined in: [awtk.ts:4323](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **run**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:4300](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L4300)
+Defined in: [awtk.ts:4300](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L4300)
 
 进入TK事件主循环。
 

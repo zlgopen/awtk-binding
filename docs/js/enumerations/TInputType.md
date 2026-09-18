@@ -6,7 +6,7 @@
 
 # Enumeration: TInputType
 
-Defined in: [awtk.ts:6129](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6129)
+Defined in: [awtk.ts:6129](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6129)
 
 输入类型常量定义。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:6129](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **ASCII**: `number`
 
-Defined in: [awtk.ts:6225](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6225)
+Defined in: [awtk.ts:6225](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6225)
 
 纯英文文本。字符串属性值：ascii
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:6225](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **CUSTOM**: `number`
 
-Defined in: [awtk.ts:6213](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6213)
+Defined in: [awtk.ts:6213](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6213)
 
 使用自定义的软键盘(如计算器等应用不希望弹出系统软键盘)。字符串属性值：custom
 
@@ -36,7 +36,7 @@ Defined in: [awtk.ts:6213](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **CUSTOM\_PASSWORD**: `number`
 
-Defined in: [awtk.ts:6219](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6219)
+Defined in: [awtk.ts:6219](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6219)
 
 使用自定义的密码软键盘。字符串属性值：custom_password
 
@@ -46,7 +46,7 @@ Defined in: [awtk.ts:6219](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **DATE**: `number`
 
-Defined in: [awtk.ts:6195](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6195)
+Defined in: [awtk.ts:6195](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6195)
 
 日期(如：2020/02/20)。字符串属性值：date
 
@@ -56,7 +56,7 @@ Defined in: [awtk.ts:6195](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **EMAIL**: `number`
 
-Defined in: [awtk.ts:6171](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6171)
+Defined in: [awtk.ts:6171](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6171)
 
 邮件地址。字符串属性值：email
 
@@ -66,7 +66,7 @@ Defined in: [awtk.ts:6171](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **FLOAT**: `number`
 
-Defined in: [awtk.ts:6159](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6159)
+Defined in: [awtk.ts:6159](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6159)
 
 浮点数。字符串属性值：float
 
@@ -76,7 +76,7 @@ Defined in: [awtk.ts:6159](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **HEX**: `number`
 
-Defined in: [awtk.ts:6153](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6153)
+Defined in: [awtk.ts:6153](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6153)
 
 16进制整数。字符串属性值：hex
 
@@ -86,7 +86,7 @@ Defined in: [awtk.ts:6153](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **INT**: `number`
 
-Defined in: [awtk.ts:6141](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6141)
+Defined in: [awtk.ts:6141](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6141)
 
 整数。字符串属性值：int
 
@@ -96,7 +96,7 @@ Defined in: [awtk.ts:6141](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **IPV4**: `number`
 
-Defined in: [awtk.ts:6189](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6189)
+Defined in: [awtk.ts:6189](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6189)
 
 IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
@@ -106,7 +106,7 @@ IP Addr V4(如：192.168.1.1)。字符串属性值：ipv4
 
 > **PASSWORD**: `number`
 
-Defined in: [awtk.ts:6177](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6177)
+Defined in: [awtk.ts:6177](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6177)
 
 密码。字符串属性值：password
 
@@ -116,7 +116,7 @@ Defined in: [awtk.ts:6177](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **PHONE**: `number`
 
-Defined in: [awtk.ts:6183](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6183)
+Defined in: [awtk.ts:6183](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6183)
 
 电话号码。字符串属性值：phone
 
@@ -126,7 +126,7 @@ Defined in: [awtk.ts:6183](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **TEXT**: `number`
 
-Defined in: [awtk.ts:6135](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6135)
+Defined in: [awtk.ts:6135](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6135)
 
 文本。字符串属性值：text
 
@@ -136,7 +136,7 @@ Defined in: [awtk.ts:6135](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **TIME**: `number`
 
-Defined in: [awtk.ts:6201](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6201)
+Defined in: [awtk.ts:6201](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6201)
 
 时间(时分，如：12:00)。字符串属性值：time
 
@@ -146,7 +146,7 @@ Defined in: [awtk.ts:6201](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **TIME\_FULL**: `number`
 
-Defined in: [awtk.ts:6207](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6207)
+Defined in: [awtk.ts:6207](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6207)
 
 时间(时分秒，如：12:00:00)。字符串属性值：time_full
 
@@ -156,7 +156,7 @@ Defined in: [awtk.ts:6207](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **UFLOAT**: `number`
 
-Defined in: [awtk.ts:6165](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6165)
+Defined in: [awtk.ts:6165](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6165)
 
 非负浮点数。字符串属性值：ufloat
 
@@ -166,6 +166,6 @@ Defined in: [awtk.ts:6165](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **UINT**: `number`
 
-Defined in: [awtk.ts:6147](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L6147)
+Defined in: [awtk.ts:6147](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6147)
 
 非负整数。字符串属性值：uint

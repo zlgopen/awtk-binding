@@ -6,7 +6,7 @@
 
 # Class: TTimeNow
 
-Defined in: [awtk.ts:15223](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15223)
+Defined in: [awtk.ts:15223](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15223)
 
 获取当前时间的函数。
 这里的当前时间是相对的，在嵌入式系统一般相对于开机时间(毫秒)。
@@ -28,7 +28,7 @@ Defined in: [awtk.ts:15223](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **ms**(): `number`
 
-Defined in: [awtk.ts:15246](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15246)
+Defined in: [awtk.ts:15246](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15246)
 
 获取当前时间(毫秒)。
 
@@ -46,7 +46,7 @@ Defined in: [awtk.ts:15246](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **s**(): `number`
 
-Defined in: [awtk.ts:15233](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15233)
+Defined in: [awtk.ts:15233](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15233)
 
 获取当前时间(秒)。
 
@@ -64,7 +64,7 @@ Defined in: [awtk.ts:15233](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **us**(): `number`
 
-Defined in: [awtk.ts:15259](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15259)
+Defined in: [awtk.ts:15259](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15259)
 
 获取当前时间(微秒)。
 

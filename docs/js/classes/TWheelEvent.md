@@ -6,7 +6,7 @@
 
 # Class: TWheelEvent
 
-Defined in: [awtk.ts:15811](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15811)
+Defined in: [awtk.ts:15811](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15811)
 
 滚轮事件。
 
@@ -20,7 +20,7 @@ Defined in: [awtk.ts:15811](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **new TWheelEvent**(`nativeObj`): `TWheelEvent`
 
-Defined in: [awtk.ts:15813](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15813)
+Defined in: [awtk.ts:15813](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15813)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [awtk.ts:15813](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:15812](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15812)
+Defined in: [awtk.ts:15812](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15812)
 
 #### Overrides
 
@@ -56,7 +56,7 @@ Defined in: [awtk.ts:15812](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **alt**(): `boolean`
 
-Defined in: [awtk.ts:15861](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15861)
+Defined in: [awtk.ts:15861](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15861)
 
 alt键是否按下。
 
@@ -72,7 +72,7 @@ alt键是否按下。
 
 > **get** **ctrl**(): `boolean`
 
-Defined in: [awtk.ts:15870](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15870)
+Defined in: [awtk.ts:15870](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15870)
 
 ctrl键是否按下。
 
@@ -88,7 +88,7 @@ ctrl键是否按下。
 
 > **get** **dy**(): `number`
 
-Defined in: [awtk.ts:15852](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15852)
+Defined in: [awtk.ts:15852](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15852)
 
 滚轮的y值。
 
@@ -104,7 +104,7 @@ Defined in: [awtk.ts:15852](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **get** **shift**(): `boolean`
 
-Defined in: [awtk.ts:15879](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15879)
+Defined in: [awtk.ts:15879](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15879)
 
 shift键是否按下。
 
@@ -120,7 +120,7 @@ shift键是否按下。
 
 > **get** **size**(): `number`
 
-Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5927)
+Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5927)
 
 结构体的大小。
 
@@ -140,7 +140,7 @@ Defined in: [awtk.ts:5927](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **target**(): `any`
 
-Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5945)
+Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5945)
 
 事件发生的目标对象。
 
@@ -160,7 +160,7 @@ Defined in: [awtk.ts:5945](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **time**(): `number`
 
-Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5936)
+Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5936)
 
 事件发生的时间点（该时间点并非真实时间）。
 
@@ -180,7 +180,7 @@ Defined in: [awtk.ts:5936](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **type**(): `number`
 
-Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5918)
+Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5918)
 
 类型。
 
@@ -200,7 +200,7 @@ Defined in: [awtk.ts:5918](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **get** **x**(): `number`
 
-Defined in: [awtk.ts:15834](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15834)
+Defined in: [awtk.ts:15834](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15834)
 
 x坐标。
 
@@ -216,7 +216,7 @@ x坐标。
 
 > **get** **y**(): `number`
 
-Defined in: [awtk.ts:15843](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15843)
+Defined in: [awtk.ts:15843](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15843)
 
 y坐标。
 
@@ -230,7 +230,7 @@ y坐标。
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5909)
+Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5909)
 
 销毁事件对象。
 
@@ -252,7 +252,7 @@ Defined in: [awtk.ts:5909](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **getType**(): `number`
 
-Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5882)
+Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5882)
 
 获取event类型。
 
@@ -272,7 +272,7 @@ Defined in: [awtk.ts:5882](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **cast**(`event`): `TWheelEvent`
 
-Defined in: [awtk.ts:15825](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15825)
+Defined in: [awtk.ts:15825](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15825)
 
 把event对象转wheel_event_t对象。
 
@@ -300,7 +300,7 @@ event对象。
 
 > `static` **create**(`type`): [`TEvent`](TEvent.md)
 
-Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5896)
+Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5896)
 
 创建event对象。
 
@@ -330,7 +330,7 @@ Defined in: [awtk.ts:5896](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **fromName**(`name`): `number`
 
-Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5832)
+Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5832)
 
 将事件名转换成事件的类型。
 
@@ -358,7 +358,7 @@ Defined in: [awtk.ts:5832](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **registerCustomName**(`event_type`, `name`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5845)
+Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5845)
 
 给事件注册名称。
 
@@ -392,7 +392,7 @@ Defined in: [awtk.ts:5845](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **unregisterCustomName**(`name`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5857)
+Defined in: [awtk.ts:5857](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5857)
 
 注销事件名称。
 

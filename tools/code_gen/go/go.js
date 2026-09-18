@@ -24,6 +24,8 @@ class GoGenerator extends TargetGen {
       return `a${name}`
     } else if (type === 'void*') {
       return `(unsafe.Pointer)(${name})`;
+    } else if (this.typeIsPointer(type)) {
+      return `(*C.${this.typeToNativeName(type)})(${name})`;
     } else {
       return `(C.${type})(${name})`;
     }
@@ -90,6 +92,8 @@ class GoGenerator extends TargetGen {
       return 'string';
     } else if (this.typeIsWString(type)) {
       return 'string';
+    } else if (this.typeIsPointer(type)) {
+      return 'unsafe.Pointer';
     } else {
       console.log(type);
       return 'int64';

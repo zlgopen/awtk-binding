@@ -6,7 +6,7 @@
 
 # Class: TTimerManager
 
-Defined in: [awtk.ts:15268](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15268)
+Defined in: [awtk.ts:15268](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15268)
 
 定时器管理器。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:15268](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **new TTimerManager**(`nativeObj`): `TTimerManager`
 
-Defined in: [awtk.ts:15270](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15270)
+Defined in: [awtk.ts:15270](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15270)
 
 #### Parameters
 
@@ -34,4 +34,4 @@ Defined in: [awtk.ts:15270](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:15269](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15269)
+Defined in: [awtk.ts:15269](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15269)

@@ -6,7 +6,7 @@
 
 # Enumeration: TVgcanvasLineJoin
 
-Defined in: [awtk.ts:9161](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9161)
+Defined in: [awtk.ts:9161](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L9161)
 
 线条连接类型。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:9161](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **BEVEL**: `number`
 
-Defined in: [awtk.ts:9173](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9173)
+Defined in: [awtk.ts:9173](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L9173)
 
 bevel。
 
@@ -26,7 +26,7 @@ bevel。
 
 > **MITTER**: `number`
 
-Defined in: [awtk.ts:9179](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9179)
+Defined in: [awtk.ts:9179](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L9179)
 
 mitter。
 
@@ -36,6 +36,6 @@ mitter。
 
 > **ROUND**: `number`
 
-Defined in: [awtk.ts:9167](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L9167)
+Defined in: [awtk.ts:9167](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L9167)
 
 round。

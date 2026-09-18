@@ -6,7 +6,7 @@
 
 # Class: TLocaleInfos
 
-Defined in: [awtk.ts:7326](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7326)
+Defined in: [awtk.ts:7326](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7326)
 
 在某些情况下，需要多个资源管理器。比如在手表系统里，每个应用或表盘，可能放在独立的资源包中，
 此时优先加载应用自己的资源，如果没有就加载系统的资源。
@@ -27,7 +27,7 @@ Defined in: [awtk.ts:7326](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **change**(`language`, `country`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7360](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7360)
+Defined in: [awtk.ts:7360](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7360)
 
 设置全部locale_info的当前国家和语言。
 
@@ -57,7 +57,7 @@ Defined in: [awtk.ts:7360](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7386](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7386)
+Defined in: [awtk.ts:7386](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7386)
 
 注销指定事件的处理函数。
 
@@ -81,7 +81,7 @@ locale_infos_on返回的ID。
 
 > `static` **on**(`type`, `on_event`, `ctx`): `number`
 
-Defined in: [awtk.ts:7374](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7374)
+Defined in: [awtk.ts:7374](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7374)
 
 注册指定事件的处理函数。
 
@@ -117,7 +117,7 @@ Defined in: [awtk.ts:7374](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **ref**(`name`): `TLocaleInfos`
 
-Defined in: [awtk.ts:7335](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7335)
+Defined in: [awtk.ts:7335](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7335)
 
 获取指定小应用程序(applet)的locale_info。
 
@@ -141,7 +141,7 @@ Defined in: [awtk.ts:7335](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **reloadAll**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7397](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7397)
+Defined in: [awtk.ts:7397](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7397)
 
 重新加载全部字符串资源。
 
@@ -157,7 +157,7 @@ Defined in: [awtk.ts:7397](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **unref**(`locale_info`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7347](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7347)
+Defined in: [awtk.ts:7347](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7347)
 
 释放指定小应用程序(applet)的locale_info。
 

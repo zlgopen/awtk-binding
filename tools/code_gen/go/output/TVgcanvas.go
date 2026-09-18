@@ -140,8 +140,8 @@ func (this TVgcanvas) FillText(text string, x float64, y float64, max_width floa
   return TRet(C.vgcanvas_fill_text((*C.vgcanvas_t)(this.handle), atext, (C.float_t)(x), (C.float_t)(y), (C.float_t)(max_width)));
 }
 
-func (this TVgcanvas) FillTextByGlyphs(glyphs int64, start uint32, len uint32, x int, y int, max_width float64) TRet {
-  return TRet(C.vgcanvas_fill_text_by_glyphs((*C.vgcanvas_t)(this.handle), (C.glyphs_t*)(glyphs), (C.uint32_t)(start), (C.uint32_t)(len), (C.xy_t)(x), (C.xy_t)(y), (C.float_t)(max_width)));
+func (this TVgcanvas) FillTextByGlyphs(glyphs unsafe.Pointer, start uint32, len uint32, x int, y int, max_width float64) TRet {
+  return TRet(C.vgcanvas_fill_text_by_glyphs((*C.vgcanvas_t)(this.handle), (*C.glyphs_t)(glyphs), (C.uint32_t)(start), (C.uint32_t)(len), (C.xy_t)(x), (C.xy_t)(y), (C.float_t)(max_width)));
 }
 
 func (this TVgcanvas) MeasureText(text string) float64 {

@@ -6,7 +6,7 @@
 
 # Class: TLocaleInfo
 
-Defined in: [awtk.ts:7266](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7266)
+Defined in: [awtk.ts:7266](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7266)
 
 本地化信息。提供字符串翻译数据管理，当前语言改变的事件通知等等。
 
@@ -20,7 +20,7 @@ Defined in: [awtk.ts:7266](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **new TLocaleInfo**(`nativeObj`): `TLocaleInfo`
 
-Defined in: [awtk.ts:7268](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7268)
+Defined in: [awtk.ts:7268](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7268)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [awtk.ts:7268](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:7267](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7267)
+Defined in: [awtk.ts:7267](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7267)
 
 ## Methods
 
@@ -46,7 +46,7 @@ Defined in: [awtk.ts:7267](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **change**(`language`, `country`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7304](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7304)
+Defined in: [awtk.ts:7304](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7304)
 
 设置当前的国家和语言。
 
@@ -76,7 +76,7 @@ Defined in: [awtk.ts:7304](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:7316](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7316)
+Defined in: [awtk.ts:7316](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7316)
 
 注销指定事件的处理函数。
 
@@ -100,7 +100,7 @@ locale_info_on返回的ID。
 
 > **tr**(`text`): `string`
 
-Defined in: [awtk.ts:7291](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7291)
+Defined in: [awtk.ts:7291](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7291)
 
 翻译字符串。
 
@@ -124,7 +124,7 @@ Defined in: [awtk.ts:7291](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **instance**(): `TLocaleInfo`
 
-Defined in: [awtk.ts:7279](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L7279)
+Defined in: [awtk.ts:7279](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7279)
 
 获取缺省locale_info。
 

@@ -6,7 +6,7 @@
 
 # Class: TExtWidgets
 
-Defined in: [awtk.ts:13481](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13481)
+Defined in: [awtk.ts:13481](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13481)
 
 扩展控件。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:13481](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **init**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13489](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13489)
+Defined in: [awtk.ts:13489](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13489)
 
 初始化AWTK扩展控件。
 

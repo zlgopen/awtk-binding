@@ -6,7 +6,7 @@
 
 # Enumeration: TEditExProp
 
-Defined in: [awtk.ts:13348](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13348)
+Defined in: [awtk.ts:13348](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13348)
 
 属性。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:13348](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IS\_SELECT\_SUGGEST\_WORD**: `number`
 
-Defined in: [awtk.ts:13437](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13437)
+Defined in: [awtk.ts:13437](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13437)
 
 是否选中输入建议词。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:13437](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **MULTILINE**: `number`
 
-Defined in: [awtk.ts:13354](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13354)
+Defined in: [awtk.ts:13354](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13354)
 
 多行编辑。
 
@@ -36,7 +36,7 @@ Defined in: [awtk.ts:13354](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **SUGGEST\_WORDS**: `number`
 
-Defined in: [awtk.ts:13360](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13360)
+Defined in: [awtk.ts:13360](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13360)
 
 输入建议词。
 
@@ -46,7 +46,7 @@ Defined in: [awtk.ts:13360](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **SUGGEST\_WORDS\_INPUT\_NAME**: `number`
 
-Defined in: [awtk.ts:13431](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13431)
+Defined in: [awtk.ts:13431](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13431)
 
 最终输入到edit控件的文本的属性名。
 > 设置了 suggest_words_item_formats 才会被用到。
@@ -57,7 +57,7 @@ Defined in: [awtk.ts:13431](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **SUGGEST\_WORDS\_ITEM\_EVEN\_STYLE**: `number`
 
-Defined in: [awtk.ts:13406](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13406)
+Defined in: [awtk.ts:13406](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13406)
 
 偶数项的样式。
 eg:
@@ -79,7 +79,7 @@ style:
 
 > **SUGGEST\_WORDS\_ITEM\_FORMATS**: `number`
 
-Defined in: [awtk.ts:13454](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13454)
+Defined in: [awtk.ts:13454](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13454)
 
 项格式。
 > 格式说明：
@@ -100,7 +100,7 @@ eg:
 
 > **SUGGEST\_WORDS\_ITEM\_ODD\_STYLE**: `number`
 
-Defined in: [awtk.ts:13388](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13388)
+Defined in: [awtk.ts:13388](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13388)
 
 奇数项的样式。
 eg:
@@ -122,7 +122,7 @@ style:
 
 > **SUGGEST\_WORDS\_ITEM\_SEPARATE\_STYLE**: `number`
 
-Defined in: [awtk.ts:13424](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13424)
+Defined in: [awtk.ts:13424](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13424)
 
 分隔线的样式。
 eg:
@@ -144,7 +144,7 @@ style:
 
 > **SUGGEST\_WORDS\_UI\_PROPS**: `number`
 
-Defined in: [awtk.ts:13370](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13370)
+Defined in: [awtk.ts:13370](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13370)
 
 输入建议词相关ui属性。
 eg:

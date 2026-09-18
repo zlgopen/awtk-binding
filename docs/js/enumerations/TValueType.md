@@ -6,7 +6,7 @@
 
 # Enumeration: TValueType
 
-Defined in: [awtk.ts:15443](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15443)
+Defined in: [awtk.ts:15443](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15443)
 
 类型常量定义。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:15443](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **BINARY**: `number`
 
-Defined in: [awtk.ts:15557](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15557)
+Defined in: [awtk.ts:15557](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15557)
 
 二进制数据。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:15557](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **BITMAP**: `number`
 
-Defined in: [awtk.ts:15605](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15605)
+Defined in: [awtk.ts:15605](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15605)
 
 位图类型。
 
@@ -36,7 +36,7 @@ Defined in: [awtk.ts:15605](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **BOOL**: `number`
 
-Defined in: [awtk.ts:15455](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15455)
+Defined in: [awtk.ts:15455](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15455)
 
 BOOL类型。
 
@@ -46,7 +46,7 @@ BOOL类型。
 
 > **DOUBLE**: `number`
 
-Defined in: [awtk.ts:15527](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15527)
+Defined in: [awtk.ts:15527](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15527)
 
 double类型。
 
@@ -56,7 +56,7 @@ double类型。
 
 > **FLOAT**: `number`
 
-Defined in: [awtk.ts:15515](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15515)
+Defined in: [awtk.ts:15515](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15515)
 
 float_t类型。
 
@@ -66,7 +66,7 @@ float_t类型。
 
 > **FLOAT32**: `number`
 
-Defined in: [awtk.ts:15521](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15521)
+Defined in: [awtk.ts:15521](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15521)
 
 float类型。
 
@@ -76,7 +76,7 @@ float类型。
 
 > **FUNC**: `number`
 
-Defined in: [awtk.ts:15587](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15587)
+Defined in: [awtk.ts:15587](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15587)
 
 func。
 
@@ -86,7 +86,7 @@ func。
 
 > **FUNC\_DEF**: `number`
 
-Defined in: [awtk.ts:15593](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15593)
+Defined in: [awtk.ts:15593](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15593)
 
 func definition。
 
@@ -96,7 +96,7 @@ func definition。
 
 > **GRADIENT**: `number`
 
-Defined in: [awtk.ts:15575](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15575)
+Defined in: [awtk.ts:15575](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15575)
 
 渐变颜色。
 
@@ -106,7 +106,7 @@ Defined in: [awtk.ts:15575](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **ID**: `number`
 
-Defined in: [awtk.ts:15581](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15581)
+Defined in: [awtk.ts:15581](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15581)
 
 id。
 
@@ -116,7 +116,7 @@ id。
 
 > **INT16**: `number`
 
-Defined in: [awtk.ts:15473](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15473)
+Defined in: [awtk.ts:15473](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15473)
 
 int16_t类型。
 
@@ -126,7 +126,7 @@ int16_t类型。
 
 > **INT32**: `number`
 
-Defined in: [awtk.ts:15485](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15485)
+Defined in: [awtk.ts:15485](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15485)
 
 int32_t类型。
 
@@ -136,7 +136,7 @@ int32_t类型。
 
 > **INT64**: `number`
 
-Defined in: [awtk.ts:15497](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15497)
+Defined in: [awtk.ts:15497](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15497)
 
 int64_t类型。
 
@@ -146,7 +146,7 @@ int64_t类型。
 
 > **INT8**: `number`
 
-Defined in: [awtk.ts:15461](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15461)
+Defined in: [awtk.ts:15461](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15461)
 
 int8_t类型。
 
@@ -156,7 +156,7 @@ int8_t类型。
 
 > **INVALID**: `number`
 
-Defined in: [awtk.ts:15449](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15449)
+Defined in: [awtk.ts:15449](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15449)
 
 无效类型。
 
@@ -166,7 +166,7 @@ Defined in: [awtk.ts:15449](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **OBJECT**: `number`
 
-Defined in: [awtk.ts:15545](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15545)
+Defined in: [awtk.ts:15545](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15545)
 
 tk_object_t*类型。
 
@@ -176,7 +176,7 @@ tk_object_t*类型。
 
 > **POINTER**: `number`
 
-Defined in: [awtk.ts:15509](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15509)
+Defined in: [awtk.ts:15509](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15509)
 
 void*类型。
 
@@ -186,7 +186,7 @@ void*类型。
 
 > **POINTER\_REF**: `number`
 
-Defined in: [awtk.ts:15599](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15599)
+Defined in: [awtk.ts:15599](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15599)
 
 void*类型。
 
@@ -196,7 +196,7 @@ void*类型。
 
 > **RECT**: `number`
 
-Defined in: [awtk.ts:15611](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15611)
+Defined in: [awtk.ts:15611](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15611)
 
 矩形类型。
 
@@ -206,7 +206,7 @@ Defined in: [awtk.ts:15611](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **SIZED\_STRING**: `number`
 
-Defined in: [awtk.ts:15551](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15551)
+Defined in: [awtk.ts:15551](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15551)
 
 带长度的字符串。
 
@@ -216,7 +216,7 @@ Defined in: [awtk.ts:15551](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **STRING**: `number`
 
-Defined in: [awtk.ts:15533](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15533)
+Defined in: [awtk.ts:15533](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15533)
 
 char*类型。
 
@@ -226,7 +226,7 @@ char*类型。
 
 > **TOKEN**: `number`
 
-Defined in: [awtk.ts:15569](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15569)
+Defined in: [awtk.ts:15569](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15569)
 
 特殊用途。
 
@@ -236,7 +236,7 @@ Defined in: [awtk.ts:15569](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **UBJSON**: `number`
 
-Defined in: [awtk.ts:15563](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15563)
+Defined in: [awtk.ts:15563](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15563)
 
 二进制数据(UBJSON)。
 
@@ -246,7 +246,7 @@ Defined in: [awtk.ts:15563](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **UINT16**: `number`
 
-Defined in: [awtk.ts:15479](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15479)
+Defined in: [awtk.ts:15479](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15479)
 
 uint16_t类型。
 
@@ -256,7 +256,7 @@ uint16_t类型。
 
 > **UINT32**: `number`
 
-Defined in: [awtk.ts:15491](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15491)
+Defined in: [awtk.ts:15491](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15491)
 
 uint32_t类型。
 
@@ -266,7 +266,7 @@ uint32_t类型。
 
 > **UINT64**: `number`
 
-Defined in: [awtk.ts:15503](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15503)
+Defined in: [awtk.ts:15503](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15503)
 
 uint64_t类型。
 
@@ -276,7 +276,7 @@ uint64_t类型。
 
 > **UINT8**: `number`
 
-Defined in: [awtk.ts:15467](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15467)
+Defined in: [awtk.ts:15467](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15467)
 
 uint8_t类型。
 
@@ -286,6 +286,6 @@ uint8_t类型。
 
 > **WSTRING**: `number`
 
-Defined in: [awtk.ts:15539](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15539)
+Defined in: [awtk.ts:15539](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15539)
 
 wchar_t*类型。

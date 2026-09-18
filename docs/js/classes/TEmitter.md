@@ -6,7 +6,7 @@
 
 # Class: TEmitter
 
-Defined in: [awtk.ts:2519](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2519)
+Defined in: [awtk.ts:2519](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2519)
 
 事件分发器, 用于实现观察者模式。
 
@@ -23,7 +23,7 @@ Defined in: [awtk.ts:2519](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **new TEmitter**(`nativeObj`): `TEmitter`
 
-Defined in: [awtk.ts:2521](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2521)
+Defined in: [awtk.ts:2521](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2521)
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Defined in: [awtk.ts:2521](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2520)
+Defined in: [awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2520)
 
 ## Methods
 
@@ -49,7 +49,7 @@ Defined in: [awtk.ts:2520](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **destroy**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2620)
+Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2620)
 
 销毁。
 
@@ -65,7 +65,7 @@ Defined in: [awtk.ts:2620](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **disable**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2609)
+Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2609)
 
 禁用。
 
@@ -83,7 +83,7 @@ Defined in: [awtk.ts:2609](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatch**(`e`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2545)
+Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2545)
 
 分发事件。如果当前分发的回调函数返回RET_REMOVE，该回调函数将被移出。
 禁用状态下，本函数不做任何事情。
@@ -108,7 +108,7 @@ Defined in: [awtk.ts:2545](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **dispatchSimpleEvent**(`type`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2559)
+Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2559)
 
 分发事件。
 > 对emitter_dispatch的包装，分发一个简单的事件。
@@ -132,7 +132,7 @@ Defined in: [awtk.ts:2559](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **enable**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2596)
+Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2596)
 
 启用。
 
@@ -148,7 +148,7 @@ Defined in: [awtk.ts:2596](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **off**(`id`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:2585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2585)
+Defined in: [awtk.ts:2585](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2585)
 
 注销指定事件的处理函数。
 
@@ -172,7 +172,7 @@ emitter_on返回的ID。
 
 > **on**(`etype`, `handler`, `ctx`): `number`
 
-Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2573)
+Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2573)
 
 注册指定事件的处理函数。
 
@@ -208,7 +208,7 @@ Defined in: [awtk.ts:2573](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > `static` **cast**(`emitter`): `TEmitter`
 
-Defined in: [awtk.ts:2634](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2634)
+Defined in: [awtk.ts:2634](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2634)
 
 转换为emitter对象(供脚本语言使用)。
 
@@ -234,7 +234,7 @@ emitter对象。
 
 > `static` **create**(): `TEmitter`
 
-Defined in: [awtk.ts:2532](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L2532)
+Defined in: [awtk.ts:2532](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L2532)
 
 创建emitter对象。
 

@@ -6,7 +6,7 @@
 
 # Enumeration: TFontBidiType
 
-Defined in: [awtk.ts:5954](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5954)
+Defined in: [awtk.ts:5954](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5954)
 
 字库 bidi 类型常量定义。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:5954](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **AUTO**: `number`
 
-Defined in: [awtk.ts:5960](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5960)
+Defined in: [awtk.ts:5960](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5960)
 
 自动检查。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:5960](https://github.com/zlgopen/awtk-binding/blob/fc6a8995
 
 > **LRO**: `number`
 
-Defined in: [awtk.ts:5978](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5978)
+Defined in: [awtk.ts:5978](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5978)
 
 Left-To-Right letter Override。
 
@@ -36,7 +36,7 @@ Left-To-Right letter Override。
 
 > **LTR**: `number`
 
-Defined in: [awtk.ts:5966](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5966)
+Defined in: [awtk.ts:5966](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5966)
 
 Left-To-Right letter。
 
@@ -46,7 +46,7 @@ Left-To-Right letter。
 
 > **RLO**: `number`
 
-Defined in: [awtk.ts:5984](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5984)
+Defined in: [awtk.ts:5984](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5984)
 
 Right-To-Left letter Override。
 
@@ -56,7 +56,7 @@ Right-To-Left letter Override。
 
 > **RTL**: `number`
 
-Defined in: [awtk.ts:5972](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5972)
+Defined in: [awtk.ts:5972](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5972)
 
 Right-To-Left letter。
 
@@ -66,7 +66,7 @@ Right-To-Left letter。
 
 > **WLTR**: `number`
 
-Defined in: [awtk.ts:5990](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5990)
+Defined in: [awtk.ts:5990](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5990)
 
 Weak Left To Right paragraph。
 
@@ -76,6 +76,6 @@ Weak Left To Right paragraph。
 
 > **WRTL**: `number`
 
-Defined in: [awtk.ts:5996](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L5996)
+Defined in: [awtk.ts:5996](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L5996)
 
 Weak Right To Left paragraph。

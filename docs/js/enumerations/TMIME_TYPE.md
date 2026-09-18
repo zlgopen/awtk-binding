@@ -6,7 +6,7 @@
 
 # Enumeration: TMIME\_TYPE
 
-Defined in: [awtk.ts:14405](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14405)
+Defined in: [awtk.ts:14405](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14405)
 
 MIME_TYPE。
 
@@ -16,7 +16,7 @@ MIME_TYPE。
 
 > **APPLICATION\_ENVOY**: `number`
 
-Defined in: [awtk.ts:14411](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14411)
+Defined in: [awtk.ts:14411](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14411)
 
 "application/envoy"。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:14411](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_FRACTALS**: `number`
 
-Defined in: [awtk.ts:14417](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14417)
+Defined in: [awtk.ts:14417](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14417)
 
 "application/fractals"。
 
@@ -36,7 +36,7 @@ Defined in: [awtk.ts:14417](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_FUTURESPLASH**: `number`
 
-Defined in: [awtk.ts:14423](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14423)
+Defined in: [awtk.ts:14423](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14423)
 
 "application/futuresplash"。
 
@@ -46,7 +46,7 @@ Defined in: [awtk.ts:14423](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_HTA**: `number`
 
-Defined in: [awtk.ts:14429](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14429)
+Defined in: [awtk.ts:14429](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14429)
 
 "application/hta"。
 
@@ -56,7 +56,7 @@ Defined in: [awtk.ts:14429](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_JSON**: `number`
 
-Defined in: [awtk.ts:14435](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14435)
+Defined in: [awtk.ts:14435](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14435)
 
 "application/json"。
 
@@ -66,7 +66,7 @@ Defined in: [awtk.ts:14435](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_MAC\_BINHEX40**: `number`
 
-Defined in: [awtk.ts:14447](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14447)
+Defined in: [awtk.ts:14447](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14447)
 
 "application/mac-binhex40"。
 
@@ -76,7 +76,7 @@ Defined in: [awtk.ts:14447](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_MSWORD**: `number`
 
-Defined in: [awtk.ts:14453](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14453)
+Defined in: [awtk.ts:14453](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14453)
 
 "application/msword"。
 
@@ -86,7 +86,7 @@ Defined in: [awtk.ts:14453](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_OCTET\_STREAM**: `number`
 
-Defined in: [awtk.ts:14459](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14459)
+Defined in: [awtk.ts:14459](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14459)
 
 "application/octet-stream"。
 
@@ -96,7 +96,7 @@ Defined in: [awtk.ts:14459](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_ODA**: `number`
 
-Defined in: [awtk.ts:14465](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14465)
+Defined in: [awtk.ts:14465](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14465)
 
 "application/oda"。
 
@@ -106,7 +106,7 @@ Defined in: [awtk.ts:14465](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_OLESCRIPT**: `number`
 
-Defined in: [awtk.ts:14471](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14471)
+Defined in: [awtk.ts:14471](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14471)
 
 "application/olescript"。
 
@@ -116,7 +116,7 @@ Defined in: [awtk.ts:14471](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_PDF**: `number`
 
-Defined in: [awtk.ts:14477](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14477)
+Defined in: [awtk.ts:14477](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14477)
 
 "application/pdf"。
 
@@ -126,7 +126,7 @@ Defined in: [awtk.ts:14477](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_PICS\_RULES**: `number`
 
-Defined in: [awtk.ts:14483](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14483)
+Defined in: [awtk.ts:14483](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14483)
 
 "application/pics-rules"。
 
@@ -136,7 +136,7 @@ Defined in: [awtk.ts:14483](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_PKCS10**: `number`
 
-Defined in: [awtk.ts:14489](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14489)
+Defined in: [awtk.ts:14489](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14489)
 
 "application/pkcs10"。
 
@@ -146,7 +146,7 @@ Defined in: [awtk.ts:14489](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_PKIX\_CRL**: `number`
 
-Defined in: [awtk.ts:14495](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14495)
+Defined in: [awtk.ts:14495](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14495)
 
 "application/pkix-crl"。
 
@@ -156,7 +156,7 @@ Defined in: [awtk.ts:14495](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_POSTSCRIPT**: `number`
 
-Defined in: [awtk.ts:14501](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14501)
+Defined in: [awtk.ts:14501](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14501)
 
 "application/postscript"。
 
@@ -166,7 +166,7 @@ Defined in: [awtk.ts:14501](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_RTF**: `number`
 
-Defined in: [awtk.ts:14507](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14507)
+Defined in: [awtk.ts:14507](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14507)
 
 "application/rtf"。
 
@@ -176,7 +176,7 @@ Defined in: [awtk.ts:14507](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_UBJSON**: `number`
 
-Defined in: [awtk.ts:14441](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14441)
+Defined in: [awtk.ts:14441](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14441)
 
 "application/ubjson"。
 
@@ -186,7 +186,7 @@ Defined in: [awtk.ts:14441](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_EXCEL**: `number`
 
-Defined in: [awtk.ts:14513](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14513)
+Defined in: [awtk.ts:14513](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14513)
 
 "application/vnd.ms-excel"。
 
@@ -196,7 +196,7 @@ Defined in: [awtk.ts:14513](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_OUTLOOK**: `number`
 
-Defined in: [awtk.ts:14519](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14519)
+Defined in: [awtk.ts:14519](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14519)
 
 "application/vnd.ms-outlook"。
 
@@ -206,7 +206,7 @@ Defined in: [awtk.ts:14519](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_PKICERTSTORE**: `number`
 
-Defined in: [awtk.ts:14525](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14525)
+Defined in: [awtk.ts:14525](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14525)
 
 "application/vnd.ms-pkicertstore"。
 
@@ -216,7 +216,7 @@ Defined in: [awtk.ts:14525](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_PKISECCAT**: `number`
 
-Defined in: [awtk.ts:14531](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14531)
+Defined in: [awtk.ts:14531](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14531)
 
 "application/vnd.ms-pkiseccat"。
 
@@ -226,7 +226,7 @@ Defined in: [awtk.ts:14531](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_PKISTL**: `number`
 
-Defined in: [awtk.ts:14537](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14537)
+Defined in: [awtk.ts:14537](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14537)
 
 "application/vnd.ms-pkistl"。
 
@@ -236,7 +236,7 @@ Defined in: [awtk.ts:14537](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_POWERPOINT**: `number`
 
-Defined in: [awtk.ts:14543](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14543)
+Defined in: [awtk.ts:14543](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14543)
 
 "application/vnd.ms-powerpoint"。
 
@@ -246,7 +246,7 @@ Defined in: [awtk.ts:14543](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_PROJECT**: `number`
 
-Defined in: [awtk.ts:14549](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14549)
+Defined in: [awtk.ts:14549](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14549)
 
 "application/vnd.ms-project"。
 
@@ -256,7 +256,7 @@ Defined in: [awtk.ts:14549](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_VND\_MS\_WORKS**: `number`
 
-Defined in: [awtk.ts:14555](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14555)
+Defined in: [awtk.ts:14555](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14555)
 
 "application/vnd.ms-works"。
 
@@ -266,7 +266,7 @@ Defined in: [awtk.ts:14555](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_WINHLP**: `number`
 
-Defined in: [awtk.ts:14561](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14561)
+Defined in: [awtk.ts:14561](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14561)
 
 "application/winhlp"。
 
@@ -276,7 +276,7 @@ Defined in: [awtk.ts:14561](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_BCPIO**: `number`
 
-Defined in: [awtk.ts:14567](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14567)
+Defined in: [awtk.ts:14567](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14567)
 
 "application/x-bcpio"。
 
@@ -286,7 +286,7 @@ Defined in: [awtk.ts:14567](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_CDF**: `number`
 
-Defined in: [awtk.ts:14573](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14573)
+Defined in: [awtk.ts:14573](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14573)
 
 "application/x-cdf"。
 
@@ -296,7 +296,7 @@ Defined in: [awtk.ts:14573](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_COMPRESS**: `number`
 
-Defined in: [awtk.ts:14579](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14579)
+Defined in: [awtk.ts:14579](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14579)
 
 "application/x-compress"。
 
@@ -306,7 +306,7 @@ Defined in: [awtk.ts:14579](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_COMPRESSED**: `number`
 
-Defined in: [awtk.ts:14585](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14585)
+Defined in: [awtk.ts:14585](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14585)
 
 "application/x-compressed"。
 
@@ -316,7 +316,7 @@ Defined in: [awtk.ts:14585](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_CPIO**: `number`
 
-Defined in: [awtk.ts:14591](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14591)
+Defined in: [awtk.ts:14591](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14591)
 
 "application/x-cpio"。
 
@@ -326,7 +326,7 @@ Defined in: [awtk.ts:14591](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_CSH**: `number`
 
-Defined in: [awtk.ts:14597](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14597)
+Defined in: [awtk.ts:14597](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14597)
 
 "application/x-csh"。
 
@@ -336,7 +336,7 @@ Defined in: [awtk.ts:14597](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_DIRECTOR**: `number`
 
-Defined in: [awtk.ts:14603](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14603)
+Defined in: [awtk.ts:14603](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14603)
 
 "application/x-director"。
 
@@ -346,7 +346,7 @@ Defined in: [awtk.ts:14603](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_DVI**: `number`
 
-Defined in: [awtk.ts:14609](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14609)
+Defined in: [awtk.ts:14609](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14609)
 
 "application/x-dvi"。
 
@@ -356,7 +356,7 @@ Defined in: [awtk.ts:14609](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_GTAR**: `number`
 
-Defined in: [awtk.ts:14615](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14615)
+Defined in: [awtk.ts:14615](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14615)
 
 "application/x-gtar"。
 
@@ -366,7 +366,7 @@ Defined in: [awtk.ts:14615](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_GZIP**: `number`
 
-Defined in: [awtk.ts:14621](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14621)
+Defined in: [awtk.ts:14621](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14621)
 
 "application/x-gzip"。
 
@@ -376,7 +376,7 @@ Defined in: [awtk.ts:14621](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_HDF**: `number`
 
-Defined in: [awtk.ts:14627](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14627)
+Defined in: [awtk.ts:14627](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14627)
 
 "application/x-hdf"。
 
@@ -386,7 +386,7 @@ Defined in: [awtk.ts:14627](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_IPHONE**: `number`
 
-Defined in: [awtk.ts:14633](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14633)
+Defined in: [awtk.ts:14633](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14633)
 
 "application/x-iphone"。
 
@@ -396,7 +396,7 @@ Defined in: [awtk.ts:14633](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_JAVASCRIPT**: `number`
 
-Defined in: [awtk.ts:14639](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14639)
+Defined in: [awtk.ts:14639](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14639)
 
 "application/x-javascript"。
 
@@ -406,7 +406,7 @@ Defined in: [awtk.ts:14639](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_LATEX**: `number`
 
-Defined in: [awtk.ts:14645](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14645)
+Defined in: [awtk.ts:14645](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14645)
 
 "application/x-latex"。
 
@@ -416,7 +416,7 @@ Defined in: [awtk.ts:14645](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSACCESS**: `number`
 
-Defined in: [awtk.ts:14651](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14651)
+Defined in: [awtk.ts:14651](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14651)
 
 "application/x-msaccess"。
 
@@ -426,7 +426,7 @@ Defined in: [awtk.ts:14651](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSCARDFILE**: `number`
 
-Defined in: [awtk.ts:14657](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14657)
+Defined in: [awtk.ts:14657](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14657)
 
 "application/x-mscardfile"。
 
@@ -436,7 +436,7 @@ Defined in: [awtk.ts:14657](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSCLIP**: `number`
 
-Defined in: [awtk.ts:14663](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14663)
+Defined in: [awtk.ts:14663](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14663)
 
 "application/x-msclip"。
 
@@ -446,7 +446,7 @@ Defined in: [awtk.ts:14663](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSDOWNLOAD**: `number`
 
-Defined in: [awtk.ts:14669](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14669)
+Defined in: [awtk.ts:14669](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14669)
 
 "application/x-msdownload"。
 
@@ -456,7 +456,7 @@ Defined in: [awtk.ts:14669](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSMEDIAVIEW**: `number`
 
-Defined in: [awtk.ts:14675](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14675)
+Defined in: [awtk.ts:14675](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14675)
 
 "application/x-msmediaview"。
 
@@ -466,7 +466,7 @@ Defined in: [awtk.ts:14675](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSMETAFILE**: `number`
 
-Defined in: [awtk.ts:14681](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14681)
+Defined in: [awtk.ts:14681](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14681)
 
 "application/x-msmetafile"。
 
@@ -476,7 +476,7 @@ Defined in: [awtk.ts:14681](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSMONEY**: `number`
 
-Defined in: [awtk.ts:14687](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14687)
+Defined in: [awtk.ts:14687](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14687)
 
 "application/x-msmoney"。
 
@@ -486,7 +486,7 @@ Defined in: [awtk.ts:14687](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSPUBLISHER**: `number`
 
-Defined in: [awtk.ts:14693](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14693)
+Defined in: [awtk.ts:14693](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14693)
 
 "application/x-mspublisher"。
 
@@ -496,7 +496,7 @@ Defined in: [awtk.ts:14693](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSSCHEDULE**: `number`
 
-Defined in: [awtk.ts:14699](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14699)
+Defined in: [awtk.ts:14699](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14699)
 
 "application/x-msschedule"。
 
@@ -506,7 +506,7 @@ Defined in: [awtk.ts:14699](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSTERMINAL**: `number`
 
-Defined in: [awtk.ts:14705](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14705)
+Defined in: [awtk.ts:14705](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14705)
 
 "application/x-msterminal"。
 
@@ -516,7 +516,7 @@ Defined in: [awtk.ts:14705](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_MSWRITE**: `number`
 
-Defined in: [awtk.ts:14711](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14711)
+Defined in: [awtk.ts:14711](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14711)
 
 "application/x-mswrite"。
 
@@ -526,7 +526,7 @@ Defined in: [awtk.ts:14711](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_NETCDF**: `number`
 
-Defined in: [awtk.ts:14717](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14717)
+Defined in: [awtk.ts:14717](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14717)
 
 "application/x-netcdf"。
 
@@ -536,7 +536,7 @@ Defined in: [awtk.ts:14717](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_PERFMON**: `number`
 
-Defined in: [awtk.ts:14723](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14723)
+Defined in: [awtk.ts:14723](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14723)
 
 "application/x-perfmon"。
 
@@ -546,7 +546,7 @@ Defined in: [awtk.ts:14723](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_PKCS12**: `number`
 
-Defined in: [awtk.ts:14729](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14729)
+Defined in: [awtk.ts:14729](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14729)
 
 "application/x-pkcs12"。
 
@@ -556,7 +556,7 @@ Defined in: [awtk.ts:14729](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_SH**: `number`
 
-Defined in: [awtk.ts:14735](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14735)
+Defined in: [awtk.ts:14735](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14735)
 
 "application/x-sh"。
 
@@ -566,7 +566,7 @@ Defined in: [awtk.ts:14735](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_SHAR**: `number`
 
-Defined in: [awtk.ts:14741](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14741)
+Defined in: [awtk.ts:14741](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14741)
 
 "application/x-shar"。
 
@@ -576,7 +576,7 @@ Defined in: [awtk.ts:14741](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_SHOCKWAVE\_FLASH**: `number`
 
-Defined in: [awtk.ts:14747](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14747)
+Defined in: [awtk.ts:14747](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14747)
 
 "application/x-shockwave-flash"。
 
@@ -586,7 +586,7 @@ Defined in: [awtk.ts:14747](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_STUFFIT**: `number`
 
-Defined in: [awtk.ts:14753](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14753)
+Defined in: [awtk.ts:14753](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14753)
 
 "application/x-stuffit"。
 
@@ -596,7 +596,7 @@ Defined in: [awtk.ts:14753](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_SV4CPIO**: `number`
 
-Defined in: [awtk.ts:14759](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14759)
+Defined in: [awtk.ts:14759](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14759)
 
 "application/x-sv4cpio"。
 
@@ -606,7 +606,7 @@ Defined in: [awtk.ts:14759](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_SV4CRC**: `number`
 
-Defined in: [awtk.ts:14765](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14765)
+Defined in: [awtk.ts:14765](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14765)
 
 "application/x-sv4crc"。
 
@@ -616,7 +616,7 @@ Defined in: [awtk.ts:14765](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_TAR**: `number`
 
-Defined in: [awtk.ts:14771](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14771)
+Defined in: [awtk.ts:14771](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14771)
 
 "application/x-tar"。
 
@@ -626,7 +626,7 @@ Defined in: [awtk.ts:14771](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_TCL**: `number`
 
-Defined in: [awtk.ts:14777](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14777)
+Defined in: [awtk.ts:14777](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14777)
 
 "application/x-tcl"。
 
@@ -636,7 +636,7 @@ Defined in: [awtk.ts:14777](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_TEX**: `number`
 
-Defined in: [awtk.ts:14783](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14783)
+Defined in: [awtk.ts:14783](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14783)
 
 "application/x-tex"。
 
@@ -646,7 +646,7 @@ Defined in: [awtk.ts:14783](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_TEXINFO**: `number`
 
-Defined in: [awtk.ts:14789](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14789)
+Defined in: [awtk.ts:14789](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14789)
 
 "application/x-texinfo"。
 
@@ -656,7 +656,7 @@ Defined in: [awtk.ts:14789](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_TROFF**: `number`
 
-Defined in: [awtk.ts:14795](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14795)
+Defined in: [awtk.ts:14795](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14795)
 
 "application/x-troff"。
 
@@ -666,7 +666,7 @@ Defined in: [awtk.ts:14795](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_X\_USTAR**: `number`
 
-Defined in: [awtk.ts:14801](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14801)
+Defined in: [awtk.ts:14801](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14801)
 
 "application/x-ustar"。
 
@@ -676,7 +676,7 @@ Defined in: [awtk.ts:14801](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **APPLICATION\_ZIP**: `number`
 
-Defined in: [awtk.ts:14807](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14807)
+Defined in: [awtk.ts:14807](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14807)
 
 "application/zip"。
 
@@ -686,7 +686,7 @@ Defined in: [awtk.ts:14807](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_BASIC**: `number`
 
-Defined in: [awtk.ts:14813](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14813)
+Defined in: [awtk.ts:14813](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14813)
 
 "audio/basic"。
 
@@ -696,7 +696,7 @@ Defined in: [awtk.ts:14813](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_MID**: `number`
 
-Defined in: [awtk.ts:14819](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14819)
+Defined in: [awtk.ts:14819](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14819)
 
 "audio/mid"。
 
@@ -706,7 +706,7 @@ Defined in: [awtk.ts:14819](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_MPEG**: `number`
 
-Defined in: [awtk.ts:14825](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14825)
+Defined in: [awtk.ts:14825](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14825)
 
 "audio/mpeg"。
 
@@ -716,7 +716,7 @@ Defined in: [awtk.ts:14825](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_X\_AIFF**: `number`
 
-Defined in: [awtk.ts:14831](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14831)
+Defined in: [awtk.ts:14831](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14831)
 
 "audio/x-aiff"。
 
@@ -726,7 +726,7 @@ Defined in: [awtk.ts:14831](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_X\_MPEGURL**: `number`
 
-Defined in: [awtk.ts:14837](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14837)
+Defined in: [awtk.ts:14837](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14837)
 
 "audio/x-mpegurl"。
 
@@ -736,7 +736,7 @@ Defined in: [awtk.ts:14837](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **AUDIO\_X\_WAV**: `number`
 
-Defined in: [awtk.ts:14843](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14843)
+Defined in: [awtk.ts:14843](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14843)
 
 "audio/x-wav"。
 
@@ -746,7 +746,7 @@ Defined in: [awtk.ts:14843](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_BMP**: `number`
 
-Defined in: [awtk.ts:14849](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14849)
+Defined in: [awtk.ts:14849](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14849)
 
 "image/bmp"。
 
@@ -756,7 +756,7 @@ Defined in: [awtk.ts:14849](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_CIS\_COD**: `number`
 
-Defined in: [awtk.ts:14855](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14855)
+Defined in: [awtk.ts:14855](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14855)
 
 "image/cis-cod"。
 
@@ -766,7 +766,7 @@ Defined in: [awtk.ts:14855](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_GIF**: `number`
 
-Defined in: [awtk.ts:14861](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14861)
+Defined in: [awtk.ts:14861](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14861)
 
 "image/gif"。
 
@@ -776,7 +776,7 @@ Defined in: [awtk.ts:14861](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_IEF**: `number`
 
-Defined in: [awtk.ts:14867](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14867)
+Defined in: [awtk.ts:14867](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14867)
 
 "image/ief"。
 
@@ -786,7 +786,7 @@ Defined in: [awtk.ts:14867](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_JPEG**: `number`
 
-Defined in: [awtk.ts:14873](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14873)
+Defined in: [awtk.ts:14873](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14873)
 
 "image/jpeg"。
 
@@ -796,7 +796,7 @@ Defined in: [awtk.ts:14873](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_PIPEG**: `number`
 
-Defined in: [awtk.ts:14879](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14879)
+Defined in: [awtk.ts:14879](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14879)
 
 "image/pipeg"。
 
@@ -806,7 +806,7 @@ Defined in: [awtk.ts:14879](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_SVG\_XML**: `number`
 
-Defined in: [awtk.ts:14885](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14885)
+Defined in: [awtk.ts:14885](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14885)
 
 "image/svg+xml"。
 
@@ -816,7 +816,7 @@ Defined in: [awtk.ts:14885](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_TIFF**: `number`
 
-Defined in: [awtk.ts:14891](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14891)
+Defined in: [awtk.ts:14891](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14891)
 
 "image/tiff"。
 
@@ -826,7 +826,7 @@ Defined in: [awtk.ts:14891](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_CMX**: `number`
 
-Defined in: [awtk.ts:14897](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14897)
+Defined in: [awtk.ts:14897](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14897)
 
 "image/x-cmx"。
 
@@ -836,7 +836,7 @@ Defined in: [awtk.ts:14897](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_ICON**: `number`
 
-Defined in: [awtk.ts:14903](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14903)
+Defined in: [awtk.ts:14903](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14903)
 
 "image/x-icon"。
 
@@ -846,7 +846,7 @@ Defined in: [awtk.ts:14903](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_RGB**: `number`
 
-Defined in: [awtk.ts:14909](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14909)
+Defined in: [awtk.ts:14909](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14909)
 
 "image/x-rgb"。
 
@@ -856,7 +856,7 @@ Defined in: [awtk.ts:14909](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_XBITMAP**: `number`
 
-Defined in: [awtk.ts:14915](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14915)
+Defined in: [awtk.ts:14915](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14915)
 
 "image/x-xbitmap"。
 
@@ -866,7 +866,7 @@ Defined in: [awtk.ts:14915](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_XPIXMAP**: `number`
 
-Defined in: [awtk.ts:14921](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14921)
+Defined in: [awtk.ts:14921](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14921)
 
 "image/x-xpixmap"。
 
@@ -876,7 +876,7 @@ Defined in: [awtk.ts:14921](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **IMAGE\_X\_XWINDOWDUMP**: `number`
 
-Defined in: [awtk.ts:14927](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14927)
+Defined in: [awtk.ts:14927](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14927)
 
 "image/x-xwindowdump"。
 
@@ -886,7 +886,7 @@ Defined in: [awtk.ts:14927](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **MESSAGE\_RFC822**: `number`
 
-Defined in: [awtk.ts:14933](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14933)
+Defined in: [awtk.ts:14933](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14933)
 
 "message/rfc822"。
 
@@ -896,7 +896,7 @@ Defined in: [awtk.ts:14933](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_CSS**: `number`
 
-Defined in: [awtk.ts:14939](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14939)
+Defined in: [awtk.ts:14939](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14939)
 
 "text/css"。
 
@@ -906,7 +906,7 @@ Defined in: [awtk.ts:14939](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_H323**: `number`
 
-Defined in: [awtk.ts:14945](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14945)
+Defined in: [awtk.ts:14945](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14945)
 
 "text/h323"。
 
@@ -916,7 +916,7 @@ Defined in: [awtk.ts:14945](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_HTML**: `number`
 
-Defined in: [awtk.ts:14951](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14951)
+Defined in: [awtk.ts:14951](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14951)
 
 "text/html"。
 
@@ -926,7 +926,7 @@ Defined in: [awtk.ts:14951](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_IULS**: `number`
 
-Defined in: [awtk.ts:14957](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14957)
+Defined in: [awtk.ts:14957](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14957)
 
 "text/iuls"。
 
@@ -936,7 +936,7 @@ Defined in: [awtk.ts:14957](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_PLAIN**: `number`
 
-Defined in: [awtk.ts:14963](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14963)
+Defined in: [awtk.ts:14963](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14963)
 
 "text/plain"。
 
@@ -946,7 +946,7 @@ Defined in: [awtk.ts:14963](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_RICHTEXT**: `number`
 
-Defined in: [awtk.ts:14969](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14969)
+Defined in: [awtk.ts:14969](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14969)
 
 "text/richtext"。
 
@@ -956,7 +956,7 @@ Defined in: [awtk.ts:14969](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_SCRIPTLET**: `number`
 
-Defined in: [awtk.ts:14975](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14975)
+Defined in: [awtk.ts:14975](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14975)
 
 "text/scriptlet"。
 
@@ -966,7 +966,7 @@ Defined in: [awtk.ts:14975](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_WEBVIEWHTML**: `number`
 
-Defined in: [awtk.ts:14981](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14981)
+Defined in: [awtk.ts:14981](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14981)
 
 "text/webviewhtml"。
 
@@ -976,7 +976,7 @@ Defined in: [awtk.ts:14981](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_X\_COMPONENT**: `number`
 
-Defined in: [awtk.ts:14987](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14987)
+Defined in: [awtk.ts:14987](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14987)
 
 "text/x-component"。
 
@@ -986,7 +986,7 @@ Defined in: [awtk.ts:14987](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_X\_SETEXT**: `number`
 
-Defined in: [awtk.ts:14993](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14993)
+Defined in: [awtk.ts:14993](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14993)
 
 "text/x-setext"。
 
@@ -996,7 +996,7 @@ Defined in: [awtk.ts:14993](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **TEXT\_X\_VCARD**: `number`
 
-Defined in: [awtk.ts:14999](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L14999)
+Defined in: [awtk.ts:14999](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14999)
 
 "text/x-vcard"。
 
@@ -1006,7 +1006,7 @@ Defined in: [awtk.ts:14999](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **VIDEO\_MPEG**: `number`
 
-Defined in: [awtk.ts:15005](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15005)
+Defined in: [awtk.ts:15005](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15005)
 
 "video/mpeg"。
 
@@ -1016,7 +1016,7 @@ Defined in: [awtk.ts:15005](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **VIDEO\_QUICKTIME**: `number`
 
-Defined in: [awtk.ts:15011](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15011)
+Defined in: [awtk.ts:15011](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15011)
 
 "video/quicktime"。
 
@@ -1026,6 +1026,6 @@ Defined in: [awtk.ts:15011](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > **VIDEO\_X\_MSVIDEO**: `number`
 
-Defined in: [awtk.ts:15017](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L15017)
+Defined in: [awtk.ts:15017](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L15017)
 
 "video/x-msvideo"。

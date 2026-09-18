@@ -6,7 +6,7 @@
 
 # Class: TAppConf
 
-Defined in: [awtk.ts:13135](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13135)
+Defined in: [awtk.ts:13135](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13135)
 
 应用程序的配置信息。
 
@@ -32,7 +32,7 @@ conf-io是可选组件，需要自己包含头文件，否则64位数据类型�
 
 > `static` **deinit**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13165](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13165)
+Defined in: [awtk.ts:13165](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13165)
 
 释放conf对象。
 
@@ -48,7 +48,7 @@ Defined in: [awtk.ts:13165](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **exist**(`key`): `boolean`
 
-Defined in: [awtk.ts:13177](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13177)
+Defined in: [awtk.ts:13177](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13177)
 
 检查配置项是否存在。
 
@@ -72,7 +72,7 @@ Defined in: [awtk.ts:13177](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **getBool**(`key`, `defval`): `boolean`
 
-Defined in: [awtk.ts:13281](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13281)
+Defined in: [awtk.ts:13281](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13281)
 
 获取bool类型配置项的值。
 
@@ -102,7 +102,7 @@ Defined in: [awtk.ts:13281](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **getDouble**(`key`, `defval`): `number`
 
-Defined in: [awtk.ts:13294](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13294)
+Defined in: [awtk.ts:13294](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13294)
 
 获取单精度浮点数类型配置项的值。
 
@@ -132,7 +132,7 @@ Defined in: [awtk.ts:13294](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **getInt**(`key`, `defval`): `number`
 
-Defined in: [awtk.ts:13255](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13255)
+Defined in: [awtk.ts:13255](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13255)
 
 获取整数类型配置项的值。
 
@@ -162,7 +162,7 @@ Defined in: [awtk.ts:13255](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **getInt64**(`key`, `defval`): `number`
 
-Defined in: [awtk.ts:13268](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13268)
+Defined in: [awtk.ts:13268](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13268)
 
 获取64位整数类型配置项的值。
 
@@ -192,7 +192,7 @@ Defined in: [awtk.ts:13268](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **getStr**(`key`, `defval`): `string`
 
-Defined in: [awtk.ts:13307](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13307)
+Defined in: [awtk.ts:13307](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13307)
 
 获取字符串类型配置项的值。
 
@@ -222,7 +222,7 @@ Defined in: [awtk.ts:13307](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **reload**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13154](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13154)
+Defined in: [awtk.ts:13154](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13154)
 
 重新加载配置(内存中的配置丢失)。
 
@@ -238,7 +238,7 @@ Defined in: [awtk.ts:13154](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **remove**(`key`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13319](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13319)
+Defined in: [awtk.ts:13319](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13319)
 
 删除配置项。
 
@@ -262,7 +262,7 @@ Defined in: [awtk.ts:13319](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **save**(): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13143](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13143)
+Defined in: [awtk.ts:13143](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13143)
 
 持久保存配置。
 
@@ -278,7 +278,7 @@ Defined in: [awtk.ts:13143](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **setBool**(`key`, `v`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13216](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13216)
+Defined in: [awtk.ts:13216](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13216)
 
 设置bool类型配置项的值。
 
@@ -308,7 +308,7 @@ Defined in: [awtk.ts:13216](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **setDouble**(`key`, `v`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13229](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13229)
+Defined in: [awtk.ts:13229](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13229)
 
 设置双精度类型配置项的值。
 
@@ -338,7 +338,7 @@ Defined in: [awtk.ts:13229](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **setInt**(`key`, `v`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13190](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13190)
+Defined in: [awtk.ts:13190](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13190)
 
 设置整数类型配置项的值。
 
@@ -368,7 +368,7 @@ Defined in: [awtk.ts:13190](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **setInt64**(`key`, `v`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13203](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13203)
+Defined in: [awtk.ts:13203](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13203)
 
 设置64位整数类型配置项的值。
 
@@ -398,7 +398,7 @@ Defined in: [awtk.ts:13203](https://github.com/zlgopen/awtk-binding/blob/fc6a899
 
 > `static` **setStr**(`key`, `v`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13242](https://github.com/zlgopen/awtk-binding/blob/fc6a89953425a78e07c6b6bfebe31f79505904bf/tools/code_gen/js/output/awtk.ts#L13242)
+Defined in: [awtk.ts:13242](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13242)
 
 设置字符串类型配置项的值。
 
