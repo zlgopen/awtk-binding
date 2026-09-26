@@ -6,7 +6,7 @@
 
 # Enumeration: TEditExSuggestWordsProp
 
-Defined in: [awtk.ts:13462](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13462)
+Defined in: [awtk.ts:13462](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L13462)
 
 属性。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:13462](https://github.com/zlgopen/awtk-binding/blob/4527754
 
 > **FORMAT\_NAME**: `number`
 
-Defined in: [awtk.ts:13473](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13473)
+Defined in: [awtk.ts:13473](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L13473)
 
 建议词源属性：使用的格式名。
 eg:

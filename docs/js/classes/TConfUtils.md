@@ -6,7 +6,7 @@
 
 # Class: TConfUtils
 
-Defined in: [awtk.ts:13328](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13328)
+Defined in: [awtk.ts:13328](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L13328)
 
 工具类。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:13328](https://github.com/zlgopen/awtk-binding/blob/4527754
 
 > `static` **objectLoadConf**(`obj`, `url`, `type`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:13339](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L13339)
+Defined in: [awtk.ts:13339](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L13339)
 
 加载配置文件到对象中。
 

@@ -6,7 +6,7 @@
 
 # Class: TLog
 
-Defined in: [awtk.ts:14376](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14376)
+Defined in: [awtk.ts:14376](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L14376)
 
 log。
 
@@ -26,7 +26,7 @@ log。
 
 > `static` **getLogLevel**(): [`TTkLogLevel`](../enumerations/TTkLogLevel.md)
 
-Defined in: [awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14384)
+Defined in: [awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L14384)
 
 获取log的级别。
 
@@ -42,7 +42,7 @@ Defined in: [awtk.ts:14384](https://github.com/zlgopen/awtk-binding/blob/4527754
 
 > `static` **setLogLevel**(`log_level`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:14396](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L14396)
+Defined in: [awtk.ts:14396](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L14396)
 
 设置log的级别。
 

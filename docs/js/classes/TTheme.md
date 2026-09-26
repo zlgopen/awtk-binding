@@ -6,7 +6,7 @@
 
 # Class: TTheme
 
-Defined in: [awtk.ts:7878](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7878)
+Defined in: [awtk.ts:7878](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L7878)
 
 窗体样式。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:7878](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **new TTheme**(`nativeObj`): `TTheme`
 
-Defined in: [awtk.ts:7880](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7880)
+Defined in: [awtk.ts:7880](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L7880)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [awtk.ts:7880](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **nativeObj**: `any`
 
-Defined in: [awtk.ts:7879](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7879)
+Defined in: [awtk.ts:7879](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L7879)
 
 ## Methods
 
@@ -42,7 +42,7 @@ Defined in: [awtk.ts:7879](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > `static` **instance**(): `TTheme`
 
-Defined in: [awtk.ts:7891](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L7891)
+Defined in: [awtk.ts:7891](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L7891)
 
 获取缺省的窗体样式对象。
 

@@ -6,7 +6,7 @@
 
 # Class: TIdle
 
-Defined in: [awtk.ts:6050](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6050)
+Defined in: [awtk.ts:6050](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L6050)
 
 idle可以看作是duration为0的定时器。
 
@@ -32,7 +32,7 @@ idle可以看作是duration为0的定时器。
 
 > `static` **add**(`on_idle`, `ctx`): `number`
 
-Defined in: [awtk.ts:6060](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6060)
+Defined in: [awtk.ts:6060](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L6060)
 
 增加一个idle。
 
@@ -62,7 +62,7 @@ idle回调函数的上下文。
 
 > `static` **remove**(`idle_id`): [`TRet`](../enumerations/TRet.md)
 
-Defined in: [awtk.ts:6072](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L6072)
+Defined in: [awtk.ts:6072](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L6072)
 
 删除指定的idle。
 

@@ -6,7 +6,7 @@
 
 # Enumeration: TAlignV
 
-Defined in: [awtk.ts:8002](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L8002)
+Defined in: [awtk.ts:8002](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L8002)
 
 垂直对齐的常量定义。
 
@@ -16,7 +16,7 @@ Defined in: [awtk.ts:8002](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **BOTTOM**: `number`
 
-Defined in: [awtk.ts:8026](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L8026)
+Defined in: [awtk.ts:8026](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L8026)
 
 底部对齐。
 
@@ -26,7 +26,7 @@ Defined in: [awtk.ts:8026](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **MIDDLE**: `number`
 
-Defined in: [awtk.ts:8014](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L8014)
+Defined in: [awtk.ts:8014](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L8014)
 
 居中对齐。
 
@@ -36,7 +36,7 @@ Defined in: [awtk.ts:8014](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **NONE**: `number`
 
-Defined in: [awtk.ts:8008](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L8008)
+Defined in: [awtk.ts:8008](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L8008)
 
 无效对齐方式。
 
@@ -46,6 +46,6 @@ Defined in: [awtk.ts:8008](https://github.com/zlgopen/awtk-binding/blob/45277547
 
 > **TOP**: `number`
 
-Defined in: [awtk.ts:8020](https://github.com/zlgopen/awtk-binding/blob/452775476bc9eb3d3f63639b48e2df4197347ad7/tools/code_gen/js/output/awtk.ts#L8020)
+Defined in: [awtk.ts:8020](https://github.com/zlgopen/awtk-binding/blob/a6237d7b8f7034c4858ebc4c519159cb37865e42/tools/code_gen/js/output/awtk.ts#L8020)
 
 顶部对齐。
